@@ -1,0 +1,2931 @@
+; Copyright 2014-2017 Richard Dymond (rjdymond@gmail.com)
+
+; Logo graphic data
+d18659 DEFB 15,0,0,240,15,0,0,240,15,240,0,240,15
+ 18674 DEFB 240,15,0,0,240,15,0,15
+ 18915 DEFB 15,0,0,240,15,0,0,240,15,240,0,240,15
+ 18930 DEFB 240,15,0,0,240,15,0,15
+ 19171 DEFB 15,0,0,240,15,0,0,240,15,240,0,240,15
+ 19186 DEFB 240,15,0,0,240,15,0,15
+ 19427 DEFB 15,0,0,240,15,0,0,240,15,240,0,240,15
+ 19442 DEFB 240,15,0,0,240,15,0,15
+ 19651 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,0,255,255
+ 19667 DEFB 15,255,255,0,240,0,0,240
+ 19683 DEFB 15,255,255,240,15,0,0,240,15,15,0,240,15
+ 19699 DEFB 15,0,0,240,0,240,240
+ 19907 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,0,255,255
+ 19923 DEFB 15,255,255,0,240,0,0,240
+ 19939 DEFB 15,255,255,240,15,0,0,240,15,15,0,240,15
+ 19955 DEFB 15,0,0,240,0,240,240
+ 20163 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,0,255,255
+ 20179 DEFB 15,255,255,0,240,0,0,240
+ 20195 DEFB 15,255,255,240,15,0,0,240,15,15,0,240,15
+ 20211 DEFB 15,0,0,240,0,240,240
+ 20419 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,0,255,255
+ 20435 DEFB 15,255,255,0,240,0,0,240
+ 20451 DEFB 15,255,255,240,15,0,0,240,15,15,0,240,15
+ 20467 DEFB 15,0,0,240,0,240,240
+ 20483 DEFB 15,0,0,240,15,0,0,240,15,0,240,240,15
+ 20497 DEFB 255,240,15,255,255,0,0,15
+ 20515 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,0,255,255
+ 20531 DEFB 15,0,0,240,0,15
+ 20579 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,15
+ 20594 DEFB 240,15,0,0,240,15
+ 20611 DEFB 15,0,0,240,15,0,0,240,15,255,255
+ 20623 DEFB 15,255,255,240,15,0,0,0,15
+ 20643 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,15,0,0,240
+ 20660 DEFB 255,255,0,15,255,255,240
+ 20739 DEFB 15,0,0,240,15,0,0,240,15,0,240,240,15
+ 20753 DEFB 255,240,15,255,255,0,0,15
+ 20771 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,0,255,255
+ 20787 DEFB 15,0,0,240,0,15
+ 20835 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,15
+ 20850 DEFB 240,15,0,0,240,15
+ 20867 DEFB 15,0,0,240,15,0,0,240,15,255,255
+ 20879 DEFB 15,255,255,240,15,0,0,0,15
+ 20899 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,15,0,0,240
+ 20916 DEFB 255,255,0,15,255,255,240
+ 20995 DEFB 15,0,0,240,15,0,0,240,15,0,240,240,15
+ 21009 DEFB 255,240,15,255,255,0,0,15
+ 21027 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,0,255,255
+ 21043 DEFB 15,0,0,240,0,15
+ 21091 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,15
+ 21106 DEFB 240,15,0,0,240,15
+ 21123 DEFB 15,0,0,240,15,0,0,240,15,255,255
+ 21135 DEFB 15,255,255,240,15,0,0,0,15
+ 21155 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,15,0,0,240
+ 21172 DEFB 255,255,0,15,255,255,240
+ 21251 DEFB 15,0,0,240,15,0,0,240,15,0,240,240,15
+ 21265 DEFB 255,240,15,255,255,0,0,15
+ 21283 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,0,255,255
+ 21299 DEFB 15,0,0,240,0,15
+ 21347 DEFB 15,0,0,240,15,0,0,240,15,0,0,240,15
+ 21362 DEFB 240,15,0,0,240,15
+ 21379 DEFB 15,0,0,240,15,0,0,240,15,255,255
+ 21391 DEFB 15,255,255,240,15,0,0,0,15
+ 21411 DEFB 15,0,0,240,0,255,255,0,15,0,0,240,15,0,0,240
+ 21428 DEFB 255,255,0,15,255,255,240
+ 21507 DEFB 15,0,0,240,15,0,0,240,15,0,15,240,15
+ 21522 DEFB 240,15,0,15,0,0,15
+ 21571 DEFB 15,0,0,240,0,255,255,0,15,255,255,0,0,255,255
+ 21588 DEFB 255,255,0,15,255,255,240
+ 21603 DEFB 15,255,255,240,15,0,0,240,15,0,0,240,15
+ 21618 DEFB 240,15,0,0,0,15,255,255
+ 21635 DEFB 15,0,0,240,15,0,0,240,15,0,15,0,15
+ 21650 DEFB 240,15,0,0,240,15
+ 21763 DEFB 15,0,0,240,15,0,0,240,15,0,15,240,15
+ 21778 DEFB 240,15,0,15,0,0,15
+ 21827 DEFB 15,0,0,240,0,255,255,0,15,255,255,0,0,255,255
+ 21844 DEFB 255,255,0,15,255,255,240
+ 21859 DEFB 15,255,255,240,15,0,0,240,15,0,0,240,15
+ 21874 DEFB 240,15,0,0,0,15,255,255
+ 21891 DEFB 15,0,0,240,15,0,0,240,15,0,15,0,15
+ 21906 DEFB 240,15,0,0,240,15
+ 22019 DEFB 15,0,0,240,15,0,0,240,15,0,15,240,15
+ 22034 DEFB 240,15,0,15,0,0,15
+ 22083 DEFB 15,0,0,240,0,255,255,0,15,255,255,0,0,255,255
+ 22100 DEFB 255,255,0,15,255,255,240
+ 22115 DEFB 15,255,255,240,15,0,0,240,15,0,0,240,15
+ 22130 DEFB 240,15,0,0,0,15,255,255
+ 22147 DEFB 15,0,0,240,15,0,0,240,15,0,15,0,15
+ 22162 DEFB 240,15,0,0,240,15
+ 22275 DEFB 15,0,0,240,15,0,0,240,15,0,15,240,15
+ 22290 DEFB 240,15,0,15,0,0,15
+ 22339 DEFB 15,0,0,240,0,255,255,0,15,255,255,0,0,255,255
+ 22356 DEFB 255,255,0,15,255,255,240
+ 22371 DEFB 15,255,255,240,15,0,0,240,15,0,0,240,15
+ 22386 DEFB 240,15,0,0,0,15,255,255
+ 22403 DEFB 15,0,0,240,15,0,0,240,15,0,15,0,15
+ 22418 DEFB 240,15,0,0,240,15
+ 22976 DEFS 256,14
+
+; Game status buffer variables
+d28086 DEFS 217
+ 28623 DEFS 8
+ 31841 DEFS 27
+ 31940 DEFS 3
+
+@start
+@org=24576
+@replace=/#maze\i/#UDGARRAY#(32#FOR(\1,\1+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||)
+@replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
+@replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
+@set-handle-unsupported-macros=1
+; Hungry Horace disassembly
+; http://skoolkit.ca/
+;
+; Copyright 1982 Beam Software (Hungry Horace)
+; Copyright 2014-2017 Richard Dymond (this disassembly)
+
+; The game has just loaded
+c24576 DI            ; Disable interrupts.
+ 24577 LD A,(23672)  ; {Initialise the pseudo-random number address.
+ 24580 LD L,A        ;
+ 24581 AND 31        ;
+ 24583 LD H,A        ;
+ 24584 LD A,(HL)     ;
+ 24585 LD L,A        ;
+ 24586 AND 31        ;
+ 24588 LD H,A        ;
+ 24589 LD (31847),HL ; }
+ 24592 LD HL,31850   ; {Initialise the 'T' pressed indicator to 'off' (bit 4
+ 24595 LD (HL),16    ; set).}
+ 24597 LD HL,31849   ; {Initialise the sound indicator to 'on'.
+ 24600 LD (HL),31    ; }
+; This entry point is used by the routine at #R26426 when a game has ended.
+*24602 LD HL,22528   ; {INK 7: PAPER 7
+ 24605 LD DE,22529   ;
+ 24608 LD BC,767     ;
+ 24611 LD (HL),63    ;
+ 24613 LDIR          ; }
+ 24615 LD HL,16384   ; {Clear the display file.
+ 24618 LD DE,16385   ;
+ 24621 LD BC,6143    ;
+ 24624 LD (HL),0     ;
+ 24626 LDIR          ; }
+ 24628 LD HL,22528   ; {INK 0: PAPER 7
+ 24631 LD DE,22529   ;
+ 24634 LD BC,767     ;
+ 24637 LD (HL),56    ;
+ 24639 LDIR          ; }
+ 24641 LD A,0        ; {Signal demo mode.
+ 24643 LD (27403),A  ; }
+ 24646 LD HL,140     ; {Initialise the title screen countdown timer.
+ 24649 LD (27400),HL ; }
+ 24652 LD DE,16544   ; {Print 'HUNGRY' in big letters.
+ 24655 LD HL,28303   ;
+ 24658 LD BC,160     ;
+ 24661 CALL 27982    ; }
+ 24664 LD DE,18560   ; {Print 'HORACE' in big letters.
+ 24667 LD HL,28463   ;
+ 24670 LD BC,160     ;
+ 24673 CALL 27982    ; }
+ 24676 LD A,(27403)  ; Pick up the game mode indicator.
+ 24679 PUSH AF       ; Save it briefly.
+ 24680 LD A,1        ; {Signal game mode (to force the copyright message to be
+ 24682 LD (27403),A  ; printed).}
+ 24685 LD HL,20672   ; This is the display file address for the copyright
+                     ; message.
+ 24688 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 24691 EX DE,HL      ; Transfer the display file address to #REGde.
+ 24692 LD HL,27303   ; {Print 'Copyright #CHR169 1982 Beam Software' and 'PRESS
+*24695 LD A,(HL)     ; ANY KEY TO START PLAY'.
+ 24696 CP 255        ;
+ 24698 JR Z,24706    ;
+ 24700 INC HL        ;
+ 24701 CALL 27471    ;
+ 24704 JR 24695      ; }
+*24706 POP AF        ; {Restore the game mode indicator.
+ 24707 LD (27403),A  ; }
+*24710 LD HL,22688   ; {Change the colour of the words 'HUNGRY HORACE' on the
+ 24713 LD DE,22689   ; title screen.
+ 24716 LD BC,159     ;
+ 24719 LD A,(HL)     ;
+ 24720 INC A         ;
+ 24721 AND 63        ;
+ 24723 OR 56         ;
+ 24725 LD (HL),A     ;
+ 24726 LDIR          ;
+ 24728 LD HL,22912   ;
+ 24731 LD DE,22913   ;
+ 24734 LD BC,159     ;
+ 24737 LD A,(HL)     ;
+ 24738 INC A         ;
+ 24739 AND 63        ;
+ 24741 OR 56         ;
+ 24743 LD (HL),A     ;
+ 24744 LDIR          ; }
+ 24746 CALL 27255    ; Make the title screen sound effect.
+ 24749 LD HL,(27400) ; {Decrement the title screen countdown timer.
+ 24752 DEC HL        ;
+ 24753 LD (27400),HL ; }
+ 24756 LD A,H        ; {Is it zero now?
+ 24757 OR L          ; }
+ 24758 JR Z,24777    ; Jump if so.
+ 24760 LD A,0        ; {Read the keyboard.
+ 24762 IN A,(254)    ; }
+ 24764 AND 31        ; {Is a key being pressed?
+ 24766 CP 31         ; }
+ 24768 JR Z,24710    ; Jump if not.
+ 24770 LD A,1        ; {Signal that a game (not demo mode) has started.
+ 24772 LD (27403),A  ; }
+ 24775 JR 24777      ; This instruction is redundant.
+*24777 LD A,255      ; {Initialise the maze number.
+ 24779 LD (31843),A  ; }
+ 24782 LD A,8        ; {Initialise the game speed parameter.
+ 24784 LD (31842),A  ; }
+ 24787 LD A,3        ; {Initialise the number of lives remaining.
+ 24789 LD (31864),A  ; }
+ 24792 LD HL,0       ; {Initialise the score.
+ 24795 LD (31859),HL ; }
+ 24798 LD A,0        ; {Initialise the active guard counter.
+ 24800 LD (27402),A  ; }
+ 24803 LD (31863),A  ; Initialise the extra life indicator.
+ 24806 CALL 27170    ; Initialise the guard countdown timers.
+; This entry point is used when moving from one maze to the next by the
+; routines at #R26426 (in demo mode) and #R27166 (in game mode).
+*24809 LD A,(31843)  ; Pick up the current maze number (0-3).
+ 24812 INC A         ; {Is it 0, 1 or 2?
+ 24813 AND 252       ; }
+ 24815 JR Z,24828    ; Jump if so.
+ 24817 LD A,(31842)  ; {Decrement the game speed parameter (unless it's already
+ 24820 DEC A         ; 1). This increases the speed of the game.
+ 24821 JR NZ,24825   ;
+ 24823 LD A,1        ;
+*24825 LD (31842),A  ; }
+*24828 LD A,(31843)  ; {Increment the maze number.
+ 24831 INC A         ;
+ 24832 AND 3         ;
+ 24834 LD (31843),A  ; }
+ 24837 LD A,(31843)  ; Pick up the current maze number.
+ 24840 CP 0          ; Is it maze 1?
+ 24842 JR NZ,24855   ; Jump if not.
+ 24844 LD HL,28631   ; {Copy the tunnel offset and bell, initial guard and
+ 24847 CALL 27294    ; entrance locations for maze 1 to #R28623.}
+ 24850 LD HL,29431   ; Point #REGhl at the layout data for maze 1.
+ 24853 JR 24896      ;
+*24855 CP 1          ; Is it maze 2?
+ 24857 JR NZ,24870   ; Jump if not.
+ 24859 LD HL,28639   ; {Copy the tunnel offset and bell, initial guard and
+ 24862 CALL 27294    ; entrance locations for maze 2 to #R28623.}
+ 24865 LD HL,28663   ; Point #REGhl at the layout data for maze 2.
+ 24868 JR 24896      ;
+*24870 CP 2          ; Is it maze 3?
+ 24872 JR NZ,24885   ; Jump if not.
+ 24874 LD HL,28647   ; {Copy the tunnel offset and bell, initial guard and
+ 24877 CALL 27294    ; entrance locations for maze 3 to #R28623.}
+ 24880 LD HL,30199   ; Point #REGhl at the layout data for maze 3.
+ 24883 JR 24896      ;
+*24885 LD HL,28655   ; {Copy the tunnel offset and bell, initial guard and
+ 24888 CALL 27294    ; entrance locations for maze 4 to #R28623.}
+ 24891 LD HL,30967   ; Point #REGhl at the layout data for maze 4.
+ 24894 JR 24896      ;
+*24896 LD DE,16384   ; {Draw the current maze.
+ 24899 LD BC,768     ;
+ 24902 CALL 27509    ; }
+ 24905 LD A,(27403)  ; Pick up the game mode indicator.
+ 24908 AND A         ; Is it demo mode?
+ 24909 JR Z,24932    ; Jump if so.
+ 24911 LD HL,16384   ; This is the display file address for
+                     ; 'PASSES#SPACE(3)SCORE#SPACE(7)BEST'.
+ 24914 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 24917 EX DE,HL      ; Transfer the display file address to #REGde.
+ 24918 LD HL,31815   ; {Print 'PASSES#SPACE(3)SCORE#SPACE(7)BEST'.
+*24921 LD A,(HL)     ;
+ 24922 CP 255        ;
+ 24924 JR Z,24975    ;
+ 24926 INC HL        ;
+ 24927 CALL 27471    ;
+ 24930 JR 24921      ; }
+*24932 LD A,1        ; {Signal game mode (to force the 'DEMO MODE' text to be
+ 24934 LD (27403),A  ; printed).}
+ 24937 LD HL,16384   ; This is the display file address for 'DEMO
+                     ; MODE#SPACE(2)PRESS ANY KEY TO PLAY'.
+ 24940 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 24943 EX DE,HL      ; Transfer the display file address to #REGde.
+ 24944 LD HL,27367   ; {Print 'DEMO MODE#SPACE(2)PRESS ANY KEY TO PLAY'.
+*24947 LD A,(HL)     ;
+ 24948 CP 255        ;
+ 24950 JR Z,24958    ;
+ 24952 INC HL        ;
+ 24953 CALL 27471    ;
+ 24956 JR 24947      ; }
+*24958 LD A,0        ; {Restore the game mode indicator to demo mode.
+ 24960 LD (27403),A  ; }
+ 24963 LD HL,22528   ; {Make 'DEMO MODE' flash.
+ 24966 LD B,9        ;
+*24968 LD A,(HL)     ;
+ 24969 ADD A,128     ;
+ 24971 LD (HL),A     ;
+ 24972 INC HL        ;
+ 24973 DJNZ 24968    ; }
+*24975 LD HL,(28625) ; {Copy the bell location to #R31940.
+ 24978 LD (31940),HL ; }
+ 24981 LD HL,16391   ; This is the display file address for the number of lives
+                     ; remaining.
+ 24984 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 24987 LD A,(31864)  ; Pick up the number of lives remaining.
+ 24990 ADD A,"0"     ; Convert it to the ASCII code for the corresponding
+                     ; digit.
+ 24992 EX DE,HL      ; Transfer the display file address to #REGde.
+ 24993 CALL 27471    ; Print the number of lives remaining.
+ 24996 LD HL,2000    ; {Initialise the lunch-drop countdown timer.
+ 24999 LD (31845),HL ; }
+; This entry point is used by the routine at #R26426 after Horace has lost a
+; life.
+*25002 LD HL,(31940) ; Pick up the bell location.
+ 25005 LD A,H        ; {Has Horace sounded the alarm?
+ 25006 OR L          ; }
+ 25007 JR Z,25015    ; Jump if so.
+ 25009 LD HL,(28625) ; {Reinitialise the bell location.
+ 25012 LD (31940),HL ; }
+*25015 LD B,4        ; There are four guards.
+*25017 PUSH BC       ; {Copy the guard's buffer into the temporary location
+ 25018 CALL 27199    ; (#R28088).
+ 25021 POP BC        ; }
+ 25022 PUSH BC       ; Save the guard counter.
+ 25023 SLA B         ; {Point #REGhl at one of the guard countdown timers at
+ 25025 LD C,B        ; #R28070.
+ 25026 LD B,0        ;
+ 25028 XOR A         ;
+@keep
+ 25029 LD HL,28078   ;
+ 25032 SBC HL,BC     ; }
+ 25034 LD A,(HL)     ; {Is this guard in play?
+ 25035 INC HL        ;
+ 25036 OR (HL)       ; }
+ 25037 JR NZ,25044   ; Jump if not.
+ 25039 LD HL,(28627) ; Pick up the initial guard location for the current maze.
+ 25042 JR 25047      ;
+*25044 LD HL,(28629) ; Pick up the bell location for the current maze.
+*25047 LD (28088),HL ; {Initialise the guard's current and new locations.
+ 25050 LD (28092),HL ; }
+ 25053 LD HL,28095   ; {Clear the four maze background tiles in the temporary
+ 25056 LD C,4        ; guard buffer.
+*25058 LD (HL),62    ;
+ 25060 INC HL        ;
+ 25061 LD B,8        ;
+*25063 LD (HL),0     ;
+ 25065 INC HL        ;
+ 25066 DJNZ 25063    ;
+ 25068 DEC C         ;
+ 25069 JR NZ,25058   ; }
+ 25071 CALL 27242    ; Copy the guard's buffer back to the original location.
+ 25074 POP BC        ; Restore the guard counter to #REGb.
+ 25075 DJNZ 25017    ; Jump back to prepare the next guard.
+ 25077 LD HL,(28629) ; Pick up Horace's initial location for the current maze.
+ 25080 LD (31851),HL ; {Initialise Horace's current and new locations.
+ 25083 LD (31853),HL ; }
+ 25086 LD A,1        ; {Initialise Horace's animation frame.
+ 25088 LD (31856),A  ; }
+ 25091 LD A,(31842)  ; {Initialise the sprite movement timer (using the value
+ 25094 LD (31841),A  ; of the game speed parameter).}
+ 25097 LD HL,(31859) ; {Print the score and make a sound effect.
+ 25100 CALL 26055    ; }
+ 25103 LD HL,(31861) ; Pick up the high score.
+ 25106 LD DE,16384   ; {Set #REGde to the display file address for the high
+ 25109 EX DE,HL      ; score (in a roundabout way).
+ 25110 LD BC,26      ;
+ 25113 ADD HL,BC     ;
+ 25114 EX DE,HL      ; }
+ 25115 CALL 27425    ; Print the high score.
+ 25118 LD HL,0       ; {Initialise the guard panic timer.
+ 25121 LD (28078),HL ; }
+ 25124 LD A,57       ; {Initialise Horace's attribute byte (INK 1: PAPER 7).
+ 25126 LD (31857),A  ; }
+; Here we enter the main loop.
+*25129 CALL 25167    ; Read the keyboard and change Horace's sprite
+                     ; accordingly.
+ 25132 CALL 25399    ; Move Horace and the guards.
+ 25135 CALL 25886    ; Redraw the tiles behind Horace and the guards if they've
+                     ; moved.
+ 25138 CALL 26017    ; Add to the score if Horace has eaten something.
+ 25141 CALL 26146    ; Draw the guards.
+ 25144 CALL 26276    ; Check whether Horace has run into a guard.
+ 25147 CALL 26657    ; Draw Horace.
+ 25150 CALL 26730    ; Draw the bell and check whether Horace has sounded the
+                     ; alarm.
+ 25153 CALL 26887    ; Check whether a guard should drop his lunch.
+ 25156 CALL 26988    ; Decrement the guard countdown timers.
+ 25159 CALL 27022    ; Toggle the sound on/off if 'T' is pressed.
+ 25162 CALL 27044    ; Ring the bell if necessary.
+ 25165 JR 25129      ; Jump back to the start of the main loop.
+
+; Read the keyboard and update Horace's sprite accordingly
+;
+; Used by the routine at #R24576.
+c25167 LD A,(31865)  ; Pick up the tunnel timer.
+ 25170 AND A         ; Is Horace in a tunnel at the moment?
+ 25171 RET NZ        ; Return if so.
+ 25172 LD A,255      ; {Initialise the direction keypress to 'no key'.
+ 25174 LD (31855),A  ; }
+ 25177 LD A,(27403)  ; Pick up the game mode indicator.
+ 25180 AND A         ; Is it demo mode?
+ 25181 JR NZ,25284   ; Jump if not.
+ 25183 LD A,0        ; {Read the keyboard.
+ 25185 IN A,(254)    ; }
+ 25187 AND 31        ; {Is a key being pressed?
+ 25189 CP 31         ; }
+ 25191 JR Z,25197    ; Jump if not.
+ 25193 POP HL        ; Drop the return address from the stack.
+ 25194 JP 26601      ; Cycle the screen colours briefly and return to the title
+                     ; screen.
+; It's demo mode. Time to figure out where to move Horace next.
+*25197 LD B,4        ; Initialise #REGb (the direction indicator) for the loop
+                     ; that follows.
+*25199 DEC B         ; #REGb=3 (left), 2 (down), 1 (right) or 0 (up).
+ 25200 LD HL,(31851) ; Pick up Horace's current location.
+ 25203 LD C,0        ; Initialise #REGc to 0; this is the direction probability
+                     ; parameter.
+ 25205 PUSH BC       ; Save the direction indicator briefly.
+ 25206 LD A,B        ; Copy the direction indicator to #REGa.
+ 25207 CALL 27842    ; Check the tiles next to Horace in that direction.
+ 25210 POP BC        ; Restore the direction indicator to #REGb.
+ 25211 CP 2          ; Is there a wall or the maze exit or entrance in that
+                     ; direction?
+ 25213 JP NC,25247   ; Jump if so with #REGc=0: that direction is blocked.
+ 25216 CALL 27410    ; {Set #REGc to a pseudo-random number between 25 and 56;
+ 25219 AND 31        ; the higher this value, the more likely Horace will turn
+ 25221 ADD A,25      ; 90 degrees in the direction indicated by #REGb when his
+ 25223 LD C,A        ; path is blocked.}
+ 25224 LD A,(31856)  ; Pick up Horace's animation frame.
+ 25227 CP B          ; Is it equal to the current value of the direction
+                     ; indicator?
+ 25228 JR NZ,25236   ; Jump if not.
+ 25230 LD A,40       ; {Now #REGc holds a pseudo-random number between 65 and
+ 25232 ADD A,C       ; 96; this value ensures that Horace will keep moving in
+ 25233 LD C,A        ; the same direction if he can.}
+ 25234 JR 25247      ;
+*25236 ADD A,2       ; {Add 2 to Horace's animation frame; this has the effect
+ 25238 AND 3         ; of toggling his direction between up/down and
+                     ; left/right.}
+ 25240 CP B          ; Is it equal to the current value of the direction
+                     ; indicator now?
+ 25241 JR NZ,25247   ; Jump if not.
+ 25243 LD A,246      ; {Now #REGc holds a pseudo-random number between 15 and
+ 25245 ADD A,C       ; 46; the higher this value, the more likely Horace will
+ 25246 LD C,A        ; turn round 180 degrees when his path is blocked.}
+*25247 PUSH BC       ; Save the direction indicator briefly.
+ 25248 LD HL,28082   ; {Point #REGhl at one of the four slots at #R28082.
+ 25251 LD C,B        ;
+ 25252 LD B,0        ;
+ 25254 ADD HL,BC     ; }
+ 25255 POP BC        ; Restore the direction indicator to #REGb.
+ 25256 LD A,C        ; {Save the direction probability parameter in the
+ 25257 LD (HL),A     ; appropriate slot.}
+ 25258 INC B         ; {Have we considered every direction yet?
+ 25259 DEC B         ; }
+ 25260 JR NZ,25199   ; Jump back if not.
+; Having computed a direction probability parameter for each of the four slots
+; at #R28082, we now use those parameters to determine Horace's next animation
+; frame (and therefore direction of travel).
+ 25262 XOR A         ; {Compute in #REGc the index of the slot that holds the
+@keep
+ 25263 LD HL,28086   ; largest number (0, 1, 2 or 3).
+ 25266 LD B,4        ;
+*25268 DEC B         ;
+ 25269 DEC HL        ;
+ 25270 CP (HL)       ;
+ 25271 JR NC,25275   ;
+ 25273 LD A,(HL)     ;
+ 25274 LD C,B        ;
+*25275 INC B         ;
+ 25276 DEC B         ;
+ 25277 JR NZ,25268   ; }
+ 25279 LD A,C        ; {Update Horace's animation frame to this index value.
+ 25280 LD (31856),A  ; }
+ 25283 RET           ;
+; A game is in progress.
+*25284 LD A,251      ; {Read keys Q-W-E-R-T.
+ 25286 IN A,(254)    ; }
+ 25288 AND 1         ; Is 'Q' (up) being pressed?
+ 25290 JR Z,25300    ; Jump if so.
+ 25292 LD A,247      ; {Read keys 1-2-3-4-5.
+ 25294 IN A,(254)    ; }
+ 25296 AND 8         ; Is '4' (up) being pressed?
+ 25298 JR NZ,25307   ; Jump if not.
+*25300 LD A,0        ; {Signal: 'up' key pressed.
+ 25302 LD (31855),A  ; }
+ 25305 JR 25374      ;
+*25307 LD A,254      ; {Read keys SHIFT-Z-X-C-V.
+ 25309 IN A,(254)    ; }
+ 25311 AND 2         ; is 'Z' (down) being pressed?
+ 25313 JR Z,25323    ; Jump if so.
+ 25315 LD A,247      ; Read keys 1-2-3-4-5.
+ 25317 IN A,(254)    ; is '3' (down) being pressed?
+ 25319 AND 4         ; Jump if not.
+ 25321 JR NZ,25330   ;
+*25323 LD A,2        ; {Signal: 'down' key pressed.
+ 25325 LD (31855),A  ; }
+ 25328 JR 25374      ;
+*25330 LD A,223      ; {Read keys Y-U-I-O-P.
+ 25332 IN A,(254)    ; }
+ 25334 BIT 0,A       ; Is 'P' (right) being pressed?
+ 25336 JR Z,25346    ; Jump if so.
+ 25338 LD A,247      ; {Read keys 1-2-3-4-5.
+ 25340 IN A,(254)    ; }
+ 25342 AND 2         ; is '2' (right) being pressed?
+ 25344 JR NZ,25353   ; Jump if not.
+*25346 LD A,1        ; {Signal: 'right' key pressed.
+ 25348 LD (31855),A  ; }
+ 25351 JR 25374      ;
+*25353 LD A,223      ; {Read keys Y-U-I-O-P.
+ 25355 IN A,(254)    ; }
+ 25357 BIT 2,A       ; Is 'I' (left) being pressed?
+ 25359 JR Z,25369    ; Jump if so.
+ 25361 LD A,247      ; {Read keys 1-2-3-4-5.
+ 25363 IN A,(254)    ; }
+ 25365 AND 1         ; is '1' (left) being pressed?
+ 25367 JR NZ,25389   ; Jump if not.
+*25369 LD A,3        ; {Signal: 'left' key pressed.
+ 25371 LD (31855),A  ; }
+*25374 LD HL,(31851) ; Pick up Horace's current location.
+ 25377 CALL 27842    ; Check the tiles in front of Horace.
+ 25380 CP 3          ; Is Horace facing a wall?
+ 25382 JR NZ,25389   ; Jump if not.
+ 25384 LD A,255      ; {Signal: no key pressed (Horace will not respond to the
+ 25386 LD (31855),A  ; keypress).}
+*25389 LD A,(31855)  ; Pick up the direction keypress indicator.
+ 25392 CP 255        ; Was a direction key pressed?
+ 25394 RET Z         ; Return if not.
+ 25395 LD (31856),A  ; Otherwise update Horace's animation frame accordingly.
+ 25398 RET           ;
+
+; Move Horace and the guards
+;
+; Used by the routine at #R24576.
+c25399 LD A,(31841)  ; {Decrement the sprite movement timer.
+ 25402 DEC A         ;
+ 25403 LD (31841),A  ; }
+ 25406 RET NZ        ; Return unless it's zero.
+ 25407 LD A,(31842)  ; {Reset the sprite movement timer to the value of the
+ 25410 LD (31841),A  ; game speed parameter.}
+ 25413 LD A,(31865)  ; Pick up the tunnel timer.
+ 25416 AND A         ; Is Horace in a tunnel at the moment?
+ 25417 JR NZ,25535   ; Jump if so.
+ 25419 LD A,(31856)  ; Pick up Horace's animation frame.
+ 25422 LD HL,(31851) ; Pick up Horace's current location.
+ 25425 CALL 27842    ; Check the tiles in front of Horace.
+ 25428 CP 0          ; Is there anything in front of Horace?
+ 25430 JR Z,25515    ; Jump if not.
+ 25432 CP 1          ; Is Horace facing a tunnel entrance?
+ 25434 JR Z,25450    ; Jump if so.
+ 25436 CP 2          ; Is Horace facing a maze exit or entrance?
+ 25438 JR NZ,25529   ; Jump if not.
+ 25440 LD A,(31856)  ; Pick up Horace's animation frame.
+ 25443 CP 1          ; Is Horace facing right?
+ 25445 JP Z,27166    ; Jump if so (Horace is leaving the maze).
+ 25448 JR 25529      ;
+; Horace is about to enter a tunnel.
+*25450 LD A,90       ; {Initialise the tunnel timer.
+ 25452 LD (31865),A  ; }
+ 25455 LD BC,(28623) ; Pick up the tunnel offset for the current maze.
+ 25459 LD HL,(31851) ; Pick up Horace's location.
+ 25462 LD A,(31856)  ; Pick up Horace's animation frame.
+ 25465 AND A         ; Is Horace going up?
+ 25466 JR Z,25472    ; Jump if so.
+ 25468 SBC HL,BC     ; Subtract the tunnel offset from Horace's location.
+ 25470 JR 25473      ;
+*25472 ADD HL,BC     ; Add the tunnel offset to Horace's location.
+*25473 PUSH HL       ; Save #REGhl (which holds Horace's new location)
+                     ; temporarily.
+ 25474 LD HL,31849   ; Pick up the sound on/off indicator.
+ 25477 LD C,16       ; Initialise #REGc for the loop that follows.
+*25479 PUSH BC       ; Save the loop counter (unnecessarily).
+ 25480 LD B,C        ; {Set #REGb and #REGe equal to 8*#REGc. This value
+ 25481 SLA B         ; determines the pitch.
+ 25483 SLA B         ;
+ 25485 SLA B         ;
+ 25487 LD E,B        ; }
+ 25488 LD D,8        ; This value determines the duration.
+*25490 LD B,E        ; {Produce a sound (if the sound on/off indicator is on)
+ 25491 LD A,31       ; with pitch and duration determined by #REGe and #REGd.
+ 25493 AND (HL)      ;
+ 25494 OUT (254),A   ;
+*25496 DJNZ 25496    ;
+ 25498 LD A,7        ;
+ 25500 OUT (254),A   ;
+ 25502 LD B,E        ;
+*25503 DJNZ 25503    ;
+ 25505 DEC D         ;
+ 25506 JR NZ,25490   ; }
+ 25508 POP BC        ; Restore the loop counter to #REGc (unnecessarily).
+ 25509 DEC C         ; Finished yet?
+ 25510 JR NZ,25479   ; Jump back if not.
+ 25512 POP HL        ; Restore Horace's new location to #REGhl.
+ 25513 JR 25524      ;
+; There's nothing in front of Horace, so he can move one space forward.
+*25515 LD HL,(31851) ; Pick up Horace's current location.
+ 25518 LD A,(31856)  ; Pick up Horace's animation frame.
+ 25521 CALL 27927    ; Get the location of the spot one space in front of
+                     ; Horace.
+*25524 LD (31853),HL ; Update Horace's location.
+ 25527 JR 25535      ;
+; Horace is facing a wall or the maze entrance, and so cannot move forward.
+*25529 LD HL,(31851) ; Pick up Horace's current location.
+ 25532 LD (31853),HL ; Set Horace's new location.
+; Now it's time to move the guards.
+*25535 LD HL,28070   ; Point #REGhl at the first of the guard countdown timers.
+ 25538 LD B,4        ; There are four guards to consider.
+*25540 PUSH BC       ; Save the guard counter.
+ 25541 LD A,(HL)     ; {Set the zero flag if this guard is in play.
+ 25542 INC HL        ;
+ 25543 OR (HL)       ; }
+ 25544 INC HL        ; Point #REGhl at the next guard's countdown timer.
+ 25545 PUSH HL       ; Save the guard countdown timer pointer.
+ 25546 JR NZ,25557   ; Jump if this guard is not in play at the moment.
+ 25548 CALL 27199    ; Copy the guard's buffer into the temporary location
+                     ; (#R28088).
+ 25551 CALL 25562    ; Move the guard.
+ 25554 CALL 27242    ; Copy the guard's buffer back to the original location.
+*25557 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 25558 POP BC        ; Restore the guard counter to #REGb.
+ 25559 DJNZ 25540    ; Jump back to handle the next guard.
+ 25561 RET           ;
+
+; Move a guard
+;
+; Used by the routine at #R25399.
+c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
+ 25565 AND A         ; Has this guard been thrown out of the park?
+ 25566 RET NZ        ; Return if so.
+ 25567 LD HL,(31851) ; Pick up Horace's current location.
+ 25570 RR H          ; {Now #REGh=0, 1 or 2, indicating which third of the
+ 25572 RR H          ; screen the top row of Horace's sprite is in.
+ 25574 RR H          ; }
+ 25576 LD B,5        ; {Move bits 5-7 of #REGl down to bits 0-2, and bits 0-2
+*25578 RR H          ; of #REGh into bits 3-5 of #REGl.
+ 25580 RR L          ;
+ 25582 DJNZ 25578    ; }
+ 25584 LD A,L        ; {Now #REGa=Horace's screen y-coordinate (0-22).
+ 25585 AND 31        ; }
+ 25587 LD HL,(31851) ; Pick up Horace's current location.
+ 25590 LD H,A        ; #REGh=Horace's screen y-coordinate (0-22).
+ 25591 LD A,L        ; {Now #REGl=Horace's screen x-coordinate (0-30).
+ 25592 AND 31        ;
+ 25594 LD L,A        ; }
+ 25595 LD (31866),HL ; Save Horace's screen x- and y-coordinates temporarily.
+ 25598 LD HL,(28088) ; {Compute the guard's screen x- and y-coordinates.
+ 25601 RR H          ;
+ 25603 RR H          ;
+ 25605 RR H          ;
+ 25607 LD B,5        ;
+*25609 RR H          ;
+ 25611 RR L          ;
+ 25613 DJNZ 25609    ;
+ 25615 LD A,L        ;
+ 25616 AND 31        ;
+ 25618 LD HL,(28088) ;
+ 25621 LD H,A        ;
+ 25622 LD A,L        ;
+ 25623 AND 31        ;
+ 25625 LD L,A        ; }
+ 25626 LD (28080),HL ; Save the guard's screen x- and y-coordinates
+                     ; temporarily.
+ 25629 LD B,4        ; Initialise #REGb (the direction indicator) for the loop
+                     ; that follows.
+; Four passes are made through the following loop, one for each direction the
+; guard might go: left, down, right, or up.
+*25631 DEC B         ; #REGb=3 (left), 2 (down), 1 (right) or 0 (up).
+ 25632 LD HL,(28088) ; Pick up the guard's current location.
+ 25635 LD C,0        ; Initialise #REGc to 0; this is the direction probability
+                     ; parameter.
+ 25637 PUSH BC       ; Save the direction indicator briefly.
+ 25638 LD A,B        ; Copy the direction indicator to #REGa.
+ 25639 CALL 27842    ; Check the tiles next to the guard in that direction.
+ 25642 POP BC        ; Restore the direction indicator to #REGb.
+ 25643 CP 2          ; Is there a wall or the maze exit or entrance in that
+                     ; direction?
+ 25645 JP NC,25795   ; Jump if so with #REGc=0: that direction is blocked.
+ 25648 LD C,25       ; #REGc=25; this value determines the base probability
+                     ; that the guard will turn 90 degrees in the direction
+                     ; indicated by #REGb when his path is blocked.
+ 25650 LD A,(28090)  ; Pick up the guard's animation frame.
+ 25653 CP B          ; Is it equal to the current value of the direction
+                     ; indicator?
+ 25654 JR NZ,25662   ; Jump if not.
+ 25656 LD A,40       ; {#REGc=65; this value ensures that the guard will keep
+ 25658 ADD A,C       ; moving in the same direction if he can.
+ 25659 LD C,A        ; }
+ 25660 JR 25691      ;
+*25662 ADD A,2       ; {Add 2 to the guard's current animation frame; this has
+ 25664 AND 3         ; the effect of toggling his direction between up/down and
+                     ; left/right.}
+ 25666 CP B          ; Is it equal to the current value of the direction
+                     ; indicator now?
+ 25667 JR NZ,25675   ; Jump if not.
+ 25669 LD A,246      ; {#REGc=15; this value determines the probability that
+ 25671 ADD A,C       ; the guard will turn round 180 degrees when his path is
+ 25672 LD C,A        ; blocked.}
+ 25673 JR 25691      ;
+*25675 LD HL,(23672) ; {Increment the two least significant bytes of the system
+ 25678 INC HL        ; variable FRAMES, and copy the value to #REGhl.
+ 25679 LD (23672),HL ; }
+ 25682 LD A,H        ; {Use this value to generate a pseudo-random number
+ 25683 AND 15        ; between 0 and 31.
+ 25685 LD H,A        ;
+ 25686 LD A,(HL)     ;
+ 25687 AND 31        ; }
+ 25689 ADD A,C       ; {Add this to #REGc, giving a number between 25 and 56;
+ 25690 LD C,A        ; the higher this value, the more likely the guard will
+                     ; turn 90 degrees in the direction indicated by #REGb when
+                     ; his path is blocked.}
+*25691 LD A,B        ; Copy the direction indicator to #REGa.
+ 25692 CP 3          ; Set the zero flag if we're considering 'left' at the
+                     ; moment.
+ 25694 LD A,(31844)  ; Pick up the value of the redundant variable at #R31844.
+ 25697 JR NZ,25703   ; Jump if we're considering 'right', 'up' or 'down' at the
+                     ; moment.
+ 25699 DEC A         ; {Decrement the redundant variable at #R31844.
+ 25700 LD (31844),A  ; }
+*25703 AND A         ; This instruction is redundant.
+ 25704 LD A,B        ; Copy the direction indicator to #REGa.
+ 25705 CP 0          ; Are we considering 'up' at the moment?
+ 25707 JR NZ,25715   ; Jump if not.
+ 25709 LD A,(31842)  ; {Reset the redundant variable at #R31844 to the value of
+ 25712 LD (31844),A  ; the game speed parameter.}
+*25715 LD A,B        ; Copy the direction indicator to #REGa.
+ 25716 CP 0          ; Are we considering 'up' at the moment?
+ 25718 JR NZ,25732   ; Jump if not.
+ 25720 LD HL,(28080) ; Pick up the guard's screen x- and y-coordinates.
+ 25723 LD A,H        ; #REGa=guard's screen y-coordinate.
+ 25724 LD HL,(31866) ; Pick up Horace's screen x- and y-coordinates.
+ 25727 SUB H         ; Is Horace's y-coordinate greater than the guard's?
+ 25728 JR C,25795    ; Jump if so.
+ 25730 JR 25774      ; Otherwise jump to increase the probability that the
+                     ; guard will move up (towards Horace).
+*25732 CP 1          ; Are we considering 'right' at the moment?
+ 25734 JR NZ,25748   ; Jump if not.
+ 25736 LD HL,(31866) ; Pick up Horace's screen x- and y-coordinates.
+ 25739 LD A,L        ; #REGa=Horace's screen x-coordinate.
+ 25740 LD HL,(28080) ; Pick up the guard's screen x- and y-coordinates.
+ 25743 SUB L         ; Is the guard's x-coordinate greater than Horace's?
+ 25744 JR C,25795    ; Jump if so.
+ 25746 JR 25774      ; Otherwise jump to increase the probability that the
+                     ; guard will move right (towards Horace).
+*25748 CP 2          ; Are we considering 'down' at the moment?
+ 25750 JR NZ,25764   ; Jump if not.
+ 25752 LD HL,(31866) ; Pick up Horace's screen x- and y-coordinates.
+ 25755 LD A,H        ; #REGa=Horace's screen y-coordinate.
+ 25756 LD HL,(28080) ; Pick up the guard's screen x- and y-coordinates.
+ 25759 SUB H         ; Is the guard's y-coordinate greater than Horace's?
+ 25760 JR C,25795    ; Jump if so.
+ 25762 JR 25774      ; Otherwise jump to increase the probability that the
+                     ; guard will move down (towards Horace).
+*25764 LD HL,(28080) ; Pick up the guard's screen x- and y-coordinates.
+ 25767 LD A,L        ; #REGa=guard's screen x-coordinate.
+ 25768 LD HL,(31866) ; Pick up Horace's screen x- and y-coordinates.
+ 25771 SUB L         ; Is Horace's x-coordinate greater than the guard's?
+ 25772 JR C,25795    ; Jump if so.
+*25774 AND A         ; This instruction is redundant.
+ 25775 ADD A,10      ; Add 10 to #REGa; the higher the value #REGa holds now,
+                     ; the more likely the guard will move in the direction
+                     ; indicated by #REGb (towards Horace).
+ 25777 PUSH AF       ; Save this probability modifier briefly.
+ 25778 PUSH HL       ; Save #REGhl (unnecessarily).
+ 25779 LD HL,(28078) ; Pick up the guard panic timer.
+ 25782 LD A,H        ; {Set the zero flag unless the guards are panicking.
+ 25783 OR L          ; }
+ 25784 POP HL        ; Restore #REGhl.
+ 25785 JR Z,25792    ; Jump unless the guards are panicking.
+ 25787 POP AF        ; Restore the probability modifier to #REGa.
+ 25788 NEG           ; Negate #REGa, making it less likely that the guard will
+                     ; move in the direction indicated by #REGb (towards
+                     ; Horace).
+ 25790 JR 25793      ;
+*25792 POP AF        ; Restore the probability modifier to #REGa.
+*25793 ADD A,C       ; {Now #REGc holds the probability parameter for the
+ 25794 LD C,A        ; direction indicated by #REGb.}
+*25795 PUSH BC       ; Save the direction indicator briefly.
+ 25796 LD HL,28082   ; {Point #REGhl at one of the four slots at #R28082.
+ 25799 LD C,B        ;
+ 25800 LD B,0        ;
+ 25802 ADD HL,BC     ; }
+ 25803 POP BC        ; Restore the direction indicator to #REGb.
+ 25804 LD A,C        ; {Save the direction probability parameter in the
+ 25805 LD (HL),A     ; appropriate slot.}
+ 25806 INC B         ; {Have we considered every direction yet?
+ 25807 DEC B         ; }
+ 25808 JP NZ,25631   ; Jump back if not.
+; Having computed a direction probability parameter for each of the four slots
+; at #R28082, we now use those values to determine the guard's next animation
+; frame (and therefore direction of travel).
+ 25811 XOR A         ; {Compute in #REGc the index of the slot that holds the
+@keep
+ 25812 LD HL,28086   ; largest number (0, 1, 2 or 3).
+ 25815 LD B,4        ;
+*25817 DEC B         ;
+ 25818 DEC HL        ;
+ 25819 CP (HL)       ;
+ 25820 JR NC,25824   ;
+ 25822 LD A,(HL)     ;
+ 25823 LD C,B        ;
+*25824 INC B         ;
+ 25825 DEC B         ;
+ 25826 JR NZ,25817   ; }
+ 25828 LD A,C        ; {Update the guard's animation frame to this index
+ 25829 LD (28090),A  ; value.}
+ 25832 LD A,(28090)  ; Pick up the guard's animation frame.
+ 25835 LD HL,(28088) ; Pick up the guard's current location.
+ 25838 CALL 27842    ; Check the tiles in front of the guard.
+ 25841 CP 0          ; Is there anything in front of the guard?
+ 25843 JR Z,25866    ; Jump if not.
+ 25845 CP 1          ; Is the guard facing a tunnel entrance?
+ 25847 JR NZ,25879   ; Jump if not.
+; The guard is about to enter a tunnel.
+ 25849 LD BC,(28623) ; Pick up the the tunnel offset.
+ 25853 LD A,(28090)  ; Pick up the guard's animation frame.
+ 25856 AND A         ; Is it 0 (going up)?
+ 25857 JR Z,25863    ; Jump if so.
+ 25859 SBC HL,BC     ; Subtract the tunnel offset from the guard's current
+                     ; location.
+ 25861 JR 25864      ;
+*25863 ADD HL,BC     ; Add the tunnel offset to the guard's current location.
+*25864 JR 25875      ;
+*25866 LD HL,(28088) ; Pick up the guard's current location.
+ 25869 LD A,(28090)  ; Pick up the guard's animation frame.
+ 25872 CALL 27927    ; Compute the guard's new location.
+*25875 LD (28092),HL ; Update the guard's location.
+ 25878 RET           ;
+; The guard is facing a wall or the maze entrance or exit (so he cannot move).
+*25879 LD HL,(28088) ; Pick up the guard's current location.
+ 25882 LD (28092),HL ; Set the guard's new location.
+ 25885 RET           ;
+
+; Redraw the tiles behind Horace and the guards if they've moved
+;
+; Used by the routine at #R24576.
+c25886 LD HL,(31853) ; Pick up Horace's new location.
+ 25889 LD DE,(31851) ; Pick up Horace's current location.
+ 25893 XOR A         ; Clear the carry flag.
+ 25894 SBC HL,DE     ; Subtract Horace's current location from his new
+                     ; location.
+ 25896 LD A,H        ; {Has Horace moved?
+ 25897 OR L          ; }
+ 25898 JR Z,25914    ; Jump if not.
+ 25900 LD HL,(31851) ; Pick up Horace's current location.
+ 25903 LD DE,32647   ; Point #REGde at the graphic data for the blank sprite.
+ 25906 CALL 27663    ; Set #REGhl' to the attribute file address for Horace's
+                     ; location.
+ 25909 LD C,62       ; This is the attribute byte for the blank sprite (INK 6:
+                     ; PAPER 7).
+ 25911 CALL 27606    ; Draw the blank sprite over Horace's current location.
+; Now consider the guards.
+*25914 LD HL,28076   ; Point #REGhl at the last of the guard countdown timers.
+ 25917 LD B,1        ; #REGb will count the guards: 1, 2, 3 and 4.
+*25919 PUSH BC       ; Save the guard counter.
+ 25920 LD A,(HL)     ; {Set the zero flag if this guard is in play.
+ 25921 INC HL        ;
+ 25922 OR (HL)       ; }
+ 25923 DEC HL        ; {Point #REGhl at the next guard's countdown timer.
+ 25924 DEC HL        ;
+ 25925 DEC HL        ; }
+ 25926 PUSH HL       ; Save the guard countdown timer pointer briefly.
+ 25927 JR NZ,25938   ; Jump if this guard is not in play yet.
+ 25929 CALL 27199    ; Copy the guard's buffer to the temporary location
+                     ; (#R28088).
+ 25932 CALL 25947    ; Redraw the tiles behind the guard if he's moved.
+ 25935 CALL 27242    ; Copy the guard's buffer back to its original location.
+*25938 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 25939 POP BC        ; Restore the guard counter to #REGb.
+ 25940 INC B         ; Next guard.
+ 25941 LD A,B        ; Copy the guard counter to #REGa.
+ 25942 CP 5          ; Have we done all four guards yet?
+ 25944 JR NZ,25919   ; If not, jump back to do the next one.
+ 25946 RET           ;
+
+; Redraw the tiles behind a guard after he's moved
+;
+; Used by the routine at #R25886.
+c25947 LD HL,(28092) ; Pick up the guard's new location.
+ 25950 LD DE,(28088) ; Pick up the guard's current location.
+ 25954 XOR A         ; Clear the carry flag.
+ 25955 SBC HL,DE     ; Subtract the guard's current location from his new
+                     ; location.
+ 25957 LD A,H        ; {Has the guard moved?
+ 25958 OR L          ; }
+ 25959 RET Z         ; Return if not.
+; This entry point is used by the routines at #R26276 (when the guards have
+; been thrown out of the park) and #R26426 (after Horace has lost a life).
+*25960 LD HL,(28088) ; Pick up the guard's current location.
+ 25963 LD BC,16384   ; {Set #REGhl to the corresponding display file address.
+ 25966 ADD HL,BC     ; }
+ 25967 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 25970 LD DE,28095   ; Point #REGde at the first of the maze background tiles
+                     ; in the guard's buffer.
+ 25973 LD A,(DE)     ; Pick up the attribute byte of the first maze background
+                     ; tile.
+ 25974 INC DE        ; Point #REGde at the graphic data for the first maze
+                     ; background tile.
+ 25975 LD C,A        ; Copy the attribute byte to #REGc.
+ 25976 CALL 27642    ; Draw the first (top-left) maze background tile.
+ 25979 LD A,(DE)     ; Pick up the attribute byte of the second maze background
+                     ; tile.
+ 25980 INC DE        ; Point #REGde at the graphic data for the second maze
+                     ; background tile.
+ 25981 LD C,A        ; Copy the attribute byte to #REGc.
+ 25982 CALL 27642    ; Draw the second (top-right) maze background tile.
+ 25985 LD A,L        ; {Point #REGhl at the third tile on-screen.
+ 25986 ADD A,30      ;
+ 25988 LD L,A        ;
+ 25989 JR NC,25995   ;
+ 25991 LD A,H        ;
+ 25992 ADD A,8       ;
+ 25994 LD H,A        ; }
+*25995 LD A,(DE)     ; Pick up the attribute byte of the third maze background
+                     ; tile.
+ 25996 INC DE        ; Point #REGde at the graphic data for the third maze
+                     ; background tile.
+ 25997 LD C,A        ; Copy the attribute byte to #REGc.
+ 25998 CALL 27663    ; Set #REGhl' to the appropriate attribute file address.
+ 26001 CALL 27642    ; Draw the third (bottom-left) maze background tile.
+ 26004 LD A,(DE)     ; Pick up the attribute byte of the fourth maze background
+                     ; tile.
+ 26005 INC DE        ; Point #REGde at the graphic data for the fourth maze
+                     ; background tile.
+ 26006 LD C,A        ; Copy the attribute byte to #REGc.
+ 26007 CALL 27642    ; Draw the fourth (bottom-right) maze background tile.
+ 26010 LD HL,(28092) ; Pick up the guard's new location.
+ 26013 CALL 27752    ; Copy the maze backround tiles at this location into the
+                     ; guard's buffer.
+ 26016 RET           ;
+
+; Add to the score if Horace has eaten something
+;
+; Used by the routine at #R24576.
+c26017 LD A,(31865)  ; Pick up the tunnel timer.
+ 26020 AND A         ; Is Horace in a tunnel?
+ 26021 RET NZ        ; Return if so.
+ 26022 LD HL,(31853) ; Pick up Horace's new location.
+ 26025 CALL 27680    ; Check the attribute bytes at this location.
+ 26028 RET Z         ; Return if there's nothing to eat there.
+ 26029 CP 60         ; Has Horace run into a flower?
+ 26031 JR NZ,26045   ; Jump if not.
+ 26033 LD HL,(31859) ; {Add 10 to the score (Horace has eaten a flower).
+ 26036 LD BC,10      ;
+ 26039 ADD HL,BC     ;
+ 26040 LD (31859),HL ; }
+ 26043 JR 26055      ;
+*26045 LD HL,(31859) ; {Add 50 to the score (Horace has eaten a cherry or
+ 26048 LD BC,50      ; strawberry).
+ 26051 ADD HL,BC     ;
+ 26052 LD (31859),HL ; }
+; This entry point is used by the routines at #R24576 (when initialising a
+; maze), #R26276 (when Horace has thrown the guards out of the park) and
+; #R26730 (when Horace has sounded the alarm).
+*26055 LD DE,16384   ; {Set #REGde to the display file address for the score
+ 26058 EX DE,HL      ; (in a roundabout way).
+ 26059 LD BC,15      ;
+ 26062 ADD HL,BC     ;
+ 26063 EX DE,HL      ; }
+ 26064 CALL 27425    ; Print the score.
+ 26067 LD HL,(31859) ; Pick up the current score.
+ 26070 XOR A         ; Clear the carry flag and set #REGa=0.
+ 26071 LD BC,10000   ; {Perform trial subtractions of 10000 from the score.
+*26074 INC A         ;
+ 26075 SBC HL,BC     ;
+ 26077 JR NC,26074   ; }
+ 26079 INC A         ; This should be 'DEC A'.
+ 26080 LD B,A        ; Now #REGb=INT(Score/10000)+2.
+ 26081 LD A,(31863)  ; Pick up the extra life indicator.
+ 26084 CP B          ; Is it time to award an extra life?
+ 26085 JR Z,26113    ; Jump if not.
+ 26087 LD A,B        ; {Update the extra life indicator.
+ 26088 LD (31863),A  ; }
+ 26091 LD A,(31864)  ; {Increment the number of lives.
+ 26094 INC A         ;
+ 26095 LD (31864),A  ; }
+ 26098 LD HL,16391   ; This is the display file address for the number of
+                     ; lives.
+ 26101 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 26104 LD A,(31864)  ; Pick up the number of lives remaining.
+ 26107 ADD A,"0"     ; Convert it into an ASCII code.
+ 26109 EX DE,HL      ; Transfer the display file address to #REGde.
+ 26110 CALL 27471    ; Print the number of lives remaining.
+*26113 LD HL,31849   ; Pick up the sound on/off indicator.
+ 26116 LD C,16       ; Initialise #REGc for the loop that follows.
+*26118 PUSH BC       ; Save the loop counter (unnecessarily).
+ 26119 LD B,C        ; {Set #REGb equal to 8*#REGc. This value determines the
+ 26120 SLA B         ; pitch.
+ 26122 SLA B         ;
+ 26124 SLA B         ; }
+ 26126 PUSH BC       ; Save the pitch parameter briefly.
+ 26127 LD A,31       ; {Flip the speaker off if the sound on/off indicator is
+ 26129 AND (HL)      ; on, or on otherwise.
+ 26130 OUT (254),A   ; }
+*26132 DJNZ 26132    ; Produce a short delay.
+ 26134 LD A,7        ; {Flip the speaker on.
+ 26136 OUT (254),A   ; }
+ 26138 POP BC        ; Restore the pitch parameter to #REGb.
+*26139 DJNZ 26139    ; Produce another short delay.
+ 26141 POP BC        ; Restore the loop counter to #REGc (unnecessarily).
+ 26142 DEC C         ; Finished yet?
+ 26143 JR NZ,26118   ; Jump back if not.
+ 26145 RET           ;
+
+; Draw the guards
+;
+; Used by the routine at #R24576.
+c26146 LD HL,28070   ; Point #REGhl at the first of the guard countdown timers.
+ 26149 LD B,4        ; There are four guards.
+*26151 PUSH BC       ; Save the guard counter.
+ 26152 LD A,(HL)     ; {Set the zero flag if this guard is in play.
+ 26153 INC HL        ;
+ 26154 OR (HL)       ; }
+ 26155 INC HL        ; Point #REGhl at the next guard's countdown timer.
+ 26156 PUSH HL       ; Save the guard countdown timer pointer.
+ 26157 JR NZ,26168   ; Jump if this guard is not in play yet.
+ 26159 CALL 27199    ; Copy the guard's buffer into the temporary location
+                     ; (#R28088).
+ 26162 CALL 26173    ; Draw the guard.
+ 26165 CALL 27242    ; Copy the guard's buffer back to the original location.
+*26168 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 26169 POP BC        ; Restore the guard counter to #REGb.
+ 26170 DJNZ 26151    ; Jump back to deal with the next guard.
+ 26172 RET           ;
+
+; Draw a guard
+;
+; Used by the routine at #R26146.
+c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
+ 26176 AND A         ; Has this guard been thrown out of the park?
+ 26177 JR Z,26184    ; Jump if not.
+ 26179 DEC A         ; {Decrement the guard's return delay counter.
+ 26180 LD (28094),A  ; }
+ 26183 RET NZ        ; Return unless it's zero now.
+*26184 LD HL,(28092) ; {Update the guard's current location.
+ 26187 LD (28088),HL ; }
+ 26190 LD BC,(28078) ; Pick up the guard panic timer.
+ 26194 LD A,B        ; {Are the guards panicking?
+ 26195 OR C          ; }
+ 26196 JR Z,26227    ; Jump if not.
+ 26198 DEC BC        ; {Decrement the guard panic timer.
+ 26199 LD (28078),BC ; }
+ 26203 LD DE,32455   ; {Point #REGhl at the graphic data for a panicked guard
+ 26206 EX DE,HL      ; (frame 0).}
+ 26207 LD A,(28091)  ; {Increment the guard's animation frame timer.
+ 26210 INC A         ;
+ 26211 LD (28091),A  ; }
+ 26214 AND 8         ; {Is bit 3 set now?
+ 26216 CP 0          ; }
+ 26218 JR Z,26224    ; Jump if not.
+ 26220 LD BC,32      ; {Point #REGde at the graphic data for a panicked guard
+ 26223 ADD HL,BC     ; (frame 1), and restore the guard's location to #REGhl.
+*26224 EX DE,HL      ; }
+ 26225 JR 26267      ; Jump forward to draw the guard now.
+*26227 EX DE,HL      ; Transfer the guard's location to #REGde.
+ 26228 LD A,(28091)  ; {Increment the guard's animation frame timer.
+ 26231 INC A         ;
+ 26232 LD (28091),A  ; }
+ 26235 AND 32        ; {Is bit 5 set now?
+ 26237 CP 0          ; }
+ 26239 JR NZ,26246   ; Jump if so.
+ 26241 LD HL,32327   ; Point #REGhl at the graphic data for a regular guard
+                     ; (frame 4).
+ 26244 JR 26249      ;
+*26246 LD HL,32199   ; Point #REGhl at the graphic data for a regular guard
+                     ; (frame 0).
+*26249 LD A,(28090)  ; Pick up the guard's animation frame.
+ 26252 RLC A         ; {Point #REGde at the corresponding graphic data for the
+ 26254 RLC A         ; guard sprite, and restore the guard's location to
+ 26256 RLC A         ; #REGhl.
+ 26258 RLC A         ;
+ 26260 RLC A         ;
+ 26262 LD B,0        ;
+ 26264 LD C,A        ;
+ 26265 ADD HL,BC     ;
+ 26266 EX DE,HL      ; }
+*26267 CALL 27663    ; Set #REGhl' to the attribute file address of the guard's
+                     ; location.
+ 26270 LD C,59       ; This is the guard's attribute byte (INK 3: PAPER 7).
+ 26272 CALL 27606    ; Draw the guard.
+ 26275 RET           ;
+
+; Check whether Horace has run into a guard
+;
+; Used by the routine at #R24576.
+c26276 LD HL,(31853) ; Pick up Horace's new location.
+ 26279 CALL 27680    ; Check the attribute bytes at Horace's new location.
+ 26282 CP 59         ; Has Horace run into a guard?
+ 26284 RET NZ        ; Return if not.
+ 26285 LD HL,(28078) ; Pick up the guard panic timer.
+ 26288 LD A,H        ; {Are the guards panicking at the moment?
+ 26289 OR L          ; }
+ 26290 JP Z,26426    ; Jump if not.
+ 26293 LD HL,(31859) ; {Add 100 to the score (Horace has thrown the guards out
+ 26296 LD BC,100     ; of the park).
+ 26299 ADD HL,BC     ;
+ 26300 LD (31859),HL ; }
+ 26303 CALL 26055    ; Print the score.
+ 26306 LD HL,0       ; {Reset the guard panic timer.
+ 26309 LD (28078),HL ; }
+ 26312 LD HL,31849   ; Pick up the sound on/off indicator.
+ 26315 LD C,15       ; Initialise #REGc for the loop that follows.
+*26317 PUSH BC       ; Save the loop counter (unnecessarily).
+ 26318 LD A,C        ; {Set #REGb and #REGe equal to 8*(15-#REGc). This value
+ 26319 XOR 15        ; determines the pitch.
+ 26321 LD B,A        ;
+ 26322 SLA B         ;
+ 26324 SLA B         ;
+ 26326 SLA B         ;
+ 26328 LD E,B        ; }
+ 26329 LD D,8        ; This value determines the duration.
+*26331 LD B,E        ; {Produce a sound (if the sound on/off indicator is on)
+ 26332 LD A,31       ; with pitch and duration determined by #REGe and #REGd.
+ 26334 AND (HL)      ;
+ 26335 OUT (254),A   ;
+*26337 LD A,(IX+0)   ;
+ 26340 LD (IX+0),A   ;
+ 26343 DJNZ 26337    ;
+ 26345 LD A,7        ;
+ 26347 OUT (254),A   ;
+ 26349 LD B,E        ;
+*26350 LD A,(IX+0)   ;
+ 26353 LD (IX+0),A   ;
+ 26356 DJNZ 26350    ;
+ 26358 DEC D         ;
+ 26359 JR NZ,26331   ; }
+ 26361 POP BC        ; Restore the loop counter to #REGc (unnecessarily).
+ 26362 DEC C         ; Finished yet?
+ 26363 JR NZ,26317   ; Jump back if not.
+; Now we throw the guards out of the park.
+ 26365 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
+ 26368 LD B,4        ; There are four guards.
+*26370 PUSH BC       ; Save the guard counter.
+ 26371 LD A,(HL)     ; {Set the zero flag if this guard is already in play.
+ 26372 INC HL        ;
+ 26373 OR (HL)       ; }
+ 26374 PUSH HL       ; Save the guard countdown timer pointer.
+ 26375 JR NZ,26421   ; Jump if this guard has not appeared yet.
+ 26377 CALL 27199    ; Copy this guard's buffer into the temporary location
+                     ; (#R28088).
+ 26380 CALL 25960    ; Redraw the tiles behind the guard.
+ 26383 LD HL,(31853) ; Pick up Horace's new location.
+ 26386 CALL 27680    ; Check the attribute bytes at this location.
+ 26389 CP 59         ; Set the zero flag if there's a guard here.
+ 26391 LD HL,(28629) ; Pick up the entrance location for the current maze.
+ 26394 LD (28088),HL ; {Make this the guard's new location.
+ 26397 LD (28092),HL ; }
+ 26400 CALL 27752    ; Copy the maze background tiles into the temporary guard
+                     ; buffer.
+ 26403 LD A,1        ; {Initialise the guard's animation frame.
+ 26405 LD (28090),A  ; }
+ 26408 LD A,90       ; {Initialise the guard's return delay counter.
+ 26410 LD (28094),A  ; }
+ 26413 JR 26418      ;
+ 26415 CALL 26173    ; Draw the guard (this instruction is never executed).
+*26418 CALL 27242    ; Copy the guard's buffer back to the original location.
+*26421 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 26422 POP BC        ; Restore the guard counter to #REGb.
+ 26423 DJNZ 26370    ; Jump back to deal with the next guard.
+ 26425 RET           ;
+
+; Lose a life
+;
+; Used by the routine at #R26276.
+c26426 LD A,(31864)  ; {Decrement the number of lives.
+ 26429 DEC A         ;
+ 26430 LD (31864),A  ; }
+ 26433 XOR A         ; {Reset the tunnel timer.
+ 26434 LD (31865),A  ; }
+ 26437 LD (28094),A  ; Reset the current guard's return delay counter.
+ 26440 LD HL,16391   ; This is the display file address for the score.
+ 26443 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 26446 LD A,(31864)  ; Pick up the number of lives remaining.
+ 26449 ADD A,"0"     ; Convert it to the ASCII code of the digit.
+ 26451 EX DE,HL      ; Transfer the display file address to #REGde.
+ 26452 CALL 27471    ; Print the number of lives remaining.
+; The following loop produces the Horace-has-died colour-cycling effect.
+ 26455 LD B,45       ; Initialise the loop counter.
+*26457 PUSH BC       ; Save the loop counter.
+ 26458 LD A,(31857)  ; {Increment Horace's INK colour.
+ 26461 INC A         ;
+ 26462 AND 7         ;
+ 26464 OR 56         ;
+ 26466 LD (31857),A  ; }
+ 26469 PUSH AF       ; Save the attribute byte briefly.
+ 26470 CALL 26674    ; Draw Horace in this new colour.
+ 26473 LD HL,22528   ; This is the attribute file address for the 'P' of
+                     ; 'PASSES'.
+ 26476 LD B,9        ; #REGb will count the characters in 'PASSES n ' (where
+                     ; 'n' in the number of lives remaining).
+ 26478 POP AF        ; Restore the attribute byte to #REGa.
+*26479 LD (HL),A     ; {Change the INK colour of the number of remaining lives
+ 26480 INC HL        ; to match that of Horace.
+ 26481 DJNZ 26479    ; }
+ 26483 LD C,20       ; Initialise #REGc for the loop that follows.
+*26485 LD A,31       ; {Flip the speaker off if the sound on/off indicator is
+ 26487 LD HL,31849   ; on, or on otherwise.
+ 26490 AND (HL)      ;
+ 26491 OUT (254),A   ; }
+ 26493 CALL 27410    ; Generate a pseudo-random number in #REGa.
+ 26496 OR 64         ; Set bit 6 to make sure it's in the range 64-255.
+ 26498 LD B,A        ; {Use this value to produce a short delay.
+*26499 DJNZ 26499    ; }
+ 26501 LD A,7        ; {Flip the speaker on.
+ 26503 OUT (254),A   ; }
+ 26505 CALL 27410    ; {Generate another pseudo-random number in the range
+ 26508 OR 64         ; 64-255.}
+ 26510 LD B,A        ; {Use this value to produce a short delay.
+*26511 DJNZ 26511    ; }
+ 26513 DEC C         ; Finished yet?
+ 26514 JR NZ,26485   ; Jump back if not.
+ 26516 POP BC        ; Restore the loop counter to #REGb.
+ 26517 DJNZ 26457    ; Jump back for the next iteration.
+; Now that's done, reinitialise Horace and the guards.
+ 26519 LD A,56       ; {Reset the INK colour of the number of remaining lives
+ 26521 LD HL,22528   ; to black.
+ 26524 LD B,8        ;
+*26526 LD (HL),A     ;
+ 26527 INC HL        ;
+ 26528 DJNZ 26526    ; }
+ 26530 LD A,57       ; {Reset Horace's attribute byte (INK 1: PAPER 7).
+ 26532 LD (31857),A  ; }
+ 26535 LD HL,28076   ; Point #REGhl at the last of the four guard countdown
+                     ; timers.
+ 26538 LD B,1        ; #REGb will count four guards (1, 2, 3, 4).
+*26540 PUSH BC       ; Save the guard counter.
+ 26541 LD A,(HL)     ; {Set the zero flag if this guard is in play.
+ 26542 INC HL        ;
+ 26543 OR (HL)       ; }
+ 26544 DEC HL        ; {Point #REGhl at the next guard's countdown timer.
+ 26545 DEC HL        ;
+ 26546 DEC HL        ; }
+ 26547 PUSH HL       ; Save the guard countdown timer pointer.
+ 26548 JR NZ,26559   ; Jump if this guard is not in play yet.
+ 26550 CALL 27199    ; Copy the guard's buffer into the temporary location
+                     ; (#R28088).
+ 26553 CALL 25960    ; Redraw the maze background tiles at this guard's
+                     ; location.
+ 26556 CALL 27242    ; Copy the guard's buffer back to the original location.
+*26559 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 26560 POP BC        ; Restore the guard counter to #REGb.
+ 26561 INC B         ; Next guard.
+ 26562 LD A,B        ; Copy the guard counter to #REGa.
+ 26563 CP 5          ; Have we done all four guards yet?
+ 26565 JR NZ,26540   ; If not, jump back to do the next one.
+ 26567 LD HL,(31851) ; Pick up Horace's current location.
+ 26570 LD DE,32647   ; Point #REGde at the graphic data for the blank sprite.
+ 26573 CALL 27663    ; Set #REGhl' to the attribute file address corresponding
+                     ; to Horace's location.
+ 26576 LD C,62       ; This is the attribute byte for the blank sprite (INK 6:
+                     ; PAPER 7).
+ 26578 CALL 27606    ; Draw the blank sprite at Horace's location.
+ 26581 LD A,(31864)  ; Pick up the number of lives remaining.
+ 26584 AND A         ; Is it zero?
+ 26585 JR Z,26601    ; Jump if so.
+ 26587 POP HL        ; Drop the return address from the stack.
+ 26588 CALL 27170    ; Initialise the guard countdown timers.
+ 26591 LD A,(27403)  ; Pick up the game mode indicator.
+ 26594 AND A         ; Is it demo mode?
+ 26595 JP NZ,25002   ; Jump if not.
+ 26598 JP 24809      ; Otherwise move to the next maze.
+; Horace has just lost his last remaining life. This entry point is also used
+; by the routine at #R25167 when a key is pressed in demo mode.
+*26601 LD B,20       ; This loop will have 20 iterations.
+*26603 PUSH BC       ; Save the loop counter.
+ 26604 CALL 27255    ; Make a sound effect.
+ 26607 LD HL,22528   ; {Change the INK colour of the entire screen to #REGb mod
+ 26610 LD DE,22529   ; 8.
+ 26613 LD A,B        ;
+ 26614 AND 7         ;
+ 26616 ADD A,56      ;
+ 26618 LD (HL),A     ;
+ 26619 LD BC,767     ;
+ 26622 LDIR          ; }
+ 26624 POP BC        ; Restore the loop counter to #REGb.
+ 26625 DJNZ 26603    ; Jump back for the next iteration.
+ 26627 POP HL        ; Drop the return address from the stack.
+ 26628 LD A,(27403)  ; Pick up the game mode indicator.
+ 26631 AND A         ; Is it demo mode?
+ 26632 JP Z,24602    ; Return to the title screen if so.
+ 26635 LD HL,(31859) ; Pick up the current score.
+ 26638 LD BC,(31861) ; Pick up the high score.
+ 26642 XOR A         ; Clear the carry flag for subtraction.
+ 26643 SBC HL,BC     ; Do we have a new high score?
+ 26645 JP C,24602    ; Return to the title screen if not.
+ 26648 LD HL,(31859) ; Pick up the current score.
+ 26651 LD (31861),HL ; Make it the new high score.
+ 26654 JP 24602      ; Return to the title screen.
+
+; Draw Horace
+;
+; Used by the routines at #R24576 and #R26730.
+c26657 LD A,(31865)  ; Pick up the tunnel timer.
+ 26660 AND A         ; Is Horace in a tunnel at the moment?
+ 26661 JR Z,26674    ; Jump if not.
+ 26663 DEC A         ; {Decrement the tunnel timer.
+ 26664 LD (31865),A  ; }
+ 26667 LD HL,(31853) ; {Update Horace's current location.
+ 26670 LD (31851),HL ; }
+ 26673 RET           ;
+; This entry point is used by the routine at #R26426 to draw Horace during the
+; Horace-has-died colour-cycling effect.
+*26674 LD A,(31858)  ; {Increment Horace's walking animation timer.
+ 26677 INC A         ;
+ 26678 LD (31858),A  ; }
+ 26681 AND 16        ; Keep only bit 4.
+ 26683 CP 0          ; Is bit 4 set now? (This instruction is redundant.)
+ 26685 JR NZ,26692   ; Jump if so.
+ 26687 LD HL,32071   ; Point #REGhl at the graphic data for Horace's sprite
+                     ; (frame 4).
+ 26690 JR 26695      ;
+*26692 LD HL,31943   ; This is the base address of the graphic data for
+                     ; Horace's sprite (frame 0).
+*26695 LD A,(31856)  ; Pick up Horace's animation frame in #REGa.
+ 26698 RLC A         ; {Point #REGde at the graphic data for the corresponding
+ 26700 RLC A         ; sprite (#REGhl+32*#REGa).
+ 26702 RLC A         ;
+ 26704 RLC A         ;
+ 26706 RLC A         ;
+ 26708 LD B,0        ;
+ 26710 LD C,A        ;
+ 26711 ADD HL,BC     ;
+ 26712 EX DE,HL      ; }
+ 26713 LD HL,(31853) ; {Update Horace's current location.
+ 26716 LD (31851),HL ; }
+ 26719 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 26722 LD A,(31857)  ; {Pick up Horace's attribute byte and copy it to #REGc.
+ 26725 LD C,A        ; }
+ 26726 CALL 27606    ; Draw Horace.
+ 26729 RET           ;
+
+; Draw the bell and check whether Horace has sounded the alarm
+;
+; Used by the routine at #R24576.
+c26730 LD HL,(31851) ; Pick up Horace's current location.
+ 26733 LD BC,(31940) ; Pick up the location of the bell in the current maze.
+ 26737 LD A,B        ; {Has Horace already sounded the alarm?
+ 26738 OR C          ; }
+ 26739 RET Z         ; Return if so.
+ 26740 AND A         ; Clear the carry flag. (This instruction is redundant.)
+ 26741 SBC HL,BC     ; Subtract the bell's location from Horace's.
+ 26743 LD A,H        ; {Is Horace in exactly the same location as the bell?
+ 26744 OR L          ; }
+ 26745 JR Z,26814    ; Jump if so.
+ 26747 INC HL        ; {Is Horace one space to the left of the bell?
+ 26748 LD A,H        ;
+ 26749 OR L          ; }
+ 26750 JR Z,26814    ; Jump if so.
+ 26752 DEC HL        ; {Is Horace one space to the right of the bell?
+ 26753 DEC HL        ;
+ 26754 LD A,H        ;
+ 26755 OR L          ; }
+ 26756 JR Z,26814    ; Jump if so.
+ 26758 LD BC,33      ; {Is Horace one space above the bell?
+ 26761 ADD HL,BC     ;
+ 26762 LD A,H        ;
+ 26763 OR L          ; }
+ 26764 JR Z,26814    ; Jump if so.
+ 26766 XOR A         ; Clear the carry flag. (This instruction is redundant.)
+ 26767 LD BC,65      ; {Is Horace one space below the bell?
+ 26770 SBC HL,BC     ;
+ 26772 LD A,H        ;
+ 26773 OR L          ; }
+ 26774 JR Z,26814    ; Jump if so.
+; Horace has not sounded the alarm.
+ 26776 LD HL,(31940) ; Pick up the location of the bell in the current maze.
+ 26779 LD A,(31942)  ; {Increment the bell's animation frame counter.
+ 26782 INC A         ;
+ 26783 LD (31942),A  ; }
+ 26786 AND 56        ; Keep only bits 3, 4 and 5.
+ 26788 CP 31         ; Is the result 30 or less (i.e. bit 5 reset)?
+ 26790 JR C,26794    ; Jump if so.
+ 26792 XOR 56        ; Flip bits 3 and 4, and reset bit 5.
+*26794 RLCA          ; {#REGbc=4*#REGa.
+ 26795 RLCA          ;
+ 26796 LD C,A        ;
+ 26797 LD B,0        ; }
+ 26799 LD DE,32519   ; This is the base address of the graphic data for the
+                     ; bell.
+ 26802 EX DE,HL      ; {Point #REGde at the graphic data for the appropriate
+ 26803 ADD HL,BC     ; bell sprite.
+ 26804 EX DE,HL      ; }
+ 26805 CALL 27663    ; Set #REGhl' to the attribute file address of the bell's
+                     ; location.
+ 26808 LD C,58       ; This is the attribute byte (INK 2: PAPER 7).
+ 26810 CALL 27606    ; Draw the bell.
+ 26813 RET           ;
+; Horace has sounded the alarm.
+*26814 LD HL,0       ; {Clear the bell location to indicate that Horace has
+ 26817 LD (31940),HL ; sounded the alarm.}
+ 26820 LD DE,32647   ; Point #REGde at the graphic data for the blank sprite.
+ 26823 LD HL,(28625) ; Pick up the bell location for the current maze.
+ 26826 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 26829 LD C,62       ; This is the attribute byte (INK 6: PAPER 7).
+ 26831 CALL 27606    ; Draw the blank sprite where the bell was.
+ 26834 CALL 26657    ; Draw Horace.
+ 26837 LD HL,(31859) ; {Add 60 to the score.
+ 26840 LD BC,60      ;
+ 26843 ADD HL,BC     ;
+ 26844 LD (31859),HL ; }
+ 26847 CALL 26055    ; Print the new score and make a sound effect.
+ 26850 LD A,(31842)  ; Pick up the game speed parameter in #REGa.
+ 26853 LD L,0        ; {#REGhl=128*#REGa.
+ 26855 LD H,A        ;
+ 26856 SRA H         ;
+ 26858 RR L          ; }
+ 26860 LD (28078),HL ; Initialise the guard panic timer to this value.
+ 26863 LD A,(28090)  ; {Update the animation frame in the temporary guard
+ 26866 ADD A,2       ; buffer; these instructions are redundant and have no
+ 26868 AND 3         ; effect on any of the guards.
+ 26870 LD (28090),A  ; }
+ 26873 LD HL,(31859) ; {Add 150 to the score.
+ 26876 LD BC,150     ;
+ 26879 ADD HL,BC     ;
+ 26880 LD (31859),HL ; }
+ 26883 CALL 26055    ; Print the new score and make a sound effect.
+ 26886 RET           ;
+
+; Check whether a guard should drop his lunch
+;
+; Used by the routine at #R24576.
+c26887 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
+ 26890 LD B,4        ; There are four guards to consider.
+*26892 PUSH BC       ; Save the guard counter.
+ 26893 LD A,(HL)     ; {Set the zero flag if this guard is in play.
+ 26894 INC HL        ;
+ 26895 OR (HL)       ; }
+ 26896 INC HL        ; Point #REGhl at the next guard's countdown timer.
+ 26897 PUSH HL       ; Save the guard countdown timer pointer.
+ 26898 JR NZ,26909   ; Jump if this guard is not in play yet.
+ 26900 CALL 27199    ; Copy the guard's buffer into the temporary location
+                     ; (#R28088).
+ 26903 CALL 26914    ; Make the guard drop his lunch if necessary.
+ 26906 CALL 27242    ; Copy the guard's buffer back to the original location.
+*26909 POP HL        ; Restore the guard countdown timer pointer to #REGhl.
+ 26910 POP BC        ; Restore the guard counter to #REGb.
+ 26911 DJNZ 26892    ; Jump back to handle the next guard.
+ 26913 RET           ;
+
+; Make a guard drop his lunch if necessary
+;
+; Used by the routine at #R26887.
+c26914 LD A,(28094)  ; Pick up the guard's return delay counter.
+ 26917 AND A         ; Has this guard been thrown out of the park?
+ 26918 RET NZ        ; Return if so.
+ 26919 LD E,4        ; There are four maze background tiles to consider.
+ 26921 LD HL,28095   ; Point #REGhl at the first maze background tile in the
+                     ; temporary guard buffer.
+*26924 LD A,(HL)     ; Pick up the attribute byte of this maze background tile.
+ 26925 CP 58         ; Is there already a cherry or strawberry here?
+ 26927 RET Z         ; Return if so.
+ 26928 LD BC,9       ; {Point #REGhl at the next maze background tile.
+ 26931 ADD HL,BC     ; }
+ 26932 DEC E         ; Have we checked all four tiles yet?
+ 26933 JR NZ,26924   ; Jump back if not.
+ 26935 LD HL,(31845) ; {Decrement the lunch-drop countdown timer.
+ 26938 DEC HL        ;
+ 26939 LD (31845),HL ; }
+ 26942 LD A,H        ; {Is it zero now?
+ 26943 OR L          ; }
+ 26944 RET NZ        ; Return if not.
+ 26945 CALL 27410    ; Generate a pseudo-random number in #REGa.
+ 26948 LD L,A        ; Copy it to #REGl.
+ 26949 PUSH HL       ; Save #REGl briefly.
+ 26950 CALL 27410    ; Generate another pseudo-random number in #REGa.
+ 26953 POP HL        ; Restore #REGl.
+ 26954 AND 3         ; {Reduce #REGa to 0, 1, 2 or 3 and copy it to #REGh.
+ 26956 LD H,A        ; }
+ 26957 LD BC,800     ; {Add 800 and reset the lunch-drop countdown timer to
+ 26960 ADD HL,BC     ; this value.
+ 26961 LD (31845),HL ; }
+ 26964 CALL 27410    ; Generate yet another pseudo-random number in #REGa.
+ 26967 AND 1         ; Is bit 0 set?
+ 26969 JR NZ,26976   ; Jump if so.
+ 26971 LD HL,31868   ; Point #REGhl at the sprite data for the cherry.
+ 26974 JR 26979      ;
+*26976 LD HL,31904   ; Point #REGhl at the sprite data for the strawberry.
+*26979 LD DE,28095   ; {Copy the cherry/strawberry sprite into the maze
+ 26982 LD BC,36      ; background tiles in the temporary guard buffer.
+ 26985 LDIR          ; }
+ 26987 RET           ;
+
+; Decrement the guard countdown timers
+;
+; Used by the routine at #R24576.
+c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
+ 26991 LD B,4        ; There are four guards to consider.
+*26993 LD E,(HL)     ; {Pick up the countdown timer value in #REGde.
+ 26994 INC HL        ;
+ 26995 LD D,(HL)     ; }
+ 26996 DEC HL        ;
+ 26997 LD A,D        ; {Is the value zero?
+ 26998 OR E          ; }
+ 26999 JR Z,27017    ; Jump if so (this guard is already in play).
+ 27001 DEC DE        ; {Decrement the countdown timer.
+ 27002 LD (HL),E     ;
+ 27003 INC HL        ;
+ 27004 LD (HL),D     ; }
+ 27005 DEC HL        ;
+ 27006 LD A,D        ;
+ 27007 OR C          ; This should be 'OR E'.
+ 27008 JR NZ,27017   ; Jump unless #REGa is now zero.
+ 27010 LD A,(27402)  ; {Increment the active guard counter.
+ 27013 INC A         ;
+ 27014 LD (27402),A  ; }
+*27017 INC HL        ; {Point #REGhl at the next guard's countdown timer.
+ 27018 INC HL        ; }
+ 27019 DJNZ 26993    ; Jump back to consider the next guard.
+ 27021 RET           ;
+
+; Toggle the sound on/off if 'T' is pressed
+;
+; Used by the routine at #R24576.
+c27022 LD A,251      ; {Read keys Q-W-E-R-T.
+ 27024 IN A,(254)    ; }
+ 27026 AND 16        ; Keep only bit 4 (corresponding to 'T').
+ 27028 LD HL,31850   ; Pick up the last recorded 'T' pressed indicator.
+ 27031 CP (HL)       ; Does the current value match?
+ 27032 RET Z         ; Return if so.
+ 27033 LD (HL),A     ; Save the current 'T' pressed indicator.
+ 27034 AND A         ; Is 'T' being pressed?
+ 27035 RET NZ        ; Return if not.
+ 27036 LD HL,31849   ; {Toggle the sound on/off indicator by flipping bits 3
+ 27039 LD A,(HL)     ; and 4.
+ 27040 XOR 24        ;
+ 27042 LD (HL),A     ; }
+ 27043 RET           ;
+
+; Ring the bell if necessary
+;
+; Used by the routine at #R24576.
+c27044 LD HL,(31940) ; Pick up the bell's location in the current maze.
+ 27047 LD A,H        ; {Has Horace already sounded the alarm?
+ 27048 OR L          ; }
+ 27049 JR NZ,27088   ; Jump if not.
+; Horace has already sounded the alarm. Produce an appropriate delay in place
+; of the bell sound.
+*27051 LD A,(31842)  ; Pick up the game speed parameter in #REGa.
+ 27054 LD E,A        ; {#REGhl=350+30*#REGa.
+ 27055 LD HL,350     ;
+*27058 LD BC,30      ;
+ 27061 ADD HL,BC     ;
+ 27062 DEC E         ;
+ 27063 JR NZ,27058   ; }
+ 27065 XOR A         ; Clear #REGa for no apparent reason.
+ 27066 LD A,(27402)  ; Pick up the active guard counter (0-3) in #REGa.
+ 27069 RLA           ; {Subtract 128*#REGa from #REGhl.
+ 27070 RLA           ;
+ 27071 RLA           ;
+ 27072 RLA           ;
+ 27073 RLA           ;
+ 27074 RLA           ;
+ 27075 LD B,0        ;
+ 27077 LD C,A        ;
+ 27078 SBC HL,BC     ;
+ 27080 SBC HL,BC     ; }
+ 27082 PUSH HL       ; {Copy #REGhl to #REGbc.
+ 27083 POP BC        ; }
+ 27084 CALL 27404    ; Wait for 26*#REGbc+5 T states.
+ 27087 RET           ;
+; Horace has not sounded the alarm yet. Produce an appropriate bell sound if
+; necessary.
+*27088 LD A,(31942)  ; Pick up the bell animation frame counter.
+ 27091 AND 63        ; Keep only bits 0-5.
+ 27093 CP 0          ; Is the frame counter a multiple of 64 at the moment?
+                     ; (This instruction is redundant.)
+ 27095 JR NZ,27126   ; Jump if not.
+ 27097 LD HL,31849   ; {Pick up the sound on/off indicator in #REGa.
+ 27100 LD A,(HL)     ; }
+ 27101 CP 31         ; Is the sound on?
+ 27103 JR NZ,27051   ; Jump if not.
+ 27105 LD DE,22      ; {Call the ROM to make a short sound effect.
+ 27108 LD HL,403     ;
+ 27111 CALL 949      ; }
+ 27114 DI            ; Disable interrupts after the ROM call.
+ 27115 LD DE,26      ; {Call the ROM again to make another short sound effect.
+ 27118 LD HL,360     ;
+ 27121 CALL 949      ; }
+ 27124 DI            ; Disable interrupts after the ROM call.
+ 27125 RET           ;
+*27126 CP 32         ; Is the bell animation frame counter a multiple of 32 at
+                     ; the moment?
+ 27128 JR NZ,27051   ; Jump if not.
+ 27130 LD HL,31849   ; {Pick up the sound on/off indicator in #REGa.
+ 27133 LD A,(HL)     ; }
+ 27134 CP 31         ; Is the sound on?
+ 27136 JR NZ,27051   ; Jump if not.
+ 27138 LD DE,26      ; {Call the ROM to make a short sound effect.
+ 27141 LD HL,360     ;
+ 27144 CALL 949      ; }
+ 27147 DI            ; Disable interrupts after the ROM call.
+ 27148 LD DE,22      ; {Call the ROM again to make another short sound effect.
+ 27151 LD HL,403     ;
+ 27154 CALL 949      ; }
+ 27157 DI            ; Disable interrupts after the ROM call.
+ 27158 RET           ;
+
+; Unused
+u27159 LD A,(IX+0)
+ 27162 LD A,(IX+0)
+ 27165 RET
+
+; Enter the next maze
+;
+; Used by the routine at #R25399 when Horace is leaving the current maze.
+c27166 POP HL        ; Drop the return address from the stack.
+ 27167 JP 24809      ; Prepare the next maze.
+
+; Initialise the guard countdown timers
+;
+; Used by the routines at #R24576 and #R26426.
+c27170 LD A,0        ; {Reset the active guard counter.
+ 27172 LD (27402),A  ; }
+ 27175 LD HL,0       ; {Initialise the first guard countdown timer to zero.
+ 27178 LD (28070),HL ; }
+ 27181 LD A,(31842)  ; Pick up the game speed parameter (1-8) in #REGa.
+ 27184 LD H,A        ; #REGhl=256*#REGa.
+ 27185 LD (28072),HL ; Initialise the second guard countdown timer.
+ 27188 SLA H         ; Double #REGhl.
+ 27190 LD (28074),HL ; Initialise the third guard countdown timer.
+ 27193 SLA H         ; Double #REGhl again.
+ 27195 LD (28076),HL ; Initialise the fourth guard countdown timer.
+ 27198 RET           ;
+
+; Copy a guard buffer into the temporary location
+;
+; Used by the routines at #R24576, #R25399, #R25886, #R26146, #R26276, #R26426
+; and #R26887.
+;
+; B Guard number (1-4)
+c27199 LD A,B        ; Copy the guard number (1, 2, 3, 4) to #REGa.
+ 27200 CP 4          ; Are we dealing with guard 4?
+ 27202 JR NZ,27209   ; Jump if not.
+ 27204 LD HL,28131   ; Point #REGhl at the buffer for guard 4.
+ 27207 JR 27230      ;
+*27209 CP 3          ; Are we dealing with guard 3?
+ 27211 JR NZ,27218   ; Jump if not.
+ 27213 LD HL,28174   ; Point #REGhl at the buffer for guard 3.
+ 27216 JR 27230      ;
+*27218 CP 2          ; Are we dealing with guard 2?
+ 27220 JR NZ,27227   ; Jump if not.
+ 27222 LD HL,28217   ; Point #REGhl at the buffer for guard 2.
+ 27225 JR 27230      ;
+*27227 LD HL,28260   ; Point #REGhl at the buffer for guard 1.
+*27230 LD (28086),HL ; Save the address of the guard's buffer for later
+                     ; retrieval.
+ 27233 LD DE,28088   ; {Copy the guard's buffer into the temporary location
+ 27236 LD BC,43      ; (#R28088).
+ 27239 LDIR          ; }
+ 27241 RET           ;
+
+; Copy the temporary guard buffer back into place
+;
+; Used by the routines at #R24576, #R25399, #R25886, #R26146, #R26276, #R26426
+; and #R26887.
+c27242 LD HL,(28086) ; Retrieve the address of the guard's buffer.
+ 27245 LD DE,28088   ; Point #REGde at the temporary guard buffer.
+ 27248 EX DE,HL      ; Switch pointers.
+ 27249 LD BC,43      ; {Copy the temporary guard buffer back into place.
+ 27252 LDIR          ; }
+ 27254 RET           ;
+
+; Make the title screen or game over sound effect
+;
+; Used by the routines at #R24576 (on the title screen) and #R26426 (when a
+; game is over).
+c27255 LD HL,31849   ; Pick up the sound on/off indicator.
+ 27258 LD C,16       ; Initialise #REGc for the loop that follows.
+*27260 PUSH BC       ; Save the loop counter (unnecessarily).
+ 27261 LD B,C        ; {Set #REGb and #REGd equal to 8*#REGc. This value
+ 27262 SLA B         ; determines the pitch.
+ 27264 SLA B         ;
+ 27266 SLA B         ;
+ 27268 LD D,B        ; }
+ 27269 LD E,10       ; This value determines the duration.
+*27271 LD B,D        ; {Produce a sound (if the sound on/off indicator is on)
+ 27272 LD A,31       ; with pitch and duration determined by #REGd and #REGe.
+ 27274 AND (HL)      ;
+ 27275 OUT (254),A   ;
+*27277 DJNZ 27277    ;
+ 27279 LD A,7        ;
+ 27281 OUT (254),A   ;
+ 27283 LD B,D        ;
+*27284 DJNZ 27284    ;
+ 27286 DEC E         ;
+ 27287 JR NZ,27271   ; }
+ 27289 POP BC        ; Restore the loop counter to #REGc (unnecessarily).
+ 27290 DEC C         ; Finished yet?
+ 27291 JR NZ,27260   ; Jump back if not.
+ 27293 RET           ;
+
+; Get the tunnel offset and bell, initial guard and entrance locations for the
+; current maze
+;
+; Used by the routine at #R24576.
+;
+; HL #R28631, #R28639, #R28647 or #R28655
+c27294 LD DE,28623   ; {Copy the tunnel offset and bell, initial guard and
+ 27297 LD BC,8       ; entrance locations for the current maze to #R28623.
+ 27300 LDIR          ; }
+ 27302 RET           ;
+
+; Copyright #CHR169 1982 Beam Software...
+;
+; Used by the routine at #R24576.
+t27303 DEFM " Copyright "
+ 27314 DEFB 127                               ; #CHR169
+ 27315 DEFM " 1982 Beam Software "
+ 27335 DEFM "  PRESS ANY KEY TO START PLAY  "
+ 27366 DEFB 255                               ; End marker.
+
+; DEMO MODE#SPACE(2)PRESS ANY KEY TO PLAY
+;
+; Used by the routine at #R24576.
+t27367 DEFM "DEMO MODE  PRESS ANY KEY TO PLAY"
+ 27399 DEFB 255                                ; End marker.
+
+; Title screen countdown timer
+;
+; Used by the routine at #R24576. Decremented until it reaches zero, after
+; which demo mode begins.
+g27400 DEFW 0
+
+; Active guard counter
+;
+; Initialised by the routine at #R24576, and used by the routines at #R26988,
+; #R27044 and #R27170. Holds the number of active guards minus one.
+g27402 DEFB 0
+
+; Game mode indicator
+;
+; Used by the routines at #R24576, #R25167, #R26426 and #R27464. Holds 0 in
+; demo mode, or 1 in game mode.
+g27403 DEFB 0
+
+; Wait for 26*#REGbc+5 T states
+;
+; Used by the routine at #R27044 to produce a delay in place of a bell sound.
+;
+; BC Delay parameter
+c27404 DEC BC        ; Decrement the delay counter.
+ 27405 LD A,B        ; {Is it zero yet?
+ 27406 OR C          ; }
+ 27407 JR NZ,27404   ; Jump back if not.
+ 27409 RET           ;
+
+; Collect a pseudo-random number (from the ROM)
+;
+; Used by the routines at #R25167, #R26426 and #R26914.
+;
+; O:A Pseudo-random number
+c27410 LD HL,(31847) ; Pick up the address of the next pseudo-random number.
+ 27413 LD A,(HL)     ; Copy the number to #REGa.
+ 27414 PUSH AF       ; Save the number briefly.
+ 27415 INC HL        ; {Increment the address, rolling over from 8191 to 0.
+ 27416 LD A,H        ;
+ 27417 AND 31        ;
+ 27419 LD H,A        ; }
+ 27420 LD (31847),HL ; Save the new address.
+ 27423 POP AF        ; Restore the pseudo-random number to #REGa.
+ 27424 RET           ;
+
+; Print the score or high score
+;
+; Used by the routines at #R24576 and #R26017.
+;
+; DE Display file address
+; HL Score or high score
+c27425 EX DE,HL      ; Switch the display file address to #REGhl.
+ 27426 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (unnecessarily).
+ 27429 EX DE,HL      ; Switch the display file address back to #REGde, and the
+                     ; score or high score to #REGhl.
+ 27430 LD A,"0"      ; Initialise #REGa.
+ 27432 AND A         ; Clear the carry flag, ready for trial subtraction.
+ 27433 LD BC,10000   ; {Compute and print the 10,000s digit.
+ 27436 CALL 27464    ; }
+ 27439 LD BC,1000    ; {Compute and print the 1,000s digit.
+ 27442 CALL 27464    ; }
+ 27445 LD BC,100     ; {Compute and print the 100s digit.
+ 27448 CALL 27464    ; }
+ 27451 LD BC,10      ; {Compute and print the 10s digit.
+ 27454 CALL 27464    ; }
+ 27457 LD A,L        ; {Compute the ASCII code for the 1s digit.
+ 27458 ADD A,"0"     ; }
+ 27460 CALL 27471    ; Print it.
+ 27463 RET           ;
+
+; Compute and print a digit
+;
+; Used by the routine at #R27425.
+;
+;   A 48 (ASCII code for '0')
+;   BC 10000, 1000, 100 or 10
+;   DE Display file address
+;   HL Number being printed
+;   F Carry flag reset
+; O:A 48 (ASCII code for '0')
+; O:F Carry flag reset
+c27464 INC A         ; {Compute in #REGa the ASCII code for the digit.
+ 27465 SBC HL,BC     ;
+ 27467 JR NC,27464   ;
+ 27469 ADD HL,BC     ;
+ 27470 DEC A         ; }
+; This entry point is used by the routines at #R24576, #R26017, #R26426 and
+; #R27425 with #REGa holding the ASCII code of the character to print.
+*27471 PUSH BC       ; Save #REGbc.
+ 27472 PUSH AF       ; Save the character code briefly.
+ 27473 LD A,(27403)  ; Pick up the game mode indicator.
+ 27476 LD B,A        ; Copy it to #REGb.
+ 27477 POP AF        ; Restore the character code to #REGa.
+ 27478 BIT 0,B       ; Set the zero flag if it's demo mode.
+ 27480 POP BC        ; Restore #REGbc.
+ 27481 RET Z         ; Return if it's demo mode.
+ 27482 EX DE,HL      ; Swap #REGde and #REGhl for no apparent reason.
+ 27483 PUSH BC       ; Save #REGbc.
+ 27484 PUSH DE       ; Save #REGde.
+ 27485 EX DE,HL      ; Swap #REGde and #REGhl back again.
+ 27486 LD H,0        ; {Compute in #REGhl the address of the graphic data for
+ 27488 LD L,A        ; the character in the ROM.
+ 27489 ADD HL,HL     ;
+ 27490 ADD HL,HL     ;
+ 27491 ADD HL,HL     ;
+ 27492 LD BC,15360   ;
+ 27495 ADD HL,BC     ; }
+ 27496 EX DE,HL      ; Point #REGde at the character's graphic data, and set
+                     ; #REGhl to the display file address.
+ 27497 LD C,56       ; This is the attribute byte for the character (INK 0:
+                     ; PAPER 7).
+ 27499 CALL 27642    ; Print the character.
+ 27502 POP DE        ; Restore #REGde.
+ 27503 POP BC        ; Restore #REGbc.
+ 27504 EX DE,HL      ; Point #REGde back at the display file, and restore the
+                     ; original value of #REGhl.
+ 27505 LD A,"0"      ; Reset #REGa to the ASCII code for '0'.
+ 27507 AND A         ; Clear the carry flag. (This instruction is redundant.)
+ 27508 RET           ;
+
+; Draw the current maze
+;
+; Used by the routine at #R24576.
+;
+; BC 768
+; DE 16384
+; HL Address of the maze layout data (#R28663, #R29431, #R30199 or #R30967)
+c27509 PUSH BC       ; Save the tile counter.
+ 27510 PUSH HL       ; Save the maze layout data address.
+ 27511 EX DE,HL      ; Transfer the display file address to #REGhl.
+ 27512 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
+                     ; (always #N22528).
+ 27515 EX DE,HL      ; Transfer the display file address back to #REGde.
+ 27516 EXX           ; Exchange registers.
+ 27517 POP DE        ; Restore the maze layout data address to #REGde'.
+ 27518 POP BC        ; Restore the tile counter to #REGbc'.
+*27519 LD A,(DE)     ; Pick up a tile identifier.
+ 27520 INC DE        ; Point #REGde' at the next tile identifier.
+ 27521 CP 0          ; Is the current tile blank?
+ 27523 JR Z,27549    ; Jump if so.
+ 27525 CP 2          ; Is the current tile a flower?
+ 27527 JR Z,27553    ; Jump if so.
+ 27529 CP 3          ; Is the current tile an arrow (entrance or exit)?
+ 27531 JR Z,27541    ; Jump if so.
+ 27533 CP 9          ; Is the current tile a tunnel entrance?
+ 27535 JR Z,27545    ; Jump if so.
+ 27537 LD A,61       ; Wall tile (INK 5).
+ 27539 JR 27555      ;
+*27541 LD A,56       ; Arrow tile (INK 0).
+ 27543 JR 27555      ;
+*27545 LD A,63       ; Tunnel entrance (INK 7).
+ 27547 JR 27555      ;
+*27549 LD A,62       ; Blank tile (INK 6).
+ 27551 JR 27555      ;
+*27553 LD A,60       ; Flower (INK 4).
+*27555 LD (HL),A     ; Set the attribute byte.
+ 27556 INC HL        ; Move #REGhl' along the attribute file.
+ 27557 DEC BC        ; Decrement the tile counter.
+ 27558 LD A,B        ; {Have we finished setting the attribute bytes yet?
+ 27559 OR C          ; }
+ 27560 JR NZ,27519   ; Jump back if not.
+ 27562 EXX           ; Exchange registers.
+; The attribute bytes have been set. Time to draw the maze tiles.
+*27563 PUSH HL       ; Save the maze layout pointer.
+ 27564 LD A,(HL)     ; Pick up a tile identifier in #REGa.
+ 27565 LD H,0        ; {Point #REGix at the graphic data for the corresponding
+ 27567 LD L,A        ; tile (at #R31735+8*#REGa).
+ 27568 ADD HL,HL     ;
+ 27569 ADD HL,HL     ;
+ 27570 ADD HL,HL     ;
+ 27571 LD IX,31735   ;
+ 27575 EX DE,HL      ;
+ 27576 ADD IX,DE     ;
+ 27578 EX DE,HL      ; }
+ 27579 LD L,8        ; {Draw the tile.
+*27581 LD A,(IX+0)   ;
+ 27584 LD (DE),A     ;
+ 27585 INC D         ;
+ 27586 INC IX        ;
+ 27588 DEC L         ;
+ 27589 JR NZ,27581   ; }
+ 27591 INC E         ; {Point #REGde at the display file address for the next
+ 27592 JR Z,27598    ; tile.
+ 27594 LD A,D        ;
+ 27595 SUB 8         ;
+ 27597 LD D,A        ; }
+*27598 POP HL        ; Restore the maze layout pointer to #REGhl.
+ 27599 INC HL        ; Move along to the next maze tile identifier.
+ 27600 DEC BC        ; Decrement the tile counter.
+ 27601 LD A,B        ; {Have we drawn all the tiles yet?
+ 27602 OR C          ; }
+ 27603 JR NZ,27563   ; Jump back if not.
+ 27605 RET           ;
+
+; Draw a sprite
+;
+; Used by the routines at #R25886, #R26173, #R26426, #R26657 and #R26730.
+;
+; C Attribute byte
+; DE Address of the sprite graphic data
+; HL Sprite location
+; HL' Attribute file address for the sprite location
+c27606 EX AF,AF'     ; {Copy the attribute byte to #REGa'.
+ 27607 LD A,C        ;
+ 27608 EX AF,AF'     ; }
+ 27609 LD BC,16384   ; {Set #REGhl to the appropriate display file address.
+ 27612 ADD HL,BC     ; }
+ 27613 EX AF,AF'     ; {Copy the attribute byte from #REGa' back to #REGc.
+ 27614 LD C,A        ;
+ 27615 EX AF,AF'     ; }
+ 27616 CALL 27642    ; Draw the top-left tile.
+ 27619 CALL 27642    ; Draw the top-right tile.
+ 27622 LD A,L        ; {Set #REGhl to the display file address for the
+ 27623 ADD A,30      ; bottom-left tile.
+ 27625 LD L,A        ;
+ 27626 JR NC,27632   ;
+ 27628 LD A,H        ;
+ 27629 ADD A,8       ;
+ 27631 LD H,A        ; }
+*27632 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 27635 CALL 27642    ; Draw the bottom-left tile.
+ 27638 CALL 27642    ; Draw the bottom-right tile.
+ 27641 RET           ;
+
+; Print a tile or font character
+;
+; Used by the routines at #R25947, #R27464 and #R27606.
+;
+; C Attribute byte
+; DE Address of the sprite tile or font character graphic data
+; HL Display file address
+; HL' Attribute file address
+; O:HL Display file address for the next tile to the right
+; O:HL' Attribute file address for the next tile to the right
+c27642 LD A,C        ; Copy the attribute byte to #REGa.
+ 27643 EXX           ; Exchange registers.
+ 27644 LD (HL),A     ; Set the attribute byte.
+ 27645 INC HL        ; Point #REGhl' at the next attribute byte.
+ 27646 EXX           ; Exchange registers.
+ 27647 LD B,8        ; {Copy the 8 graphic bytes of the tile to the screen.
+*27649 LD A,(DE)     ;
+ 27650 LD (HL),A     ;
+ 27651 INC H         ;
+ 27652 INC DE        ;
+ 27653 DJNZ 27649    ; }
+ 27655 INC L         ; {Set #REGhl to the display file address for the next
+ 27656 RET Z         ; tile to the right.
+ 27657 LD B,8        ;
+ 27659 LD A,H        ;
+ 27660 SUB B         ;
+ 27661 LD H,A        ; }
+ 27662 RET           ;
+
+; Convert a sprite location or display file address into an attribute file
+; address
+;
+; Used by the routines at #R24576, #R25886, #R25947, #R26017, #R26173, #R26426,
+; #R26657, #R26730, #R27425, #R27509, #R27606, #R27680, #R27752 and #R27842.
+;
+;   HL Sprite location or display file address
+; O:HL' Attribute file address
+c27663 PUSH HL       ; Push the address/location onto the stack.
+ 27664 EXX           ; Exchange registers.
+ 27665 POP HL        ; Drop the address/location off the stack into #REGhl'.
+ 27666 LD A,H        ; {Set #REGhl' to the corresponding attribute file
+ 27667 AND 24        ; address.
+ 27669 SRA A         ;
+ 27671 SRA A         ;
+ 27673 SRA A         ;
+ 27675 ADD A,88      ;
+ 27677 LD H,A        ; }
+ 27678 EXX           ; Exchange registers.
+ 27679 RET           ;
+
+; Check the attribute bytes at a sprite's location
+;
+; Used by the routines at #R26017 and #R26276.
+;
+;   HL Sprite location
+; O:A 58 (cherry/strawberry), 59 (guard), 60 (flower), or 0 (none of these)
+; O:F Zero flag set if #REGa is 0 (nothing found)
+c27680 PUSH BC       ; Save #REGbc.
+ 27681 PUSH DE       ; Save #REGde.
+ 27682 PUSH HL       ; Save the sprite location.
+ 27683 LD BC,16384   ; {Convert the sprite location into a display file
+ 27686 ADD HL,BC     ; address.}
+ 27687 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 27690 EXX           ; Exchange registers.
+ 27691 LD E,0        ; #REGe' will hold the attribute of any interesting tile
+                     ; at this location; initialise it now.
+ 27693 CALL 27718    ; Check the attribute of the top-left tile.
+ 27696 INC HL        ; Point #REGhl' at the top-right tile.
+ 27697 CALL 27718    ; Check the attribute of the top-right tile.
+ 27700 LD BC,31      ; {Point #REGhl' at the bottom-left tile.
+ 27703 ADD HL,BC     ; }
+ 27704 CALL 27718    ; Check the attribute of the bottom-left tile.
+ 27707 INC HL        ; Point #REGhl' at the bottom-right tile.
+ 27708 CALL 27718    ; Check the attribute of the bottom-right tile.
+ 27711 LD A,E        ; Copy the tile attribute indicator to #REGa.
+ 27712 EXX           ; Exchange registers.
+ 27713 POP HL        ; Restore the sprite location to #REGhl.
+ 27714 POP DE        ; Restore #REGde.
+ 27715 POP BC        ; Restore #REGbc.
+ 27716 AND A         ; Set the zero flag if no interesting tile (guard, flower,
+                     ; cherry, strawberry) was found.
+ 27717 RET           ;
+
+; Check the attribute byte at a sprite tile location
+;
+; Used by the routine at #R27680.
+;
+;   E 0, or attribute value from previous call
+;   HL Attribute file address
+; O:E 58 (cherry/strawberry), 59 (guard), 60 (flower), or 0 (none of these)
+c27718 LD A,(HL)     ; Pick up the attribute byte.
+ 27719 CP 59         ; Is it magenta?
+ 27721 JR Z,27733    ; Jump if so (there is a guard here).
+ 27723 CP 58         ; Is it red?
+ 27725 JR Z,27736    ; Jump if so (there is a cherry or strawberry here).
+ 27727 CP 60         ; Is it green?
+ 27729 JR Z,27745    ; Jump if so (there is a flower here).
+ 27731 JR 27751      ;
+*27733 LD E,A        ; #REGe=59 (guard).
+ 27734 JR 27751      ;
+*27736 LD D,A        ; #REGd=58 (cherry or strawberry).
+ 27737 LD A,E        ; {Have we already detected a guard at the sprite's
+ 27738 CP 59         ; location?}
+ 27740 JR Z,27751    ; Jump if so (it doesn't matter that there's also a cherry
+                     ; or strawberry here).
+ 27742 LD E,D        ; #REGe=58 (cherry or strawberry).
+ 27743 JR 27751      ;
+*27745 LD D,A        ; #REGd=60 (flower).
+ 27746 LD A,E        ; {Have we already detected a guard, cherry, strawberry or
+ 27747 AND A         ; flower at the sprite's location?}
+ 27748 JR NZ,27751   ; Jump if so.
+ 27750 LD E,D        ; #REGe=60 (flower).
+*27751 RET           ;
+
+; Copy maze background tiles into a guard's buffer
+;
+; Used by the routines at #R25947 and #R26276.
+;
+; HL Guard's location
+c27752 PUSH BC       ; Save #REGbc.
+ 27753 PUSH DE       ; Save #REGde.
+ 27754 PUSH HL       ; Save the guard's location.
+ 27755 LD BC,16384   ; {Convert the guard's location into a display file
+ 27758 ADD HL,BC     ; address.}
+ 27759 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 27762 LD DE,28095   ; Point #REGde at the first of the maze background tiles
+                     ; in the temporary guard buffer.
+ 27765 CALL 27797    ; Copy the top-left maze background tile into the
+                     ; temporary guard buffer.
+ 27768 CALL 27797    ; Copy the top-right maze background tile into the
+                     ; temporary guard buffer.
+ 27771 EXX           ; Exchange registers.
+ 27772 LD BC,30      ; {Point #REGhl' at the bottom-left tile's attribute
+ 27775 ADD HL,BC     ; byte.}
+ 27776 EXX           ; Exchange registers.
+ 27777 LD A,L        ; {Point #REGhl at the bottom-left tile in the display
+ 27778 ADD A,30      ; file.
+ 27780 LD L,A        ;
+ 27781 JR NC,27787   ;
+ 27783 LD A,H        ;
+ 27784 ADD A,8       ;
+ 27786 LD H,A        ; }
+*27787 CALL 27797    ; Copy the bottom-left maze background tile into the
+                     ; temporary guard buffer.
+ 27790 CALL 27797    ; Copy the bottom-right maze background tile into the
+                     ; temporary guard buffer.
+ 27793 POP DE        ; Restore the guard's location to #REGde.
+ 27794 POP HL        ; Restore the value in #REGde on entry to #REGhl.
+ 27795 POP BC        ; Restore #REGbc.
+ 27796 RET           ;
+
+; Copy a maze background tile into a guard's buffer
+;
+; Used by the routine at #R27752.
+;
+; DE Address of the tile in the guard's buffer
+; HL Display file address of the maze background tile
+; HL' Attribute file address of the maze background tile
+c27797 EXX           ; Exchange registers.
+ 27798 LD A,(HL)     ; Pick up the attribute byte of the maze background tile.
+ 27799 INC HL        ; Point #REGhl' at the attribute byte of the next tile to
+                     ; the right.
+ 27800 EXX           ; Exchange registers.
+ 27801 CP 59         ; Is there a magenta (guard sprite) tile here?
+ 27803 JR Z,27823    ; Jump if so.
+ 27805 LD (DE),A     ; Copy the maze background tile attribute byte into the
+                     ; temporary guard buffer.
+ 27806 INC DE        ; Point #REGde at the first graphic byte of the tile in
+                     ; the temporary guard buffer.
+ 27807 LD B,8        ; {Copy the maze background tile's graphic bytes into the
+*27809 LD A,(HL)     ; temporary guard buffer.
+ 27810 LD (DE),A     ;
+ 27811 INC DE        ;
+ 27812 INC H         ;
+ 27813 DJNZ 27809    ; }
+ 27815 INC L         ; {Point #REGhl at the first graphic byte of the next maze
+ 27816 JR Z,27822    ; background tile to the right.
+ 27818 LD A,H        ;
+ 27819 SUB 8         ;
+ 27821 LD H,A        ; }
+*27822 RET           ;
+; There is a guard sprite tile at this location.
+*27823 LD A,62       ; {Set the background tile attribute byte (INK 6: PAPER
+ 27825 LD (DE),A     ; 7).}
+ 27826 INC DE        ; Point #REGde at the first graphic byte of the tile in
+                     ; the temporary guard buffer.
+ 27827 LD B,8        ; {Clear out the background tile in the temporary guard
+ 27829 LD A,0        ; buffer.
+*27831 LD (DE),A     ;
+ 27832 INC DE        ;
+ 27833 DJNZ 27831    ; }
+ 27835 INC L         ; {Point #REGhl at the first graphic byte of the next maze
+ 27836 RET NZ        ; background tile to the right.
+ 27837 LD A,H        ;
+ 27838 ADD A,8       ;
+ 27840 LD H,A        ; }
+ 27841 RET           ;
+
+; Check the tiles next to Horace or a guard
+;
+; Used by the routines at #R25167, #R25399 and #R25562.
+;
+;   A Sprite animation frame
+;   HL Sprite location
+; O:A 1 (tunnel entrance), 2 (maze exit/entrance), 3 (wall), or 0 (none of
+; .   these)
+c27842 PUSH BC       ; Save #REGbc.
+ 27843 PUSH DE       ; Save #REGde.
+ 27844 PUSH HL       ; Save the sprite location.
+ 27845 LD BC,16384   ; {Convert the sprite location into a display file
+ 27848 ADD HL,BC     ; address.}
+ 27849 CALL 27927    ; Set #REGhl the display file address of the tile in front
+                     ; of the sprite.
+ 27852 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
+ 27855 EXX           ; Exchange registers.
+ 27856 LD E,0        ; #REGe' will hold the indicator of any interesting tiles
+                     ; at this location; initialise it now.
+ 27858 CALL 27898    ; Check the top-left tile.
+ 27861 INC HL        ; Point #REGhl' at the top-right tile.
+ 27862 CALL 27898    ; Check the top-right tile.
+ 27865 LD BC,31      ; {Point #REGhl' at the bottom-left tile.
+ 27868 ADD HL,BC     ; }
+ 27869 CALL 27898    ; Check the bottom-left tile.
+ 27872 INC HL        ; Point #REGhl' at the bottom-right tile.
+ 27873 CALL 27898    ; Check the bottom-right tile.
+ 27876 LD A,E        ; Copy the tile indicator to #REGa.
+ 27877 EXX           ; Exchange registers.
+ 27878 POP HL        ; Restore the sprite location to #REGhl.
+ 27879 POP DE        ; Restore #REGde.
+ 27880 POP BC        ; Restore #REGbc.
+ 27881 CP 255        ; Is the sprite facing a wall tile?
+ 27883 JR NZ,27888   ; Jump if not.
+ 27885 LD A,3        ; Signal: sprite is facing a wall tile.
+ 27887 RET           ;
+*27888 AND 10        ; {Return with #REGa=1 if the sprite is facing a tunnel
+ 27890 RRC A         ; entrance.
+ 27892 CP 1          ;
+ 27894 RET Z         ; }
+ 27895 RRC A         ; Now #REGa=2 if the sprite is facing the maze
+                     ; exit/entrance, or 0 otherwise.
+ 27897 RET           ;
+
+; Identify a tile in front of a sprite
+;
+; Used by the routine at #R27842.
+;
+;   E Previous tile indicator
+;   HL Attribute file address for the tile
+; O:E Updated tile indicator
+c27898 LD A,E        ; Copy the previous tile indicator to #REGa.
+ 27899 CP 255        ; Have we already found a wall tile?
+ 27901 RET Z         ; Return if so.
+ 27902 LD A,(HL)     ; Pick up the tile's attribute byte.
+ 27903 CP 61         ; Is it a wall tile?
+ 27905 JR NZ,27910   ; Jump if not.
+ 27907 LD E,255      ; Signal: wall tile found.
+ 27909 RET           ;
+*27910 CP 63         ; Is it a tunnel entrance?
+ 27912 JR NZ,27919   ; Jump if not.
+ 27914 LD A,1        ; {Record the number of tunnel entrance tiles found so far
+ 27916 ADD A,E       ; in bits 0 and 1 of #REGe.
+ 27917 LD E,A        ; }
+ 27918 RET           ;
+*27919 CP 56         ; Is it an arrow tile (maze entrance/exit)?
+ 27921 RET NZ        ; Return if not.
+ 27922 LD A,4        ; {Record the number of arrow tiles found so far in bits 2
+ 27924 ADD A,E       ; and 3 of #REGe.
+ 27925 LD E,A        ; }
+ 27926 RET           ;
+
+; Get the location of the tile in front of a sprite
+;
+; Used by the routines at #R25399, #R25562 and #R27842.
+;
+;   A Sprite animation frame
+;   HL Sprite location
+; O:HL Location of the tile in front of the sprite
+c27927 AND 3         ; Keep only bits 0 and 1 of the animation frame (which
+                     ; indicate the direction that the sprite is facing). (This
+                     ; instruction is redundant.)
+ 27929 CP 0          ; Is the sprite facing up?
+ 27931 JR Z,27950    ; Jump if so.
+ 27933 CP 1          ; Is the sprite facing right?
+ 27935 JR Z,27962    ; Jump if so.
+ 27937 CP 2          ; Is the sprite facing down?
+ 27939 JR Z,27971    ; Jump if so.
+; The sprite is facing left.
+ 27941 DEC L         ; Point #REGhl at the tile to the left of the sprite's
+                     ; current location.
+ 27942 JR NC,27981   ; This jump is always made.
+ 27944 LD A,H        ; {This code is never executed.
+ 27945 SUB 8         ;
+ 27947 LD H,A        ;
+ 27948 JR 27981      ; }
+; The sprite is facing up.
+*27950 LD A,L        ; {Point #REGhl at the tile above the sprite's current
+ 27951 SUB 32        ; location.
+ 27953 LD L,A        ;
+ 27954 JR NC,27981   ;
+ 27956 LD A,H        ;
+ 27957 SUB 8         ;
+ 27959 LD H,A        ; }
+ 27960 JR 27981      ;
+; The sprite is facing right.
+*27962 INC L         ; {Point #REGhl at the tile to the right of the sprite's
+ 27963 JR NZ,27981   ; current location.
+ 27965 LD A,H        ;
+ 27966 ADD A,8       ;
+ 27968 LD H,A        ; }
+ 27969 JR 27981      ;
+; The sprite is facing down.
+*27971 LD A,L        ; {Point #REGhl at the tile below the sprite's current
+ 27972 ADD A,32      ; location.
+ 27974 LD L,A        ;
+ 27975 JR NC,27981   ;
+ 27977 LD A,H        ;
+ 27978 ADD A,8       ;
+ 27980 LD H,A        ; }
+*27981 RET           ;
+
+; Print 'HUNGRY' or 'HORACE' on the title screen
+;
+; Used by the routine at #R24576.
+;
+; BC 160 (number of tiles to draw)
+; DE Display file address
+; HL #R28303 (HUNGRY) or #R28463 (HORACE)
+c27982 PUSH BC        ; Save the tile counter.
+ 27983 LD A,(HL)      ; Pick up a data byte.
+ 27984 AND 48         ; Keep only bits 4 and 5.
+ 27986 CP 0           ; Are bits 4 and 5 both reset?
+ 27988 JR Z,28010     ; Jump if so.
+ 27990 CP 16          ; Is bit 4 set and bit 5 reset?
+ 27992 JR Z,28006     ; Jump if so.
+ 27994 CP 32          ; Is bit 4 reset and bit 5 set?
+ 27996 JR Z,28002     ; Jump if so.
+ 27998 LD C,%11111111 ; Bits 5 and 4 of #REGa are both set.
+ 28000 JR 28012       ;
+*28002 LD C,%00001111 ; Bit 5 of #REGa is reset and bit 4 is set.
+ 28004 JR 28012       ;
+*28006 LD C,%11110000 ; Bit 5 of #REGa is set and bit 4 is reset.
+ 28008 JR 28012       ;
+*28010 LD C,%00000000 ; Bits 5 and 4 of #REGa are both reset.
+*28012 LD B,4         ; {Draw the top four pixel rows of the character cell
+ 28014 LD A,C         ; using the bit pattern in #REGc.
+*28015 LD (DE),A      ;
+ 28016 INC D          ;
+ 28017 DJNZ 28015     ; }
+ 28019 LD A,(HL)      ; Pick up the data byte again.
+ 28020 AND 3          ; Keep only bits 0 and 1.
+ 28022 CP 0           ; Are bits 0 and 1 both reset?
+ 28024 JR Z,28046     ; Jump if so.
+ 28026 CP 1           ; Is bit 0 set and bit 1 reset?
+ 28028 JR Z,28042     ; Jump if so.
+ 28030 CP 2           ; Is bit 0 reset and bit 1 set?
+ 28032 JR Z,28038     ; Jump if so.
+ 28034 LD C,%11111111 ; Bits 1 and 0 of #REGa are both set.
+ 28036 JR 28048       ;
+*28038 LD C,%00001111 ; Bit 1 of #REGa is reset and bit 0 is set.
+ 28040 JR 28048       ;
+*28042 LD C,%11110000 ; Bit 1 of #REGa is set and bit 0 is reset.
+ 28044 JR 28048       ;
+*28046 LD C,%00000000 ; Bits 1 and 0 of #REGa are both reset.
+*28048 LD B,4         ; {Draw the bottom four pixel rows of the character cell
+ 28050 LD A,C         ; using the bit pattern in #REGc.
+*28051 LD (DE),A      ;
+ 28052 INC D          ;
+ 28053 DJNZ 28051     ; }
+ 28055 INC E          ; {Set #REGde to the display file address of the next
+ 28056 JR Z,28062     ; cell to the right.
+ 28058 LD A,D         ;
+ 28059 SUB 8          ;
+ 28061 LD D,A         ; }
+*28062 INC HL         ; Point #REGhl at the next data byte.
+ 28063 POP BC         ; Restore the tile counter to #REGbc.
+ 28064 DEC BC         ; Decrement the tile counter.
+ 28065 LD A,B         ; {Is it zero now?
+ 28066 OR C           ; }
+ 28067 JR NZ,27982    ; Jump back if not.
+ 28069 RET            ;
+
+; Guard countdown timers
+;
+; Initialised by the routine at #R27170, and used by the routines at #R25399,
+; #R25886, #R26146, #R26276, #R26426, #R26887 and #R26988. When a guard's
+; countdown timer reaches 0, the guard is brought into play.
+g28070 DEFW 0        ; Guard 1.
+ 28072 DEFW 0        ; Guard 2.
+ 28074 DEFW 0        ; Guard 3.
+ 28076 DEFW 0        ; Guard 4.
+
+; Guard panic timer
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25562,
+; #R26173, #R26276 and #R26730. Holds a non-zero value when the guards are
+; panicking.
+g28078 DEFW 0
+
+; Temporary store for a guard's screen x- and y-coordinates
+;
+; Used by the routine at #R25562.
+g28080 DEFB 0        ; x-coordinate.
+ 28081 DEFB 0        ; y-coordinate.
+
+; Temporary store for direction probability parameters
+;
+; Used by the routine at #R25167 (when moving Horace in demo mode) and #R25562
+; (when moving a guard).
+g28082 DEFB 0        ; Up.
+ 28083 DEFB 0        ; Right.
+ 28084 DEFB 0        ; Down.
+ 28085 DEFB 0        ; Left.
+
+; Buffer address of the guard currently being handled
+;
+; Used by the routines at #R27199 and #R27242.
+g28086 DEFW 0
+
+; Temporary guard buffer
+;
+; The contents of a guard's buffer (see #R28131) are copied here by the routine
+; at #R27199 whenever the guard needs to be moved, drawn or otherwise examined.
+; After that, the updated contents are copied back to the original location by
+; the routine at #R27242.
+g28088 DEFW 0                 ; Current location. Used by the routines at
+                              ; #R24576, #R25562, #R25947, #R26173, #R26276,
+                              ; #R27199 and #R27242.
+ 28090 DEFB 0                 ; Animation frame. Used by the routines at
+                              ; #R25562, #R26173, #R26276 and #R26730.
+ 28091 DEFB 0                 ; Animation frame timer. Used by the routine at
+                              ; #R26173.
+ 28092 DEFW 0                 ; New location. Used by the routines at #R24576,
+                              ; #R25562, #R25947, #R26173 and #R26276.
+ 28094 DEFB 0                 ; Return delay counter. Used by the routines at
+                              ; #R25562, #R26173, #R26276, #R26426 and
+                              ; #R26914.
+ 28095 DEFB 0,0,0,0,0,0,0,0,0 ; {Maze background tiles at the guard's location.
+ 28104 DEFB 0,0,0,0,0,0,0,0,0 ; Used by the routines at #R24576, #R25947,
+ 28113 DEFB 0,0,0,0,0,0,0,0,0 ; #R26914 and #R27752.
+ 28122 DEFB 0,0,0,0,0,0,0,0,0 ; }
+
+; Guard buffers
+;
+; Used by the routines at #R27199 and #R27242. See #R28088 for a description of
+; the contents of a guard's buffer.
+g28131 DEFW 0                 ; {Guard 1.
+ 28133 DEFB 0
+ 28134 DEFB 0
+ 28135 DEFW 0
+ 28137 DEFB 0
+ 28138 DEFB 0,0,0,0,0,0,0,0,0
+ 28147 DEFB 0,0,0,0,0,0,0,0,0
+ 28156 DEFB 0,0,0,0,0,0,0,0,0
+ 28165 DEFB 0,0,0,0,0,0,0,0,0 ; }
+ 28174 DEFW 0                 ; {Guard 2.
+ 28176 DEFB 0
+ 28177 DEFB 0
+ 28178 DEFW 0
+ 28180 DEFB 0
+ 28181 DEFB 0,0,0,0,0,0,0,0,0
+ 28190 DEFB 0,0,0,0,0,0,0,0,0
+ 28199 DEFB 0,0,0,0,0,0,0,0,0
+ 28208 DEFB 0,0,0,0,0,0,0,0,0 ; }
+ 28217 DEFW 0                 ; {Guard 3.
+ 28219 DEFB 0
+ 28220 DEFB 0
+ 28221 DEFW 0
+ 28223 DEFB 0
+ 28224 DEFB 0,0,0,0,0,0,0,0,0
+ 28233 DEFB 0,0,0,0,0,0,0,0,0
+ 28242 DEFB 0,0,0,0,0,0,0,0,0
+ 28251 DEFB 0,0,0,0,0,0,0,0,0 ; }
+ 28260 DEFW 0                 ; {Guard 4.
+ 28262 DEFB 0
+ 28263 DEFB 0
+ 28264 DEFW 0
+ 28266 DEFB 0
+ 28267 DEFB 0,0,0,0,0,0,0,0,0
+ 28276 DEFB 0,0,0,0,0,0,0,0,0
+ 28285 DEFB 0,0,0,0,0,0,0,0,0
+ 28294 DEFB 0,0,0,0,0,0,0,0,0 ; }
+
+; Data for the word 'HUNGRY' on the title screen
+;
+; Used by the routine at #R27982.
+; .
+; Each byte here determines the bit pattern that is drawn in a single tile.
+; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
+; and 1 determine the pattern in the lower half.
+b28303 DEFB 51,17,0,51,17,34,51,0  ; {First row of tiles.
+ 28311 DEFB 34,51,0,51,17,0,51,17
+ 28319 DEFB 0,35,49,51,1,0,51,49
+ 28327 DEFB 50,19,0,34,51,0,34,51  ; }
+ 28335 DEFB 51,17,0,51,17,34,51,0  ; {Second row of tiles.
+ 28343 DEFB 34,51,0,51,51,1,51,17
+ 28351 DEFB 34,51,0,32,48,0,51,17
+ 28359 DEFB 0,51,17,34,51,0,34,51  ; }
+ 28367 DEFB 51,19,3,51,17,34,51,0  ; {Third row of tiles.
+ 28375 DEFB 34,51,0,51,49,51,51,17
+ 28383 DEFB 34,51,2,3,3,0,51,19
+ 28391 DEFB 35,49,0,0,50,19,51,16  ; }
+ 28399 DEFB 51,17,0,51,17,34,51,0  ; {Fourth row of tiles.
+ 28407 DEFB 34,51,0,51,17,32,51,17
+ 28415 DEFB 34,51,0,34,51,0,51,49
+ 28423 DEFB 51,1,0,0,0,51,17,0     ; }
+ 28431 DEFB 51,17,0,51,17,0,50,19  ; {Fifth row of tiles.
+ 28439 DEFB 51,16,0,51,17,0,51,17
+ 28447 DEFB 0,50,19,51,16,0,51,17
+ 28455 DEFB 32,51,1,0,0,51,17,0    ; }
+
+; Data for the word 'HORACE' on the title screen
+;
+; Used by the routine at #R27982.
+; .
+; Each byte here determines the bit pattern that is drawn in a single tile.
+; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
+; and 1 determine the pattern in the lower half.
+b28463 DEFB 51,17,0,51,17,0,35,49  ; {First row of tiles.
+ 28471 DEFB 51,1,0,51,49,50,19,0
+ 28479 DEFB 0,35,49,51,1,0,2,51
+ 28487 DEFB 50,19,0,34,51,48,48,16 ; }
+ 28495 DEFB 51,17,0,51,17,34,51,0  ; {Second row of tiles.
+ 28503 DEFB 34,51,0,51,17,0,51,17
+ 28511 DEFB 34,51,0,34,51,0,51,17
+ 28519 DEFB 0,48,16,34,51,0,0,0    ; }
+ 28527 DEFB 51,19,3,51,17,34,51,0  ; {Third row of tiles.
+ 28535 DEFB 34,51,0,51,19,35,49,0
+ 28543 DEFB 34,51,3,35,51,0,51,17
+ 28551 DEFB 0,0,0,34,51,3,1,0      ; }
+ 28559 DEFB 51,17,0,51,17,34,51,0  ; {Fourth row of tiles.
+ 28567 DEFB 34,51,0,51,49,51,1,0
+ 28575 DEFB 34,51,0,34,51,0,51,17
+ 28583 DEFB 0,3,1,34,51,0,0,0      ; }
+ 28591 DEFB 51,17,0,51,17,0,50,19  ; {Fifth row of tiles.
+ 28599 DEFB 51,16,0,51,17,32,51,1
+ 28607 DEFB 34,51,0,34,51,0,32,51
+ 28615 DEFB 35,49,0,34,51,3,3,1    ; }
+
+; Tunnel offset and bell, initial guard and entrance locations for the current
+; maze
+;
+; Used by the routines at #R24576, #R25399, #R25562, #R26276, #R26730 and
+; #R27294. The values here are copied from #R28631, #R28639, #R28647 or
+; #R28655.
+g28623 DEFW 0        ; Tunnel offset.
+ 28625 DEFW 0        ; Bell location.
+ 28627 DEFW 0        ; Initial guard location.
+ 28629 DEFW 0        ; Entrance location.
+
+; Tunnel offset and bell, initial guard and entrance locations for maze 1
+;
+; Used by the routine at #R24576.
+b28631 DEFW 63488    ; Tunnel offset (up 8 tiles).
+ 28633 DEFW 4202     ; Bell location: (x,y)=(10,19).
+ 28635 DEFW 2197     ; Initial guard location: (x,y)=(21,12).
+ 28637 DEFW 2209     ; Entrance location: (x,y)=(1,13).
+
+; Tunnel offset and bell, initial guard and entrance locations for maze 2
+;
+; Used by the routine at #R24576.
+b28639 DEFW 4192     ; Tunnel offset (down 19 tiles).
+ 28641 DEFW 252      ; Bell location: (x,y)=(28,7).
+ 28643 DEFW 4112     ; Initial guard location: (x,y)=(16,16).
+ 28645 DEFW 2113     ; Entrance location: (x,y)=(1,10).
+
+; Tunnel offset and bell, initial guard and entrance locations for maze 3
+;
+; Used by the routine at #R24576.
+b28647 DEFW 0        ; Tunnel offset (no tunnel in this maze).
+ 28649 DEFW 189      ; Bell location: (x,y)=(29,5).
+ 28651 DEFW 2092     ; Initial guard location: (x,y)=(12,9).
+ 28653 DEFW 4257     ; Entrance location: (x,y)=(1,21).
+
+; Tunnel offset and bell, initial guard and entrance locations for maze 4
+;
+; Used by the routine at #R24576.
+b28655 DEFW 4064     ; Tunnel offset (down 15 tiles).
+ 28657 DEFW 125      ; Bell location: (x,y)=(29,3).
+ 28659 DEFW 2159     ; Initial guard location: (x,y)=(15,11).
+ 28661 DEFW 97       ; Entrance location: (x,y)=(1,3).
+
+; Maze 2 layout
+;
+; Used by the routine at #R27509.
+; .
+; #maze28663(maze2)
+b28663 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 28695 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,9,9,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 28727 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 28759 DEFB 5,1,1,1,1,1,1,1,1,1,1,1,4,0,0,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,0
+ 28791 DEFB 4,0,2,0,0,2,0,0,2,0,0,2,4,0,0,4,0,2,0,0,2,0,0,2,0,0,2,0,0,2,4,0
+ 28823 DEFB 4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0
+ 28855 DEFB 4,0,0,5,1,1,1,1,1,1,0,0,4,0,0,4,0,0,4,0,0,4,0,0,1,1,1,1,0,0,4,0
+ 28887 DEFB 4,0,2,4,0,2,0,0,2,0,0,2,0,0,2,0,0,2,4,0,2,4,0,2,0,0,2,0,0,0,4,0
+ 28919 DEFB 4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,4,0
+ 28951 DEFB 4,0,0,4,0,0,5,1,1,1,1,1,1,1,1,1,0,0,4,0,0,7,1,1,1,1,1,1,1,1,8,0
+ 28983 DEFB 3,0,0,4,0,2,4,0,2,0,0,2,0,0,2,0,0,2,4,0,2,0,0,2,0,0,2,0,0,0,3,0
+ 29015 DEFB 3,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,3,0
+ 29047 DEFB 4,0,0,4,0,0,4,0,0,5,1,1,1,1,1,1,0,0,4,0,0,1,1,1,6,0,0,4,0,0,4,0
+ 29079 DEFB 4,0,2,4,0,2,4,0,2,4,0,2,0,0,2,0,0,2,4,0,2,0,0,2,4,0,2,4,0,2,4,0
+ 29111 DEFB 4,0,0,4,0,0,4,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,4,0,0,4,0,0,4,0
+ 29143 DEFB 4,0,0,4,0,0,4,0,0,4,0,0,5,1,1,1,0,0,4,0,0,4,0,0,4,0,0,4,0,0,4,0
+ 29175 DEFB 4,0,2,4,0,2,0,0,2,4,0,2,4,0,2,0,0,2,0,0,2,4,0,2,0,0,2,4,0,2,4,0
+ 29207 DEFB 4,0,0,4,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,4,0,0,4,0
+ 29239 DEFB 4,0,0,7,1,1,1,1,1,8,0,0,4,0,0,4,0,0,1,1,1,1,1,1,1,1,1,8,0,0,4,0
+ 29271 DEFB 4,0,2,0,0,2,0,0,2,0,0,2,4,0,0,4,0,2,0,0,2,0,0,2,0,0,2,0,0,2,4,0
+ 29303 DEFB 4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0
+ 29335 DEFB 7,1,1,1,1,1,1,1,1,1,1,1,4,0,0,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,8,0
+ 29367 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 29399 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,9,9,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+; Maze 1 layout
+;
+; Used by the routine at #R27509.
+; .
+; #maze29431(maze1)
+b29431 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 29463 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 29495 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 29527 DEFB 5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,0
+ 29559 DEFB 4,0,2,0,0,2,0,0,2,4,0,2,0,0,2,0,0,2,0,0,2,4,0,2,0,0,2,0,0,2,4,0
+ 29591 DEFB 4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,4,0
+ 29623 DEFB 4,0,0,5,1,1,1,0,0,4,0,0,1,1,1,1,0,0,0,0,0,4,0,0,1,1,1,6,0,0,4,0
+ 29655 DEFB 4,0,2,4,0,2,0,0,2,0,0,2,0,0,2,0,0,2,0,0,2,0,0,2,0,0,2,4,0,2,4,0
+ 29687 DEFB 4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0
+ 29719 DEFB 4,0,0,4,0,0,5,1,1,1,1,1,1,1,1,6,0,0,5,1,1,1,1,1,6,0,0,4,0,0,4,0
+ 29751 DEFB 4,0,2,4,0,2,4,0,0,0,0,0,5,1,1,1,1,1,1,1,1,6,0,0,4,0,2,0,0,2,4,0
+ 29783 DEFB 4,0,0,4,0,0,4,0,0,5,1,1,8,0,0,0,0,0,0,0,0,7,1,1,4,0,0,0,0,0,4,0
+ 29815 DEFB 4,0,0,4,0,0,7,1,1,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,1,1,0,0,4,0
+ 29847 DEFB 3,0,0,4,0,2,0,0,0,0,0,0,0,0,0,5,1,1,6,0,0,0,0,0,0,0,0,0,0,2,4,0
+ 29879 DEFB 3,0,0,4,0,0,0,0,0,0,0,0,5,1,1,8,9,9,7,1,1,6,0,0,0,0,0,0,0,0,4,0
+ 29911 DEFB 4,0,0,4,0,0,5,1,1,1,1,1,8,0,0,0,0,0,4,0,0,7,1,1,1,1,1,1,0,0,4,0
+ 29943 DEFB 4,0,2,4,0,2,4,0,2,0,0,2,0,0,2,0,0,2,4,0,2,0,0,2,0,0,2,0,0,2,4,0
+ 29975 DEFB 4,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,4,0
+ 30007 DEFB 4,0,0,4,0,0,4,0,0,5,1,1,1,1,1,1,1,1,8,0,0,4,0,0,1,1,1,1,0,0,4,0
+ 30039 DEFB 4,0,2,0,0,2,0,0,2,4,0,0,0,0,2,0,0,2,0,0,2,4,0,2,0,0,2,0,0,0,3,0
+ 30071 DEFB 4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,3,0
+ 30103 DEFB 7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,8,0
+ 30135 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 30167 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+; Maze 3 layout
+;
+; Used by the routine at #R27509.
+; .
+; #maze30199(maze3)
+b30199 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 30231 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1
+ 30263 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,0,0,0,0,0,0,0,3
+ 30295 DEFB 0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,2,0,0,2,0,0,0,2,0,0,0,0,0,0,3
+ 30327 DEFB 5,1,1,1,1,1,1,1,8,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,6
+ 30359 DEFB 4,0,2,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,8,0,0,4,0,0,4
+ 30391 DEFB 4,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,6,0,2,7,1,1,1,1,1,6,4,0,0,4
+ 30423 DEFB 4,0,0,1,1,1,1,1,1,1,1,4,0,0,0,0,0,0,4,0,0,0,0,0,2,0,0,7,8,0,0,4
+ 30455 DEFB 4,0,2,0,0,2,0,0,2,0,0,7,1,1,1,1,1,1,4,0,0,0,0,0,0,0,0,2,0,0,0,4
+ 30487 DEFB 4,0,0,0,0,0,0,0,0,0,0,2,0,0,2,0,0,0,7,1,1,1,1,1,6,0,0,0,0,0,0,4
+ 30519 DEFB 7,1,1,1,1,1,1,1,6,0,0,0,0,0,0,0,0,2,0,0,2,0,0,0,7,1,1,1,1,1,1,4
+ 30551 DEFB 0,0,0,0,0,0,0,0,7,1,1,1,1,1,1,6,0,0,0,0,0,0,0,0,2,0,0,2,0,0,2,4
+ 30583 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,1,1,1,1,6,0,0,0,0,0,0,0,0,0,4
+ 30615 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,1,1,1,1,1,1,1,0,0,4
+ 30647 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,0,2,0,0,2,0,0,2,4
+ 30679 DEFB 0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,4
+ 30711 DEFB 5,1,1,1,1,1,1,8,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,4
+ 30743 DEFB 4,0,2,0,0,2,0,0,2,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,4
+ 30775 DEFB 4,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,0,0,2,0,0,2,0,0,2,0,0,2,4
+ 30807 DEFB 4,0,0,5,1,1,1,1,1,1,4,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+ 30839 DEFB 4,0,0,7,1,1,1,1,1,1,8,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,4
+ 30871 DEFB 3,0,0,0,0,2,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,2,0,0,2,0,0,2,4
+ 30903 DEFB 3,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+ 30935 DEFB 7,1,1,1,1,1,1,1,1,1,1,1,1,8,0,0,0,7,1,1,1,1,1,1,1,1,1,1,1,1,1,8
+
+; Maze 4 layout
+;
+; Used by the routine at #R27509.
+; .
+; #maze30967(maze4)
+b30967 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 30999 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 31031 DEFB 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6
+ 31063 DEFB 3,0,0,4,9,9,4,0,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0,4,9,9,4,0,0,4
+ 31095 DEFB 3,0,0,4,0,0,4,0,0,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,4,0,0,4,0,0,4
+ 31127 DEFB 4,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,4
+ 31159 DEFB 4,0,0,4,0,0,4,0,0,2,0,0,0,0,2,0,0,2,0,0,0,0,0,2,0,4,0,0,4,0,0,4
+ 31191 DEFB 4,0,0,4,0,0,4,0,0,0,0,5,6,0,0,0,0,0,0,5,6,0,0,0,0,4,0,0,4,0,0,4
+ 31223 DEFB 4,0,0,4,0,0,4,0,0,0,0,7,8,0,0,0,0,0,0,7,8,0,0,0,0,4,0,0,4,0,0,4
+ 31255 DEFB 4,0,0,4,0,0,4,0,2,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,2,4,0,0,0,0,0,4
+ 31287 DEFB 4,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,4
+ 31319 DEFB 4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,1,6,0,0,4
+ 31351 DEFB 4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4
+ 31383 DEFB 4,0,0,7,1,1,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4
+ 31415 DEFB 4,0,0,0,0,0,4,0,0,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,4,0,0,4,0,0,4
+ 31447 DEFB 4,0,0,0,0,0,4,0,2,0,0,5,6,0,0,0,0,0,0,5,6,0,0,0,2,4,0,0,4,0,0,4
+ 31479 DEFB 7,1,1,6,0,0,4,0,0,0,0,7,8,0,0,0,0,0,0,7,8,0,0,0,0,4,0,0,4,0,0,4
+ 31511 DEFB 0,0,0,4,0,0,4,0,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0,4,0,0,4,0,0,4
+ 31543 DEFB 0,0,0,4,0,0,4,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,4,0,0,4,0,0,4
+ 31575 DEFB 0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,4
+ 31607 DEFB 0,0,0,4,0,0,4,0,0,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,4,0,0,4,0,0,3
+ 31639 DEFB 0,0,0,4,9,9,4,0,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0,4,9,9,4,0,0,3
+ 31671 DEFB 0,0,0,7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+ 31703 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+; Maze tiles
+;
+; Used by the routine at #R27509.
+; .
+; #UDGTABLE
+; { #FOR31735,31807,8//n/#UDG(n,#MAPn(61,31751:60,31759:56))/ | // }
+; TABLE#
+b31735 DEFB 0,0,0,0,0,0,0,0
+ 31743 DEFB 0,255,255,0,0,255,255,0
+ 31751 DEFB 0,0,0,32,248,80,248,32
+ 31759 DEFB 0,24,12,6,127,6,12,24
+ 31767 DEFB 102,102,102,102,102,102,102,102
+ 31775 DEFB 0,127,127,96,96,103,103,102
+ 31783 DEFB 0,254,254,6,6,230,230,102
+ 31791 DEFB 102,103,103,96,96,127,127,0
+ 31799 DEFB 102,230,230,6,6,254,254,0
+ 31807 DEFB 0,0,0,0,0,0,0,0
+
+; PASSES#SPACE(3)SCORE#SPACE(7)BEST
+;
+; Used by the routine at #R24576.
+t31815 DEFM "PASSES   SCORE       BEST"
+ 31840 DEFB 255                         ; End marker.
+
+; Sprite movement timer
+;
+; Initialised by the routine at #R24576, and used by the routine at #R25399.
+; Decremented on each pass through the main loop; when it reaches zero, Horace
+; and the guards are moved.
+g31841 DEFB 0
+
+; Game speed parameter (1-8)
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25399,
+; #R25562, #R26730, #R27044 and #R27170. The value here determines the speed at
+; which the game runs.
+g31842 DEFB 0
+
+; Current maze number
+;
+; Initialised to 255 by the routine at #R24576 just before a game starts. Holds
+; 0, 1, 2 or 3 while a game is in progress.
+g31843 DEFB 0
+
+; Redundant temporary variable
+;
+; Used by the routine at #R25562.
+g31844 DEFB 0
+
+; Lunch-drop countdown timer
+;
+; Initialised by the routine at #R24576, and used by the routine at #R26914.
+; When this timer reaches zero, one of the guards will drop his lunch.
+g31845 DEFW 0
+
+; Address of the next pseudo-random number
+;
+; Initialised by the routine at #R24576, and used by the routine at #R27410.
+g31847 DEFW 0
+
+; Sound on/off indicator
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25399,
+; #R26017, #R26276, #R26426, #R27022, #R27044 and #R27255. Holds 00011111
+; binary if the sound is on, or 00000111 binary otherwise.
+g31849 DEFB 0
+
+; 'T' pressed indicator
+;
+; Initialised by the routine at #R24576, and used by the routine at #R27022.
+; Holds 0 if 'T' was being pressed the last time it was checked, or 16
+; otherwise.
+g31850 DEFB 0
+
+; Horace's current location
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25167,
+; #R25399, #R25562, #R25886, #R26426, #R26657 and #R26730. Holds the display
+; file address minus #N16384,,,1(0x).
+g31851 DEFW 0
+
+; Horace's new location
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25399,
+; #R25886, #R26017, #R26276 and #R26657. Holds the display file address minus
+; #N16384,,,1(0x).
+g31853 DEFW 0
+
+; Temporary store for direction keypress
+;
+; Used by the routine at #R25167.
+g31855 DEFB 0
+
+; Horace's animation frame (0-3)
+;
+; Initialised by the routine at #R24576, and used by the routines at #R25167,
+; #R25399 and #R26657.
+g31856 DEFB 0
+
+; Horace's attribute byte
+;
+; Initialised by the routine at #R24576, and used by the routines at #R26426
+; and #R26657.
+g31857 DEFB 0
+
+; Horace's walking animation timer
+;
+; Used by the routine at #R26657. Incremented whenever Horace is drawn; bit 4
+; determines which set of animation frames (see #R31943) is used: 0-3 if it's
+; set, or 4-7 otherwise.
+g31858 DEFB 0
+
+; Score
+;
+; Initialised by the routine at #R24576, and used by the routines at #R26017,
+; #R26276, #R26426 and #R26730.
+g31859 DEFW 0
+
+; High score
+;
+; Used by the routines at #R24576 and #R26426.
+g31861 DEFW 0
+
+; Extra life indicator
+;
+; Initialised by the routine at #R24576, and used by the routine at #R26017.
+; Holds INT(S/10000)+2, where 'S' is the current score. When this value
+; changes, Horace gets a new life.
+g31863 DEFB 0
+
+; Number of lives remaining
+;
+; Initialised by the routine at #R24576, and used by the routines at #R26017
+; and #R26426.
+g31864 DEFB 0
+
+; Tunnel timer
+;
+; Used by the routines at #R25167, #R25399, #R26017, #R26426 and #R26657. Holds
+; a non-zero value when Horace is in a tunnel.
+g31865 DEFB 0
+
+; Temporary store for Horace's screen x- and y-coordinates
+;
+; Used by the routine at #R25562.
+g31866 DEFB 0        ; x-coordinate.
+ 31867 DEFB 0        ; y-coordinate.
+
+; Cherry and strawberry graphics
+;
+; Used by the routine at #R26914.
+b31868 DEFB 60,0,0,1,1,2,2,2,1              ; {#fruit31868(cherry)
+ 31877 DEFB 60,96,192,224,96,32,0,0,0
+ 31886 DEFB 58,6,14,15,15,7,3,0,0
+ 31895 DEFB 58,192,224,224,224,192,128,0,0  ; }
+ 31904 DEFB 60,0,0,0,0,16,28,14,3           ; {#fruit31904(strawberry)
+ 31913 DEFB 60,0,0,0,0,0,56,240,192
+ 31922 DEFB 58,30,23,29,31,13,7,3,0
+ 31931 DEFB 58,120,232,120,216,240,96,192,0 ; }
+
+; Bell location
+;
+; Initialised by the routine at #R24576, and used by the routines at #R26730
+; and #R27044. Holds the location of the bell in the current maze, or zero if
+; Horace has sounded the alarm.
+g31940 DEFW 0
+
+; Bell animation frame counter
+;
+; Used by the routines at #R26730 and #R27044. Incremented on each pass through
+; the main loop; its value determines which bell animation frame is used (see
+; #R32519), and also the bell sound effect.
+g31942 DEFB 0
+
+; Horace graphics
+;
+; Used by the routine at #R26657.
+b31943 DEFB 15,31,127,127,255,159,231,120   ; {#sprite31943,57(horace0)
+ 31951 DEFB 224,248,254,254,255,241,143,126
+ 31959 DEFB 127,59,24,24,56,60,68,124
+ 31967 DEFB 216,216,28,36,124,0,0,0         ; }
+ 31975 DEFB 15,63,127,252,248,184,152,157   ; {#sprite31975,57(horace1)
+ 31983 DEFB 248,252,254,115,115,99,230,238
+ 31991 DEFB 15,35,63,51,30,2,0,0
+ 31999 DEFB 252,188,158,142,12,28,18,63     ; }
+ 32007 DEFB 7,31,127,97,192,224,243,127     ; {#sprite32007,57(horace2)
+ 32015 DEFB 240,248,254,198,195,195,227,254
+ 32023 DEFB 27,27,56,36,62,0,0,0
+ 32031 DEFB 254,220,24,24,28,52,34,62       ; }
+ 32039 DEFB 31,63,127,204,206,70,119,63     ; {#sprite32039,57(horace3)
+ 32047 DEFB 224,248,254,62,31,31,31,185
+ 32055 DEFB 31,14,12,29,21,60,1,3
+ 32063 DEFB 249,240,224,192,192,224,48,224  ; }
+ 32071 DEFB 7,31,127,127,255,143,241,126    ; {#sprite32071,57(horace4)
+ 32079 DEFB 240,248,254,254,255,249,231,30
+ 32087 DEFB 27,27,56,36,62,0,0,0
+ 32095 DEFB 254,220,24,24,28,60,34,62       ; }
+ 32103 DEFB 7,31,127,124,248,248,248,157    ; {#sprite32103,57(horace5)
+ 32111 DEFB 248,252,254,51,115,98,238,252
+ 32119 DEFB 159,15,7,3,3,7,12,7
+ 32127 DEFB 248,112,48,184,168,60,128,192   ; }
+ 32135 DEFB 15,31,127,99,195,195,199,127    ; {#sprite32135,57(horace6)
+ 32143 DEFB 224,248,254,134,3,7,207,254
+ 32151 DEFB 127,59,24,24,56,44,68,124
+ 32159 DEFB 216,216,28,36,124,0,0,0         ; }
+ 32167 DEFB 31,63,127,206,206,198,103,119   ; {#sprite32167,57(horace7)
+ 32175 DEFB 240,252,254,63,31,29,25,185
+ 32183 DEFB 63,61,121,113,48,56,72,252
+ 32191 DEFB 240,196,252,204,120,64,0,0      ; }
+
+; Guard graphics
+;
+; Used by the routine at #R26173.
+b32199 DEFB 31,63,63,63,79,113,126,127      ; {#sprite32199,59(guard0)
+ 32207 DEFB 248,252,252,252,250,198,62,254
+ 32215 DEFB 95,95,63,63,31,15,7,3
+ 32223 DEFB 250,250,252,252,248,240,224,192 ; }
+ 32231 DEFB 31,63,63,63,63,60,124,76        ; {#sprite32231,59(guard1)
+ 32239 DEFB 224,240,240,248,255,68,68,238
+ 32247 DEFB 92,94,111,63,63,31,31,7
+ 32255 DEFB 238,34,252,248,184,128,248,192  ; }
+ 32263 DEFB 31,63,63,63,127,99,65,102       ; {#sprite32263,59(guard2)
+ 32271 DEFB 248,252,252,252,254,142,134,154
+ 32279 DEFB 118,121,63,63,31,12,7,3
+ 32287 DEFB 218,230,252,252,248,48,224,192  ; }
+ 32295 DEFB 7,15,15,31,255,34,34,93         ; {#sprite32295,59(guard3)
+ 32303 DEFB 248,252,252,252,252,60,62,242
+ 32311 DEFB 93,68,63,31,31,17,31,3
+ 32319 DEFB 250,122,246,252,252,248,248,224 ; }
+ 32327 DEFB 31,63,63,63,95,99,124,127       ; {#sprite32327,59(guard4)
+ 32335 DEFB 248,252,252,252,242,142,126,254
+ 32343 DEFB 95,95,63,63,31,15,7,3
+ 32351 DEFB 250,250,252,252,248,240,224,192 ; }
+ 32359 DEFB 31,63,63,63,63,60,124,79        ; {#sprite32359,59(guard5)
+ 32367 DEFB 224,240,240,248,255,68,68,186
+ 32375 DEFB 95,94,111,63,63,31,31,7
+ 32383 DEFB 186,34,252,248,248,136,248,192  ; }
+ 32391 DEFB 31,63,63,63,127,113,97,89       ; {#sprite32391,59(guard6)
+ 32399 DEFB 248,252,252,252,254,198,130,102
+ 32407 DEFB 91,103,63,63,24,12,6,3
+ 32415 DEFB 110,158,252,252,24,48,96,192    ; }
+ 32423 DEFB 7,15,15,31,255,34,34,119        ; {#sprite32423,59(guard7)
+ 32431 DEFB 248,252,252,252,252,60,62,50
+ 32439 DEFB 119,68,63,31,29,1,31,3
+ 32447 DEFB 58,122,246,252,252,248,248,224  ; }
+ 32455 DEFB 136,200,76,102,55,164,160,230   ; {#sprite32455,59(guard8)
+ 32463 DEFB 64,96,96,198,204,60,9,199
+ 32471 DEFB 70,96,33,35,22,12,6,3
+ 32479 DEFB 194,6,132,204,104,48,96,192     ; }
+ 32487 DEFB 196,68,102,38,55,184,160,227    ; {#sprite32487,59(guard9)
+ 32495 DEFB 16,48,96,231,206,60,8,103
+ 32503 DEFB 67,96,33,35,22,12,6,3
+ 32511 DEFB 98,6,132,204,104,48,96,192      ; }
+
+; Bell graphics
+;
+; Used by the routine at #R26730.
+b32519 DEFB 0,0,0,2,1,1,1,1           ; {#sprite32519,58(bell0)
+ 32527 DEFB 0,0,0,0,224,249,254,252
+ 32535 DEFB 0,0,0,1,1,0,0,0
+ 32543 DEFB 240,224,224,160,0,0,0,0   ; }
+ 32551 DEFB 0,0,0,1,1,1,3,3           ; {#sprite32551,58(bell1)
+ 32559 DEFB 0,0,0,0,0,192,224,224
+ 32567 DEFB 3,7,7,29,1,0,0,0
+ 32575 DEFB 240,252,224,0,0,0,0,0     ; }
+ 32583 DEFB 0,0,0,0,0,3,7,7           ; {#sprite32583,58(bell2)
+ 32591 DEFB 0,0,0,128,128,128,192,192
+ 32599 DEFB 15,63,7,0,0,0,0,0
+ 32607 DEFB 192,224,224,184,128,0,0,0 ; }
+ 32615 DEFB 0,0,0,0,7,159,127,63      ; {#sprite32615,58(bell3)
+ 32623 DEFB 0,0,0,64,128,128,128,128
+ 32631 DEFB 15,7,7,5,0,0,0,0
+ 32639 DEFB 0,0,0,128,128,0,0,0       ; }
+
+; Blank sprite
+;
+; Used by the routines at #R25886, #R26426 and #R26730.
+b32647 DEFB 0,0,0,0,0,0,0,0 ; {#sprite32647,56(blank)
+ 32655 DEFB 0,0,0,0,0,0,0,0
+ 32663 DEFB 0,0,0,0,0,0,0,0
+ 32671 DEFB 0,0,0,0,0,0,0,0 ; }

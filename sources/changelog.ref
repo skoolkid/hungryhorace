@@ -1,0 +1,31 @@
+; Copyright 2014-2017 Richard Dymond (rjdymond@gmail.com)
+
+[Page:Changelog]
+SectionType=BulletPoints
+
+[Changelog:YYYYMMDD]
+The disassembly is now 'complete'.
+
+- Annotated the #LINK:RoutinesMap(routines), #LINK:DataMap(data blocks) and
+  #LINK:MessagesMap(text blocks)
+- Added the #LINK:GameStatusBuffer(game status buffer) page
+
+[Changelog:20160109]
+Included in SkoolKit 5.1.
+
+- Added images of #R29431(maze 1), #R28663(maze 2), #R30199(maze 3) and
+  #R30967(maze 4)
+- Added images of the #R31735(maze tiles)
+- Added images of #R31943(Horace)
+- Added images of the #R32199(guards)
+- Added images of the #R32519(bell)
+- Added images of the #R31868(cherry and strawberry)
+- Added titles to the #LINK:MessagesMap(message entries)
+
+[Changelog:20150214]
+Included in SkoolKit 4.3.
+
+- Added <i>@start</i> and <i>@org</i> directives
+
+[Changelog:20140920]
+Initial version, included in SkoolKit 4.1.1.

@@ -1,0 +1,12 @@
+; tap2sna.py file for Hungry Horace. Run:
+;
+;   $ tap2sna.py @hungry_horace.t2s
+;
+; to create a Z80 snapshot.
+
+http://www.worldofspectrum.org/pub/sinclair/games/h/HungryHorace.tzx.zip
+hungry_horace.z80
+--state border=7
+--ram poke=23624,56 # BORDCR
+--stack 24500
+--start 24576

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -e # Abort on errors
+
+if [[ -z $HUNGRYHORACE_HOME ]]; then
+  echo "Error: HUNGRYHORACE_HOME not defined."
+  exit 1
+fi
+if [[ ! -d $HUNGRYHORACE_HOME ]]; then
+  echo "Error: directory not found: $HUNGRYHORACE_HOME"
+  exit 1
+fi
+
+if [[ -z $SKOOLKIT_HOME ]]; then
+  echo "Error: SKOOLKIT_HOME not defined."
+  exit 1
+fi
+if [[ ! -d $SKOOLKIT_HOME ]]; then
+  echo "Error: directory not found: $SKOOLKIT_HOME"
+  exit 1
+fi
+
+DHOME=$HUNGRYHORACE_HOME
+
+. $DHOME/.dreleaserc
+
+. $SKOOLKIT_HOME/tools/drelease-functions
+
+parse_args $*
