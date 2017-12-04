@@ -1,2 +1,2 @@
 GAME=hh
-SRCFILES=$(echo hh.skool {hh,changelog}.ref)
+SRCFILES=$(echo hh.skool {hh,changelog}.ref COPYING)
