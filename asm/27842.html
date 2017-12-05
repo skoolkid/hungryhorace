@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 6CC2</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="logo" src="../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27797.html">6C95</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27842">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27898.html">6CFA</a></span></td>
+</tr>
+</table>
+<div class="description">6CC2: Check the tiles next to Horace or a guard</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+Used by the routines at <a href="25167.html">624F</a>, <a href="25399.html">6337</a> and <a href="25562.html">63DA</a>.
+</div>
+</div>
+<table class="input-1">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+<tr>
+<td class="register">A</td>
+<td class="register-desc">Sprite animation frame</td>
+</tr>
+<tr>
+<td class="register">HL</td>
+<td class="register-desc">Sprite location</td>
+</tr>
+</table>
+<table class="output-1">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+<tr>
+<td class="register">A</td>
+<td class="register-desc">1 (tunnel entrance), 2 (maze exit/entrance), 3 (wall), or 0 (none of these)</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27842"></span>6CC2</td>
+<td class="instruction">PUSH BC</td>
+<td class="comment-11" rowspan="1">Save <span class="register">BC</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27843"></span>6CC3</td>
+<td class="instruction">PUSH DE</td>
+<td class="comment-11" rowspan="1">Save <span class="register">DE</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27844"></span>6CC4</td>
+<td class="instruction">PUSH HL</td>
+<td class="comment-11" rowspan="1">Save the sprite location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27845"></span>6CC5</td>
+<td class="instruction">LD BC,$4000</td>
+<td class="comment-11" rowspan="2">Convert the sprite location into a display file address.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27848"></span>6CC8</td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27849"></span>6CC9</td>
+<td class="instruction">CALL <a href="27927.html">$6D17</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL</span> the display file address of the tile in front of the sprite.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27852"></span>6CCC</td>
+<td class="instruction">CALL <a href="27663.html">$6C0F</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27855"></span>6CCF</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27856"></span>6CD0</td>
+<td class="instruction">LD E,$00</td>
+<td class="comment-11" rowspan="1"><span class="register">E'</span> will hold the indicator of any interesting tiles at this location; initialise it now.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27858"></span>6CD2</td>
+<td class="instruction">CALL <a href="27898.html">$6CFA</a></td>
+<td class="comment-11" rowspan="1">Check the top-left tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27861"></span>6CD5</td>
+<td class="instruction">INC HL</td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the top-right tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27862"></span>6CD6</td>
+<td class="instruction">CALL <a href="27898.html">$6CFA</a></td>
+<td class="comment-11" rowspan="1">Check the top-right tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27865"></span>6CD9</td>
+<td class="instruction">LD BC,$001F</td>
+<td class="comment-11" rowspan="2">Point <span class="register">HL'</span> at the bottom-left tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27868"></span>6CDC</td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27869"></span>6CDD</td>
+<td class="instruction">CALL <a href="27898.html">$6CFA</a></td>
+<td class="comment-11" rowspan="1">Check the bottom-left tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27872"></span>6CE0</td>
+<td class="instruction">INC HL</td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the bottom-right tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27873"></span>6CE1</td>
+<td class="instruction">CALL <a href="27898.html">$6CFA</a></td>
+<td class="comment-11" rowspan="1">Check the bottom-right tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27876"></span>6CE4</td>
+<td class="instruction">LD A,E</td>
+<td class="comment-11" rowspan="1">Copy the tile indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27877"></span>6CE5</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27878"></span>6CE6</td>
+<td class="instruction">POP HL</td>
+<td class="comment-11" rowspan="1">Restore the sprite location to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27879"></span>6CE7</td>
+<td class="instruction">POP DE</td>
+<td class="comment-11" rowspan="1">Restore <span class="register">DE</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27880"></span>6CE8</td>
+<td class="instruction">POP BC</td>
+<td class="comment-11" rowspan="1">Restore <span class="register">BC</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27881"></span>6CE9</td>
+<td class="instruction">CP $FF</td>
+<td class="comment-11" rowspan="1">Is the sprite facing a wall tile?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27883"></span>6CEB</td>
+<td class="instruction">JR NZ,<a href="27842.html#27888">$6CF0</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27885"></span>6CED</td>
+<td class="instruction">LD A,$03</td>
+<td class="comment-11" rowspan="1">Signal: sprite is facing a wall tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27887"></span>6CEF</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27888"></span>6CF0</td>
+<td class="instruction">AND $0A</td>
+<td class="comment-11" rowspan="4">Return with <span class="register">A</span>=1 if the sprite is facing a tunnel entrance.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27890"></span>6CF2</td>
+<td class="instruction">RRC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27892"></span>6CF4</td>
+<td class="instruction">CP $01</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27894"></span>6CF6</td>
+<td class="instruction">RET Z</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27895"></span>6CF7</td>
+<td class="instruction">RRC A</td>
+<td class="comment-11" rowspan="1">Now <span class="register">A</span>=2 if the sprite is facing the maze exit/entrance, or 0 otherwise.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27897"></span>6CF9</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27797.html">6C95</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27842">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27898.html">6CFA</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20171205</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.1.</div>
+</footer>
+</body>
+</html>

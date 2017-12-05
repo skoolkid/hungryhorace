@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 6CFA</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="logo" src="../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27842.html">6CC2</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27898">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27927.html">6D17</a></span></td>
+</tr>
+</table>
+<div class="description">6CFA: Identify a tile in front of a sprite</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="27842.html">6CC2</a>.
+</div>
+</div>
+<table class="input-1">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+<tr>
+<td class="register">E</td>
+<td class="register-desc">Previous tile indicator</td>
+</tr>
+<tr>
+<td class="register">HL</td>
+<td class="register-desc">Attribute file address for the tile</td>
+</tr>
+</table>
+<table class="output-1">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+<tr>
+<td class="register">E</td>
+<td class="register-desc">Updated tile indicator</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27898"></span>6CFA</td>
+<td class="instruction">LD A,E</td>
+<td class="comment-11" rowspan="1">Copy the previous tile indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27899"></span>6CFB</td>
+<td class="instruction">CP $FF</td>
+<td class="comment-11" rowspan="1">Have we already found a wall tile?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27901"></span>6CFD</td>
+<td class="instruction">RET Z</td>
+<td class="comment-11" rowspan="1">Return if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27902"></span>6CFE</td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-11" rowspan="1">Pick up the tile's attribute byte.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27903"></span>6CFF</td>
+<td class="instruction">CP $3D</td>
+<td class="comment-11" rowspan="1">Is it a wall tile?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27905"></span>6D01</td>
+<td class="instruction">JR NZ,<a href="27898.html#27910">$6D06</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27907"></span>6D03</td>
+<td class="instruction">LD E,$FF</td>
+<td class="comment-11" rowspan="1">Signal: wall tile found.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27909"></span>6D05</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27910"></span>6D06</td>
+<td class="instruction">CP $3F</td>
+<td class="comment-11" rowspan="1">Is it a tunnel entrance?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27912"></span>6D08</td>
+<td class="instruction">JR NZ,<a href="27898.html#27919">$6D0F</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27914"></span>6D0A</td>
+<td class="instruction">LD A,$01</td>
+<td class="comment-11" rowspan="3">Record the number of tunnel entrance tiles found so far in bits 0 and 1 of <span class="register">E</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27916"></span>6D0C</td>
+<td class="instruction">ADD A,E</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27917"></span>6D0D</td>
+<td class="instruction">LD E,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27918"></span>6D0E</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27919"></span>6D0F</td>
+<td class="instruction">CP $38</td>
+<td class="comment-11" rowspan="1">Is it an arrow tile (maze entrance/exit)?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27921"></span>6D11</td>
+<td class="instruction">RET NZ</td>
+<td class="comment-11" rowspan="1">Return if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27922"></span>6D12</td>
+<td class="instruction">LD A,$04</td>
+<td class="comment-11" rowspan="3">Record the number of arrow tiles found so far in bits 2 and 3 of <span class="register">E</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27924"></span>6D14</td>
+<td class="instruction">ADD A,E</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27925"></span>6D15</td>
+<td class="instruction">LD E,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27926"></span>6D16</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27842.html">6CC2</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27898">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27927.html">6D17</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20171205</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.1.</div>
+</footer>
+</body>
+</html>

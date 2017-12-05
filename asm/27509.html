@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 6B75</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="logo" src="../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27464.html">6B48</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27509">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27606.html">6BD6</a></span></td>
+</tr>
+</table>
+<div class="description">6B75: Draw the current maze</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="24576.html">6000</a>.
+</div>
+</div>
+<table class="input-1">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+<tr>
+<td class="register">BC</td>
+<td class="register-desc">768</td>
+</tr>
+<tr>
+<td class="register">DE</td>
+<td class="register-desc">16384</td>
+</tr>
+<tr>
+<td class="register">HL</td>
+<td class="register-desc">Address of the maze layout data (<a href="28663.html">6FF7</a>, <a href="29431.html">72F7</a>, <a href="30199.html">75F7</a> or <a href="30967.html">78F7</a>)</td>
+</tr>
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27509"></span>6B75</td>
+<td class="instruction">PUSH BC</td>
+<td class="comment-11" rowspan="1">Save the tile counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27510"></span>6B76</td>
+<td class="instruction">PUSH HL</td>
+<td class="comment-11" rowspan="1">Save the maze layout data address.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27511"></span>6B77</td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-11" rowspan="1">Transfer the display file address to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27512"></span>6B78</td>
+<td class="instruction">CALL <a href="27663.html">$6C0F</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address (always 5800).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27515"></span>6B7B</td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-11" rowspan="1">Transfer the display file address back to <span class="register">DE</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27516"></span>6B7C</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27517"></span>6B7D</td>
+<td class="instruction">POP DE</td>
+<td class="comment-11" rowspan="1">Restore the maze layout data address to <span class="register">DE'</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27518"></span>6B7E</td>
+<td class="instruction">POP BC</td>
+<td class="comment-11" rowspan="1">Restore the tile counter to <span class="register">BC'</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27519"></span>6B7F</td>
+<td class="instruction">LD A,(DE)</td>
+<td class="comment-11" rowspan="1">Pick up a tile identifier.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27520"></span>6B80</td>
+<td class="instruction">INC DE</td>
+<td class="comment-11" rowspan="1">Point <span class="register">DE'</span> at the next tile identifier.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27521"></span>6B81</td>
+<td class="instruction">CP $00</td>
+<td class="comment-11" rowspan="1">Is the current tile blank?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27523"></span>6B83</td>
+<td class="instruction">JR Z,<a href="27509.html#27549">$6B9D</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27525"></span>6B85</td>
+<td class="instruction">CP $02</td>
+<td class="comment-11" rowspan="1">Is the current tile a flower?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27527"></span>6B87</td>
+<td class="instruction">JR Z,<a href="27509.html#27553">$6BA1</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27529"></span>6B89</td>
+<td class="instruction">CP $03</td>
+<td class="comment-11" rowspan="1">Is the current tile an arrow (entrance or exit)?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27531"></span>6B8B</td>
+<td class="instruction">JR Z,<a href="27509.html#27541">$6B95</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27533"></span>6B8D</td>
+<td class="instruction">CP $09</td>
+<td class="comment-11" rowspan="1">Is the current tile a tunnel entrance?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27535"></span>6B8F</td>
+<td class="instruction">JR Z,<a href="27509.html#27545">$6B99</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27537"></span>6B91</td>
+<td class="instruction">LD A,$3D</td>
+<td class="comment-11" rowspan="1">Wall tile (INK 5).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27539"></span>6B93</td>
+<td class="instruction">JR <a href="27509.html#27555">$6BA3</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27541"></span>6B95</td>
+<td class="instruction">LD A,$38</td>
+<td class="comment-11" rowspan="1">Arrow tile (INK 0).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27543"></span>6B97</td>
+<td class="instruction">JR <a href="27509.html#27555">$6BA3</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27545"></span>6B99</td>
+<td class="instruction">LD A,$3F</td>
+<td class="comment-11" rowspan="1">Tunnel entrance (INK 7).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27547"></span>6B9B</td>
+<td class="instruction">JR <a href="27509.html#27555">$6BA3</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27549"></span>6B9D</td>
+<td class="instruction">LD A,$3E</td>
+<td class="comment-11" rowspan="1">Blank tile (INK 6).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27551"></span>6B9F</td>
+<td class="instruction">JR <a href="27509.html#27555">$6BA3</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27553"></span>6BA1</td>
+<td class="instruction">LD A,$3C</td>
+<td class="comment-11" rowspan="1">Flower (INK 4).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27555"></span>6BA3</td>
+<td class="instruction">LD (HL),A</td>
+<td class="comment-11" rowspan="1">Set the attribute byte.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27556"></span>6BA4</td>
+<td class="instruction">INC HL</td>
+<td class="comment-11" rowspan="1">Move <span class="register">HL'</span> along the attribute file.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27557"></span>6BA5</td>
+<td class="instruction">DEC BC</td>
+<td class="comment-11" rowspan="1">Decrement the tile counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27558"></span>6BA6</td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="2">Have we finished setting the attribute bytes yet?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27559"></span>6BA7</td>
+<td class="instruction">OR C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27560"></span>6BA8</td>
+<td class="instruction">JR NZ,<a href="27509.html#27519">$6B7F</a></td>
+<td class="comment-11" rowspan="1">Jump back if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27562"></span>6BAA</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="4">
+<span id="27563"></span>
+<div class="comments">
+<div class="paragraph">
+The attribute bytes have been set. Time to draw the maze tiles.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27563"></span>6BAB</td>
+<td class="instruction">PUSH HL</td>
+<td class="comment-11" rowspan="1">Save the maze layout pointer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27564"></span>6BAC</td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-11" rowspan="1">Pick up a tile identifier in <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27565"></span>6BAD</td>
+<td class="instruction">LD H,$00</td>
+<td class="comment-11" rowspan="9">Point <span class="register">IX</span> at the graphic data for the corresponding tile (at <a href="31735.html">7BF7</a>+8*<span class="register">A</span>).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27567"></span>6BAF</td>
+<td class="instruction">LD L,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27568"></span>6BB0</td>
+<td class="instruction">ADD HL,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27569"></span>6BB1</td>
+<td class="instruction">ADD HL,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27570"></span>6BB2</td>
+<td class="instruction">ADD HL,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27571"></span>6BB3</td>
+<td class="instruction">LD IX,<a href="31735.html">$7BF7</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27575"></span>6BB7</td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27576"></span>6BB8</td>
+<td class="instruction">ADD IX,DE</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27578"></span>6BBA</td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27579"></span>6BBB</td>
+<td class="instruction">LD L,$08</td>
+<td class="comment-11" rowspan="7">Draw the tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27581"></span>6BBD</td>
+<td class="instruction">LD A,(IX+$00)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27584"></span>6BC0</td>
+<td class="instruction">LD (DE),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27585"></span>6BC1</td>
+<td class="instruction">INC D</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27586"></span>6BC2</td>
+<td class="instruction">INC IX</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27588"></span>6BC4</td>
+<td class="instruction">DEC L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27589"></span>6BC5</td>
+<td class="instruction">JR NZ,<a href="27509.html#27581">$6BBD</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27591"></span>6BC7</td>
+<td class="instruction">INC E</td>
+<td class="comment-11" rowspan="5">Point <span class="register">DE</span> at the display file address for the next tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27592"></span>6BC8</td>
+<td class="instruction">JR Z,<a href="27509.html#27598">$6BCE</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27594"></span>6BCA</td>
+<td class="instruction">LD A,D</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27595"></span>6BCB</td>
+<td class="instruction">SUB $08</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27597"></span>6BCD</td>
+<td class="instruction">LD D,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27598"></span>6BCE</td>
+<td class="instruction">POP HL</td>
+<td class="comment-11" rowspan="1">Restore the maze layout pointer to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27599"></span>6BCF</td>
+<td class="instruction">INC HL</td>
+<td class="comment-11" rowspan="1">Move along to the next maze tile identifier.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27600"></span>6BD0</td>
+<td class="instruction">DEC BC</td>
+<td class="comment-11" rowspan="1">Decrement the tile counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27601"></span>6BD1</td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="2">Have we drawn all the tiles yet?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27602"></span>6BD2</td>
+<td class="instruction">OR C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27603"></span>6BD3</td>
+<td class="instruction">JR NZ,<a href="27509.html#27563">$6BAB</a></td>
+<td class="comment-11" rowspan="1">Jump back if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27605"></span>6BD5</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27464.html">6B48</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27509">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27606.html">6BD6</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20171205</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.1.</div>
+</footer>
+</body>
+</html>

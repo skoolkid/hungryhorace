@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 6A22</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="logo" src="../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27166.html">6A1E</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27170">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27199.html">6A3F</a></span></td>
+</tr>
+</table>
+<div class="description">6A22: Initialise the guard countdown timers</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+Used by the routines at <a href="24576.html">6000</a> and <a href="26426.html">673A</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27170"></span>6A22</td>
+<td class="instruction">LD A,$00</td>
+<td class="comment-11" rowspan="2">Reset the active guard counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27172"></span>6A24</td>
+<td class="instruction">LD (<a href="27402.html">$6B0A</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27175"></span>6A27</td>
+<td class="instruction">LD HL,$0000</td>
+<td class="comment-11" rowspan="2">Initialise the first guard countdown timer to zero.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27178"></span>6A2A</td>
+<td class="instruction">LD (<a href="28070.html">$6DA6</a>),HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27181"></span>6A2D</td>
+<td class="instruction">LD A,(<a href="31842.html">$7C62</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the game speed parameter (1-8) in <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27184"></span>6A30</td>
+<td class="instruction">LD H,A</td>
+<td class="comment-11" rowspan="1"><span class="register">HL</span>=256*<span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27185"></span>6A31</td>
+<td class="instruction">LD (<a href="28070.html#28072">$6DA8</a>),HL</td>
+<td class="comment-11" rowspan="1">Initialise the second guard countdown timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27188"></span>6A34</td>
+<td class="instruction">SLA H</td>
+<td class="comment-11" rowspan="1">Double <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27190"></span>6A36</td>
+<td class="instruction">LD (<a href="28070.html#28074">$6DAA</a>),HL</td>
+<td class="comment-11" rowspan="1">Initialise the third guard countdown timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27193"></span>6A39</td>
+<td class="instruction">SLA H</td>
+<td class="comment-11" rowspan="1">Double <span class="register">HL</span> again.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27195"></span>6A3B</td>
+<td class="instruction">LD (<a href="28070.html#28076">$6DAC</a>),HL</td>
+<td class="comment-11" rowspan="1">Initialise the fourth guard countdown timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27198"></span>6A3E</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27166.html">6A1E</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27170">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27199.html">6A3F</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20171205</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.1.</div>
+</footer>
+</body>
+</html>
