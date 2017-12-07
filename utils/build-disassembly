@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+D_VERSIONS=(
+  20171205
+)
+
 declare -A SK_VERSIONS
 SK_VERSIONS=(
   [20160109]=5.1
@@ -17,12 +21,13 @@ if (($# < 2)); then
   echo ""
   echo "  VERSION must be one of:"
   echo ""
-  for v in ${!SK_VERSIONS[@]}; do
+  for v in ${D_VERSIONS[@]} ${!SK_VERSIONS[@]}; do
     echo "    $v"
   done | sort -r | column -c 80
   echo ""
   echo "  Environment variables:"
   echo "    SKOOLKIT_ARCHIVE - directory containing SkoolKit release tarballs"
+  echo "    DISASSEMBLY_ARCHIVE - directory containing disassembly release tarballs"
   exit 1
 fi
 
@@ -38,12 +43,6 @@ fi
 D_VERSION=$1
 SK_VERSION=$2
 
-D_SK_VERSION=${SK_VERSIONS[$D_VERSION]}
-if [[ -z "$D_SK_VERSION" ]]; then
-  echo "Disassembly version not recognised: $D_VERSION"
-  exit 1
-fi
-
 ODIR=hh-$D_VERSION-$SK_VERSION
 rm -rf $ODIR
 mkdir $ODIR
@@ -54,20 +53,39 @@ tar xf $SKOOLKIT_ARCHIVE/$SK_DIR.tar.*
 SK_BUILD_DIR=$SK_DIR-build
 mv $SK_DIR $SK_BUILD_DIR
 
-D_SK_DIR=skoolkit-$D_SK_VERSION
-tar xf $SKOOLKIT_ARCHIVE/$D_SK_DIR.tar.*
-SK_SRC_DIR=$D_SK_DIR-src
-mv $D_SK_DIR $SK_SRC_DIR
-
-cp -p $SK_SRC_DIR/examples/hungry_horace.{ctl,ref} $SK_BUILD_DIR
-cd $SK_BUILD_DIR
-
-SKOOLFILE=hungry_horace.skool
-./sna2skool.py -c hungry_horace.ctl $HHZ80 > $SKOOLFILE
+if (($D_VERSION >= 20171205)); then
+  if [[ -z $DISASSEMBLY_ARCHIVE ]]; then
+      echo 'DISASSEMBLY_ARCHIVE is not set; aborting'
+      exit 1
+  fi
+  if [[ ! -d $DISASSEMBLY_ARCHIVE ]]; then
+      echo "DISASSEMBLY_ARCHIVE=$DISASSEMBLY_ARCHIVE: directory not found"
+      exit 1
+  fi
+  D_DIR=hh-disassembly-$D_VERSION
+  tar xf $DISASSEMBLY_ARCHIVE/$D_DIR.tar.xz
+  cd $SK_BUILD_DIR
+  cp -p ../$D_DIR/sources/*.{skool,ref} .
+  SKOOLFILE=hh.skool
+else
+  D_SK_VERSION=${SK_VERSIONS[$D_VERSION]}
+  if [[ -z $D_SK_VERSION ]]; then
+    echo "Disassembly version not recognised: $D_VERSION"
+    exit 1
+  fi
+  D_SK_DIR=skoolkit-$D_SK_VERSION
+  tar xf $SKOOLKIT_ARCHIVE/$D_SK_DIR.tar.*
+  SK_SRC_DIR=$D_SK_DIR-src
+  mv $D_SK_DIR $SK_SRC_DIR
+  cp -p $SK_SRC_DIR/examples/hungry_horace.{ctl,ref} $SK_BUILD_DIR
+  cd $SK_BUILD_DIR
+  SKOOLFILE=hungry_horace.skool
+  ./sna2skool.py -c hungry_horace.ctl $HHZ80 > $SKOOLFILE
+fi
 
 SK_VERSION_INT=$(echo $SK_VERSION | tr -d . )0
 SK_VERSION_INT=${SK_VERSION_INT:0:3}
-HTMLDIR=../hungry_horace
+HTMLDIR=..
 if (($SK_VERSION_INT < 220)); then
   ./skool2html.py -f $SKOOLFILE $HTMLDIR
 elif (($SK_VERSION_INT < 302)); then
