@@ -3,6 +3,11 @@
 [Page:Changelog]
 SectionType=BulletPoints
 
+[Changelog:YYYYMMDD]
+-
+
+- Added a POKE: #POKE#infiniteLives()
+
 [Changelog:20171205]
 The disassembly is now 'complete'.
 

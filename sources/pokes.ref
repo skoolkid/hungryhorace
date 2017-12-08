@@ -1,0 +1,6 @@
+; Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+
+[Poke:infiniteLives:Infinite lives]
+To give Horace infinite lives:
+
+POKE #R26429(26429),0

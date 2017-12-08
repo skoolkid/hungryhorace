@@ -2,7 +2,7 @@
 
 [Config]
 GameDir=hungry_horace
-RefFiles=changelog.ref
+RefFiles=changelog.ref;pokes.ref
 
 [Game]
 Copyright=&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.
@@ -10,4 +10,4 @@ Game=Hungry Horace
 Logo=#SCR1,2,14,26,8(/images/logo)
 LinkInternalOperands=1
 LinkOperands=CALL,DEFW,DJNZ,JP,JR,LD
-Release=The complete Hungry Horace RAM disassembly 20171205
+Release=The complete Hungry Horace RAM disassembly YYYYMMDD
