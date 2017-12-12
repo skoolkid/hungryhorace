@@ -11,3 +11,12 @@ Logo=#SCR1,2,14,26,8(/images/logo|Hungry Horace)
 LinkInternalOperands=1
 LinkOperands=CALL,DEFW,DJNZ,JP,JR,LD
 Release=The complete Hungry Horace RAM disassembly YYYYMMDD
+
+[MemoryMap:MemoryMap]
+PageByteColumns=#IF({base}==16)(0,1)
+
+[MemoryMap:DataMap]
+PageByteColumns=#IF({base}==16)(0,1)
+
+[MemoryMap:UnusedMap]
+PageByteColumns=#IF({base}==16)(0,1)
