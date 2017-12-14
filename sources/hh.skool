@@ -111,6 +111,7 @@ d28086 DEFS 217
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
 @set-handle-unsupported-macros=1
+@replace=/#BUG/#LINK:Bugs
 @replace=/#FACT/#LINK:Facts
 @replace=/#POKE/#LINK:Pokes
 ; Hungry Horace disassembly
@@ -971,7 +972,7 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
 *26074 INC A         ;
  26075 SBC HL,BC     ;
  26077 JR NC,26074   ; }
- 26079 INC A         ; This should be 'DEC A'.
+ 26079 INC A         ; This is a #BUG#freeExtraLife(bug): it should be 'DEC A'.
  26080 LD B,A        ; Now #REGb=INT(Score/10000)+2.
  26081 LD A,(31863)  ; Pick up the extra life indicator.
  26084 CP B          ; Is it time to award an extra life?

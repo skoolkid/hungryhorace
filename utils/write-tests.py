@@ -17,7 +17,7 @@ SKOOL = '../sources/hh.skool'
 SNAPSHOT = '../build/hungry_horace.z80'
 
 OUTPUT = """Using skool file: {skoolfile}
-Using ref files: ../sources/hh.ref, ../sources/changelog.ref, ../sources/facts.ref, ../sources/pokes.ref
+Using ref files: ../sources/hh.ref, ../sources/bugs.ref, ../sources/changelog.ref, ../sources/facts.ref, ../sources/pokes.ref
 Parsing {skoolfile}
 Creating directory {odir}/hungry_horace
 Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/skoolkit.css
@@ -28,6 +28,7 @@ Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/
   Writing hungry_horace/maps/messages.html
   Writing hungry_horace/maps/unused.html
   Writing hungry_horace/buffers/gbuffer.html
+  Writing hungry_horace/reference/bugs.html
   Writing hungry_horace/reference/changelog.html
   Writing hungry_horace/reference/facts.html
   Writing hungry_horace/reference/pokes.html

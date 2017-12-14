@@ -8,6 +8,7 @@ SectionType=BulletPoints
 
 - Added a POKE: #POKE#infiniteLives()
 - Added a trivia entry: #FACT#tIsForToggling()
+- Documented a bug: #BUG#freeExtraLife()
 
 [Changelog:20171205]
 The disassembly is now 'complete'.

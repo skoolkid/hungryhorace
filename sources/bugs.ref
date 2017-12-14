@@ -1,0 +1,9 @@
+; Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+
+[Bug:freeExtraLife:Free extra life]
+Horace is given three lives before a game starts (see #R24787), but not long
+after the game has started he's awarded an extra life, which is not supposed to
+happen until the score hits 10,000. This is caused by the section of code at
+#R26067, which miscalculates the 10,000s digit of the current score.
+
+POKE #R26079(26079),61

@@ -2,7 +2,7 @@
 
 [Config]
 GameDir=hungry_horace
-RefFiles=changelog.ref;facts.ref;pokes.ref
+RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
 
 [Game]
 Copyright=&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.
