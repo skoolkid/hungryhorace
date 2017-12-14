@@ -1,0 +1,5 @@
+; Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+
+[Fact:tIsForToggling:'T' is for toggling]
+Pressing 'T' turns the sound on or off - but only while a game is in progress
+(see #R27022).

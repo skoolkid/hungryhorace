@@ -111,6 +111,7 @@ d28086 DEFS 217
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
 @set-handle-unsupported-macros=1
+@replace=/#FACT/#LINK:Facts
 @replace=/#POKE/#LINK:Pokes
 ; Hungry Horace disassembly
 ; http://skoolkit.ca/
