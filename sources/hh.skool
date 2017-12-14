@@ -113,6 +113,7 @@ d28086 DEFS 217
 @replace=/#BUG/#LINK:Bugs
 @replace=/#FACT/#LINK:Facts
 @replace=/#POKE/#LINK:Pokes
+@writer=:hungryhorace.HungryHoraceAsmWriter
 ; Hungry Horace disassembly
 ; http://skoolkit.ca/
 ;
@@ -971,7 +972,8 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
 *26074 INC A         ;
  26075 SBC HL,BC     ;
  26077 JR NC,26074   ; }
- 26079 INC A         ; This is a #BUG#freeExtraLife(bug): it should be 'DEC A'.
+ 26079 INC A         ; This is a #BUG#freeExtraLife(bug): it should be
+                     ; '#S/DEC A/'.
  26080 LD B,A        ; Now #REGb=INT(Score/10000)+2.
  26081 LD A,(31863)  ; Pick up the extra life indicator.
  26084 CP B          ; Is it time to award an extra life?
@@ -1507,7 +1509,7 @@ c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
  27004 LD (HL),D     ; }
  27005 DEC HL        ;
  27006 LD A,D        ;
- 27007 OR C          ; This should be 'OR E'.
+ 27007 OR C          ; This should be '#S/OR E/'.
  27008 JR NZ,27017   ; Jump unless #REGa is now zero.
  27010 LD A,(27402)  ; {Increment the active guard counter.
  27013 INC A         ;
