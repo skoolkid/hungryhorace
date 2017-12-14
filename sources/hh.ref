@@ -2,6 +2,7 @@
 
 [Config]
 GameDir=hungry_horace
+HtmlWriterClass=:hungryhorace.HungryHoraceHtmlWriter
 RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
 
 [Game]

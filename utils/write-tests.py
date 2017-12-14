@@ -34,4 +34,6 @@ Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/
   Writing hungry_horace/reference/pokes.html
   Writing hungry_horace/index.html"""
 
-write_tests(SKOOL, SNAPSHOT, OUTPUT, clean=False)
+HTML_WRITER = '../sources:hungryhorace.HungryHoraceHtmlWriter'.format(SKOOLKIT_HOME)
+
+write_tests(SKOOL, SNAPSHOT, OUTPUT, HTML_WRITER, clean=False)
