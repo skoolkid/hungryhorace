@@ -6,6 +6,7 @@ HtmlWriterClass=:hungryhorace.HungryHoraceHtmlWriter
 RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
 
 [Game]
+AddressAnchor={address#IF({base}==16)(:04#S/X/)}
 Copyright=&#169; 1982 Beam Software. &#169; 2017 Richard Dymond.
 Game=Hungry Horace
 Logo=#SCR1,2,14,26,8(/images/logo|Hungry Horace)
