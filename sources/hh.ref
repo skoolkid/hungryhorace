@@ -13,6 +13,9 @@ LinkInternalOperands=1
 LinkOperands=CALL,DEFW,DJNZ,JP,JR,LD
 Release=The complete Hungry Horace RAM disassembly YYYYMMDD
 
+[Paths]
+CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
+
 [MemoryMap:MemoryMap]
 PageByteColumns=#IF({base}==16)(0,1)
 
