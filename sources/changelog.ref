@@ -6,7 +6,9 @@ SectionType=BulletPoints
 [Changelog:YYYYMMDD]
 -
 
-- Added a POKE: #POKE#infiniteLives()
+- Added POKEs:
+  - #POKE#infiniteLives()
+  - #POKE#alwaysThrowableGuards()
 - Added a trivia entry: #FACT#tIsForToggling()
 - Documented a bug: #BUG#freeExtraLife()
 

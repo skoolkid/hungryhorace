@@ -4,3 +4,9 @@
 To give Horace infinite lives:
 
 POKE #R26429(26429),0
+
+[Poke:alwaysThrowableGuards:Always throwable guards]
+To enable Horace to throw the guards out of the park even when he hasn't
+sounded the alarm:
+
+POKE #R26285(26287),0
