@@ -10,7 +10,9 @@ SectionType=BulletPoints
   - #POKE#infiniteLives()
   - #POKE#alwaysThrowableGuards()
 - Added a trivia entry: #FACT#tIsForToggling()
-- Documented a bug: #BUG#freeExtraLife()
+- Documented bugs:
+  - #BUG#freeExtraLife()
+  - #BUG#brokenGuardCounter()
 
 [Changelog:20171205]
 The disassembly is now 'complete'.
