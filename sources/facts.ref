@@ -3,3 +3,8 @@
 [Fact:tIsForToggling:'T' is for toggling]
 Pressing 'T' turns the sound on or off - but only while a game is in progress
 (see #R27022).
+
+[Fact:1-2-3-4]
+In addition to the documented movement keys - 'Q', 'Z', 'I' and 'P' - the keys
+'1', '2', '3' and '4' can also be used to move Horace left, right, down and up
+(see #R25284).
