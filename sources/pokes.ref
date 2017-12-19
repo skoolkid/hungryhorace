@@ -10,3 +10,8 @@ To enable Horace to throw the guards out of the park even when he hasn't
 sounded the alarm:
 
 POKE #R26285(26287),0
+
+[Poke:graciousGuards:Gracious guards]
+To allow Horace to roam the park without fear of being caught by a guard:
+
+POKE #R26276(26276),201

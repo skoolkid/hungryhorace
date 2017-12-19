@@ -9,6 +9,7 @@ SectionType=BulletPoints
 - Added POKEs:
   - #POKE#infiniteLives()
   - #POKE#alwaysThrowableGuards()
+  - #POKE#graciousGuards()
 - Added trivia entries:
   - #FACT#tIsForToggling()
   - #FACT#1-2-3-4()
