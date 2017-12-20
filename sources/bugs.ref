@@ -15,3 +15,17 @@ of a bell sound. However, because of a bug in the routine at #R26988, the
 counter is unlikely to be accurate.
 
 POKE #R27007(27007),179
+
+[Bug:gameSlowdown:Game slowdown]
+When Horace reaches the 29th maze, the game might slow down significantly,
+making it barely playable.
+
+This can happen because the routine at #R27044 produces a timing delay (D) of
+26*(350+30*S-128*G)+5 T states, where 'S' is the value of the game speed
+parameter at #R31842 (1-8), and 'G' is the value of the active guard counter at
+#R27402 (0-3). When S&gt;1, 681&lt;=D&lt;=15345; but when S=1 and G=3, D=65437
+(mod 65536).
+
+However, one reason the slowdown might not happen is that the active guard
+counter is #BUG#brokenGuardCounter(broken), and so 'G' might not be 3 even when
+all four guards are in play.

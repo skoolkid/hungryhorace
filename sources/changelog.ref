@@ -17,6 +17,7 @@ SectionType=BulletPoints
 - Documented bugs:
   - #BUG#freeExtraLife()
   - #BUG#brokenGuardCounter()
+  - #BUG#gameSlowdown()
 
 [Changelog:20171205]
 The disassembly is now 'complete'.
