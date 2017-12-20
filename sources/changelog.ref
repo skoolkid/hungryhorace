@@ -13,6 +13,7 @@ SectionType=BulletPoints
 - Added trivia entries:
   - #FACT#tIsForToggling()
   - #FACT#1-2-3-4()
+  - #FACT#gameSpeed()
 - Documented bugs:
   - #BUG#freeExtraLife()
   - #BUG#brokenGuardCounter()
