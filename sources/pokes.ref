@@ -15,3 +15,9 @@ POKE #R26285(26287),0
 To allow Horace to roam the park without fear of being caught by a guard:
 
 POKE #R26276(26276),201
+
+[Poke:turboTunnel:Turbo tunnel]
+It's not fair that the guards can catch up with Horace by following him through
+a tunnel. To make Horace's passage through a tunnel much quicker:
+
+POKE #R25450(25451),1
