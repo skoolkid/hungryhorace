@@ -21,3 +21,9 @@ It's not fair that the guards can catch up with Horace by following him through
 a tunnel. To make Horace's passage through a tunnel much quicker:
 
 POKE #R25450(25451),1
+
+[Poke:twoWayTunnel:Two-way tunnel]
+To make the tunnel in #R29431(maze 1) accessible from both sides (like the
+tunnels in #R28663(maze 2) and #R30967(maze 4)):
+
+POKE 29735,9: POKE 29736,9

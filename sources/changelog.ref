@@ -11,6 +11,7 @@ SectionType=BulletPoints
   - #POKE#alwaysThrowableGuards()
   - #POKE#graciousGuards()
   - #POKE#turboTunnel()
+  - #POKE#twoWayTunnel()
 - Added trivia entries:
   - #FACT#tIsForToggling()
   - #FACT#1-2-3-4()
