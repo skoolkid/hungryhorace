@@ -15,6 +15,7 @@ SectionType=BulletPoints
   - #FACT#tIsForToggling()
   - #FACT#1-2-3-4()
   - #FACT#gameSpeed()
+  - #FACT#variableFruitBonus()
 - Documented bugs:
   - #BUG#freeExtraLife()
   - #BUG#brokenGuardCounter()

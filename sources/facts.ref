@@ -14,3 +14,10 @@ When Horace moves from maze 4 back to maze 1, the game speed parameter at
 #R31842 is decreased by one, which increases the speed of the game (see
 #R27044). It reaches its lowest value (1) on the 29th maze, and then remains
 at that value until the game ends.
+
+[Fact:variableFruitBonus:Variable fruit bonus]
+The bonus awarded for eating a cherry or strawberry depends on Horace's
+direction of approach. He scores 60 when moving up or down over the fruit (50
+for the fruit itself, plus 10 for the green leaves, which count as a flower),
+and 100 when moving left or right over the fruit (50 for each half of the
+fruit).
