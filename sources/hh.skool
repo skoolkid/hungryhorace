@@ -988,7 +988,9 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
  26101 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
                      ; (unnecessarily).
  26104 LD A,(31864)  ; Pick up the number of lives remaining.
- 26107 ADD A,"0"     ; Convert it into an ASCII code.
+ 26107 ADD A,"0"     ; Convert it into an ASCII code. This does not work if
+                     ; there are 10 or more lives remaining, which is a
+                     ; #BUG#howManyLives(bug).
  26109 EX DE,HL      ; Transfer the display file address to #REGde.
  26110 CALL 27471    ; Print the number of lives remaining.
 *26113 LD HL,31849   ; Pick up the sound on/off indicator.

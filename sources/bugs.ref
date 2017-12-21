@@ -29,3 +29,8 @@ parameter at #R31842 (1-8), and 'G' is the value of the active guard counter at
 However, one reason the slowdown might not happen is that the active guard
 counter is #BUG#brokenGuardCounter(broken), and so 'G' might not be 3 even when
 all four guards are in play.
+
+[Bug:howManyLives:How many lives?]
+If Horace does well enough to get 10 lives remaining, that number is printed as
+':' (which follows '9' in the character set) instead of '10'. This is because
+the section of code at #R26104 cannot handle a number with two or more digits.

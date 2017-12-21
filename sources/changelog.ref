@@ -20,6 +20,7 @@ SectionType=BulletPoints
   - #BUG#freeExtraLife()
   - #BUG#brokenGuardCounter()
   - #BUG#gameSlowdown()
+  - #BUG#howManyLives()
 
 [Changelog:20171205]
 The disassembly is now 'complete'.
