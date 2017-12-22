@@ -36,4 +36,6 @@ Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/
 
 HTML_WRITER = '../sources:hungryhorace.HungryHoraceHtmlWriter'.format(SKOOLKIT_HOME)
 
-write_tests(SKOOL, SNAPSHOT, OUTPUT, HTML_WRITER, clean=False)
+ASM_WRITER = '../sources:hungryhorace.HungryHoraceAsmWriter'.format(SKOOLKIT_HOME)
+
+write_tests(SKOOL, SNAPSHOT, OUTPUT, HTML_WRITER, ASM_WRITER)
