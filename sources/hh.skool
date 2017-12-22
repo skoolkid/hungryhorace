@@ -336,7 +336,8 @@ c24576 DI            ; Disable interrupts.
  25025 LD C,B        ; #R28070.
  25026 LD B,0        ;
  25028 XOR A         ;
-@keep
+@ssub=LD HL,28070+8
+@keep=28078
  25029 LD HL,28078   ;
  25032 SBC HL,BC     ; }
  25034 LD A,(HL)     ; {Is this guard in play?
@@ -469,7 +470,8 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
 ; at #R28082, we now use those parameters to determine Horace's next animation
 ; frame (and therefore direction of travel).
  25262 XOR A         ; {Compute in #REGc the index of the slot that holds the
-@keep
+@ssub=LD HL,28082+4
+@keep=28086
  25263 LD HL,28086   ; largest number (0, 1, 2 or 3).
  25266 LD B,4        ;
 *25268 DEC B         ;
@@ -802,7 +804,8 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
 ; at #R28082, we now use those values to determine the guard's next animation
 ; frame (and therefore direction of travel).
  25811 XOR A         ; {Compute in #REGc the index of the slot that holds the
-@keep
+@ssub=LD HL,28082+4
+@keep=28086
  25812 LD HL,28086   ; largest number (0, 1, 2 or 3).
  25815 LD B,4        ;
 *25817 DEC B         ;
@@ -1061,6 +1064,7 @@ c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
  26196 JR Z,26227    ; Jump if not.
  26198 DEC BC        ; {Decrement the guard panic timer.
  26199 LD (28078),BC ; }
+@ssub=LD DE,32199+256
  26203 LD DE,32455   ; {Point #REGhl at the graphic data for a panicked guard
  26206 EX DE,HL      ; (frame 0).}
  26207 LD A,(28091)  ; {Increment the guard's animation frame timer.
@@ -1080,6 +1084,7 @@ c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
  26235 AND 32        ; {Is bit 5 set now?
  26237 CP 0          ; }
  26239 JR NZ,26246   ; Jump if so.
+@ssub=LD HL,32199+128
  26241 LD HL,32327   ; Point #REGhl at the graphic data for a regular guard
                      ; (frame 4).
  26244 JR 26249      ;
@@ -1331,6 +1336,7 @@ c26657 LD A,(31865)  ; Pick up the tunnel timer.
  26681 AND 16        ; Keep only bit 4.
  26683 CP 0          ; Is bit 4 set now? (This instruction is redundant.)
  26685 JR NZ,26692   ; Jump if so.
+@ssub=LD HL,31943+128
  26687 LD HL,32071   ; Point #REGhl at the graphic data for Horace's sprite
                      ; (frame 4).
  26690 JR 26695      ;
