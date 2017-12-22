@@ -8,6 +8,7 @@ SectionType=BulletPoints
 
 - Added POKEs:
   - #POKE#infiniteLives()
+  - #POKE#extraLivesMoreOften()
   - #POKE#alwaysThrowableGuards()
   - #POKE#graciousGuards()
   - #POKE#turboTunnel()

@@ -5,6 +5,16 @@ To give Horace infinite lives:
 
 POKE #R26429(26429),0
 
+[Poke:extraLivesMoreOften:Extra lives more often]
+By default, Horace gains an extra life every 10,000 points. To change that to
+every 1000 points:
+
+POKE #R26071(26072),232: POKE 26073,3
+
+Or to every 100 points:
+
+POKE #R26071(26072),100: POKE 26073,0
+
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't
 sounded the alarm:
