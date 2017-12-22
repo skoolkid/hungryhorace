@@ -22,6 +22,7 @@ SectionType=BulletPoints
   - #BUG#brokenGuardCounter()
   - #BUG#gameSlowdown()
   - #BUG#howManyLives()
+- Added <i>@label</i> directives
 
 [Changelog:20171205]
 The disassembly is now 'complete'.

@@ -121,6 +121,7 @@ d28086 DEFS 217
 ; Copyright 2014-2017 Richard Dymond (this disassembly)
 
 ; The game has just loaded
+@label=START
 c24576 DI            ; Disable interrupts.
  24577 LD A,(23672)  ; {Initialise the pseudo-random number address.
  24580 LD L,A        ;
@@ -401,6 +402,7 @@ c24576 DI            ; Disable interrupts.
 ; Read the keyboard and update Horace's sprite accordingly
 ;
 ; Used by the routine at #R24576.
+@label=READKEYS
 c25167 LD A,(31865)  ; Pick up the tunnel timer.
  25170 AND A         ; Is Horace in a tunnel at the moment?
  25171 RET NZ        ; Return if so.
@@ -541,6 +543,7 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
 ; Move Horace and the guards
 ;
 ; Used by the routine at #R24576.
+@label=MVSPRITES
 c25399 LD A,(31841)  ; {Decrement the sprite movement timer.
  25402 DEC A         ;
  25403 LD (31841),A  ; }
@@ -633,6 +636,7 @@ c25399 LD A,(31841)  ; {Decrement the sprite movement timer.
 ; Move a guard
 ;
 ; Used by the routine at #R25399.
+@label=MVGUARD
 c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
  25565 AND A         ; Has this guard been thrown out of the park?
  25566 RET NZ        ; Return if so.
@@ -842,6 +846,7 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
 ; Redraw the tiles behind Horace and the guards if they've moved
 ;
 ; Used by the routine at #R24576.
+@label=REDRAW
 c25886 LD HL,(31853) ; Pick up Horace's new location.
  25889 LD DE,(31851) ; Pick up Horace's current location.
  25893 XOR A         ; Clear the carry flag.
@@ -884,6 +889,7 @@ c25886 LD HL,(31853) ; Pick up Horace's new location.
 ; Redraw the tiles behind a guard after he's moved
 ;
 ; Used by the routine at #R25886.
+@label=REDRAWG
 c25947 LD HL,(28092) ; Pick up the guard's new location.
  25950 LD DE,(28088) ; Pick up the guard's current location.
  25954 XOR A         ; Clear the carry flag.
@@ -940,6 +946,7 @@ c25947 LD HL,(28092) ; Pick up the guard's new location.
 ; Add to the score if Horace has eaten something
 ;
 ; Used by the routine at #R24576.
+@label=CHKEATEN
 c26017 LD A,(31865)  ; Pick up the tunnel timer.
  26020 AND A         ; Is Horace in a tunnel?
  26021 RET NZ        ; Return if so.
@@ -1017,6 +1024,7 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
 ; Draw the guards
 ;
 ; Used by the routine at #R24576.
+@label=DRAWGUARDS
 c26146 LD HL,28070   ; Point #REGhl at the first of the guard countdown timers.
  26149 LD B,4        ; There are four guards.
 *26151 PUSH BC       ; Save the guard counter.
@@ -1038,6 +1046,7 @@ c26146 LD HL,28070   ; Point #REGhl at the first of the guard countdown timers.
 ; Draw a guard
 ;
 ; Used by the routine at #R26146.
+@label=DRAWGUARD
 c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
  26176 AND A         ; Has this guard been thrown out of the park?
  26177 JR Z,26184    ; Jump if not.
@@ -1095,6 +1104,7 @@ c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
 ; Check whether Horace has run into a guard
 ;
 ; Used by the routine at #R24576.
+@label=CHKHIT
 c26276 LD HL,(31853) ; Pick up Horace's new location.
  26279 CALL 27680    ; Check the attribute bytes at Horace's new location.
  26282 CP 59         ; Has Horace run into a guard?
@@ -1174,6 +1184,7 @@ c26276 LD HL,(31853) ; Pick up Horace's new location.
 ; Lose a life
 ;
 ; Used by the routine at #R26276.
+@label=DEAD
 c26426 LD A,(31864)  ; {Decrement the number of lives.
  26429 DEC A         ;
  26430 LD (31864),A  ; }
@@ -1303,6 +1314,7 @@ c26426 LD A,(31864)  ; {Decrement the number of lives.
 ; Draw Horace
 ;
 ; Used by the routines at #R24576 and #R26730.
+@label=DRAWHORACE
 c26657 LD A,(31865)  ; Pick up the tunnel timer.
  26660 AND A         ; Is Horace in a tunnel at the moment?
  26661 JR Z,26674    ; Jump if not.
@@ -1345,6 +1357,7 @@ c26657 LD A,(31865)  ; Pick up the tunnel timer.
 ; Draw the bell and check whether Horace has sounded the alarm
 ;
 ; Used by the routine at #R24576.
+@label=DRAWBELL
 c26730 LD HL,(31851) ; Pick up Horace's current location.
  26733 LD BC,(31940) ; Pick up the location of the bell in the current maze.
  26737 LD A,B        ; {Has Horace already sounded the alarm?
@@ -1432,6 +1445,7 @@ c26730 LD HL,(31851) ; Pick up Horace's current location.
 ; Check whether a guard should drop his lunch
 ;
 ; Used by the routine at #R24576.
+@label=CHKLUNCH
 c26887 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
  26890 LD B,4        ; There are four guards to consider.
 *26892 PUSH BC       ; Save the guard counter.
@@ -1453,6 +1467,7 @@ c26887 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
 ; Make a guard drop his lunch if necessary
 ;
 ; Used by the routine at #R26887.
+@label=DROPLUNCH
 c26914 LD A,(28094)  ; Pick up the guard's return delay counter.
  26917 AND A         ; Has this guard been thrown out of the park?
  26918 RET NZ        ; Return if so.
@@ -1496,6 +1511,7 @@ c26914 LD A,(28094)  ; Pick up the guard's return delay counter.
 ; Decrement the guard countdown timers
 ;
 ; Used by the routine at #R24576.
+@label=DECGTIMERS
 c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
  26991 LD B,4        ; There are four guards to consider.
 *26993 LD E,(HL)     ; {Pick up the countdown timer value in #REGde.
@@ -1525,6 +1541,7 @@ c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
 ; Toggle the sound on/off if 'T' is pressed
 ;
 ; Used by the routine at #R24576.
+@label=TOGGLESND
 c27022 LD A,251      ; {Read keys Q-W-E-R-T.
  27024 IN A,(254)    ; }
  27026 AND 16        ; Keep only bit 4 (corresponding to 'T').
@@ -1543,6 +1560,7 @@ c27022 LD A,251      ; {Read keys Q-W-E-R-T.
 ; Ring the bell if necessary
 ;
 ; Used by the routine at #R24576.
+@label=RINGBELL
 c27044 LD HL,(31940) ; Pick up the bell's location in the current maze.
  27047 LD A,H        ; {Has Horace already sounded the alarm?
  27048 OR L          ; }
@@ -1617,12 +1635,14 @@ u27159 LD A,(IX+0)
 ; Enter the next maze
 ;
 ; Used by the routine at #R25399 when Horace is leaving the current maze.
+@label=NEXTMAZE
 c27166 POP HL        ; Drop the return address from the stack.
  27167 JP 24809      ; Prepare the next maze.
 
 ; Initialise the guard countdown timers
 ;
 ; Used by the routines at #R24576 and #R26426.
+@label=INITGCT
 c27170 LD A,0        ; {Reset the active guard counter.
  27172 LD (27402),A  ; }
  27175 LD HL,0       ; {Initialise the first guard countdown timer to zero.
@@ -1642,6 +1662,7 @@ c27170 LD A,0        ; {Reset the active guard counter.
 ; and #R26887.
 ;
 ; B Guard number (1-4)
+@label=COPYGUARD
 c27199 LD A,B        ; Copy the guard number (1, 2, 3, 4) to #REGa.
  27200 CP 4          ; Are we dealing with guard 4?
  27202 JR NZ,27209   ; Jump if not.
@@ -1667,6 +1688,7 @@ c27199 LD A,B        ; Copy the guard number (1, 2, 3, 4) to #REGa.
 ;
 ; Used by the routines at #R24576, #R25399, #R25886, #R26146, #R26276, #R26426
 ; and #R26887.
+@label=UPDTGUARD
 c27242 LD HL,(28086) ; Retrieve the address of the guard's buffer.
  27245 LD DE,28088   ; Point #REGde at the temporary guard buffer.
  27248 EX DE,HL      ; Switch pointers.
@@ -1678,6 +1700,7 @@ c27242 LD HL,(28086) ; Retrieve the address of the guard's buffer.
 ;
 ; Used by the routines at #R24576 (on the title screen) and #R26426 (when a
 ; game is over).
+@label=TITLESOUND
 c27255 LD HL,31849   ; Pick up the sound on/off indicator.
  27258 LD C,16       ; Initialise #REGc for the loop that follows.
 *27260 PUSH BC       ; Save the loop counter (unnecessarily).
@@ -1709,6 +1732,7 @@ c27255 LD HL,31849   ; Pick up the sound on/off indicator.
 ; Used by the routine at #R24576.
 ;
 ; HL #R28631, #R28639, #R28647 or #R28655
+@label=CPMAZEDATA
 c27294 LD DE,28623   ; {Copy the tunnel offset and bell, initial guard and
  27297 LD BC,8       ; entrance locations for the current maze to #R28623.
  27300 LDIR          ; }
@@ -1717,6 +1741,7 @@ c27294 LD DE,28623   ; {Copy the tunnel offset and bell, initial guard and
 ; Copyright #CHR169 1982 Beam Software...
 ;
 ; Used by the routine at #R24576.
+@label=COPYRIGHT
 t27303 DEFM " Copyright "
  27314 DEFB 127                               ; #CHR169
  27315 DEFM " 1982 Beam Software "
@@ -1726,6 +1751,7 @@ t27303 DEFM " Copyright "
 ; DEMO MODE#SPACE(2)PRESS ANY KEY TO PLAY
 ;
 ; Used by the routine at #R24576.
+@label=DEMOMODE
 t27367 DEFM "DEMO MODE  PRESS ANY KEY TO PLAY"
  27399 DEFB 255                                ; End marker.
 
@@ -1733,6 +1759,7 @@ t27367 DEFM "DEMO MODE  PRESS ANY KEY TO PLAY"
 ;
 ; Used by the routine at #R24576. Decremented until it reaches zero, after
 ; which demo mode begins.
+@label=TITLECT
 g27400 DEFW 0
 
 ; Active guard counter
@@ -1740,12 +1767,14 @@ g27400 DEFW 0
 ; Initialised by the routine at #R24576, and used by the routines at #R26988,
 ; #R27044 and #R27170. Supposed to hold the number of active guards minus one,
 ; but may not because of a #BUG#brokenGuardCounter(bug).
+@label=GUARDCOUNT
 g27402 DEFB 0
 
 ; Game mode indicator
 ;
 ; Used by the routines at #R24576, #R25167, #R26426 and #R27464. Holds 0 in
 ; demo mode, or 1 in game mode.
+@label=GAMEMODE
 g27403 DEFB 0
 
 ; Wait for 26*#REGbc+5 T states
@@ -1753,6 +1782,7 @@ g27403 DEFB 0
 ; Used by the routine at #R27044 to produce a delay in place of a bell sound.
 ;
 ; BC Delay parameter
+@label=DELAY
 c27404 DEC BC        ; Decrement the delay counter.
  27405 LD A,B        ; {Is it zero yet?
  27406 OR C          ; }
@@ -1764,6 +1794,7 @@ c27404 DEC BC        ; Decrement the delay counter.
 ; Used by the routines at #R25167, #R26426 and #R26914.
 ;
 ; O:A Pseudo-random number
+@label=RANDOM
 c27410 LD HL,(31847) ; Pick up the address of the next pseudo-random number.
  27413 LD A,(HL)     ; Copy the number to #REGa.
  27414 PUSH AF       ; Save the number briefly.
@@ -1781,6 +1812,7 @@ c27410 LD HL,(31847) ; Pick up the address of the next pseudo-random number.
 ;
 ; DE Display file address
 ; HL Score or high score
+@label=PRINTSCORE
 c27425 EX DE,HL      ; Switch the display file address to #REGhl.
  27426 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
                      ; (unnecessarily).
@@ -1812,6 +1844,7 @@ c27425 EX DE,HL      ; Switch the display file address to #REGhl.
 ;   F Carry flag reset
 ; O:A 48 (ASCII code for '0')
 ; O:F Carry flag reset
+@label=PRINTDIGIT
 c27464 INC A         ; {Compute in #REGa the ASCII code for the digit.
  27465 SBC HL,BC     ;
  27467 JR NC,27464   ;
@@ -1858,6 +1891,7 @@ c27464 INC A         ; {Compute in #REGa the ASCII code for the digit.
 ; BC 768
 ; DE 16384
 ; HL Address of the maze layout data (#R28663, #R29431, #R30199 or #R30967)
+@label=DRAWMAZE
 c27509 PUSH BC       ; Save the tile counter.
  27510 PUSH HL       ; Save the maze layout data address.
  27511 EX DE,HL      ; Transfer the display file address to #REGhl.
@@ -1933,6 +1967,7 @@ c27509 PUSH BC       ; Save the tile counter.
 ; DE Address of the sprite graphic data
 ; HL Sprite location
 ; HL' Attribute file address for the sprite location
+@label=DRAWSPRITE
 c27606 EX AF,AF'     ; {Copy the attribute byte to #REGa'.
  27607 LD A,C        ;
  27608 EX AF,AF'     ; }
@@ -1965,6 +2000,7 @@ c27606 EX AF,AF'     ; {Copy the attribute byte to #REGa'.
 ; HL' Attribute file address
 ; O:HL Display file address for the next tile to the right
 ; O:HL' Attribute file address for the next tile to the right
+@label=PRINTTILE
 c27642 LD A,C        ; Copy the attribute byte to #REGa.
  27643 EXX           ; Exchange registers.
  27644 LD (HL),A     ; Set the attribute byte.
@@ -1992,6 +2028,7 @@ c27642 LD A,C        ; Copy the attribute byte to #REGa.
 ;
 ;   HL Sprite location or display file address
 ; O:HL' Attribute file address
+@label=ATTRADDR
 c27663 PUSH HL       ; Push the address/location onto the stack.
  27664 EXX           ; Exchange registers.
  27665 POP HL        ; Drop the address/location off the stack into #REGhl'.
@@ -2012,6 +2049,7 @@ c27663 PUSH HL       ; Push the address/location onto the stack.
 ;   HL Sprite location
 ; O:A 58 (cherry/strawberry), 59 (guard), 60 (flower), or 0 (none of these)
 ; O:F Zero flag set if #REGa is 0 (nothing found)
+@label=CHKATTRS
 c27680 PUSH BC       ; Save #REGbc.
  27681 PUSH DE       ; Save #REGde.
  27682 PUSH HL       ; Save the sprite location.
@@ -2045,6 +2083,7 @@ c27680 PUSH BC       ; Save #REGbc.
 ;   E 0, or attribute value from previous call
 ;   HL Attribute file address
 ; O:E 58 (cherry/strawberry), 59 (guard), 60 (flower), or 0 (none of these)
+@label=CHKATTR
 c27718 LD A,(HL)     ; Pick up the attribute byte.
  27719 CP 59         ; Is it magenta?
  27721 JR Z,27733    ; Jump if so (there is a guard here).
@@ -2074,6 +2113,7 @@ c27718 LD A,(HL)     ; Pick up the attribute byte.
 ; Used by the routines at #R25947 and #R26276.
 ;
 ; HL Guard's location
+@label=CPMAZEBG
 c27752 PUSH BC       ; Save #REGbc.
  27753 PUSH DE       ; Save #REGde.
  27754 PUSH HL       ; Save the guard's location.
@@ -2113,6 +2153,7 @@ c27752 PUSH BC       ; Save #REGbc.
 ; DE Address of the tile in the guard's buffer
 ; HL Display file address of the maze background tile
 ; HL' Attribute file address of the maze background tile
+@label=CPMAZETILE
 c27797 EXX           ; Exchange registers.
  27798 LD A,(HL)     ; Pick up the attribute byte of the maze background tile.
  27799 INC HL        ; Point #REGhl' at the attribute byte of the next tile to
@@ -2161,6 +2202,7 @@ c27797 EXX           ; Exchange registers.
 ;   HL Sprite location
 ; O:A 1 (tunnel entrance), 2 (maze exit/entrance), 3 (wall), or 0 (none of
 ; .   these)
+@label=CHKTILES
 c27842 PUSH BC       ; Save #REGbc.
  27843 PUSH DE       ; Save #REGde.
  27844 PUSH HL       ; Save the sprite location.
@@ -2204,6 +2246,7 @@ c27842 PUSH BC       ; Save #REGbc.
 ;   E Previous tile indicator
 ;   HL Attribute file address for the tile
 ; O:E Updated tile indicator
+@label=IDTILE
 c27898 LD A,E        ; Copy the previous tile indicator to #REGa.
  27899 CP 255        ; Have we already found a wall tile?
  27901 RET Z         ; Return if so.
@@ -2232,6 +2275,7 @@ c27898 LD A,E        ; Copy the previous tile indicator to #REGa.
 ;   A Sprite animation frame
 ;   HL Sprite location
 ; O:HL Location of the tile in front of the sprite
+@label=INFRONT
 c27927 AND 3         ; Keep only bits 0 and 1 of the animation frame (which
                      ; indicate the direction that the sprite is facing). (This
                      ; instruction is redundant.)
@@ -2282,6 +2326,7 @@ c27927 AND 3         ; Keep only bits 0 and 1 of the animation frame (which
 ; BC 160 (number of tiles to draw)
 ; DE Display file address
 ; HL #R28303 (HUNGRY) or #R28463 (HORACE)
+@label=BIGWORD
 c27982 PUSH BC        ; Save the tile counter.
  27983 LD A,(HL)      ; Pick up a data byte.
  27984 AND 48         ; Keep only bits 4 and 5.
@@ -2341,9 +2386,13 @@ c27982 PUSH BC        ; Save the tile counter.
 ; Initialised by the routine at #R27170, and used by the routines at #R25399,
 ; #R25886, #R26146, #R26276, #R26426, #R26887 and #R26988. When a guard's
 ; countdown timer reaches 0, the guard is brought into play.
+@label=GUARD1CT
 g28070 DEFW 0        ; Guard 1.
+@label=GUARD2CT
  28072 DEFW 0        ; Guard 2.
+@label=GUARD3CT
  28074 DEFW 0        ; Guard 3.
+@label=GUARD4CT
  28076 DEFW 0        ; Guard 4.
 
 ; Guard panic timer
@@ -2351,11 +2400,13 @@ g28070 DEFW 0        ; Guard 1.
 ; Initialised by the routine at #R24576, and used by the routines at #R25562,
 ; #R26173, #R26276 and #R26730. Holds a non-zero value when the guards are
 ; panicking.
+@label=GUARDPT
 g28078 DEFW 0
 
 ; Temporary store for a guard's screen x- and y-coordinates
 ;
 ; Used by the routine at #R25562.
+@label=TEMPXY
 g28080 DEFB 0        ; x-coordinate.
  28081 DEFB 0        ; y-coordinate.
 
@@ -2363,6 +2414,7 @@ g28080 DEFB 0        ; x-coordinate.
 ;
 ; Used by the routine at #R25167 (when moving Horace in demo mode) and #R25562
 ; (when moving a guard).
+@label=TEMPDPP
 g28082 DEFB 0        ; Up.
  28083 DEFB 0        ; Right.
  28084 DEFB 0        ; Down.
@@ -2371,6 +2423,7 @@ g28082 DEFB 0        ; Up.
 ; Buffer address of the guard currently being handled
 ;
 ; Used by the routines at #R27199 and #R27242.
+@label=GBUFADDR
 g28086 DEFW 0
 
 ; Temporary guard buffer
@@ -2379,18 +2432,24 @@ g28086 DEFW 0
 ; at #R27199 whenever the guard needs to be moved, drawn or otherwise examined.
 ; After that, the updated contents are copied back to the original location by
 ; the routine at #R27242.
+@label=GUARDLOC
 g28088 DEFW 0                 ; Current location. Used by the routines at
                               ; #R24576, #R25562, #R25947, #R26173, #R26276,
                               ; #R27199 and #R27242.
+@label=GUARDAF
  28090 DEFB 0                 ; Animation frame. Used by the routines at
                               ; #R25562, #R26173, #R26276 and #R26730.
+@label=GUARDTIMER
  28091 DEFB 0                 ; Animation frame timer. Used by the routine at
                               ; #R26173.
+@label=GUARDNLOC
  28092 DEFW 0                 ; New location. Used by the routines at #R24576,
                               ; #R25562, #R25947, #R26173 and #R26276.
+@label=GUARDDELAY
  28094 DEFB 0                 ; Return delay counter. Used by the routines at
                               ; #R25562, #R26173, #R26276, #R26426 and
                               ; #R26914.
+@label=GUARDBG
  28095 DEFB 0,0,0,0,0,0,0,0,0 ; {Maze background tiles at the guard's location.
  28104 DEFB 0,0,0,0,0,0,0,0,0 ; Used by the routines at #R24576, #R25947,
  28113 DEFB 0,0,0,0,0,0,0,0,0 ; #R26914 and #R27752.
@@ -2400,6 +2459,7 @@ g28088 DEFW 0                 ; Current location. Used by the routines at
 ;
 ; Used by the routines at #R27199 and #R27242. See #R28088 for a description of
 ; the contents of a guard's buffer.
+@label=GUARD1BUF
 g28131 DEFW 0                 ; {Guard 1.
  28133 DEFB 0
  28134 DEFB 0
@@ -2409,6 +2469,7 @@ g28131 DEFW 0                 ; {Guard 1.
  28147 DEFB 0,0,0,0,0,0,0,0,0
  28156 DEFB 0,0,0,0,0,0,0,0,0
  28165 DEFB 0,0,0,0,0,0,0,0,0 ; }
+@label=GUARD2BUF
  28174 DEFW 0                 ; {Guard 2.
  28176 DEFB 0
  28177 DEFB 0
@@ -2418,6 +2479,7 @@ g28131 DEFW 0                 ; {Guard 1.
  28190 DEFB 0,0,0,0,0,0,0,0,0
  28199 DEFB 0,0,0,0,0,0,0,0,0
  28208 DEFB 0,0,0,0,0,0,0,0,0 ; }
+@label=GUARD3BUF
  28217 DEFW 0                 ; {Guard 3.
  28219 DEFB 0
  28220 DEFB 0
@@ -2427,6 +2489,7 @@ g28131 DEFW 0                 ; {Guard 1.
  28233 DEFB 0,0,0,0,0,0,0,0,0
  28242 DEFB 0,0,0,0,0,0,0,0,0
  28251 DEFB 0,0,0,0,0,0,0,0,0 ; }
+@label=GUARD4BUF
  28260 DEFW 0                 ; {Guard 4.
  28262 DEFB 0
  28263 DEFB 0
@@ -2444,6 +2507,7 @@ g28131 DEFW 0                 ; {Guard 1.
 ; Each byte here determines the bit pattern that is drawn in a single tile.
 ; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
 ; and 1 determine the pattern in the lower half.
+@label=HUNGRY
 b28303 DEFB 51,17,0,51,17,34,51,0  ; {First row of tiles.
  28311 DEFB 34,51,0,51,17,0,51,17
  28319 DEFB 0,35,49,51,1,0,51,49
@@ -2472,6 +2536,7 @@ b28303 DEFB 51,17,0,51,17,34,51,0  ; {First row of tiles.
 ; Each byte here determines the bit pattern that is drawn in a single tile.
 ; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
 ; and 1 determine the pattern in the lower half.
+@label=HORACE
 b28463 DEFB 51,17,0,51,17,0,35,49  ; {First row of tiles.
  28471 DEFB 51,1,0,51,49,50,19,0
  28479 DEFB 0,35,49,51,1,0,2,51
@@ -2499,14 +2564,19 @@ b28463 DEFB 51,17,0,51,17,0,35,49  ; {First row of tiles.
 ; Used by the routines at #R24576, #R25399, #R25562, #R26276, #R26730 and
 ; #R27294. The values here are copied from #R28631, #R28639, #R28647 or
 ; #R28655.
+@label=CMTUNNEL
 g28623 DEFW 0        ; Tunnel offset.
+@label=CMBELLLOC
  28625 DEFW 0        ; Bell location.
+@label=CMINITGL
  28627 DEFW 0        ; Initial guard location.
+@label=CMENTRANCE
  28629 DEFW 0        ; Entrance location.
 
 ; Tunnel offset and bell, initial guard and entrance locations for maze 1
 ;
 ; Used by the routine at #R24576.
+@label=MAZE1DATA
 b28631 DEFW 63488    ; Tunnel offset (up 8 tiles).
  28633 DEFW 4202     ; Bell location: (x,y)=(10,19).
  28635 DEFW 2197     ; Initial guard location: (x,y)=(21,12).
@@ -2515,6 +2585,7 @@ b28631 DEFW 63488    ; Tunnel offset (up 8 tiles).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 2
 ;
 ; Used by the routine at #R24576.
+@label=MAZE2DATA
 b28639 DEFW 4192     ; Tunnel offset (down 19 tiles).
  28641 DEFW 252      ; Bell location: (x,y)=(28,7).
  28643 DEFW 4112     ; Initial guard location: (x,y)=(16,16).
@@ -2523,6 +2594,7 @@ b28639 DEFW 4192     ; Tunnel offset (down 19 tiles).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 3
 ;
 ; Used by the routine at #R24576.
+@label=MAZE3DATA
 b28647 DEFW 0        ; Tunnel offset (no tunnel in this maze).
  28649 DEFW 189      ; Bell location: (x,y)=(29,5).
  28651 DEFW 2092     ; Initial guard location: (x,y)=(12,9).
@@ -2531,6 +2603,7 @@ b28647 DEFW 0        ; Tunnel offset (no tunnel in this maze).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 4
 ;
 ; Used by the routine at #R24576.
+@label=MAZE4DATA
 b28655 DEFW 4064     ; Tunnel offset (down 15 tiles).
  28657 DEFW 125      ; Bell location: (x,y)=(29,3).
  28659 DEFW 2159     ; Initial guard location: (x,y)=(15,11).
@@ -2541,6 +2614,7 @@ b28655 DEFW 4064     ; Tunnel offset (down 15 tiles).
 ; Used by the routine at #R27509.
 ; .
 ; #HTML[#MAZE28663(maze2)]
+@label=MAZE2
 b28663 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  28695 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,9,9,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  28727 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2571,6 +2645,7 @@ b28663 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ; Used by the routine at #R27509.
 ; .
 ; #HTML[#MAZE29431(maze1)]
+@label=MAZE1
 b29431 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  29463 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  29495 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -2601,6 +2676,7 @@ b29431 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ; Used by the routine at #R27509.
 ; .
 ; #HTML[#MAZE30199(maze3)]
+@label=MAZE3
 b30199 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  30231 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1
  30263 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,1,8,0,0,0,0,0,0,0,0,3
@@ -2631,6 +2707,7 @@ b30199 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ; Used by the routine at #R27509.
 ; .
 ; #HTML[#MAZE30967(maze4)]
+@label=MAZE4
 b30967 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  30999 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  31031 DEFB 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6
@@ -2663,6 +2740,7 @@ b30967 DEFB 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ; #UDGTABLE
 ; { #FOR0,9//n/#UDG(31735+8*n,#MAPn(61,2:60,3:56))(tilen)/ | // }
 ; TABLE#
+@label=MAZETILES
 b31735 DEFB 0,0,0,0,0,0,0,0
  31743 DEFB 0,255,255,0,0,255,255,0
  31751 DEFB 0,0,0,32,248,80,248,32
@@ -2677,6 +2755,7 @@ b31735 DEFB 0,0,0,0,0,0,0,0
 ; PASSES#SPACE(3)SCORE#SPACE(7)BEST
 ;
 ; Used by the routine at #R24576.
+@label=STATUS
 t31815 DEFM "PASSES   SCORE       BEST"
  31840 DEFB 255                         ; End marker.
 
@@ -2685,6 +2764,7 @@ t31815 DEFM "PASSES   SCORE       BEST"
 ; Initialised by the routine at #R24576, and used by the routine at #R25399.
 ; Decremented on each pass through the main loop; when it reaches zero, Horace
 ; and the guards are moved.
+@label=MVTIMER
 g31841 DEFB 0
 
 ; Game speed parameter (1-8)
@@ -2692,28 +2772,33 @@ g31841 DEFB 0
 ; Initialised by the routine at #R24576, and used by the routines at #R25399,
 ; #R25562, #R26730, #R27044 and #R27170. The value here determines the speed at
 ; which the game runs.
+@label=SPEED
 g31842 DEFB 0
 
 ; Current maze number
 ;
 ; Initialised to 255 by the routine at #R24576 just before a game starts. Holds
 ; 0, 1, 2 or 3 while a game is in progress.
+@label=MAZENO
 g31843 DEFB 0
 
 ; Redundant temporary variable
 ;
 ; Used by the routine at #R25562.
+@label=TEMPVAR
 g31844 DEFB 0
 
 ; Lunch-drop countdown timer
 ;
 ; Initialised by the routine at #R24576, and used by the routine at #R26914.
 ; When this timer reaches zero, one of the guards will drop his lunch.
+@label=LUNCHCT
 g31845 DEFW 0
 
 ; Address of the next pseudo-random number
 ;
 ; Initialised by the routine at #R24576, and used by the routine at #R27410.
+@label=RANDADDR
 g31847 DEFW 0
 
 ; Sound on/off indicator
@@ -2721,6 +2806,7 @@ g31847 DEFW 0
 ; Initialised by the routine at #R24576, and used by the routines at #R25399,
 ; #R26017, #R26276, #R26426, #R27022, #R27044 and #R27255. Holds 00011111
 ; binary if the sound is on, or 00000111 binary otherwise.
+@label=SOUND
 g31849 DEFB 0
 
 ; 'T' pressed indicator
@@ -2728,6 +2814,7 @@ g31849 DEFB 0
 ; Initialised by the routine at #R24576, and used by the routine at #R27022.
 ; Holds 0 if 'T' was being pressed the last time it was checked, or 16
 ; otherwise.
+@label=TPRESS
 g31850 DEFB 0
 
 ; Horace's current location
@@ -2735,6 +2822,7 @@ g31850 DEFB 0
 ; Initialised by the routine at #R24576, and used by the routines at #R25167,
 ; #R25399, #R25562, #R25886, #R26426, #R26657 and #R26730. Holds the display
 ; file address minus #N16384,,,1(0x).
+@label=HORACELOC
 g31851 DEFW 0
 
 ; Horace's new location
@@ -2742,23 +2830,27 @@ g31851 DEFW 0
 ; Initialised by the routine at #R24576, and used by the routines at #R25399,
 ; #R25886, #R26017, #R26276 and #R26657. Holds the display file address minus
 ; #N16384,,,1(0x).
+@label=HORACENLOC
 g31853 DEFW 0
 
 ; Temporary store for direction keypress
 ;
 ; Used by the routine at #R25167.
+@label=DIRKEY
 g31855 DEFB 0
 
 ; Horace's animation frame (0-3)
 ;
 ; Initialised by the routine at #R24576, and used by the routines at #R25167,
 ; #R25399 and #R26657.
+@label=HORACEAF
 g31856 DEFB 0
 
 ; Horace's attribute byte
 ;
 ; Initialised by the routine at #R24576, and used by the routines at #R26426
 ; and #R26657.
+@label=HORACEATTR
 g31857 DEFB 0
 
 ; Horace's walking animation timer
@@ -2766,17 +2858,20 @@ g31857 DEFB 0
 ; Used by the routine at #R26657. Incremented whenever Horace is drawn; bit 4
 ; determines which set of animation frames (see #R31943) is used: 0-3 if it's
 ; set, or 4-7 otherwise.
+@label=HORACETIME
 g31858 DEFB 0
 
 ; Score
 ;
 ; Initialised by the routine at #R24576, and used by the routines at #R26017,
 ; #R26276, #R26426 and #R26730.
+@label=SCORE
 g31859 DEFW 0
 
 ; High score
 ;
 ; Used by the routines at #R24576 and #R26426.
+@label=HISCORE
 g31861 DEFW 0
 
 ; Extra life indicator
@@ -2784,33 +2879,39 @@ g31861 DEFW 0
 ; Initialised by the routine at #R24576, and used by the routine at #R26017.
 ; Holds INT(S/10000)+2, where 'S' is the current score. When this value
 ; changes, Horace gets a new life.
+@label=ELIFEIND
 g31863 DEFB 0
 
 ; Number of lives remaining
 ;
 ; Initialised by the routine at #R24576, and used by the routines at #R26017
 ; and #R26426.
+@label=LIVES
 g31864 DEFB 0
 
 ; Tunnel timer
 ;
 ; Used by the routines at #R25167, #R25399, #R26017, #R26426 and #R26657. Holds
 ; a non-zero value when Horace is in a tunnel.
+@label=TUNNELTIME
 g31865 DEFB 0
 
 ; Temporary store for Horace's screen x- and y-coordinates
 ;
 ; Used by the routine at #R25562.
+@label=TEMPHXY
 g31866 DEFB 0        ; x-coordinate.
  31867 DEFB 0        ; y-coordinate.
 
 ; Cherry and strawberry graphics
 ;
 ; Used by the routine at #R26914.
+@label=CHERRY
 b31868 DEFB 60,0,0,1,1,2,2,2,1              ; {#fruit31868(cherry)
  31877 DEFB 60,96,192,224,96,32,0,0,0
  31886 DEFB 58,6,14,15,15,7,3,0,0
  31895 DEFB 58,192,224,224,224,192,128,0,0  ; }
+@label=STRAWBERRY
  31904 DEFB 60,0,0,0,0,16,28,14,3           ; {#fruit31904(strawberry)
  31913 DEFB 60,0,0,0,0,0,56,240,192
  31922 DEFB 58,30,23,29,31,13,7,3,0
@@ -2821,6 +2922,7 @@ b31868 DEFB 60,0,0,1,1,2,2,2,1              ; {#fruit31868(cherry)
 ; Initialised by the routine at #R24576, and used by the routines at #R26730
 ; and #R27044. Holds the location of the bell in the current maze, or zero if
 ; Horace has sounded the alarm.
+@label=BELLLOC
 g31940 DEFW 0
 
 ; Bell animation frame counter
@@ -2828,11 +2930,13 @@ g31940 DEFW 0
 ; Used by the routines at #R26730 and #R27044. Incremented on each pass through
 ; the main loop; its value determines which bell animation frame is used (see
 ; #R32519), and also the bell sound effect.
+@label=BELLANIMFC
 g31942 DEFB 0
 
 ; Horace graphics
 ;
 ; Used by the routine at #R26657.
+@label=HORACE0
 b31943 DEFB 15,31,127,127,255,159,231,120   ; {#sprite31943,57(horace0)
  31951 DEFB 224,248,254,254,255,241,143,126
  31959 DEFB 127,59,24,24,56,60,68,124
@@ -2869,6 +2973,7 @@ b31943 DEFB 15,31,127,127,255,159,231,120   ; {#sprite31943,57(horace0)
 ; Guard graphics
 ;
 ; Used by the routine at #R26173.
+@label=GUARD0
 b32199 DEFB 31,63,63,63,79,113,126,127      ; {#sprite32199,59(guard0)
  32207 DEFB 248,252,252,252,250,198,62,254
  32215 DEFB 95,95,63,63,31,15,7,3
@@ -2913,6 +3018,7 @@ b32199 DEFB 31,63,63,63,79,113,126,127      ; {#sprite32199,59(guard0)
 ; Bell graphics
 ;
 ; Used by the routine at #R26730.
+@label=BELL
 b32519 DEFB 0,0,0,2,1,1,1,1           ; {#sprite32519,58(bell0)
  32527 DEFB 0,0,0,0,224,249,254,252
  32535 DEFB 0,0,0,1,1,0,0,0
@@ -2933,6 +3039,7 @@ b32519 DEFB 0,0,0,2,1,1,1,1           ; {#sprite32519,58(bell0)
 ; Blank sprite
 ;
 ; Used by the routines at #R25886, #R26426 and #R26730.
+@label=BLANK
 b32647 DEFB 0,0,0,0,0,0,0,0 ; {#sprite32647,56(blank)
  32655 DEFB 0,0,0,0,0,0,0,0
  32663 DEFB 0,0,0,0,0,0,0,0
