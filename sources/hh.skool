@@ -11,7 +11,7 @@
 @defb=32845:7,228,36,36,36,7,192,4,36,39,199,228,4          ;
 @defb=32859:4,36,36,68,36,36,0,4,35,196,36,35,199,224       ;
 @start
-@org=24576
+@org
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
 @set-handle-unsupported-macros=1
