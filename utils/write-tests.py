@@ -12,12 +12,12 @@ if not os.path.isdir(SKOOLKIT_HOME):
 sys.path.insert(0, '{}/tools'.format(SKOOLKIT_HOME))
 from testwriter import write_tests
 
-SKOOL = '../sources/hh.skool'
+SKOOL = 'sources/hh.skool'
 
-SNAPSHOT = '../build/hungry_horace.z80'
+SNAPSHOT = 'build/hungry_horace.z80'
 
 OUTPUT = """Using skool file: {skoolfile}
-Using ref files: ../sources/hh.ref, ../sources/bugs.ref, ../sources/changelog.ref, ../sources/facts.ref, ../sources/pokes.ref
+Using ref files: sources/hh.ref, sources/bugs.ref, sources/changelog.ref, sources/facts.ref, sources/pokes.ref
 Parsing {skoolfile}
 Creating directory {odir}/hungry_horace
 Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/skoolkit.css
@@ -34,8 +34,8 @@ Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/
   Writing hungry_horace/reference/pokes.html
   Writing hungry_horace/index.html"""
 
-HTML_WRITER = '../sources:hungryhorace.HungryHoraceHtmlWriter'.format(SKOOLKIT_HOME)
+HTML_WRITER = 'sources:hungryhorace.HungryHoraceHtmlWriter'.format(SKOOLKIT_HOME)
 
-ASM_WRITER = '../sources:hungryhorace.HungryHoraceAsmWriter'.format(SKOOLKIT_HOME)
+ASM_WRITER = 'sources:hungryhorace.HungryHoraceAsmWriter'.format(SKOOLKIT_HOME)
 
 write_tests(SKOOL, SNAPSHOT, OUTPUT, HTML_WRITER, ASM_WRITER)
