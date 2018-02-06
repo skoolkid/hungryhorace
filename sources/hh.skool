@@ -2097,9 +2097,9 @@ c27797 EXX           ; Exchange registers.
  27826 INC DE        ; Point #REGde at the first graphic byte of the tile in
                      ; the temporary guard buffer.
  27827 LD B,8        ; {Clear out the background tile in the temporary guard
- 27829 LD A,0        ; buffer.
-*27831 LD (DE),A     ;
- 27832 INC DE        ;
+ 27829 LD A,0        ; buffer. Doing this means that, in some situations, the
+*27831 LD (DE),A     ; guard will #BUG#whoAteMyLunch(eat the flowers or fruit
+ 27832 INC DE        ; in his path).
  27833 DJNZ 27831    ; }
  27835 INC L         ; {Point #REGhl at the first graphic byte of the next maze
  27836 RET NZ        ; background tile to the right.

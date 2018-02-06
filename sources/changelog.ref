@@ -1,4 +1,4 @@
-; Copyright 2014-2017 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2018 Richard Dymond (rjdymond@gmail.com)
 
 [Page:Changelog]
 SectionType=BulletPoints
@@ -23,6 +23,7 @@ SectionType=BulletPoints
   - #BUG#brokenGuardCounter()
   - #BUG#gameSlowdown()
   - #BUG#howManyLives()
+  - #BUG#whoAteMyLunch()
 - Added <i>@label</i> directives
 
 [Changelog:20171205]

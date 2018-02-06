@@ -1,4 +1,4 @@
-; Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2017, 2018 Richard Dymond (rjdymond@gmail.com)
 
 [Bug:freeExtraLife:Free extra life]
 Horace is given three lives before a game starts (see #R24787), but not long
@@ -34,3 +34,13 @@ all four guards are in play.
 If Horace does well enough to get 10 lives remaining, that number is printed as
 ':' (which follows '9' in the character set) instead of '10'. This is because
 the section of code at #R26104 cannot handle a number with two or more digits.
+
+[Bug:whoAteMyLunch:Who ate my lunch?]
+In some situations, a guard will eat the flowers or even another guard's lunch
+if Horace hasn't already.
+
+This can happen because the routine at #R27797 clears a maze background tile in
+a guard's buffer if there is a guard sprite tile at the corresponding location
+in the maze; so if two guards are close together and moving in the same
+direction, the one following effectively mops up the items that are obscured by
+the one in front.
