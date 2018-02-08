@@ -2490,6 +2490,8 @@ g28623 DEFW 0        ; Tunnel offset.
 ; Tunnel offset and bell, initial guard and entrance locations for maze 1
 ;
 ; Used by the routine at #R24576.
+; .
+; #HTML[#MAZE29431,1,28633(maze1_init)]
 @label=MAZE1DATA
 b28631 DEFW 63488    ; Tunnel offset (up 8 tiles).
  28633 DEFW 4202     ; Bell location: (x,y)=(10,19).
@@ -2499,6 +2501,8 @@ b28631 DEFW 63488    ; Tunnel offset (up 8 tiles).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 2
 ;
 ; Used by the routine at #R24576.
+; .
+; #HTML[#MAZE28663,1,28641(maze2_init)]
 @label=MAZE2DATA
 b28639 DEFW 4192     ; Tunnel offset (down 19 tiles).
  28641 DEFW 252      ; Bell location: (x,y)=(28,7).
@@ -2508,6 +2512,8 @@ b28639 DEFW 4192     ; Tunnel offset (down 19 tiles).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 3
 ;
 ; Used by the routine at #R24576.
+; .
+; #HTML[#MAZE30199,1,28649(maze3_init)]
 @label=MAZE3DATA
 b28647 DEFW 0        ; Tunnel offset (no tunnel in this maze).
  28649 DEFW 189      ; Bell location: (x,y)=(29,5).
@@ -2517,6 +2523,8 @@ b28647 DEFW 0        ; Tunnel offset (no tunnel in this maze).
 ; Tunnel offset and bell, initial guard and entrance locations for maze 4
 ;
 ; Used by the routine at #R24576.
+; .
+; #HTML[#MAZE30967,1,28657(maze4_init)]
 @label=MAZE4DATA
 b28655 DEFW 4064     ; Tunnel offset (down 15 tiles).
  28657 DEFW 125      ; Bell location: (x,y)=(29,3).

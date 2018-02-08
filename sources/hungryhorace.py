@@ -1,4 +1,4 @@
-# Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+# Copyright 2017, 2018 Richard Dymond (rjdymond@gmail.com)
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -29,17 +29,30 @@ class HungryHoraceHtmlWriter(HtmlWriter):
         self.maze_tiles[3].attr = 56 # entrance/exit
 
     def expand_maze(self, text, index, cwd):
-        # MAZEaddr(fname)
-        end, crop_rect, fname, frame, alt, (addr,) = parse_image_macro(text, index, names=('addr',))
-        frames = [Frame(self._get_maze_udgs(addr), 2, 0, *crop_rect)]
+        # MAZEaddr[,scale,locaddr](fname)
+        names = ('addr', 'scale', 'locaddr')
+        end, crop_rect, fname, frame, alt, (addr, scale, loc_addr) = parse_image_macro(text, index, (2, 0), names)
+        frames = [Frame(self._get_maze_udgs(addr, loc_addr), scale, 0, *crop_rect)]
         return end, self.handle_image(frames, fname, cwd, alt, 'ScreenshotImagePath')
 
     def expand_s(self, text, index, cwd):
         # #S/text/
         return parse_s(text, index, self.case)
 
-    def _get_maze_udgs(self, addr):
-        return [[self.maze_tiles[i] for i in self.snapshot[a:a + 32]] for a in range(addr, addr + 768, 32)]
+    def _get_maze_udgs(self, m_addr, l_addr):
+        maze_udgs = [[self.maze_tiles[i] for i in self.snapshot[a:a + 32]] for a in range(m_addr, m_addr + 768, 32)]
+        if l_addr:
+            for s_addr, attr, loc_addr in (
+                    (32519, 58, l_addr),     # Bell
+                    (32327, 59, l_addr + 2), # Guard
+                    (32103, 57, l_addr + 4)  # Horace
+            ):
+                sprite_udgs = [Udg(attr, self.snapshot[a:a + 8]) for a in range(s_addr, s_addr + 32, 8)]
+                location = self.snapshot[loc_addr] + 256 * self.snapshot[loc_addr + 1]
+                x, y = location % 32, location // 2048 * 8 + location // 32 & 31
+                maze_udgs[y][x:x + 2] = sprite_udgs[:2]
+                maze_udgs[y + 1][x:x + 2] = sprite_udgs[2:]
+        return maze_udgs
 
 class HungryHoraceAsmWriter(AsmWriter):
     def expand_s(self, text, index):

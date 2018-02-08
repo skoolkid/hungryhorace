@@ -24,6 +24,7 @@ SectionType=BulletPoints
   - #BUG#gameSlowdown()
   - #BUG#howManyLives()
   - #BUG#whoAteMyLunch()
+- Added maze images to the entries at #R28631, #R28639, #R28647 and #R28655
 - Added <i>@label</i> directives
 
 [Changelog:20171205]
