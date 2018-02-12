@@ -26,6 +26,7 @@ SectionType=BulletPoints
   - #BUG#whoAteMyLunch()
 - Added maze images to the entries at #R28631, #R28639, #R28647 and #R28655
 - Added <i>@label</i> directives
+- Added <i>@bfix</i> directives
 
 [Changelog:20171205]
 The disassembly is now 'complete'.
