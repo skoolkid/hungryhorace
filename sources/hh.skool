@@ -2806,9 +2806,10 @@ g31841 DEFB 0
 
 ; Game speed parameter (1-8)
 ;
-; Initialised by the routine at #R24576, and used by the routines at #R25399,
-; #R25562, #R26730, #R27044 and #R27170. The value here determines the speed at
-; which the game runs.
+; Initialised to 8 by the routine at #R24576 and decremented every time Horace
+; returns to maze 1 via maze 4. Also used by the routines at #R25399, #R25562,
+; #R26730, #R27044 and #R27170. The value here determines the speed at which
+; the game runs.
 @label=SPEED
 g31842 DEFB 0
 
