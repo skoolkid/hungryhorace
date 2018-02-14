@@ -738,7 +738,7 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
  25841 CP 0          ; Is there anything in front of the guard?
  25843 JR Z,25866    ; Jump if not.
  25845 CP 1          ; Is the guard facing a tunnel entrance?
- 25847 JR NZ,25879   ; Jump if not.
+ 25847 JR NZ,25879   ; Jump if not. (This jump is never made.)
 ; The guard is about to enter a tunnel.
  25849 LD BC,(28623) ; Pick up the the tunnel offset.
  25853 LD A,(28090)  ; Pick up the guard's animation frame.
@@ -754,7 +754,8 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
  25872 CALL 27927    ; Compute the guard's new location.
 *25875 LD (28092),HL ; Update the guard's location.
  25878 RET           ;
-; The guard is facing a wall or the maze entrance or exit (so he cannot move).
+; The guard has been left facing a wall or the maze entrance or exit (so he
+; cannot move). This never happens, so the following code is never executed.
 *25879 LD HL,(28088) ; Pick up the guard's current location.
  25882 LD (28092),HL ; Set the guard's new location.
  25885 RET           ;
