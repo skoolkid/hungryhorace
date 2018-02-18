@@ -2087,6 +2087,8 @@ c27752 PUSH BC       ; Save #REGbc.
 ; DE Address of the tile in the guard's buffer
 ; HL Display file address of the maze background tile
 ; HL' Attribute file address of the maze background tile
+; O:HL Display file address of the next maze background tile to the right
+; O:HL' Attribute file address of the next maze background tile to the right
 @label=CPMAZETILE
 c27797 EXX           ; Exchange registers.
  27798 LD A,(HL)     ; Pick up the attribute byte of the maze background tile.
