@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Pokes</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Pokes">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="page-header">Pokes</td>
+</tr>
+</table>
+<ul class="contents">
+<li><a href="#infiniteLives">Infinite lives</a></li>
+<li><a href="#extraLivesMoreOften">Extra lives more often</a></li>
+<li><a href="#alwaysThrowableGuards">Always throwable guards</a></li>
+<li><a href="#graciousGuards">Gracious guards</a></li>
+<li><a href="#turboTunnel">Turbo tunnel</a></li>
+<li><a href="#twoWayTunnel">Two-way tunnel</a></li>
+</ul>
+<div><span id="infiniteLives"></span></div>
+<div class="box box-1">
+<div class="box-title">Infinite lives</div>
+<div class="paragraph">
+To give Horace infinite lives:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/673A.html#673D">26429</a>,0
+</div>
+</div>
+<div><span id="extraLivesMoreOften"></span></div>
+<div class="box box-2">
+<div class="box-title">Extra lives more often</div>
+<div class="paragraph">
+By default, Horace gains an extra life every 10,000 points. To change that to
+every 1000 points:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/65A1.html#65D7">26072</a>,232: POKE 26073,3
+</div>
+<div class="paragraph">
+Or to every 100 points:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/65A1.html#65D7">26072</a>,100: POKE 26073,0
+</div>
+</div>
+<div><span id="alwaysThrowableGuards"></span></div>
+<div class="box box-1">
+<div class="box-title">Always throwable guards</div>
+<div class="paragraph">
+To enable Horace to throw the guards out of the park even when he hasn't
+sounded the alarm:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/66A4.html#66AD">26287</a>,0
+</div>
+</div>
+<div><span id="graciousGuards"></span></div>
+<div class="box box-2">
+<div class="box-title">Gracious guards</div>
+<div class="paragraph">
+To allow Horace to roam the park without fear of being caught by a guard:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/66A4.html">26276</a>,201
+</div>
+</div>
+<div><span id="turboTunnel"></span></div>
+<div class="box box-1">
+<div class="box-title">Turbo tunnel</div>
+<div class="paragraph">
+It's not fair that the guards can catch up with Horace by following him through
+a tunnel. To make Horace's passage through a tunnel much quicker:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/6337.html#636A">25451</a>,1
+</div>
+</div>
+<div><span id="twoWayTunnel"></span></div>
+<div class="box box-2">
+<div class="box-title">Two-way tunnel</div>
+<div class="paragraph">
+To make the tunnel in <a href="../asm/72F7.html">maze 1</a> accessible from both sides (like the
+tunnels in <a href="../asm/6FF7.html">maze 2</a> and <a href="../asm/78F7.html">maze 4</a>):
+</div>
+<div class="paragraph">
+POKE 29735,9: POKE 29736,9
+</div>
+</div>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20180219</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.3.</div>
+</footer>
+</body>
+</html>

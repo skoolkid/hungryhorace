@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 6C95</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="6C68.html">6C68</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#6C95">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="6CC2.html">6CC2</a></span></td>
+</tr>
+</table>
+<div class="description">6C95: Copy a maze background tile into a guard's buffer</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="6C68.html">6C68</a>.
+</div>
+</div>
+<table class="input-1">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+<tr>
+<td class="register">DE</td>
+<td class="register-desc">Address of the tile in the guard's buffer</td>
+</tr>
+<tr>
+<td class="register">HL</td>
+<td class="register-desc">Display file address of the maze background tile</td>
+</tr>
+<tr>
+<td class="register">HL'</td>
+<td class="register-desc">Attribute file address of the maze background tile</td>
+</tr>
+</table>
+<table class="output-1">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+<tr>
+<td class="register">HL</td>
+<td class="register-desc">Display file address of the next maze background tile to the right</td>
+</tr>
+<tr>
+<td class="register">HL'</td>
+<td class="register-desc">Attribute file address of the next maze background tile to the right</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="6C95"></span>6C95</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C96"></span>6C96</td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-11" rowspan="1">Pick up the attribute byte of the maze background tile.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C97"></span>6C97</td>
+<td class="instruction">INC HL</td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the attribute byte of the next tile to the right.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C98"></span>6C98</td>
+<td class="instruction">EXX</td>
+<td class="comment-11" rowspan="1">Exchange registers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C99"></span>6C99</td>
+<td class="instruction">CP $3B</td>
+<td class="comment-11" rowspan="1">Is there a magenta (guard sprite) tile here?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C9B"></span>6C9B</td>
+<td class="instruction">JR Z,<a href="6C95.html#6CAF">$6CAF</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C9D"></span>6C9D</td>
+<td class="instruction">LD (DE),A</td>
+<td class="comment-11" rowspan="1">Copy the maze background tile attribute byte into the temporary guard buffer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C9E"></span>6C9E</td>
+<td class="instruction">INC DE</td>
+<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the first graphic byte of the tile in the temporary guard buffer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6C9F"></span>6C9F</td>
+<td class="instruction">LD B,$08</td>
+<td class="comment-11" rowspan="6">Copy the maze background tile's graphic bytes into the temporary guard buffer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="6CA1"></span>6CA1</td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA2"></span>6CA2</td>
+<td class="instruction">LD (DE),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA3"></span>6CA3</td>
+<td class="instruction">INC DE</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA4"></span>6CA4</td>
+<td class="instruction">INC H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA5"></span>6CA5</td>
+<td class="instruction">DJNZ <a href="6C95.html#6CA1">$6CA1</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA7"></span>6CA7</td>
+<td class="instruction">INC L</td>
+<td class="comment-11" rowspan="5">Point <span class="register">HL</span> at the first graphic byte of the next maze background tile to the right.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CA8"></span>6CA8</td>
+<td class="instruction">JR Z,<a href="6C95.html#6CAE">$6CAE</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CAA"></span>6CAA</td>
+<td class="instruction">LD A,H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CAB"></span>6CAB</td>
+<td class="instruction">SUB $08</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CAD"></span>6CAD</td>
+<td class="instruction">LD H,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="6CAE"></span>6CAE</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="4">
+<span id="6CAF"></span>
+<div class="comments">
+<div class="paragraph">
+There is a guard sprite tile at this location.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="6CAF"></span>6CAF</td>
+<td class="instruction">LD A,$3E</td>
+<td class="comment-11" rowspan="2">Set the background tile attribute byte (INK 6: PAPER 7).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB1"></span>6CB1</td>
+<td class="instruction">LD (DE),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB2"></span>6CB2</td>
+<td class="instruction">INC DE</td>
+<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the first graphic byte of the tile in the temporary guard buffer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB3"></span>6CB3</td>
+<td class="instruction">LD B,$08</td>
+<td class="comment-11" rowspan="5">Clear out the background tile in the temporary guard buffer. Doing this means that, in some situations, the guard will <a href="../reference/bugs.html#whoAteMyLunch">eat the flowers or fruit in his path</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB5"></span>6CB5</td>
+<td class="instruction">LD A,$00</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="6CB7"></span>6CB7</td>
+<td class="instruction">LD (DE),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB8"></span>6CB8</td>
+<td class="instruction">INC DE</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CB9"></span>6CB9</td>
+<td class="instruction">DJNZ <a href="6C95.html#6CB7">$6CB7</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CBB"></span>6CBB</td>
+<td class="instruction">INC L</td>
+<td class="comment-11" rowspan="5">Point <span class="register">HL</span> at the first graphic byte of the next maze background tile to the right.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CBC"></span>6CBC</td>
+<td class="instruction">RET NZ</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CBD"></span>6CBD</td>
+<td class="instruction">LD A,H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CBE"></span>6CBE</td>
+<td class="instruction">ADD A,$08</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CC0"></span>6CC0</td>
+<td class="instruction">LD H,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6CC1"></span>6CC1</td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="6C68.html">6C68</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#6C95">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="6CC2.html">6CC2</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20180219</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.3.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Bugs</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Bugs">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="page-header">Bugs</td>
+</tr>
+</table>
+<ul class="contents">
+<li><a href="#freeExtraLife">Free extra life</a></li>
+<li><a href="#brokenGuardCounter">Broken guard counter</a></li>
+<li><a href="#gameSlowdown">Game slowdown</a></li>
+<li><a href="#howManyLives">How many lives?</a></li>
+<li><a href="#whoAteMyLunch">Who ate my lunch?</a></li>
+</ul>
+<div><span id="freeExtraLife"></span></div>
+<div class="box box-1">
+<div class="box-title">Free extra life</div>
+<div class="paragraph">
+Horace is given three lives before a game starts (see <a href="../asm/6000.html#60D3">60D3</a>), but not long
+after the game has started he's awarded an extra life, which is not supposed to
+happen until the score hits 10,000. This is caused by the section of code at
+<a href="../asm/65A1.html#65D3">65D3</a>, which miscalculates the 10,000s digit of the current score.
+</div>
+<div class="paragraph">
+POKE <a href="../asm/65A1.html#65DF">26079</a>,61
+</div>
+</div>
+<div><span id="brokenGuardCounter"></span></div>
+<div class="box box-2">
+<div class="box-title">Broken guard counter</div>
+<div class="paragraph">
+The counter at <a href="../asm/6B0A.html">6B0A</a> is supposed to hold the number of guards in play minus
+one, and is used by the routine at <a href="../asm/69A4.html">69A4</a> to produce a timing delay in place
+of a bell sound. However, because of a bug in the routine at <a href="../asm/696C.html">696C</a>, the
+counter is unlikely to be accurate.
+</div>
+<div class="paragraph">
+POKE <a href="../asm/696C.html#697F">27007</a>,179
+</div>
+</div>
+<div><span id="gameSlowdown"></span></div>
+<div class="box box-1">
+<div class="box-title">Game slowdown</div>
+<div class="paragraph">
+When Horace reaches the 29th maze, the game might slow down significantly,
+making it barely playable.
+</div>
+<div class="paragraph">
+This can happen because the routine at <a href="../asm/69A4.html">69A4</a> produces a timing delay (D) of
+26*(350+30*S-128*G)+5 T states, where 'S' is the value of the game speed
+parameter at <a href="../asm/7C62.html">7C62</a> (1-8), and 'G' is the value of the active guard counter at
+<a href="../asm/6B0A.html">6B0A</a> (0-3). When S&gt;1, 681&lt;=D&lt;=15345; but when S=1 and G=3, D=65437
+(mod 65536).
+</div>
+<div class="paragraph">
+However, one reason the slowdown might not happen is that the active guard
+counter is <a href="bugs.html#brokenGuardCounter">broken</a>, and so 'G' might not be 3 even when
+all four guards are in play.
+</div>
+</div>
+<div><span id="howManyLives"></span></div>
+<div class="box box-2">
+<div class="box-title">How many lives?</div>
+<div class="paragraph">
+If Horace does well enough to get 10 lives remaining, that number is printed as
+':' (which follows '9' in the character set) instead of '10'. This is because
+the section of code at <a href="../asm/65A1.html#65F8">65F8</a> cannot handle a number with two or more digits.
+</div>
+</div>
+<div><span id="whoAteMyLunch"></span></div>
+<div class="box box-1">
+<div class="box-title">Who ate my lunch?</div>
+<div class="paragraph">
+In some situations, a guard will eat the flowers or even another guard's lunch
+if Horace hasn't already.
+</div>
+<div class="paragraph">
+This can happen because the routine at <a href="../asm/6C95.html">6C95</a> clears a maze background tile in
+a guard's buffer if there is a guard sprite tile at the corresponding location
+in the maze; so if two guards are close together and moving in the same
+direction, the one following effectively mops up the items that are obscured by
+the one in front.
+</div>
+</div>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20180219</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.3.</div>
+</footer>
+</body>
+</html>

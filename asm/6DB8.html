@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Game status buffer entry at 6DB8</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-g">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="page-header">Game status buffer</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="6DB6.html">6DB6</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#6DB8">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="6DE3.html">6DE3</a></span></td>
+</tr>
+</table>
+<div class="description">6DB8: Temporary guard buffer</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="4">
+<div class="details">
+<div class="paragraph">
+The contents of a guard's buffer (see <a href="6DE3.html">6DE3</a>) are copied here by the routine at <a href="6A3F.html">6A3F</a> whenever the guard needs to be moved, drawn or otherwise examined. After that, the updated contents are copied back to the original location by the routine at <a href="6A6A.html">6A6A</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DB8"></span>6DB8</td>
+<td class="instruction">DEFW $0000</td>
+<td class="comment-11" rowspan="1">Current location. Used by the routines at <a href="6000.html">6000</a>, <a href="63DA.html">63DA</a>, <a href="655B.html">655B</a>, <a href="663D.html">663D</a>, <a href="66A4.html">66A4</a>, <a href="6A3F.html">6A3F</a> and <a href="6A6A.html">6A6A</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DBA"></span>6DBA</td>
+<td class="instruction">DEFB $00</td>
+<td class="comment-11" rowspan="1">Animation frame. Used by the routines at <a href="63DA.html">63DA</a>, <a href="663D.html">663D</a>, <a href="66A4.html">66A4</a> and <a href="686A.html">686A</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DBB"></span>6DBB</td>
+<td class="instruction">DEFB $00</td>
+<td class="comment-11" rowspan="1">Animation frame timer. Used by the routine at <a href="663D.html">663D</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DBC"></span>6DBC</td>
+<td class="instruction">DEFW $0000</td>
+<td class="comment-11" rowspan="1">New location. Used by the routines at <a href="6000.html">6000</a>, <a href="63DA.html">63DA</a>, <a href="655B.html">655B</a>, <a href="663D.html">663D</a> and <a href="66A4.html">66A4</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DBE"></span>6DBE</td>
+<td class="instruction">DEFB $00</td>
+<td class="comment-11" rowspan="1">Return delay counter. Used by the routines at <a href="63DA.html">63DA</a>, <a href="663D.html">663D</a>, <a href="66A4.html">66A4</a>, <a href="673A.html">673A</a> and <a href="6922.html">6922</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DBF"></span>6DBF</td>
+<td class="instruction">DEFB $00,$00,$00,$00,$00,$00,$00,$00,$00</td>
+<td class="comment-11" rowspan="4">Maze background tiles at the guard's location. Used by the routines at <a href="6000.html">6000</a>, <a href="655B.html">655B</a>, <a href="6922.html">6922</a> and <a href="6C68.html">6C68</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DC8"></span>6DC8</td>
+<td class="instruction">DEFB $00,$00,$00,$00,$00,$00,$00,$00,$00</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DD1"></span>6DD1</td>
+<td class="instruction">DEFB $00,$00,$00,$00,$00,$00,$00,$00,$00</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="6DDA"></span>6DDA</td>
+<td class="instruction">DEFB $00,$00,$00,$00,$00,$00,$00,$00,$00</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="6DB6.html">6DB6</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#6DB8">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="6DE3.html">6DE3</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20180219</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
+<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 6.3.</div>
+</footer>
+</body>
+</html>
