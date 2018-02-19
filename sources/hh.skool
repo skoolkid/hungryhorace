@@ -2046,7 +2046,7 @@ c27718 LD A,(HL)     ; Pick up the attribute byte.
 ;
 ; Used by the routines at #R25947 and #R26276.
 ;
-; HL Guard's location
+; HL Guard's new location
 @label=CPMAZEBG
 c27752 PUSH BC       ; Save #REGbc.
  27753 PUSH DE       ; Save #REGde.
