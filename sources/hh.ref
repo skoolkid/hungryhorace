@@ -12,7 +12,9 @@ Game=Hungry Horace
 Logo=#UDGARRAY7,14,4;32768-32830-1-56,,7{8,,208}({ImagePath}/logo|Hungry Horace)
 LinkInternalOperands=1
 LinkOperands=CALL,DEFW,DJNZ,JP,JR,LD
-Release=The complete Hungry Horace RAM disassembly 20180219
+Release=The complete Hungry Horace RAM disassembly YYYYMMDD
+hex=http://skoolkid.github.io/hungryhorace
+dec=http://skoolkit.ca/disassemblies/hungry_horace
 
 [Paths]
 CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
@@ -25,3 +27,35 @@ PageByteColumns=#IF({base}==16)(0,1)
 
 [MemoryMap:UnusedMap]
 PageByteColumns=#IF({base}==16)(0,1)
+
+[Template:Asm-footer#dec#]
+<footer>
+<div class="release">{Game[Release]}</div>
+<div class="copyright">{Game[Copyright]}</div>
+<div class="created">{Game[Created]}</div>
+<div><a href="{Game[hex]}/asm/{entry[location]:04X}.html">Switch to hexadecimal</a>.</div>
+</footer>
+
+[Template:Asm-footer#hex#]
+<footer>
+<div class="release">{Game[Release]}</div>
+<div class="copyright">{Game[Copyright]}</div>
+<div class="created">{Game[Created]}</div>
+<div><a href="{Game[dec]}/asm/{entry[location]}.html">Switch to decimal</a>.</div>
+</footer>
+
+[Template:footer#dec#]
+<footer>
+<div class="release">{Game[Release]}</div>
+<div class="copyright">{Game[Copyright]}</div>
+<div class="created">{Game[Created]}</div>
+<div><a href="{Game[hex]}/{SkoolKit[path]}">Switch to hexadecimal</a>.</div>
+</footer>
+
+[Template:footer#hex#]
+<footer>
+<div class="release">{Game[Release]}</div>
+<div class="copyright">{Game[Copyright]}</div>
+<div class="created">{Game[Created]}</div>
+<div><a href="{Game[dec]}/{SkoolKit[path]}">Switch to decimal</a>.</div>
+</footer>
