@@ -898,14 +898,10 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
 *26074 INC A         ;
  26075 SBC HL,BC     ;
  26077 JR NC,26074   ; }
-@bfix-begin
- 26079 INC A         ; This is a #BUG#freeExtraLife(bug): it should be
-                     ; '#S/DEC A/'.
+@bfix=DEC A          ; {Now #REGb=INT(Score/10000).
+ 26079 INC A         ; This should be #BUG#freeExtraLife(#S/DEC A/).
+@bfix=LD B,A         ; }
  26080 LD B,A        ; Now #REGb=INT(Score/10000)+2.
-@bfix+else
- 26079 DEC A         ; {Now #REGb=INT(Score/10000).
- 26080 LD B,A        ; }
-@bfix+end
  26081 LD A,(31863)  ; Pick up the extra life indicator.
  26084 CP B          ; Is it time to award an extra life?
  26085 JR Z,26113    ; Jump if not.
