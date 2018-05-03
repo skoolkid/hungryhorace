@@ -16,22 +16,21 @@ SKOOL = 'hh.skool'
 
 SNAPSHOT = 'build/hungry_horace.z80'
 
-OUTPUT = """Using skool file: {skoolfile}
-Using ref files: hh.ref, bugs.ref, changelog.ref, facts.ref, pokes.ref
+OUTPUT = """Using ref files: hh.ref, bugs.ref, changelog.ref, facts.ref, pokes.ref
 Parsing {skoolfile}
-Creating directory {odir}/hungry_horace
-Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to {odir}/hungry_horace/skoolkit.css
-  Writing disassembly files in hungry_horace/asm
-  Writing hungry_horace/maps/all.html
-  Writing hungry_horace/maps/routines.html
-  Writing hungry_horace/maps/data.html
-  Writing hungry_horace/maps/messages.html
-  Writing hungry_horace/maps/unused.html
-  Writing hungry_horace/buffers/gbuffer.html
-  Writing hungry_horace/reference/bugs.html
-  Writing hungry_horace/reference/changelog.html
-  Writing hungry_horace/reference/facts.html
-  Writing hungry_horace/reference/pokes.html
-  Writing hungry_horace/index.html"""
+Output directory: {odir}/hungry_horace
+Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to skoolkit.css
+Writing disassembly files in asm
+Writing maps/all.html
+Writing maps/routines.html
+Writing maps/data.html
+Writing maps/messages.html
+Writing maps/unused.html
+Writing buffers/gbuffer.html
+Writing reference/bugs.html
+Writing reference/changelog.html
+Writing reference/facts.html
+Writing reference/pokes.html
+Writing index.html"""
 
 write_tests(SKOOL, SNAPSHOT, OUTPUT)
