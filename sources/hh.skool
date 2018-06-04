@@ -2,18 +2,7 @@
 
 @if({vars[pub]}==1)(replace=/#dec#//)
 @if({vars[pub]}==2)(replace=/#hex#//)
-@defs=28086:217 ; Game status buffer variables
-@defs=28623:8   ;
-@defs=31841:27  ;
-@defs=31940:3   ;
-@defb=32775:4,36,36,35,199,200,32,4,36,38,36,36,36,64,7,228 ; Logo graphic data
-@defb=32791:37,36,4,34,128,4,36,36,164,231,193              ;
-@defb=32803:4,36,36,100,36,65,0,4,35,196,35,196,33          ;
-@defb=32831:4,35,199,195,195,199,224,4,36,36,36,36,36       ;
-@defb=32845:7,228,36,36,36,7,192,4,36,39,199,228,4          ;
-@defb=32859:4,36,36,68,36,36,0,4,35,196,36,35,199,224       ;
 @start
-@org
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
 @set-handle-unsupported-macros=1
@@ -35,6 +24,17 @@
 ; full descriptions of these bugs.
 @bfix+end
 
+@defs=28086:217 ; Game status buffer variables
+@defs=28623:8   ;
+@defs=31841:27  ;
+@defs=31940:3   ;
+@defb=32775:4,36,36,35,199,200,32,4,36,38,36,36,36,64,7,228 ; Logo graphic data
+@defb=32791:37,36,4,34,128,4,36,36,164,231,193              ;
+@defb=32803:4,36,36,100,36,65,0,4,35,196,35,196,33          ;
+@defb=32831:4,35,199,195,195,199,224,4,36,36,36,36,36       ;
+@defb=32845:7,228,36,36,36,7,192,4,36,39,199,228,4          ;
+@defb=32859:4,36,36,68,36,36,0,4,35,196,36,35,199,224       ;
+@org
 ; The game has just loaded
 @label=START
 c24576 DI            ; Disable interrupts.
