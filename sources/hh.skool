@@ -1922,10 +1922,10 @@ c27606 EX AF,AF'     ; {Copy the attribute byte to #REGa'.
 ;
 ; Used by the routines at #R25947, #R27464 and #R27606.
 ;
-; C Attribute byte
-; DE Address of the sprite tile or font character graphic data
-; HL Display file address
-; HL' Attribute file address
+;   C Attribute byte
+;   DE Address of the sprite tile or font character graphic data
+;   HL Display file address
+;   HL' Attribute file address
 ; O:HL Display file address for the next tile to the right
 ; O:HL' Attribute file address for the next tile to the right
 @label=PRINTTILE
@@ -2078,9 +2078,9 @@ c27752 PUSH BC       ; Save #REGbc.
 ;
 ; Used by the routine at #R27752.
 ;
-; DE Address of the tile in the guard's buffer
-; HL Display file address of the maze background tile
-; HL' Attribute file address of the maze background tile
+;   DE Address of the tile in the guard's buffer
+;   HL Display file address of the maze background tile
+;   HL' Attribute file address of the maze background tile
 ; O:HL Display file address of the next maze background tile to the right
 ; O:HL' Attribute file address of the next maze background tile to the right
 @label=CPMAZETILE
@@ -2377,8 +2377,7 @@ g28088 DEFW 0                 ; Current location. Used by the routines at
                               ; #R25562, #R25947, #R26173 and #R26276.
 @label=GUARDDELAY
  28094 DEFB 0                 ; Return delay counter. Used by the routines at
-                              ; #R25562, #R26173, #R26276, #R26426 and
-                              ; #R26914.
+                              ; #R25562, #R26173, #R26276, #R26426 and #R26914.
 @label=GUARDBG
  28095 DEFB 0,0,0,0,0,0,0,0,0 ; {Maze background tiles at the guard's location.
  28104 DEFB 0,0,0,0,0,0,0,0,0 ; Used by the routines at #R24576, #R25947,
