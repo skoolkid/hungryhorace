@@ -1,7 +1,5 @@
 ; Copyright 2014-2018 Richard Dymond (rjdymond@gmail.com)
 
-@if({vars[pub]}==1)(replace=/#dec#//)
-@if({vars[pub]}==2)(replace=/#hex#//)
 @start
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
