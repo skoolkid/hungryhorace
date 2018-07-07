@@ -730,8 +730,8 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
 *25824 INC B         ;
  25825 DEC B         ;
  25826 JR NZ,25817   ; }
- 25828 LD A,C        ; {Update the guard's animation frame to this index
- 25829 LD (28090),A  ; value.}
+ 25828 LD A,C        ; {Update the guard's animation frame to this index value.
+ 25829 LD (28090),A  ; }
  25832 LD A,(28090)  ; Pick up the guard's animation frame.
  25835 LD HL,(28088) ; Pick up the guard's current location.
  25838 CALL 27842    ; Check the tiles in front of the guard.
@@ -2053,8 +2053,8 @@ c27752 PUSH BC       ; Save #REGbc.
  27768 CALL 27797    ; Copy the top-right maze background tile into the
                      ; temporary guard buffer.
  27771 EXX           ; Exchange registers.
- 27772 LD BC,30      ; {Point #REGhl' at the bottom-left tile's attribute
- 27775 ADD HL,BC     ; byte.}
+ 27772 LD BC,30      ; {Point #REGhl' at the bottom-left tile's attribute byte.
+ 27775 ADD HL,BC     ; }
  27776 EXX           ; Exchange registers.
  27777 LD A,L        ; {Point #REGhl at the bottom-left tile in the display
  27778 ADD A,30      ; file.
