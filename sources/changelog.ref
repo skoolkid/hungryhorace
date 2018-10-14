@@ -3,6 +3,11 @@
 [Page:Changelog]
 SectionType=BulletPoints
 
+[Changelog:20181014]
+-
+
+- Ported the disassembly to SkoolKit 7
+
 [Changelog:20180219]
 -
 

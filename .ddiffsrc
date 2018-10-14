@@ -1,5 +1,5 @@
 # rc file for disassembly-diff, skooldiff and write-files
 
-OLD_VERSION=20180219
-SK_OLD_VERSION=6.3
+OLD_VERSION=20181014
+SK_OLD_VERSION=7.0
 SNAPSHOT=$HUNGRYHORACE_HOME/build/hungry_horace.z80

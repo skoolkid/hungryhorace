@@ -12,7 +12,7 @@ Game=Hungry Horace
 Logo=#UDGARRAY7,14,4;32768-32830-1-56,,7{8,,208}({ImagePath}/logo|Hungry Horace)
 LinkInternalOperands=1
 LinkOperands=CALL,DEFW,DJNZ,JP,JR,LD
-Release=The complete Hungry Horace RAM disassembly YYYYMMDD
+Release=The complete Hungry Horace RAM disassembly 20181014
 
 [Paths]
 CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
