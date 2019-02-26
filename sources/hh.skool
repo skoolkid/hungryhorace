@@ -1,4 +1,4 @@
-; Copyright 2014-2018 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2019 Richard Dymond (rjdymond@gmail.com)
 
 @start
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
@@ -12,7 +12,7 @@
 ; http://skoolkit.ca/
 ;
 ; Copyright 1982 Beam Software (Hungry Horace)
-; Copyright 2014-2018 Richard Dymond (this disassembly)
+; Copyright 2014-2019 Richard Dymond (this disassembly)
 @bfix+begin
 ;
 ; This disassembly contains fixes for the following bugs:
@@ -413,10 +413,10 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
  25305 JR 25374      ;
 *25307 LD A,254      ; {Read keys SHIFT-Z-X-C-V.
  25309 IN A,(254)    ; }
- 25311 AND 2         ; is 'Z' (down) being pressed?
+ 25311 AND 2         ; Is 'Z' (down) being pressed?
  25313 JR Z,25323    ; Jump if so.
  25315 LD A,247      ; Read keys 1-2-3-4-5.
- 25317 IN A,(254)    ; is '3' (down) being pressed?
+ 25317 IN A,(254)    ; Is '3' (down) being pressed?
  25319 AND 4         ; Jump if not.
  25321 JR NZ,25330   ;
 *25323 LD A,2        ; {Signal: 'down' key pressed.
@@ -428,7 +428,7 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
  25336 JR Z,25346    ; Jump if so.
  25338 LD A,247      ; {Read keys 1-2-3-4-5.
  25340 IN A,(254)    ; }
- 25342 AND 2         ; is '2' (right) being pressed?
+ 25342 AND 2         ; Is '2' (right) being pressed?
  25344 JR NZ,25353   ; Jump if not.
 *25346 LD A,1        ; {Signal: 'right' key pressed.
  25348 LD (31855),A  ; }
@@ -439,7 +439,7 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
  25359 JR Z,25369    ; Jump if so.
  25361 LD A,247      ; {Read keys 1-2-3-4-5.
  25363 IN A,(254)    ; }
- 25365 AND 1         ; is '1' (left) being pressed?
+ 25365 AND 1         ; Is '1' (left) being pressed?
  25367 JR NZ,25389   ; Jump if not.
 *25369 LD A,3        ; {Signal: 'left' key pressed.
  25371 LD (31855),A  ; }
