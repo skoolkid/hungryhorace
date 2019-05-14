@@ -1,8 +1,8 @@
-; Copyright 2018 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2018, 2019 Richard Dymond (rjdymond@gmail.com)
 
 [Game+]
 alt_base=#MAP({vars[pub]})(,1:hexadecimal,2:decimal)
-alt_base_url=http://#MAP({vars[pub]})(,1:skoolkid.github.io/hungryhorace,2:skoolkit.ca/disassemblies/hungry_horace)
+alt_base_url=https://#MAP({vars[pub]})(,1:skoolkid.github.io/hungryhorace,2:skoolkit.ca/disassemblies/hungry_horace)
 
 [Template:footer]
 <footer>
