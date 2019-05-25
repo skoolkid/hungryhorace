@@ -295,8 +295,13 @@ c24576 DI            ; Disable interrupts.
  25121 LD (28078),HL ; }
  25124 LD A,57       ; {Initialise Horace's attribute byte (INK 1: PAPER 7).
  25126 LD (31857),A  ; }
-; Here we enter the main loop.
-*25129 CALL 25167    ; Read the keyboard and change Horace's sprite
+; This routine continues into the main loop at #R25129.
+
+; Main loop
+;
+; The routine at #R24576 continues here.
+@label=MAINLOOP
+c25129 CALL 25167    ; Read the keyboard and change Horace's sprite
                      ; accordingly.
  25132 CALL 25399    ; Move Horace and the guards.
  25135 CALL 25886    ; Redraw the tiles behind Horace and the guards if they've
@@ -315,7 +320,7 @@ c24576 DI            ; Disable interrupts.
 
 ; Read the keyboard and update Horace's sprite accordingly
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=READKEYS
 c25167 LD A,(31865)  ; Pick up the tunnel timer.
  25170 AND A         ; Is Horace in a tunnel at the moment?
@@ -457,7 +462,7 @@ c25167 LD A,(31865)  ; Pick up the tunnel timer.
 
 ; Move Horace and the guards
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=MVSPRITES
 c25399 LD A,(31841)  ; {Decrement the sprite movement timer.
  25402 DEC A         ;
@@ -762,7 +767,7 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
 
 ; Redraw the tiles behind Horace and the guards if they've moved
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=REDRAW
 c25886 LD HL,(31853) ; Pick up Horace's new location.
  25889 LD DE,(31851) ; Pick up Horace's current location.
@@ -862,7 +867,7 @@ c25947 LD HL,(28092) ; Pick up the guard's new location.
 
 ; Add to the score if Horace has eaten something
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=CHKEATEN
 c26017 LD A,(31865)  ; Pick up the tunnel timer.
  26020 AND A         ; Is Horace in a tunnel?
@@ -941,7 +946,7 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
 
 ; Draw the guards
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=DRAWGUARDS
 c26146 LD HL,28070   ; Point #REGhl at the first of the guard countdown timers.
  26149 LD B,4        ; There are four guards.
@@ -1025,7 +1030,7 @@ c26173 LD A,(28094)  ; Pick up the guard's return delay counter.
 
 ; Check whether Horace has run into a guard
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=CHKHIT
 c26276 LD HL,(31853) ; Pick up Horace's new location.
  26279 CALL 27680    ; Check the attribute bytes at Horace's new location.
@@ -1235,7 +1240,8 @@ c26426 LD A,(31864)  ; {Decrement the number of lives.
 
 ; Draw Horace
 ;
-; Used by the routines at #R24576 and #R26730.
+; Called from the main loop at #R25129, and also used by the routine at
+; #R26730.
 @label=DRAWHORACE
 c26657 LD A,(31865)  ; Pick up the tunnel timer.
  26660 AND A         ; Is Horace in a tunnel at the moment?
@@ -1280,7 +1286,7 @@ c26657 LD A,(31865)  ; Pick up the tunnel timer.
 
 ; Draw the bell and check whether Horace has sounded the alarm
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=DRAWBELL
 c26730 LD HL,(31851) ; Pick up Horace's current location.
  26733 LD BC,(31940) ; Pick up the location of the bell in the current maze.
@@ -1368,7 +1374,7 @@ c26730 LD HL,(31851) ; Pick up Horace's current location.
 
 ; Check whether a guard should drop his lunch
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=CHKLUNCH
 c26887 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
  26890 LD B,4        ; There are four guards to consider.
@@ -1434,7 +1440,7 @@ c26914 LD A,(28094)  ; Pick up the guard's return delay counter.
 
 ; Decrement the guard countdown timers
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=DECGTIMERS
 c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
  26991 LD B,4        ; There are four guards to consider.
@@ -1466,7 +1472,7 @@ c26988 LD HL,28070   ; Point #REGhl at the first guard countdown timer.
 
 ; Toggle the sound on/off if 'T' is pressed
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=TOGGLESND
 c27022 LD A,251      ; {Read keys Q-W-E-R-T.
  27024 IN A,(254)    ; }
@@ -1485,7 +1491,7 @@ c27022 LD A,251      ; {Read keys Q-W-E-R-T.
 
 ; Ring the bell if necessary
 ;
-; Used by the routine at #R24576.
+; Called from the main loop at #R25129.
 @label=RINGBELL
 c27044 LD HL,(31940) ; Pick up the bell's location in the current maze.
  27047 LD A,H        ; {Has Horace already sounded the alarm?
