@@ -1,4 +1,4 @@
-; Copyright 2017 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2017, 2019 Richard Dymond (rjdymond@gmail.com)
 
 [Poke:infiniteLives:Infinite lives]
 To give Horace infinite lives:
@@ -14,6 +14,19 @@ POKE #R26071(26072),232: POKE 26073,3
 Or to every 100 points:
 
 POKE #R26071(26072),100: POKE 26073,0
+
+[Poke:fruitfulFruits:More fruitful fruits (and flowers)]
+To change the points awarded for eating a cherry or strawberry from 50 to N
+(0&lt;=N&lt;=65535):
+
+<div>POKE #R26048(26049),N-256*INT(N/256)</div>
+<div>POKE 26050,INT(N/256)</div>
+
+To change the points awarded for eating a flower from 10 to N
+(0&lt;=N&lt;=65535):
+
+<div>POKE #R26036(26037),N-256*INT(N/256)</div>
+<div>POKE 26038,INT(N/256)</div>
 
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't

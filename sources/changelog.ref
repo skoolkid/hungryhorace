@@ -6,6 +6,7 @@ SectionType=BulletPoints
 [Changelog:YYYYMMDD]
 -
 
+- Added a POKE: #POKE#fruitfulFruits()
 - Added the #IF({vars[pub]}==1)(<a href="../hex/reference/changelog.html">)
   hexadecimal version of the disassembly#IF({vars[pub]}==1)(</a>) to the
   distribution
