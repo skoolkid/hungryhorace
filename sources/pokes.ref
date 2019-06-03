@@ -28,6 +28,19 @@ To change the points awarded for eating a flower from 10 to N
 <div>POKE #R26036(26037),N-256*INT(N/256)</div>
 <div>POKE 26038,INT(N/256)</div>
 
+[Poke:frequentFruits:More frequent fruits]
+The lunch-drop countdown timer at #R31845 is initialised to 2000 whenever
+Horace enters a maze, and reset to a value between 800 and 1823 inclusive after
+a guard has dropped his lunch. To make sure the timer is always initialised and
+reset to N (0&lt;=N&lt;=65535) instead:
+
+<div>POKE #R24996(24997),N-256*INT(N/256)</div>
+<div>POKE 24998,INT(N/256)</div>
+<div>POKE #R26957,33</div>
+<div>POKE 26958,N-256*INT(N/256)</div>
+<div>POKE 26959,INT(N/256)</div>
+<div>POKE 26960,0</div>
+
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't
 sounded the alarm:
