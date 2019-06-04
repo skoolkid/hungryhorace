@@ -41,6 +41,14 @@ reset to N (0&lt;=N&lt;=65535) instead:
 <div>POKE 26959,INT(N/256)</div>
 <div>POKE 26960,0</div>
 
+[Poke:alarmAdvantage:Alarm advantage]
+To change the points awarded when Horace sounds the alarm from 210 (60 + 150)
+to N (0&lt;=N&lt;=65535):
+
+<div>POKE #R26840(26841),0</div>
+<div>POKE #R26876(26877),N-256*INT(N/256)</div>
+<div>POKE 26878,INT(N/256)</div>
+
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't
 sounded the alarm:
