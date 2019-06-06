@@ -49,6 +49,13 @@ to N (0&lt;=N&lt;=65535):
 <div>POKE #R26876(26877),N-256*INT(N/256)</div>
 <div>POKE 26878,INT(N/256)</div>
 
+[Poke:expulsionIncentive:Expulsion incentive]
+To change the points awarded for throwing the guards out of the park from 100
+to N (0&lt;=N&lt;=65535):
+
+<div>POKE #R26296(26297),N-256*INT(N/256)</div>
+<div>POKE 26298,INT(N/256)</div>
+
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't
 sounded the alarm:
