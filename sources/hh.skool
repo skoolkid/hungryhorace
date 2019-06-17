@@ -1090,7 +1090,8 @@ c26276 LD HL,(31853) ; Pick up Horace's new location.
  26380 CALL 25960    ; Redraw the tiles behind the guard.
  26383 LD HL,(31853) ; Pick up Horace's new location.
  26386 CALL 27680    ; Check the attribute bytes at this location.
- 26389 CP 59         ; Set the zero flag if there's a guard here.
+ 26389 CP 59         ; Set the zero flag if there's a guard here. (This
+                     ; instruction is redundant.)
  26391 LD HL,(28629) ; Pick up the entrance location for the current maze.
  26394 LD (28088),HL ; {Make this the guard's new location.
  26397 LD (28092),HL ; }
