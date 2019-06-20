@@ -23,7 +23,7 @@
 <div class="description">6A6A: Copy the temporary guard buffer back into place</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routines at <a href="6000.html">6000</a>, <a href="6337.html">6337</a>, <a href="651E.html">651E</a>, <a href="6622.html">6622</a>, <a href="66A4.html">66A4</a>, <a href="673A.html">673A</a> and <a href="6907.html">6907</a>.
@@ -46,36 +46,42 @@ Used by the routines at <a href="6000.html">6000</a>, <a href="6337.html">6337</
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6A6A"></span>6A6A</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="6DB6.html">$6DB6</a>)</td>
 <td class="comment-11" rowspan="1">Retrieve the address of the guard's buffer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A6D"></span>6A6D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD DE,<a href="6DB8.html">$6DB8</a></td>
 <td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the temporary guard buffer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A70"></span>6A70</td>
+<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
 <td class="comment-11" rowspan="1">Switch pointers.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A71"></span>6A71</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$002B</td>
 <td class="comment-11" rowspan="2">Copy the temporary guard buffer back into place.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A74"></span>6A74</td>
+<td class="bytes-0"></td>
 <td class="instruction">LDIR</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A76"></span>6A76</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -88,10 +94,10 @@ Used by the routines at <a href="6000.html">6000</a>, <a href="6337.html">6337</
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/27242.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/27242.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

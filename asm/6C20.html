@@ -23,7 +23,7 @@
 <div class="description">6C20: Check the attribute bytes at a sprite's location</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routines at <a href="65A1.html">65A1</a> and <a href="66A4.html">66A4</a>.
@@ -56,138 +56,161 @@ Used by the routines at <a href="65A1.html">65A1</a> and <a href="66A4.html">66A
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6C20"></span>6C20</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save <span class="register">BC</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C21"></span>6C21</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH DE</td>
 <td class="comment-11" rowspan="1">Save <span class="register">DE</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C22"></span>6C22</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save the sprite location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C23"></span>6C23</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$4000</td>
 <td class="comment-11" rowspan="2">Convert the sprite location into a display file address.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C26"></span>6C26</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C27"></span>6C27</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C0F.html">$6C0F</a></td>
 <td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C2A"></span>6C2A</td>
+<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
 <td class="comment-11" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C2B"></span>6C2B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD E,$00</td>
 <td class="comment-11" rowspan="1"><span class="register">E'</span> will hold the attribute of any interesting tile at this location; initialise it now.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C2D"></span>6C2D</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C46.html">$6C46</a></td>
 <td class="comment-11" rowspan="1">Check the attribute of the top-left tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C30"></span>6C30</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the top-right tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C31"></span>6C31</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C46.html">$6C46</a></td>
 <td class="comment-11" rowspan="1">Check the attribute of the top-right tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C34"></span>6C34</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$001F</td>
 <td class="comment-11" rowspan="2">Point <span class="register">HL'</span> at the bottom-left tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C37"></span>6C37</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C38"></span>6C38</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C46.html">$6C46</a></td>
 <td class="comment-11" rowspan="1">Check the attribute of the bottom-left tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C3B"></span>6C3B</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the bottom-right tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C3C"></span>6C3C</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C46.html">$6C46</a></td>
 <td class="comment-11" rowspan="1">Check the attribute of the bottom-right tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C3F"></span>6C3F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,E</td>
 <td class="comment-11" rowspan="1">Copy the tile attribute indicator to <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C40"></span>6C40</td>
+<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
 <td class="comment-11" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C41"></span>6C41</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Restore the sprite location to <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C42"></span>6C42</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP DE</td>
 <td class="comment-11" rowspan="1">Restore <span class="register">DE</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C43"></span>6C43</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore <span class="register">BC</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C44"></span>6C44</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Set the zero flag if no interesting tile (guard, flower, cherry, strawberry) was found.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6C45"></span>6C45</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -200,10 +223,10 @@ Used by the routines at <a href="65A1.html">65A1</a> and <a href="66A4.html">66A
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/27680.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/27680.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

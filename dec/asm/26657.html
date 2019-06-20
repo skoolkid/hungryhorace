@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 26657</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="26426.html">26426</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#26657">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="26730.html">26730</a></span></td>
+</tr>
+</table>
+<div class="description">26657: Draw Horace</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="5">
+<div class="details">
+<div class="paragraph">
+Called from the main loop at <a href="25129.html">25129</a>, and also used by the routine at <a href="26730.html">26730</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26657"></span>26657</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31865.html">31865</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the tunnel timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26660"></span>26660</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">Is Horace in a tunnel at the moment?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26661"></span>26661</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="26657.html#26674">26674</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26663"></span>26663</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC A</td>
+<td class="comment-11" rowspan="2">Decrement the tunnel timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26664"></span>26664</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31865.html">31865</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26667"></span>26667</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31853.html">31853</a>)</td>
+<td class="comment-11" rowspan="2">Update Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26670"></span>26670</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31851.html">31851</a>),HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26673"></span>26673</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="26674"></span>
+<div class="comments">
+<div class="paragraph">
+This entry point is used by the routine at <a href="26426.html">26426</a> to draw Horace during the Horace-has-died colour-cycling effect.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26674"></span>26674</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31858.html">31858</a>)</td>
+<td class="comment-11" rowspan="3">Increment Horace's walking animation timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26677"></span>26677</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26678"></span>26678</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31858.html">31858</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26681"></span>26681</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 16</td>
+<td class="comment-11" rowspan="1">Keep only bit 4.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26683"></span>26683</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-11" rowspan="1">Is bit 4 set now? (This instruction is redundant.)</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26685"></span>26685</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="26657.html#26692">26692</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26687"></span>26687</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="31943.html#32071">32071</a></td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the graphic data for Horace's sprite (frame 4).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26690"></span>26690</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="26657.html#26695">26695</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26692"></span>26692</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="31943.html">31943</a></td>
+<td class="comment-11" rowspan="1">This is the base address of the graphic data for Horace's sprite (frame 0).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26695"></span>26695</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31856.html">31856</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's animation frame in <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26698"></span>26698</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-11" rowspan="9">Point <span class="register">DE</span> at the graphic data for the corresponding sprite (<span class="register">HL</span>+32*<span class="register">A</span>).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26700"></span>26700</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26702"></span>26702</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26704"></span>26704</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26706"></span>26706</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26708"></span>26708</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,0</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26710"></span>26710</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26711"></span>26711</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26712"></span>26712</td>
+<td class="bytes-0"></td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26713"></span>26713</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31853.html">31853</a>)</td>
+<td class="comment-11" rowspan="2">Update Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26716"></span>26716</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31851.html">31851</a>),HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26719"></span>26719</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27663.html">27663</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26722"></span>26722</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31857.html">31857</a>)</td>
+<td class="comment-11" rowspan="2">Pick up Horace's attribute byte and copy it to <span class="register">C</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26725"></span>26725</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26726"></span>26726</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27606.html">27606</a></td>
+<td class="comment-11" rowspan="1">Draw Horace.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26729"></span>26729</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="26426.html">26426</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#26657">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="26730.html">26730</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../asm/6821.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

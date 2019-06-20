@@ -23,7 +23,7 @@
 <div class="description">6922: Make a guard drop his lunch if necessary</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routine at <a href="6907.html">6907</a>.
@@ -46,228 +46,266 @@ Used by the routine at <a href="6907.html">6907</a>.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6922"></span>6922</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="6DB8.html#6DBE">$6DBE</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the guard's return delay counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6925"></span>6925</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Has this guard been thrown out of the park?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6926"></span>6926</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET NZ</td>
 <td class="comment-11" rowspan="1">Return if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6927"></span>6927</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD E,$04</td>
 <td class="comment-11" rowspan="1">There are four maze background tiles to consider.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6929"></span>6929</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="6DB8.html#6DBF">$6DBF</a></td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the first maze background tile in the temporary guard buffer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="692C"></span>692C</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
 <td class="comment-11" rowspan="1">Pick up the attribute byte of this maze background tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="692D"></span>692D</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $3A</td>
 <td class="comment-11" rowspan="1">Is there already a cherry or strawberry here?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="692F"></span>692F</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET Z</td>
 <td class="comment-11" rowspan="1">Return if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6930"></span>6930</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0009</td>
 <td class="comment-11" rowspan="2">Point <span class="register">HL</span> at the next maze background tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6933"></span>6933</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6934"></span>6934</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC E</td>
 <td class="comment-11" rowspan="1">Have we checked all four tiles yet?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6935"></span>6935</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6922.html#692C">$692C</a></td>
 <td class="comment-11" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6937"></span>6937</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C65.html">$7C65</a>)</td>
 <td class="comment-11" rowspan="3">Decrement the lunch-drop countdown timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="693A"></span>693A</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="693B"></span>693B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C65.html">$7C65</a>),HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="693E"></span>693E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
 <td class="comment-11" rowspan="2">Is it zero now?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="693F"></span>693F</td>
+<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6940"></span>6940</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET NZ</td>
 <td class="comment-11" rowspan="1">Return if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6941"></span>6941</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6B12.html">$6B12</a></td>
 <td class="comment-11" rowspan="1">Generate a pseudo-random number in <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6944"></span>6944</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD L,A</td>
 <td class="comment-11" rowspan="1">Copy it to <span class="register">L</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6945"></span>6945</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save <span class="register">L</span> briefly.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6946"></span>6946</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6B12.html">$6B12</a></td>
 <td class="comment-11" rowspan="1">Generate another pseudo-random number in <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6949"></span>6949</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Restore <span class="register">L</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="694A"></span>694A</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $03</td>
 <td class="comment-11" rowspan="2">Reduce <span class="register">A</span> to 0, 1, 2 or 3 and copy it to <span class="register">H</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="694C"></span>694C</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="694D"></span>694D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0320</td>
 <td class="comment-11" rowspan="3">Add 800 and reset the lunch-drop countdown timer to this value.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6950"></span>6950</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6951"></span>6951</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C65.html">$7C65</a>),HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6954"></span>6954</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6B12.html">$6B12</a></td>
 <td class="comment-11" rowspan="1">Generate yet another pseudo-random number in <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6957"></span>6957</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $01</td>
 <td class="comment-11" rowspan="1">Is bit 0 set?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6959"></span>6959</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6922.html#6960">$6960</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="695B"></span>695B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="7C7C.html">$7C7C</a></td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the sprite data for the cherry.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="695E"></span>695E</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6922.html#6963">$6963</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6960"></span>6960</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="7C7C.html#7CA0">$7CA0</a></td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the sprite data for the strawberry.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6963"></span>6963</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD DE,<a href="6DB8.html#6DBF">$6DBF</a></td>
 <td class="comment-11" rowspan="3">Copy the cherry/strawberry sprite into the maze background tiles in the temporary guard buffer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6966"></span>6966</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0024</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6969"></span>6969</td>
+<td class="bytes-0"></td>
 <td class="instruction">LDIR</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="696B"></span>696B</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -280,10 +318,10 @@ Used by the routine at <a href="6907.html">6907</a>.
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/26914.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/26914.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

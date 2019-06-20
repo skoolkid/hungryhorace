@@ -23,7 +23,7 @@
 <div class="description">6B12: Collect a pseudo-random number (from the ROM)</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routines at <a href="624F.html">624F</a>, <a href="673A.html">673A</a> and <a href="6922.html">6922</a>.
@@ -49,60 +49,70 @@ Used by the routines at <a href="624F.html">624F</a>, <a href="673A.html">673A</
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B12"></span>6B12</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C67.html">$7C67</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the address of the next pseudo-random number.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B15"></span>6B15</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
 <td class="comment-11" rowspan="1">Copy the number to <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B16"></span>6B16</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH AF</td>
 <td class="comment-11" rowspan="1">Save the number briefly.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B17"></span>6B17</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="4">Increment the address, rolling over from 8191 to 0.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B18"></span>6B18</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B19"></span>6B19</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $1F</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B1B"></span>6B1B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B1C"></span>6B1C</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C67.html">$7C67</a>),HL</td>
 <td class="comment-11" rowspan="1">Save the new address.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B1F"></span>6B1F</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP AF</td>
 <td class="comment-11" rowspan="1">Restore the pseudo-random number to <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B20"></span>6B20</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -115,10 +125,10 @@ Used by the routines at <a href="624F.html">624F</a>, <a href="673A.html">673A</
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/27410.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/27410.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

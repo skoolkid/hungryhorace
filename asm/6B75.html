@@ -23,7 +23,7 @@
 <div class="description">6B75: Draw the current maze</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routine at <a href="6000.html">6000</a>.
@@ -57,209 +57,243 @@ Used by the routine at <a href="6000.html">6000</a>.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B75"></span>6B75</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save the tile counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B76"></span>6B76</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save the maze layout data address.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B77"></span>6B77</td>
+<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
 <td class="comment-11" rowspan="1">Transfer the display file address to <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B78"></span>6B78</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C0F.html">$6C0F</a></td>
 <td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address (always 5800).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B7B"></span>6B7B</td>
+<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
 <td class="comment-11" rowspan="1">Transfer the display file address back to <span class="register">DE</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B7C"></span>6B7C</td>
+<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
 <td class="comment-11" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B7D"></span>6B7D</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP DE</td>
 <td class="comment-11" rowspan="1">Restore the maze layout data address to <span class="register">DE'</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B7E"></span>6B7E</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore the tile counter to <span class="register">BC'</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B7F"></span>6B7F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
 <td class="comment-11" rowspan="1">Pick up a tile identifier.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B80"></span>6B80</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
 <td class="comment-11" rowspan="1">Point <span class="register">DE'</span> at the next tile identifier.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B81"></span>6B81</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $00</td>
 <td class="comment-11" rowspan="1">Is the current tile blank?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B83"></span>6B83</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6B75.html#6B9D">$6B9D</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B85"></span>6B85</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $02</td>
 <td class="comment-11" rowspan="1">Is the current tile a flower?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B87"></span>6B87</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6B75.html#6BA1">$6BA1</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B89"></span>6B89</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $03</td>
 <td class="comment-11" rowspan="1">Is the current tile an arrow (entrance or exit)?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B8B"></span>6B8B</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6B75.html#6B95">$6B95</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B8D"></span>6B8D</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $09</td>
 <td class="comment-11" rowspan="1">Is the current tile a tunnel entrance?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B8F"></span>6B8F</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6B75.html#6B99">$6B99</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B91"></span>6B91</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$3D</td>
 <td class="comment-11" rowspan="1">Wall tile (INK 5).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B93"></span>6B93</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6B75.html#6BA3">$6BA3</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B95"></span>6B95</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$38</td>
 <td class="comment-11" rowspan="1">Arrow tile (INK 0).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B97"></span>6B97</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6B75.html#6BA3">$6BA3</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B99"></span>6B99</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$3F</td>
 <td class="comment-11" rowspan="1">Tunnel entrance (INK 7).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B9B"></span>6B9B</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6B75.html#6BA3">$6BA3</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6B9D"></span>6B9D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$3E</td>
 <td class="comment-11" rowspan="1">Blank tile (INK 6).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6B9F"></span>6B9F</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6B75.html#6BA3">$6BA3</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6BA1"></span>6BA1</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$3C</td>
 <td class="comment-11" rowspan="1">Flower (INK 4).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6BA3"></span>6BA3</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (HL),A</td>
 <td class="comment-11" rowspan="1">Set the attribute byte.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BA4"></span>6BA4</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="1">Move <span class="register">HL'</span> along the attribute file.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BA5"></span>6BA5</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC BC</td>
 <td class="comment-11" rowspan="1">Decrement the tile counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BA6"></span>6BA6</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,B</td>
 <td class="comment-11" rowspan="2">Have we finished setting the attribute bytes yet?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BA7"></span>6BA7</td>
+<td class="bytes-0"></td>
 <td class="instruction">OR C</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BA8"></span>6BA8</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6B75.html#6B7F">$6B7F</a></td>
 <td class="comment-11" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BAA"></span>6BAA</td>
+<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
 <td class="comment-11" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="6BAB"></span>
 <div class="comments">
 <div class="paragraph">
@@ -271,180 +305,210 @@ The attribute bytes have been set. Time to draw the maze tiles.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6BAB"></span>6BAB</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save the maze layout pointer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BAC"></span>6BAC</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
 <td class="comment-11" rowspan="1">Pick up a tile identifier in <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BAD"></span>6BAD</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD H,$00</td>
 <td class="comment-11" rowspan="9">Point <span class="register">IX</span> at the graphic data for the corresponding tile (at <a href="7BF7.html">7BF7</a>+8*<span class="register">A</span>).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BAF"></span>6BAF</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD L,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB0"></span>6BB0</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB1"></span>6BB1</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB2"></span>6BB2</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB3"></span>6BB3</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD IX,<a href="7BF7.html">$7BF7</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB7"></span>6BB7</td>
+<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BB8"></span>6BB8</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD IX,DE</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BBA"></span>6BBA</td>
+<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BBB"></span>6BBB</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD L,$08</td>
 <td class="comment-11" rowspan="7">Draw the tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6BBD"></span>6BBD</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(IX+$00)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC0"></span>6BC0</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (DE),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC1"></span>6BC1</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC D</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC2"></span>6BC2</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC IX</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC4"></span>6BC4</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC L</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC5"></span>6BC5</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6B75.html#6BBD">$6BBD</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC7"></span>6BC7</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC E</td>
 <td class="comment-11" rowspan="5">Point <span class="register">DE</span> at the display file address for the next tile.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BC8"></span>6BC8</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6B75.html#6BCE">$6BCE</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BCA"></span>6BCA</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,D</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BCB"></span>6BCB</td>
+<td class="bytes-0"></td>
 <td class="instruction">SUB $08</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BCD"></span>6BCD</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD D,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6BCE"></span>6BCE</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Restore the maze layout pointer to <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BCF"></span>6BCF</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="1">Move along to the next maze tile identifier.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BD0"></span>6BD0</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC BC</td>
 <td class="comment-11" rowspan="1">Decrement the tile counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BD1"></span>6BD1</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,B</td>
 <td class="comment-11" rowspan="2">Have we drawn all the tiles yet?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BD2"></span>6BD2</td>
+<td class="bytes-0"></td>
 <td class="instruction">OR C</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BD3"></span>6BD3</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6B75.html#6BAB">$6BAB</a></td>
 <td class="comment-11" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6BD5"></span>6BD5</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -457,10 +521,10 @@ The attribute bytes have been set. Time to draw the maze tiles.
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/27509.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/27509.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

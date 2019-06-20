@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 27404</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27403.html">27403</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27404">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27410.html">27410</a></span></td>
+</tr>
+</table>
+<div class="description">27404: Wait for 26*<span class="register">BC</span>+5 T states</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="5">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="27044.html">27044</a> to produce a delay in place of a bell sound.
+</div>
+</div>
+<table class="input-1">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+<tr>
+<td class="register">BC</td>
+<td class="register-desc">Delay parameter</td>
+</tr>
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="27404"></span>27404</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC BC</td>
+<td class="comment-11" rowspan="1">Decrement the delay counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27405"></span>27405</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="2">Is it zero yet?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27406"></span>27406</td>
+<td class="bytes-0"></td>
+<td class="instruction">OR C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27407"></span>27407</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="27404.html#27404">27404</a></td>
+<td class="comment-11" rowspan="1">Jump back if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="27409"></span>27409</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="27403.html">27403</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#27404">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="27410.html">27410</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../asm/6B0C.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

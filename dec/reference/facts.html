@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Trivia</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Facts">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Trivia</td>
+</tr>
+</table>
+<ul class="contents">
+<li><a href="#tIsForToggling">'T' is for toggling</a></li>
+<li><a href="#1-2-3-4">1-2-3-4</a></li>
+<li><a href="#gameSpeed">Game speed</a></li>
+<li><a href="#variableFruitBonus">Variable fruit bonus</a></li>
+</ul>
+<div><span id="tIsForToggling"></span></div>
+<div class="box box-1">
+<div class="box-title">'T' is for toggling</div>
+<div class="paragraph">
+Pressing 'T' turns the sound on or off - but only while a game is in progress
+(see <a href="../asm/27022.html">27022</a>).
+</div>
+</div>
+<div><span id="1-2-3-4"></span></div>
+<div class="box box-2">
+<div class="box-title">1-2-3-4</div>
+<div class="paragraph">
+In addition to the documented movement keys - 'Q', 'Z', 'I' and 'P' - the keys
+'1', '2', '3' and '4' can also be used to move Horace left, right, down and up
+(see <a href="../asm/25167.html#25284">25284</a>).
+</div>
+</div>
+<div><span id="gameSpeed"></span></div>
+<div class="box box-1">
+<div class="box-title">Game speed</div>
+<div class="paragraph">
+When Horace moves from maze 4 back to maze 1, the game speed parameter at
+<a href="../asm/31842.html">31842</a> is decreased by one, which increases the speed of the game (see
+<a href="../asm/27044.html">27044</a>). It reaches its lowest value (1) on the 29th maze, and then remains
+at that value until the game ends.
+</div>
+</div>
+<div><span id="variableFruitBonus"></span></div>
+<div class="box box-2">
+<div class="box-title">Variable fruit bonus</div>
+<div class="paragraph">
+The bonus awarded for eating a cherry or strawberry depends on Horace's
+direction of approach. He scores 60 when moving up or down over the fruit (50
+for the fruit itself, plus 10 for the green leaves, which count as a flower),
+and 100 when moving left or right over the fruit (50 for each half of the
+fruit).
+</div>
+</div>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../reference/facts.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

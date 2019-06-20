@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 25886</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="25562.html">25562</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#25886">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="25947.html">25947</a></span></td>
+</tr>
+</table>
+<div class="description">25886: Redraw the tiles behind Horace and the guards if they've moved</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="5">
+<div class="details">
+<div class="paragraph">
+Called from the main loop at <a href="25129.html">25129</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25886"></span>25886</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31853.html">31853</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's new location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25889"></span>25889</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD DE,(<a href="31851.html">31851</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25893"></span>25893</td>
+<td class="bytes-0"></td>
+<td class="instruction">XOR A</td>
+<td class="comment-11" rowspan="1">Clear the carry flag.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25894"></span>25894</td>
+<td class="bytes-0"></td>
+<td class="instruction">SBC HL,DE</td>
+<td class="comment-11" rowspan="1">Subtract Horace's current location from his new location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25896"></span>25896</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,H</td>
+<td class="comment-11" rowspan="2">Has Horace moved?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25897"></span>25897</td>
+<td class="bytes-0"></td>
+<td class="instruction">OR L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25898"></span>25898</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="25886.html#25914">25914</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25900"></span>25900</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31851.html">31851</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25903"></span>25903</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD DE,<a href="32647.html">32647</a></td>
+<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the blank sprite.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25906"></span>25906</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27663.html">27663</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the attribute file address for Horace's location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25909"></span>25909</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,62</td>
+<td class="comment-11" rowspan="1">This is the attribute byte for the blank sprite (INK 6: PAPER 7).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25911"></span>25911</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27606.html">27606</a></td>
+<td class="comment-11" rowspan="1">Draw the blank sprite over Horace's current location.</td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="25914"></span>
+<div class="comments">
+<div class="paragraph">
+Now consider the guards.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25914"></span>25914</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="28070.html#28076">28076</a></td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the last of the guard countdown timers.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25917"></span>25917</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,1</td>
+<td class="comment-11" rowspan="1"><span class="register">B</span> will count the guards: 1, 2, 3 and 4.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25919"></span>25919</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH BC</td>
+<td class="comment-11" rowspan="1">Save the guard counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25920"></span>25920</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-11" rowspan="3">Set the zero flag if this guard is in play.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25921"></span>25921</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25922"></span>25922</td>
+<td class="bytes-0"></td>
+<td class="instruction">OR (HL)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25923"></span>25923</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC HL</td>
+<td class="comment-11" rowspan="3">Point <span class="register">HL</span> at the next guard's countdown timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25924"></span>25924</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25925"></span>25925</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25926"></span>25926</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH HL</td>
+<td class="comment-11" rowspan="1">Save the guard countdown timer pointer briefly.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25927"></span>25927</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25886.html#25938">25938</a></td>
+<td class="comment-11" rowspan="1">Jump if this guard is not in play yet.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25929"></span>25929</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27199.html">27199</a></td>
+<td class="comment-11" rowspan="1">Copy the guard's buffer to the temporary location (<a href="28088.html">28088</a>).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25932"></span>25932</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="25947.html">25947</a></td>
+<td class="comment-11" rowspan="1">Redraw the tiles behind the guard if he's moved.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25935"></span>25935</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27242.html">27242</a></td>
+<td class="comment-11" rowspan="1">Copy the guard's buffer back to its original location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25938"></span>25938</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP HL</td>
+<td class="comment-11" rowspan="1">Restore the guard countdown timer pointer to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25939"></span>25939</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP BC</td>
+<td class="comment-11" rowspan="1">Restore the guard counter to <span class="register">B</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25940"></span>25940</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC B</td>
+<td class="comment-11" rowspan="1">Next guard.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25941"></span>25941</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="1">Copy the guard counter to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25942"></span>25942</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 5</td>
+<td class="comment-11" rowspan="1">Have we done all four guards yet?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25944"></span>25944</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25886.html#25919">25919</a></td>
+<td class="comment-11" rowspan="1">If not, jump back to do the next one.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25946"></span>25946</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="25562.html">25562</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#25886">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="25947.html">25947</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../asm/651E.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

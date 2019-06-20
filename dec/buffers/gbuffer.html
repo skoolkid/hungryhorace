@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Game status buffer</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="GameStatusBuffer">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Game status buffer</td>
+</tr>
+</table>
+<div class="map-intro"></div>
+<table class="map">
+<tr>
+<th class="map-page-0">Page</th>
+<th class="map-byte-0">Byte</th>
+<th>Address</th>
+<th class="map-length-1">Length</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="map-page-0">107</td>
+<td class="map-byte-0">8</td>
+<td class="map-g"><span id="27400"></span><a href="../asm/27400.html">27400</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/27400.html">Title screen countdown timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/24576.html">24576</a>. Decremented until it reaches zero, after which demo mode begins.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">107</td>
+<td class="map-byte-0">10</td>
+<td class="map-g"><span id="27402"></span><a href="../asm/27402.html">27402</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/27402.html">Active guard counter</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/26988.html">26988</a>, <a href="../asm/27044.html">27044</a> and <a href="../asm/27170.html">27170</a>. Supposed to hold the number of active guards minus one, but may not because of a <a href="../reference/bugs.html#brokenGuardCounter">bug</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">107</td>
+<td class="map-byte-0">11</td>
+<td class="map-g"><span id="27403"></span><a href="../asm/27403.html">27403</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/27403.html">Game mode indicator</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/24576.html">24576</a>, <a href="../asm/25167.html">25167</a>, <a href="../asm/26426.html">26426</a> and <a href="../asm/27464.html">27464</a>. Holds 0 in demo mode, or 1 in game mode.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">166</td>
+<td class="map-g"><span id="28070"></span><a href="../asm/28070.html">28070</a></td>
+<td class="map-length-1">8</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28070.html">Guard countdown timers</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/27170.html">27170</a>, and used by the routines at <a href="../asm/25399.html">25399</a>, <a href="../asm/25886.html">25886</a>, <a href="../asm/26146.html">26146</a>, <a href="../asm/26276.html">26276</a>, <a href="../asm/26426.html">26426</a>, <a href="../asm/26887.html">26887</a> and <a href="../asm/26988.html">26988</a>. When a guard's countdown timer reaches 0, the guard is brought into play.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">174</td>
+<td class="map-g"><span id="28078"></span><a href="../asm/28078.html">28078</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28078.html">Guard panic timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/25562.html">25562</a>, <a href="../asm/26173.html">26173</a>, <a href="../asm/26276.html">26276</a> and <a href="../asm/26730.html">26730</a>. Holds a non-zero value when the guards are panicking.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">176</td>
+<td class="map-g"><span id="28080"></span><a href="../asm/28080.html">28080</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28080.html">Temporary store for a guard's screen x- and y-coordinates</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/25562.html">25562</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">178</td>
+<td class="map-g"><span id="28082"></span><a href="../asm/28082.html">28082</a></td>
+<td class="map-length-1">4</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28082.html">Temporary store for direction probability parameters</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/25167.html">25167</a> (when moving Horace in demo mode) and <a href="../asm/25562.html">25562</a> (when moving a guard).
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">182</td>
+<td class="map-g"><span id="28086"></span><a href="../asm/28086.html">28086</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28086.html">Buffer address of the guard currently being handled</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/27199.html">27199</a> and <a href="../asm/27242.html">27242</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">184</td>
+<td class="map-g"><span id="28088"></span><a href="../asm/28088.html">28088</a></td>
+<td class="map-length-1">43</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28088.html">Temporary guard buffer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+The contents of a guard's buffer (see <a href="../asm/28131.html">28131</a>) are copied here by the routine at <a href="../asm/27199.html">27199</a> whenever the guard needs to be moved, drawn or otherwise examined. After that, the updated contents are copied back to the original location by the routine at <a href="../asm/27242.html">27242</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">109</td>
+<td class="map-byte-0">227</td>
+<td class="map-g"><span id="28131"></span><a href="../asm/28131.html">28131</a></td>
+<td class="map-length-1">172</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28131.html">Guard buffers</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/27199.html">27199</a> and <a href="../asm/27242.html">27242</a>. See <a href="../asm/28088.html">28088</a> for a description of the contents of a guard's buffer.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">111</td>
+<td class="map-byte-0">207</td>
+<td class="map-g"><span id="28623"></span><a href="../asm/28623.html">28623</a></td>
+<td class="map-length-1">8</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/28623.html">Tunnel offset and bell, initial guard and entrance locations for the current maze</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/24576.html">24576</a>, <a href="../asm/25399.html">25399</a>, <a href="../asm/25562.html">25562</a>, <a href="../asm/26276.html">26276</a>, <a href="../asm/26730.html">26730</a> and <a href="../asm/27294.html">27294</a>. The values here are copied from <a href="../asm/28631.html">28631</a>, <a href="../asm/28639.html">28639</a>, <a href="../asm/28647.html">28647</a> or <a href="../asm/28655.html">28655</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">97</td>
+<td class="map-g"><span id="31841"></span><a href="../asm/31841.html">31841</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31841.html">Sprite movement timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routine at <a href="../asm/25399.html">25399</a>. Decremented on each pass through the main loop; when it reaches zero, Horace and the guards are moved.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">98</td>
+<td class="map-g"><span id="31842"></span><a href="../asm/31842.html">31842</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31842.html">Game speed parameter (1-8)</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised to 8 by the routine at <a href="../asm/24576.html">24576</a> and decremented every time Horace returns to maze 1 via maze 4. Also used by the routines at <a href="../asm/25399.html">25399</a>, <a href="../asm/25562.html">25562</a>, <a href="../asm/26730.html">26730</a>, <a href="../asm/27044.html">27044</a> and <a href="../asm/27170.html">27170</a>. The value here determines the speed at which the game runs.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">99</td>
+<td class="map-g"><span id="31843"></span><a href="../asm/31843.html">31843</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31843.html">Current maze number</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised to 255 by the routine at <a href="../asm/24576.html">24576</a> just before a game starts. Holds 0, 1, 2 or 3 while a game is in progress.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">100</td>
+<td class="map-g"><span id="31844"></span><a href="../asm/31844.html">31844</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31844.html">Redundant temporary variable</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/25562.html">25562</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">101</td>
+<td class="map-g"><span id="31845"></span><a href="../asm/31845.html">31845</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31845.html">Lunch-drop countdown timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routine at <a href="../asm/26914.html">26914</a>. When this timer reaches zero, one of the guards will drop his lunch.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">103</td>
+<td class="map-g"><span id="31847"></span><a href="../asm/31847.html">31847</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31847.html">Address of the next pseudo-random number</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routine at <a href="../asm/27410.html">27410</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">105</td>
+<td class="map-g"><span id="31849"></span><a href="../asm/31849.html">31849</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31849.html">Sound on/off indicator</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/25399.html">25399</a>, <a href="../asm/26017.html">26017</a>, <a href="../asm/26276.html">26276</a>, <a href="../asm/26426.html">26426</a>, <a href="../asm/27022.html">27022</a>, <a href="../asm/27044.html">27044</a> and <a href="../asm/27255.html">27255</a>. Holds 00011111 binary if the sound is on, or 00000111 binary otherwise.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">106</td>
+<td class="map-g"><span id="31850"></span><a href="../asm/31850.html">31850</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31850.html">'T' pressed indicator</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routine at <a href="../asm/27022.html">27022</a>. Holds 0 if 'T' was being pressed the last time it was checked, or 16 otherwise.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">107</td>
+<td class="map-g"><span id="31851"></span><a href="../asm/31851.html">31851</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31851.html">Horace's current location</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/25167.html">25167</a>, <a href="../asm/25399.html">25399</a>, <a href="../asm/25562.html">25562</a>, <a href="../asm/25886.html">25886</a>, <a href="../asm/26426.html">26426</a>, <a href="../asm/26657.html">26657</a> and <a href="../asm/26730.html">26730</a>. Holds the display file address minus 16384.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">109</td>
+<td class="map-g"><span id="31853"></span><a href="../asm/31853.html">31853</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31853.html">Horace's new location</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/25399.html">25399</a>, <a href="../asm/25886.html">25886</a>, <a href="../asm/26017.html">26017</a>, <a href="../asm/26276.html">26276</a> and <a href="../asm/26657.html">26657</a>. Holds the display file address minus 16384.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">111</td>
+<td class="map-g"><span id="31855"></span><a href="../asm/31855.html">31855</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31855.html">Temporary store for direction keypress</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/25167.html">25167</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">112</td>
+<td class="map-g"><span id="31856"></span><a href="../asm/31856.html">31856</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31856.html">Horace's animation frame (0-3)</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/25167.html">25167</a>, <a href="../asm/25399.html">25399</a> and <a href="../asm/26657.html">26657</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">113</td>
+<td class="map-g"><span id="31857"></span><a href="../asm/31857.html">31857</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31857.html">Horace's attribute byte</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/26426.html">26426</a> and <a href="../asm/26657.html">26657</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">114</td>
+<td class="map-g"><span id="31858"></span><a href="../asm/31858.html">31858</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31858.html">Horace's walking animation timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/26657.html">26657</a>. Incremented whenever Horace is drawn; bit 4 determines which set of animation frames (see <a href="../asm/31943.html">31943</a>) is used: 0-3 if it's set, or 4-7 otherwise.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">115</td>
+<td class="map-g"><span id="31859"></span><a href="../asm/31859.html">31859</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31859.html">Score</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/26017.html">26017</a>, <a href="../asm/26276.html">26276</a>, <a href="../asm/26426.html">26426</a> and <a href="../asm/26730.html">26730</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">117</td>
+<td class="map-g"><span id="31861"></span><a href="../asm/31861.html">31861</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31861.html">High score</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/24576.html">24576</a> and <a href="../asm/26426.html">26426</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">119</td>
+<td class="map-g"><span id="31863"></span><a href="../asm/31863.html">31863</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31863.html">Extra life indicator</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routine at <a href="../asm/26017.html">26017</a>. Holds INT(S/10000)+2, where 'S' is the current score. When this value changes, Horace gets a new life.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">120</td>
+<td class="map-g"><span id="31864"></span><a href="../asm/31864.html">31864</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31864.html">Number of lives remaining</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/26017.html">26017</a> and <a href="../asm/26426.html">26426</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">121</td>
+<td class="map-g"><span id="31865"></span><a href="../asm/31865.html">31865</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31865.html">Tunnel timer</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/25167.html">25167</a>, <a href="../asm/25399.html">25399</a>, <a href="../asm/26017.html">26017</a>, <a href="../asm/26426.html">26426</a> and <a href="../asm/26657.html">26657</a>. Holds a non-zero value when Horace is in a tunnel.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">122</td>
+<td class="map-g"><span id="31866"></span><a href="../asm/31866.html">31866</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31866.html">Temporary store for Horace's screen x- and y-coordinates</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routine at <a href="../asm/25562.html">25562</a>.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">196</td>
+<td class="map-g"><span id="31940"></span><a href="../asm/31940.html">31940</a></td>
+<td class="map-length-1">2</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31940.html">Bell location</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Initialised by the routine at <a href="../asm/24576.html">24576</a>, and used by the routines at <a href="../asm/26730.html">26730</a> and <a href="../asm/27044.html">27044</a>. Holds the location of the bell in the current maze, or zero if Horace has sounded the alarm.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="map-page-0">124</td>
+<td class="map-byte-0">198</td>
+<td class="map-g"><span id="31942"></span><a href="../asm/31942.html">31942</a></td>
+<td class="map-length-1">1</td>
+<td class="map-g-desc">
+<div class="map-entry-title-11"><a class="map-entry-title" href="../asm/31942.html">Bell animation frame counter</a></div>
+<div class="map-entry-desc-1">
+<div class="paragraph">
+Used by the routines at <a href="../asm/26730.html">26730</a> and <a href="../asm/27044.html">27044</a>. Incremented on each pass through the main loop; its value determines which bell animation frame is used (see <a href="../asm/32519.html">32519</a>), and also the bell sound effect.
+</div>
+</div>
+</td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../buffers/gbuffer.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

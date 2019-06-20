@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 26173</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="26146.html">26146</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#26173">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="26276.html">26276</a></span></td>
+</tr>
+</table>
+<div class="description">26173: Draw a guard</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="5">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="26146.html">26146</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26173"></span>26173</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28094">28094</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's return delay counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26176"></span>26176</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">Has this guard been thrown out of the park?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26177"></span>26177</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="26173.html#26184">26184</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26179"></span>26179</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC A</td>
+<td class="comment-11" rowspan="2">Decrement the guard's return delay counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26180"></span>26180</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28094">28094</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26183"></span>26183</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET NZ</td>
+<td class="comment-11" rowspan="1">Return unless it's zero now.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26184"></span>26184</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html#28092">28092</a>)</td>
+<td class="comment-11" rowspan="2">Update the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26187"></span>26187</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html">28088</a>),HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26190"></span>26190</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD BC,(<a href="28078.html">28078</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard panic timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26194"></span>26194</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="2">Are the guards panicking?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26195"></span>26195</td>
+<td class="bytes-0"></td>
+<td class="instruction">OR C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26196"></span>26196</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="26173.html#26227">26227</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26198"></span>26198</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC BC</td>
+<td class="comment-11" rowspan="2">Decrement the guard panic timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26199"></span>26199</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28078.html">28078</a>),BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26203"></span>26203</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD DE,<a href="32199.html#32455">32455</a></td>
+<td class="comment-11" rowspan="2">Point <span class="register">HL</span> at the graphic data for a panicked guard (frame 0).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26206"></span>26206</td>
+<td class="bytes-0"></td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26207"></span>26207</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28091">28091</a>)</td>
+<td class="comment-11" rowspan="3">Increment the guard's animation frame timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26210"></span>26210</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26211"></span>26211</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28091">28091</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26214"></span>26214</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 8</td>
+<td class="comment-11" rowspan="2">Is bit 3 set now?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26216"></span>26216</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26218"></span>26218</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="26173.html#26224">26224</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26220"></span>26220</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD BC,32</td>
+<td class="comment-11" rowspan="3">Point <span class="register">DE</span> at the graphic data for a panicked guard (frame 1), and restore the guard's location to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26223"></span>26223</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26224"></span>26224</td>
+<td class="bytes-0"></td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26225"></span>26225</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="26173.html#26267">26267</a></td>
+<td class="comment-11" rowspan="1">Jump forward to draw the guard now.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26227"></span>26227</td>
+<td class="bytes-0"></td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-11" rowspan="1">Transfer the guard's location to <span class="register">DE</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26228"></span>26228</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28091">28091</a>)</td>
+<td class="comment-11" rowspan="3">Increment the guard's animation frame timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26231"></span>26231</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26232"></span>26232</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28091">28091</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26235"></span>26235</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 32</td>
+<td class="comment-11" rowspan="2">Is bit 5 set now?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26237"></span>26237</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26239"></span>26239</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="26173.html#26246">26246</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26241"></span>26241</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="32199.html#32327">32327</a></td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the graphic data for a regular guard (frame 4).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26244"></span>26244</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="26173.html#26249">26249</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26246"></span>26246</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="32199.html">32199</a></td>
+<td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the graphic data for a regular guard (frame 0).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26249"></span>26249</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28090">28090</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's animation frame.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26252"></span>26252</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-11" rowspan="9">Point <span class="register">DE</span> at the corresponding graphic data for the guard sprite, and restore the guard's location to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26254"></span>26254</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26256"></span>26256</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26258"></span>26258</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26260"></span>26260</td>
+<td class="bytes-0"></td>
+<td class="instruction">RLC A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26262"></span>26262</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,0</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26264"></span>26264</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26265"></span>26265</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26266"></span>26266</td>
+<td class="bytes-0"></td>
+<td class="instruction">EX DE,HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="26267"></span>26267</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27663.html">27663</a></td>
+<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the attribute file address of the guard's location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26270"></span>26270</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,59</td>
+<td class="comment-11" rowspan="1">This is the guard's attribute byte (INK 3: PAPER 7).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26272"></span>26272</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27606.html">27606</a></td>
+<td class="comment-11" rowspan="1">Draw the guard.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="26275"></span>26275</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="26146.html">26146</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#26173">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="26276.html">26276</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../asm/663D.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

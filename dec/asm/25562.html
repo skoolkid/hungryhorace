@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hungry Horace: Routine at 25562</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+
+</head>
+<body class="Asm-c">
+<table class="header">
+<tr>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="page-header">Routines</td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="25399.html">25399</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#25562">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="25886.html">25886</a></span></td>
+</tr>
+</table>
+<div class="description">25562: Move a guard</div>
+<table class="disassembly">
+<tr>
+<td class="routine-comment" colspan="5">
+<div class="details">
+<div class="paragraph">
+Used by the routine at <a href="25399.html">25399</a>.
+</div>
+</div>
+<table class="input-0">
+<tr class="asm-input-header">
+<th colspan="2">Input</th>
+</tr>
+
+</table>
+<table class="output-0">
+<tr class="asm-output-header">
+<th colspan="2">Output</th>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25562"></span>25562</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28094">28094</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's return delay counter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25565"></span>25565</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">Has this guard been thrown out of the park?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25566"></span>25566</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET NZ</td>
+<td class="comment-11" rowspan="1">Return if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25567"></span>25567</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31851.html">31851</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25570"></span>25570</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-11" rowspan="3">Now <span class="register">H</span>=0, 1 or 2, indicating which third of the screen the top row of Horace's sprite is in.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25572"></span>25572</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25574"></span>25574</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25576"></span>25576</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,5</td>
+<td class="comment-11" rowspan="4">Move bits 5-7 of <span class="register">L</span> down to bits 0-2, and bits 0-2 of <span class="register">H</span> into bits 3-5 of <span class="register">L</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25578"></span>25578</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25580"></span>25580</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25582"></span>25582</td>
+<td class="bytes-0"></td>
+<td class="instruction">DJNZ <a href="25562.html#25578">25578</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25584"></span>25584</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-11" rowspan="2">Now <span class="register">A</span>=Horace's screen y-coordinate (0-22).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25585"></span>25585</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 31</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25587"></span>25587</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31851.html">31851</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25590"></span>25590</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD H,A</td>
+<td class="comment-11" rowspan="1"><span class="register">H</span>=Horace's screen y-coordinate (0-22).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25591"></span>25591</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-11" rowspan="3">Now <span class="register">L</span>=Horace's screen x-coordinate (0-30).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25592"></span>25592</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 31</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25594"></span>25594</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD L,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25595"></span>25595</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31866.html">31866</a>),HL</td>
+<td class="comment-11" rowspan="1">Save Horace's screen x- and y-coordinates temporarily.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25598"></span>25598</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-11" rowspan="15">Compute the guard's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25601"></span>25601</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25603"></span>25603</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25605"></span>25605</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25607"></span>25607</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,5</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25609"></span>25609</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR H</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25611"></span>25611</td>
+<td class="bytes-0"></td>
+<td class="instruction">RR L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25613"></span>25613</td>
+<td class="bytes-0"></td>
+<td class="instruction">DJNZ <a href="25562.html#25609">25609</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25615"></span>25615</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25616"></span>25616</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 31</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25618"></span>25618</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25621"></span>25621</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD H,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25622"></span>25622</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25623"></span>25623</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 31</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25625"></span>25625</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD L,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25626"></span>25626</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28080.html">28080</a>),HL</td>
+<td class="comment-11" rowspan="1">Save the guard's screen x- and y-coordinates temporarily.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25629"></span>25629</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,4</td>
+<td class="comment-11" rowspan="1">Initialise <span class="register">B</span> (the direction indicator) for the loop that follows.</td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="25631"></span>
+<div class="comments">
+<div class="paragraph">
+Four passes are made through the following loop, one for each direction the guard might go: left, down, right, or up.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25631"></span>25631</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC B</td>
+<td class="comment-11" rowspan="1"><span class="register">B</span>=3 (left), 2 (down), 1 (right) or 0 (up).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25632"></span>25632</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25635"></span>25635</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,0</td>
+<td class="comment-11" rowspan="1">Initialise <span class="register">C</span> to 0; this is the direction probability parameter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25637"></span>25637</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH BC</td>
+<td class="comment-11" rowspan="1">Save the direction indicator briefly.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25638"></span>25638</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="1">Copy the direction indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25639"></span>25639</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27842.html">27842</a></td>
+<td class="comment-11" rowspan="1">Check the tiles next to the guard in that direction.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25642"></span>25642</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP BC</td>
+<td class="comment-11" rowspan="1">Restore the direction indicator to <span class="register">B</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25643"></span>25643</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 2</td>
+<td class="comment-11" rowspan="1">Is there a wall or the maze exit or entrance in that direction?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25645"></span>25645</td>
+<td class="bytes-0"></td>
+<td class="instruction">JP NC,<a href="25562.html#25795">25795</a></td>
+<td class="comment-11" rowspan="1">Jump if so with <span class="register">C</span>=0: that direction is blocked.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25648"></span>25648</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,25</td>
+<td class="comment-11" rowspan="1"><span class="register">C</span>=25; this value determines the base probability that the guard will turn 90 degrees in the direction indicated by <span class="register">B</span> when his path is blocked.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25650"></span>25650</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28090">28090</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's animation frame.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25653"></span>25653</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP B</td>
+<td class="comment-11" rowspan="1">Is it equal to the current value of the direction indicator?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25654"></span>25654</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25662">25662</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25656"></span>25656</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,40</td>
+<td class="comment-11" rowspan="3"><span class="register">C</span>=65; this value ensures that the guard will keep moving in the same direction if he can.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25658"></span>25658</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25659"></span>25659</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25660"></span>25660</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25691">25691</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25662"></span>25662</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,2</td>
+<td class="comment-11" rowspan="2">Add 2 to the guard's current animation frame; this has the effect of toggling his direction between up/down and left/right.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25664"></span>25664</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 3</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25666"></span>25666</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP B</td>
+<td class="comment-11" rowspan="1">Is it equal to the current value of the direction indicator now?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25667"></span>25667</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25675">25675</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25669"></span>25669</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,246</td>
+<td class="comment-11" rowspan="3"><span class="register">C</span>=15; this value determines the probability that the guard will turn round 180 degrees when his path is blocked.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25671"></span>25671</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,C</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25672"></span>25672</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25673"></span>25673</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25691">25691</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25675"></span>25675</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(23672)</td>
+<td class="comment-11" rowspan="3">Increment the two least significant bytes of the system variable FRAMES, and copy the value to <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25678"></span>25678</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25679"></span>25679</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (23672),HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25682"></span>25682</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,H</td>
+<td class="comment-11" rowspan="5">Use this value to generate a pseudo-random number between 0 and 31.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25683"></span>25683</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 15</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25685"></span>25685</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD H,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25686"></span>25686</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25687"></span>25687</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND 31</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25689"></span>25689</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,C</td>
+<td class="comment-11" rowspan="2">Add this to <span class="register">C</span>, giving a number between 25 and 56; the higher this value, the more likely the guard will turn 90 degrees in the direction indicated by <span class="register">B</span> when his path is blocked.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25690"></span>25690</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25691"></span>25691</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="1">Copy the direction indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25692"></span>25692</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 3</td>
+<td class="comment-11" rowspan="1">Set the zero flag if we're considering 'left' at the moment.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25694"></span>25694</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31844.html">31844</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the value of the redundant variable at <a href="31844.html">31844</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25697"></span>25697</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25703">25703</a></td>
+<td class="comment-11" rowspan="1">Jump if we're considering 'right', 'up' or 'down' at the moment.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25699"></span>25699</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC A</td>
+<td class="comment-11" rowspan="2">Decrement the redundant variable at <a href="31844.html">31844</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25700"></span>25700</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31844.html">31844</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25703"></span>25703</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">This instruction is redundant.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25704"></span>25704</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="1">Copy the direction indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25705"></span>25705</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-11" rowspan="1">Are we considering 'up' at the moment?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25707"></span>25707</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25715">25715</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25709"></span>25709</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="31842.html">31842</a>)</td>
+<td class="comment-11" rowspan="2">Reset the redundant variable at <a href="31844.html">31844</a> to the value of the game speed parameter.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25712"></span>25712</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="31844.html">31844</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25715"></span>25715</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,B</td>
+<td class="comment-11" rowspan="1">Copy the direction indicator to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25716"></span>25716</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-11" rowspan="1">Are we considering 'up' at the moment?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25718"></span>25718</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25732">25732</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25720"></span>25720</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28080.html">28080</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25723"></span>25723</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,H</td>
+<td class="comment-11" rowspan="1"><span class="register">A</span>=guard's screen y-coordinate.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25724"></span>25724</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31866.html">31866</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25727"></span>25727</td>
+<td class="bytes-0"></td>
+<td class="instruction">SUB H</td>
+<td class="comment-11" rowspan="1">Is Horace's y-coordinate greater than the guard's?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25728"></span>25728</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR C,<a href="25562.html#25795">25795</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25730"></span>25730</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25774">25774</a></td>
+<td class="comment-11" rowspan="1">Otherwise jump to increase the probability that the guard will move up (towards Horace).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25732"></span>25732</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 1</td>
+<td class="comment-11" rowspan="1">Are we considering 'right' at the moment?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25734"></span>25734</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25748">25748</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25736"></span>25736</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31866.html">31866</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25739"></span>25739</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-11" rowspan="1"><span class="register">A</span>=Horace's screen x-coordinate.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25740"></span>25740</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28080.html">28080</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25743"></span>25743</td>
+<td class="bytes-0"></td>
+<td class="instruction">SUB L</td>
+<td class="comment-11" rowspan="1">Is the guard's x-coordinate greater than Horace's?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25744"></span>25744</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR C,<a href="25562.html#25795">25795</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25746"></span>25746</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25774">25774</a></td>
+<td class="comment-11" rowspan="1">Otherwise jump to increase the probability that the guard will move right (towards Horace).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25748"></span>25748</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 2</td>
+<td class="comment-11" rowspan="1">Are we considering 'down' at the moment?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25750"></span>25750</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25764">25764</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25752"></span>25752</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31866.html">31866</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25755"></span>25755</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,H</td>
+<td class="comment-11" rowspan="1"><span class="register">A</span>=Horace's screen y-coordinate.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25756"></span>25756</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28080.html">28080</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25759"></span>25759</td>
+<td class="bytes-0"></td>
+<td class="instruction">SUB H</td>
+<td class="comment-11" rowspan="1">Is the guard's y-coordinate greater than Horace's?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25760"></span>25760</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR C,<a href="25562.html#25795">25795</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25762"></span>25762</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25774">25774</a></td>
+<td class="comment-11" rowspan="1">Otherwise jump to increase the probability that the guard will move down (towards Horace).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25764"></span>25764</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28080.html">28080</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25767"></span>25767</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,L</td>
+<td class="comment-11" rowspan="1"><span class="register">A</span>=guard's screen x-coordinate.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25768"></span>25768</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="31866.html">31866</a>)</td>
+<td class="comment-11" rowspan="1">Pick up Horace's screen x- and y-coordinates.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25771"></span>25771</td>
+<td class="bytes-0"></td>
+<td class="instruction">SUB L</td>
+<td class="comment-11" rowspan="1">Is Horace's x-coordinate greater than the guard's?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25772"></span>25772</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR C,<a href="25562.html#25795">25795</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25774"></span>25774</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">This instruction is redundant.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25775"></span>25775</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,10</td>
+<td class="comment-11" rowspan="1">Add 10 to <span class="register">A</span>; the higher the value <span class="register">A</span> holds now, the more likely the guard will move in the direction indicated by <span class="register">B</span> (towards Horace).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25777"></span>25777</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH AF</td>
+<td class="comment-11" rowspan="1">Save this probability modifier briefly.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25778"></span>25778</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH HL</td>
+<td class="comment-11" rowspan="1">Save <span class="register">HL</span> (unnecessarily).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25779"></span>25779</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28078.html">28078</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard panic timer.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25782"></span>25782</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,H</td>
+<td class="comment-11" rowspan="2">Set the zero flag unless the guards are panicking.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25783"></span>25783</td>
+<td class="bytes-0"></td>
+<td class="instruction">OR L</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25784"></span>25784</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP HL</td>
+<td class="comment-11" rowspan="1">Restore <span class="register">HL</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25785"></span>25785</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="25562.html#25792">25792</a></td>
+<td class="comment-11" rowspan="1">Jump unless the guards are panicking.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25787"></span>25787</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP AF</td>
+<td class="comment-11" rowspan="1">Restore the probability modifier to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25788"></span>25788</td>
+<td class="bytes-0"></td>
+<td class="instruction">NEG</td>
+<td class="comment-11" rowspan="1">Negate <span class="register">A</span>, making it less likely that the guard will move in the direction indicated by <span class="register">B</span> (towards Horace).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25790"></span>25790</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25793">25793</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25792"></span>25792</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP AF</td>
+<td class="comment-11" rowspan="1">Restore the probability modifier to <span class="register">A</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25793"></span>25793</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD A,C</td>
+<td class="comment-11" rowspan="2">Now <span class="register">C</span> holds the probability parameter for the direction indicated by <span class="register">B</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25794"></span>25794</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25795"></span>25795</td>
+<td class="bytes-0"></td>
+<td class="instruction">PUSH BC</td>
+<td class="comment-11" rowspan="1">Save the direction indicator briefly.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25796"></span>25796</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,<a href="28082.html">28082</a></td>
+<td class="comment-11" rowspan="4">Point <span class="register">HL</span> at one of the four slots at <a href="28082.html">28082</a>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25799"></span>25799</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25800"></span>25800</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,0</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25802"></span>25802</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25803"></span>25803</td>
+<td class="bytes-0"></td>
+<td class="instruction">POP BC</td>
+<td class="comment-11" rowspan="1">Restore the direction indicator to <span class="register">B</span>.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25804"></span>25804</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,C</td>
+<td class="comment-11" rowspan="2">Save the direction probability parameter in the appropriate slot.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25805"></span>25805</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (HL),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25806"></span>25806</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC B</td>
+<td class="comment-11" rowspan="2">Have we considered every direction yet?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25807"></span>25807</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25808"></span>25808</td>
+<td class="bytes-0"></td>
+<td class="instruction">JP NZ,<a href="25562.html#25631">25631</a></td>
+<td class="comment-11" rowspan="1">Jump back if not.</td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="25811"></span>
+<div class="comments">
+<div class="paragraph">
+Having computed a direction probability parameter for each of the four slots at <a href="28082.html">28082</a>, we now use those values to determine the guard's next animation frame (and therefore direction of travel).
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25811"></span>25811</td>
+<td class="bytes-0"></td>
+<td class="instruction">XOR A</td>
+<td class="comment-11" rowspan="12">Compute in <span class="register">C</span> the index of the slot that holds the largest number (0, 1, 2 or 3).</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25812"></span>25812</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,28086</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25815"></span>25815</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD B,4</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25817"></span>25817</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25818"></span>25818</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC HL</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25819"></span>25819</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP (HL)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25820"></span>25820</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NC,<a href="25562.html#25824">25824</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25822"></span>25822</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(HL)</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25823"></span>25823</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD C,B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25824"></span>25824</td>
+<td class="bytes-0"></td>
+<td class="instruction">INC B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25825"></span>25825</td>
+<td class="bytes-0"></td>
+<td class="instruction">DEC B</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25826"></span>25826</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25817">25817</a></td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25828"></span>25828</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,C</td>
+<td class="comment-11" rowspan="2">Update the guard's animation frame to this index value.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25829"></span>25829</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28090">28090</a>),A</td>
+<td class="comment-01" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25832"></span>25832</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28090">28090</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's animation frame.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25835"></span>25835</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25838"></span>25838</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27842.html">27842</a></td>
+<td class="comment-11" rowspan="1">Check the tiles in front of the guard.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25841"></span>25841</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 0</td>
+<td class="comment-11" rowspan="1">Is there anything in front of the guard?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25843"></span>25843</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="25562.html#25866">25866</a></td>
+<td class="comment-11" rowspan="1">Jump if not.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25845"></span>25845</td>
+<td class="bytes-0"></td>
+<td class="instruction">CP 1</td>
+<td class="comment-11" rowspan="1">Is the guard facing a tunnel entrance?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25847"></span>25847</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR NZ,<a href="25562.html#25879">25879</a></td>
+<td class="comment-11" rowspan="1">Jump if not. (This jump is never made.)</td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="25849"></span>
+<div class="comments">
+<div class="paragraph">
+The guard is about to enter a tunnel.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25849"></span>25849</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD BC,(<a href="28623.html">28623</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the the tunnel offset.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25853"></span>25853</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28090">28090</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's animation frame.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25856"></span>25856</td>
+<td class="bytes-0"></td>
+<td class="instruction">AND A</td>
+<td class="comment-11" rowspan="1">Is it 0 (going up)?</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25857"></span>25857</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR Z,<a href="25562.html#25863">25863</a></td>
+<td class="comment-11" rowspan="1">Jump if so.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25859"></span>25859</td>
+<td class="bytes-0"></td>
+<td class="instruction">SBC HL,BC</td>
+<td class="comment-11" rowspan="1">Subtract the tunnel offset from the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25861"></span>25861</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25864">25864</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25863"></span>25863</td>
+<td class="bytes-0"></td>
+<td class="instruction">ADD HL,BC</td>
+<td class="comment-11" rowspan="1">Add the tunnel offset to the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25864"></span>25864</td>
+<td class="bytes-0"></td>
+<td class="instruction">JR <a href="25562.html#25875">25875</a></td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25866"></span>25866</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25869"></span>25869</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD A,(<a href="28088.html#28090">28090</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's animation frame.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25872"></span>25872</td>
+<td class="bytes-0"></td>
+<td class="instruction">CALL <a href="27927.html">27927</a></td>
+<td class="comment-11" rowspan="1">Compute the guard's new location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25875"></span>25875</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28092">28092</a>),HL</td>
+<td class="comment-11" rowspan="1">Update the guard's location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25878"></span>25878</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+<tr>
+<td class="routine-comment" colspan="5">
+<span id="25879"></span>
+<div class="comments">
+<div class="paragraph">
+The guard has been left facing a wall or the maze entrance or exit (so he cannot move). This never happens, so the following code is never executed.
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-2"><span id="25879"></span>25879</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
+<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25882"></span>25882</td>
+<td class="bytes-0"></td>
+<td class="instruction">LD (<a href="28088.html#28092">28092</a>),HL</td>
+<td class="comment-11" rowspan="1">Set the guard's new location.</td>
+</tr>
+<tr>
+<td class="asm-label-0"></td>
+<td class="address-1"><span id="25885"></span>25885</td>
+<td class="bytes-0"></td>
+<td class="instruction">RET</td>
+<td class="comment-11" rowspan="1"></td>
+</tr>
+</table>
+<table class="asm-navigation">
+<tr>
+<td class="prev"><span class="prev-1">Prev: <a href="25399.html">25399</a></span></td>
+<td class="up">Up: <a href="../maps/all.html#25562">Map</a></td>
+<td class="next"><span class="next-1">Next: <a href="25886.html">25886</a></span></td>
+</tr>
+</table>
+<footer>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../../asm/63DA.html">Switch to hexadecimal</a>.</div>
+</footer>
+</body>
+</html>

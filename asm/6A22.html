@@ -23,7 +23,7 @@
 <div class="description">6A22: Initialise the guard countdown timers</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
 Used by the routines at <a href="6000.html">6000</a> and <a href="673A.html">673A</a>.
@@ -46,72 +46,84 @@ Used by the routines at <a href="6000.html">6000</a> and <a href="673A.html">673
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6A22"></span>6A22</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$00</td>
 <td class="comment-11" rowspan="2">Reset the active guard counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A24"></span>6A24</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6B0A.html">$6B0A</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A27"></span>6A27</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0000</td>
 <td class="comment-11" rowspan="2">Initialise the first guard countdown timer to zero.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A2A"></span>6A2A</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DA6.html">$6DA6</a>),HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A2D"></span>6A2D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C62.html">$7C62</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the game speed parameter (1-8) in <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A30"></span>6A30</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
 <td class="comment-11" rowspan="1"><span class="register">HL</span>=256*<span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A31"></span>6A31</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DA6.html#6DA8">$6DA8</a>),HL</td>
 <td class="comment-11" rowspan="1">Initialise the second guard countdown timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A34"></span>6A34</td>
+<td class="bytes-0"></td>
 <td class="instruction">SLA H</td>
 <td class="comment-11" rowspan="1">Double <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A36"></span>6A36</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DA6.html#6DAA">$6DAA</a>),HL</td>
 <td class="comment-11" rowspan="1">Initialise the third guard countdown timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A39"></span>6A39</td>
+<td class="bytes-0"></td>
 <td class="instruction">SLA H</td>
 <td class="comment-11" rowspan="1">Double <span class="register">HL</span> again.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A3B"></span>6A3B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DA6.html#6DAC">$6DAC</a>),HL</td>
 <td class="comment-11" rowspan="1">Initialise the fourth guard countdown timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6A3E"></span>6A3E</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -124,10 +136,10 @@ Used by the routines at <a href="6000.html">6000</a> and <a href="673A.html">673
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/27170.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/27170.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

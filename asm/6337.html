@@ -23,10 +23,10 @@
 <div class="description">6337: Move Horace and the guards</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
-Used by the routine at <a href="6000.html">6000</a>.
+Called from the main loop at <a href="6229.html">6229</a>.
 </div>
 </div>
 <table class="input-0">
@@ -46,137 +46,159 @@ Used by the routine at <a href="6000.html">6000</a>.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6337"></span>6337</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C61.html">$7C61</a>)</td>
 <td class="comment-11" rowspan="3">Decrement the sprite movement timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="633A"></span>633A</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="633B"></span>633B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C61.html">$7C61</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="633E"></span>633E</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET NZ</td>
 <td class="comment-11" rowspan="1">Return unless it's zero.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="633F"></span>633F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C62.html">$7C62</a>)</td>
 <td class="comment-11" rowspan="2">Reset the sprite movement timer to the value of the game speed parameter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6342"></span>6342</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C61.html">$7C61</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6345"></span>6345</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C79.html">$7C79</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the tunnel timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6348"></span>6348</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Is Horace in a tunnel at the moment?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6349"></span>6349</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6337.html#63BF">$63BF</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="634B"></span>634B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C70.html">$7C70</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's animation frame.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="634E"></span>634E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6351"></span>6351</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6CC2.html">$6CC2</a></td>
 <td class="comment-11" rowspan="1">Check the tiles in front of Horace.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6354"></span>6354</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $00</td>
 <td class="comment-11" rowspan="1">Is there anything in front of Horace?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6356"></span>6356</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6337.html#63AB">$63AB</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6358"></span>6358</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $01</td>
 <td class="comment-11" rowspan="1">Is Horace facing a tunnel entrance?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="635A"></span>635A</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6337.html#636A">$636A</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="635C"></span>635C</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $02</td>
 <td class="comment-11" rowspan="1">Is Horace facing a maze exit or entrance?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="635E"></span>635E</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6337.html#63B9">$63B9</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6360"></span>6360</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C70.html">$7C70</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's animation frame.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6363"></span>6363</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $01</td>
 <td class="comment-11" rowspan="1">Is Horace facing right?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6365"></span>6365</td>
+<td class="bytes-0"></td>
 <td class="instruction">JP Z,<a href="6A1E.html">$6A1E</a></td>
 <td class="comment-11" rowspan="1">Jump if so (Horace is leaving the maze).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6368"></span>6368</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6337.html#63B9">$63B9</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="636A"></span>
 <div class="comments">
 <div class="paragraph">
@@ -188,221 +210,257 @@ Horace is about to enter a tunnel.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="636A"></span>636A</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$5A</td>
 <td class="comment-11" rowspan="2">Initialise the tunnel timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="636C"></span>636C</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C79.html">$7C79</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="636F"></span>636F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD BC,(<a href="6FCF.html">$6FCF</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the tunnel offset for the current maze.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6373"></span>6373</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6376"></span>6376</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C70.html">$7C70</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's animation frame.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6379"></span>6379</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Is Horace going up?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="637A"></span>637A</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6337.html#6380">$6380</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="637C"></span>637C</td>
+<td class="bytes-0"></td>
 <td class="instruction">SBC HL,BC</td>
 <td class="comment-11" rowspan="1">Subtract the tunnel offset from Horace's location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="637E"></span>637E</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6337.html#6381">$6381</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6380"></span>6380</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-11" rowspan="1">Add the tunnel offset to Horace's location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6381"></span>6381</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save <span class="register">HL</span> (which holds Horace's new location) temporarily.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6382"></span>6382</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="7C69.html">$7C69</a></td>
 <td class="comment-11" rowspan="1">Pick up the sound on/off indicator.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6385"></span>6385</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,$10</td>
 <td class="comment-11" rowspan="1">Initialise <span class="register">C</span> for the loop that follows.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6387"></span>6387</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save the loop counter (unnecessarily).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6388"></span>6388</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,C</td>
 <td class="comment-11" rowspan="5">Set <span class="register">B</span> and <span class="register">E</span> equal to 8*<span class="register">C</span>. This value determines the pitch.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6389"></span>6389</td>
+<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="638B"></span>638B</td>
+<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="638D"></span>638D</td>
+<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="638F"></span>638F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD E,B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6390"></span>6390</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD D,$08</td>
 <td class="comment-11" rowspan="1">This value determines the duration.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6392"></span>6392</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,E</td>
 <td class="comment-11" rowspan="11">Produce a sound (if the sound on/off indicator is on) with pitch and duration determined by <span class="register">E</span> and <span class="register">D</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6393"></span>6393</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$1F</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6395"></span>6395</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND (HL)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6396"></span>6396</td>
+<td class="bytes-0"></td>
 <td class="instruction">OUT ($FE),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6398"></span>6398</td>
+<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="6337.html#6398">$6398</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="639A"></span>639A</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$07</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="639C"></span>639C</td>
+<td class="bytes-0"></td>
 <td class="instruction">OUT ($FE),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="639E"></span>639E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,E</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="639F"></span>639F</td>
+<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="6337.html#639F">$639F</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A1"></span>63A1</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC D</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A2"></span>63A2</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6337.html#6392">$6392</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A4"></span>63A4</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore the loop counter to <span class="register">C</span> (unnecessarily).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A5"></span>63A5</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC C</td>
 <td class="comment-11" rowspan="1">Finished yet?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A6"></span>63A6</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6337.html#6387">$6387</a></td>
 <td class="comment-11" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A8"></span>63A8</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Restore Horace's new location to <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63A9"></span>63A9</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6337.html#63B4">$63B4</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="63AB"></span>
 <div class="comments">
 <div class="paragraph">
@@ -414,35 +472,40 @@ There's nothing in front of Horace, so he can move one space forward.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63AB"></span>63AB</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63AE"></span>63AE</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C70.html">$7C70</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's animation frame.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63B1"></span>63B1</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6D17.html">$6D17</a></td>
 <td class="comment-11" rowspan="1">Get the location of the spot one space in front of Horace.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63B4"></span>63B4</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6D.html">$7C6D</a>),HL</td>
 <td class="comment-11" rowspan="1">Update Horace's location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63B7"></span>63B7</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6337.html#63BF">$63BF</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="63B9"></span>
 <div class="comments">
 <div class="paragraph">
@@ -454,17 +517,19 @@ Horace is facing a wall or the maze entrance, and so cannot move forward.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63B9"></span>63B9</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63BC"></span>63BC</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6D.html">$7C6D</a>),HL</td>
 <td class="comment-11" rowspan="1">Set Horace's new location.</td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="63BF"></span>
 <div class="comments">
 <div class="paragraph">
@@ -476,96 +541,112 @@ Now it's time to move the guards.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63BF"></span>63BF</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="6DA6.html">$6DA6</a></td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the first of the guard countdown timers.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C2"></span>63C2</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,$04</td>
 <td class="comment-11" rowspan="1">There are four guards to consider.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63C4"></span>63C4</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save the guard counter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C5"></span>63C5</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
 <td class="comment-11" rowspan="3">Set the zero flag if this guard is in play.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C6"></span>63C6</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C7"></span>63C7</td>
+<td class="bytes-0"></td>
 <td class="instruction">OR (HL)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C8"></span>63C8</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
 <td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the next guard's countdown timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63C9"></span>63C9</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
 <td class="comment-11" rowspan="1">Save the guard countdown timer pointer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63CA"></span>63CA</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6337.html#63D5">$63D5</a></td>
 <td class="comment-11" rowspan="1">Jump if this guard is not in play at the moment.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63CC"></span>63CC</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6A3F.html">$6A3F</a></td>
 <td class="comment-11" rowspan="1">Copy the guard's buffer into the temporary location (<a href="6DB8.html">6DB8</a>).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63CF"></span>63CF</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="63DA.html">$63DA</a></td>
 <td class="comment-11" rowspan="1">Move the guard.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63D2"></span>63D2</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6A6A.html">$6A6A</a></td>
 <td class="comment-11" rowspan="1">Copy the guard's buffer back to the original location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="63D5"></span>63D5</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Restore the guard countdown timer pointer to <span class="register">HL</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63D6"></span>63D6</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore the guard counter to <span class="register">B</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63D7"></span>63D7</td>
+<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="6337.html#63C4">$63C4</a></td>
 <td class="comment-11" rowspan="1">Jump back to handle the next guard.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="63D9"></span>63D9</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
@@ -578,10 +659,10 @@ Now it's time to move the guards.
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/25399.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/25399.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>

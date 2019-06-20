@@ -15,7 +15,7 @@
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6000.html">6000</a></span></td>
+<td class="prev"><span class="prev-1">Prev: <a href="6229.html">6229</a></span></td>
 <td class="up">Up: <a href="../maps/all.html#624F">Map</a></td>
 <td class="next"><span class="next-1">Next: <a href="6337.html">6337</a></span></td>
 </tr>
@@ -23,10 +23,10 @@
 <div class="description">624F: Read the keyboard and update Horace's sprite accordingly</div>
 <table class="disassembly">
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <div class="details">
 <div class="paragraph">
-Used by the routine at <a href="6000.html">6000</a>.
+Called from the main loop at <a href="6229.html">6229</a>.
 </div>
 </div>
 <table class="input-0">
@@ -46,95 +46,110 @@ Used by the routine at <a href="6000.html">6000</a>.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="624F"></span>624F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C79.html">$7C79</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the tunnel timer.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6252"></span>6252</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Is Horace in a tunnel at the moment?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6253"></span>6253</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET NZ</td>
 <td class="comment-11" rowspan="1">Return if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6254"></span>6254</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$FF</td>
 <td class="comment-11" rowspan="2">Initialise the direction keypress to 'no key'.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6256"></span>6256</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6259"></span>6259</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="6B0B.html">$6B0B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the game mode indicator.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="625C"></span>625C</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
 <td class="comment-11" rowspan="1">Is it demo mode?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="625D"></span>625D</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#62C4">$62C4</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="625F"></span>625F</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$00</td>
 <td class="comment-11" rowspan="2">Read the keyboard.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6261"></span>6261</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6263"></span>6263</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $1F</td>
 <td class="comment-11" rowspan="2">Is a key being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6265"></span>6265</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $1F</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6267"></span>6267</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="624F.html#626D">$626D</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6269"></span>6269</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
 <td class="comment-11" rowspan="1">Drop the return address from the stack.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="626A"></span>626A</td>
+<td class="bytes-0"></td>
 <td class="instruction">JP <a href="673A.html#67E9">$67E9</a></td>
 <td class="comment-11" rowspan="1">Cycle the screen colours briefly and return to the title screen.</td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="626D"></span>
 <div class="comments">
 <div class="paragraph">
@@ -146,239 +161,278 @@ It's demo mode. Time to figure out where to move Horace next.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="626D"></span>626D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,$04</td>
 <td class="comment-11" rowspan="1">Initialise <span class="register">B</span> (the direction indicator) for the loop that follows.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="626F"></span>626F</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC B</td>
 <td class="comment-11" rowspan="1"><span class="register">B</span>=3 (left), 2 (down), 1 (right) or 0 (up).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6270"></span>6270</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6273"></span>6273</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,$00</td>
 <td class="comment-11" rowspan="1">Initialise <span class="register">C</span> to 0; this is the direction probability parameter.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6275"></span>6275</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save the direction indicator briefly.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6276"></span>6276</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,B</td>
 <td class="comment-11" rowspan="1">Copy the direction indicator to <span class="register">A</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6277"></span>6277</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6CC2.html">$6CC2</a></td>
 <td class="comment-11" rowspan="1">Check the tiles next to Horace in that direction.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="627A"></span>627A</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore the direction indicator to <span class="register">B</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="627B"></span>627B</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $02</td>
 <td class="comment-11" rowspan="1">Is there a wall or the maze exit or entrance in that direction?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="627D"></span>627D</td>
+<td class="bytes-0"></td>
 <td class="instruction">JP NC,<a href="624F.html#629F">$629F</a></td>
 <td class="comment-11" rowspan="1">Jump if so with <span class="register">C</span>=0: that direction is blocked.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6280"></span>6280</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6B12.html">$6B12</a></td>
 <td class="comment-11" rowspan="4">Set <span class="register">C</span> to a pseudo-random number between 25 and 56; the higher this value, the more likely Horace will turn 90 degrees in the direction indicated by <span class="register">B</span> when his path is blocked.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6283"></span>6283</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $1F</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6285"></span>6285</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD A,$19</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6287"></span>6287</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6288"></span>6288</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C70.html">$7C70</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's animation frame.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="628B"></span>628B</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP B</td>
 <td class="comment-11" rowspan="1">Is it equal to the current value of the direction indicator?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="628C"></span>628C</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#6294">$6294</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="628E"></span>628E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$28</td>
 <td class="comment-11" rowspan="3">Now <span class="register">C</span> holds a pseudo-random number between 65 and 96; this value ensures that Horace will keep moving in the same direction if he can.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6290"></span>6290</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD A,C</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6291"></span>6291</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6292"></span>6292</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="624F.html#629F">$629F</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6294"></span>6294</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD A,$02</td>
 <td class="comment-11" rowspan="2">Add 2 to Horace's animation frame; this has the effect of toggling his direction between up/down and left/right.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6296"></span>6296</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $03</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6298"></span>6298</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP B</td>
 <td class="comment-11" rowspan="1">Is it equal to the current value of the direction indicator now?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6299"></span>6299</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#629F">$629F</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="629B"></span>629B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$F6</td>
 <td class="comment-11" rowspan="3">Now <span class="register">C</span> holds a pseudo-random number between 15 and 46; the higher this value, the more likely Horace will turn round 180 degrees when his path is blocked.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="629D"></span>629D</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD A,C</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="629E"></span>629E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="629F"></span>629F</td>
+<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
 <td class="comment-11" rowspan="1">Save the direction indicator briefly.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A0"></span>62A0</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="6DB2.html">$6DB2</a></td>
 <td class="comment-11" rowspan="4">Point <span class="register">HL</span> at one of the four slots at <a href="6DB2.html">6DB2</a>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A3"></span>62A3</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A4"></span>62A4</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,$00</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A6"></span>62A6</td>
+<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A7"></span>62A7</td>
+<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
 <td class="comment-11" rowspan="1">Restore the direction indicator to <span class="register">B</span>.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A8"></span>62A8</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,C</td>
 <td class="comment-11" rowspan="2">Save the direction probability parameter in the appropriate slot.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62A9"></span>62A9</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (HL),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62AA"></span>62AA</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC B</td>
 <td class="comment-11" rowspan="2">Have we considered every direction yet?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62AB"></span>62AB</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62AC"></span>62AC</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#626F">$626F</a></td>
 <td class="comment-11" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="62AE"></span>
 <div class="comments">
 <div class="paragraph">
@@ -390,95 +444,110 @@ Having computed a direction probability parameter for each of the four slots at 
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62AE"></span>62AE</td>
+<td class="bytes-0"></td>
 <td class="instruction">XOR A</td>
 <td class="comment-11" rowspan="12">Compute in <span class="register">C</span> the index of the slot that holds the largest number (0, 1, 2 or 3).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62AF"></span>62AF</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,$6DB6</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62B2"></span>62B2</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD B,$04</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62B4"></span>62B4</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62B5"></span>62B5</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC HL</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62B6"></span>62B6</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP (HL)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62B7"></span>62B7</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NC,<a href="624F.html#62BB">$62BB</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62B9"></span>62B9</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62BA"></span>62BA</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD C,B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62BB"></span>62BB</td>
+<td class="bytes-0"></td>
 <td class="instruction">INC B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62BC"></span>62BC</td>
+<td class="bytes-0"></td>
 <td class="instruction">DEC B</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62BD"></span>62BD</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#62B4">$62B4</a></td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62BF"></span>62BF</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,C</td>
 <td class="comment-11" rowspan="2">Update Horace's animation frame to this index value.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62C0"></span>62C0</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C70.html">$7C70</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62C3"></span>62C3</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
-<td class="routine-comment" colspan="4">
+<td class="routine-comment" colspan="5">
 <span id="62C4"></span>
 <div class="comments">
 <div class="paragraph">
@@ -490,340 +559,394 @@ A game is in progress.
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62C4"></span>62C4</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$FB</td>
 <td class="comment-11" rowspan="2">Read keys Q-W-E-R-T.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62C6"></span>62C6</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62C8"></span>62C8</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $01</td>
 <td class="comment-11" rowspan="1">Is 'Q' (up) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62CA"></span>62CA</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="624F.html#62D4">$62D4</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62CC"></span>62CC</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$F7</td>
 <td class="comment-11" rowspan="2">Read keys 1-2-3-4-5.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62CE"></span>62CE</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62D0"></span>62D0</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $08</td>
 <td class="comment-11" rowspan="1">Is '4' (up) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62D2"></span>62D2</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#62DB">$62DB</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62D4"></span>62D4</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$00</td>
 <td class="comment-11" rowspan="2">Signal: 'up' key pressed.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62D6"></span>62D6</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62D9"></span>62D9</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="624F.html#631E">$631E</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62DB"></span>62DB</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$FE</td>
 <td class="comment-11" rowspan="2">Read keys SHIFT-Z-X-C-V.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62DD"></span>62DD</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62DF"></span>62DF</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $02</td>
-<td class="comment-11" rowspan="1">is 'Z' (down) being pressed?</td>
+<td class="comment-11" rowspan="1">Is 'Z' (down) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62E1"></span>62E1</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="624F.html#62EB">$62EB</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62E3"></span>62E3</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$F7</td>
 <td class="comment-11" rowspan="1">Read keys 1-2-3-4-5.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62E5"></span>62E5</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
-<td class="comment-11" rowspan="1">is '3' (down) being pressed?</td>
+<td class="comment-11" rowspan="1">Is '3' (down) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62E7"></span>62E7</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $04</td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62E9"></span>62E9</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#62F2">$62F2</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62EB"></span>62EB</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$02</td>
 <td class="comment-11" rowspan="2">Signal: 'down' key pressed.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62ED"></span>62ED</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62F0"></span>62F0</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="624F.html#631E">$631E</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="62F2"></span>62F2</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$DF</td>
 <td class="comment-11" rowspan="2">Read keys Y-U-I-O-P.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62F4"></span>62F4</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62F6"></span>62F6</td>
+<td class="bytes-0"></td>
 <td class="instruction">BIT 0,A</td>
 <td class="comment-11" rowspan="1">Is 'P' (right) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62F8"></span>62F8</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="624F.html#6302">$6302</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62FA"></span>62FA</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$F7</td>
 <td class="comment-11" rowspan="2">Read keys 1-2-3-4-5.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62FC"></span>62FC</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="62FE"></span>62FE</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $02</td>
-<td class="comment-11" rowspan="1">is '2' (right) being pressed?</td>
+<td class="comment-11" rowspan="1">Is '2' (right) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6300"></span>6300</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#6309">$6309</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6302"></span>6302</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$01</td>
 <td class="comment-11" rowspan="2">Signal: 'right' key pressed.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6304"></span>6304</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6307"></span>6307</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR <a href="624F.html#631E">$631E</a></td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6309"></span>6309</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$DF</td>
 <td class="comment-11" rowspan="2">Read keys Y-U-I-O-P.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="630B"></span>630B</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="630D"></span>630D</td>
+<td class="bytes-0"></td>
 <td class="instruction">BIT 2,A</td>
 <td class="comment-11" rowspan="1">Is 'I' (left) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="630F"></span>630F</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="624F.html#6319">$6319</a></td>
 <td class="comment-11" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6311"></span>6311</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$F7</td>
 <td class="comment-11" rowspan="2">Read keys 1-2-3-4-5.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6313"></span>6313</td>
+<td class="bytes-0"></td>
 <td class="instruction">IN A,($FE)</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6315"></span>6315</td>
+<td class="bytes-0"></td>
 <td class="instruction">AND $01</td>
-<td class="comment-11" rowspan="1">is '1' (left) being pressed?</td>
+<td class="comment-11" rowspan="1">Is '1' (left) being pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6317"></span>6317</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#632D">$632D</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="6319"></span>6319</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$03</td>
 <td class="comment-11" rowspan="2">Signal: 'left' key pressed.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="631B"></span>631B</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="631E"></span>631E</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
 <td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6321"></span>6321</td>
+<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6CC2.html">$6CC2</a></td>
 <td class="comment-11" rowspan="1">Check the tiles in front of Horace.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6324"></span>6324</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $03</td>
 <td class="comment-11" rowspan="1">Is Horace facing a wall?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6326"></span>6326</td>
+<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="624F.html#632D">$632D</a></td>
 <td class="comment-11" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6328"></span>6328</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,$FF</td>
 <td class="comment-11" rowspan="2">Signal: no key pressed (Horace will not respond to the keypress).</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="632A"></span>632A</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C6F.html">$7C6F</a>),A</td>
 <td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-2"><span id="632D"></span>632D</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C6F.html">$7C6F</a>)</td>
 <td class="comment-11" rowspan="1">Pick up the direction keypress indicator.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6330"></span>6330</td>
+<td class="bytes-0"></td>
 <td class="instruction">CP $FF</td>
 <td class="comment-11" rowspan="1">Was a direction key pressed?</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6332"></span>6332</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET Z</td>
 <td class="comment-11" rowspan="1">Return if not.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6333"></span>6333</td>
+<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C70.html">$7C70</a>),A</td>
 <td class="comment-11" rowspan="1">Otherwise update Horace's animation frame accordingly.</td>
 </tr>
 <tr>
 <td class="asm-label-0"></td>
 <td class="address-1"><span id="6336"></span>6336</td>
+<td class="bytes-0"></td>
 <td class="instruction">RET</td>
 <td class="comment-11" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6000.html">6000</a></span></td>
+<td class="prev"><span class="prev-1">Prev: <a href="6229.html">6229</a></span></td>
 <td class="up">Up: <a href="../maps/all.html#624F">Map</a></td>
 <td class="next"><span class="next-1">Next: <a href="6337.html">6337</a></span></td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20181014</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2018 Richard Dymond.</div>
-<div class="created">Created using <a href="http://skoolkit.ca/">SkoolKit</a> 7.0.</div>
-<div><a href="http://skoolkit.ca/disassemblies/hungry_horace/asm/25167.html">Switch to decimal</a>.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div><a href="../dec/asm/25167.html">Switch to decimal</a>.</div>
 </footer>
 </body>
 </html>
