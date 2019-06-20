@@ -10,7 +10,7 @@ Decide which number base you prefer and then click the corresponding link below
 to browse the latest release:
 
 * [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/) (hexadecimal; mirror [here](https://skoolkid.gitlab.io/hungryhorace/))
-* [Hungry Horace disassembly](https://skoolkit.ca/disassemblies/hungry_horace/) (decimal)
+* [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/dec/) (decimal; mirror [here](https://skoolkid.gitlab.io/hungryhorace/dec/))
 
 To build the current development version, first either install SkoolKit, or
 make a clone of the [SkoolKit repository](https://github.com/skoolkid/skoolkit)
