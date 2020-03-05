@@ -1,5 +1,6 @@
-# rc file for disassembly-diff, skooldiff and write-files
+# rc file for check-asms, check-bins, disassembly-diff, skooldiff, write-files
 
 OLD_VERSION=20190620
 SK_OLD_VERSION=7.2
+SKOOL2BIN_START=24576
 SNAPSHOT=$HUNGRYHORACE_HOME/build/hungry_horace.z80
