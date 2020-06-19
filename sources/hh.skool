@@ -1,6 +1,7 @@
-; Copyright 2014-2019 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2020 Richard Dymond (rjdymond@gmail.com)
 
 @start
+@expand=#DEFINE2,1@@LOGO@#UDGARRAY(7,#EVAL(14+7*{0}-6*{1}),4,tindex=2,alpha=#IF({1})(0,255));32768-32830-1-56,,7{{8,,208}}({{ImagePath}}/{2}|Hungry Horace)@@
 @replace=/#sprite\i,\i/#UDGARRAY2,\2;\1-(\1+24)-8
 @replace=/#fruit\i/#UDGARRAY#(2#FOR(\1,\1+27,9)||n|;(n+1),#PEEKn||)
 @set-handle-unsupported-macros=1
@@ -12,7 +13,7 @@
 ; https://skoolkit.ca
 ;
 ; Copyright 1982 Beam Software (Hungry Horace)
-; Copyright 2014-2019 Richard Dymond (this disassembly)
+; Copyright 2014-2020 Richard Dymond (this disassembly)
 @bfix+begin
 ;
 ; This disassembly contains fixes for the following bugs:
