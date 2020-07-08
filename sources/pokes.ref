@@ -1,4 +1,4 @@
-; Copyright 2017, 2019 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2017, 2019, 2020 Richard Dymond (rjdymond@gmail.com)
 
 [Poke:infiniteLives:Infinite lives]
 To give Horace infinite lives:
@@ -55,6 +55,16 @@ to N (0&lt;=N&lt;=65535):
 
 <div>POKE #R26296(26297),N-256*INT(N/256)</div>
 <div>POKE 26298,INT(N/256)</div>
+
+[Poke:prolongedPanic:Prolonged panic]
+When Horace sounds the alarm, the guards will panic for a while and then calm
+down. To make the guards panic until Horace throws them out of the park:
+
+POKE #R26198(26198),0
+
+Alternatively, to make the guards panic until Horace leaves the maze:
+
+POKE 26198,0: POKE #R26306(26307),1
 
 [Poke:alwaysThrowableGuards:Always throwable guards]
 To enable Horace to throw the guards out of the park even when he hasn't
