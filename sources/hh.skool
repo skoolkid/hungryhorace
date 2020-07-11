@@ -2144,8 +2144,8 @@ c27842 PUSH BC       ; Save #REGbc.
  27844 PUSH HL       ; Save the sprite location.
  27845 LD BC,16384   ; {Convert the sprite location into a display file
  27848 ADD HL,BC     ; address.}
- 27849 CALL 27927    ; Set #REGhl the display file address of the tile in front
-                     ; of the sprite.
+ 27849 CALL 27927    ; Set #REGhl to the display file address of the tile in
+                     ; front of the sprite.
  27852 CALL 27663    ; Set #REGhl' to the corresponding attribute file address.
  27855 EXX           ; Exchange registers.
  27856 LD E,0        ; #REGe' will hold the indicator of any interesting tiles
