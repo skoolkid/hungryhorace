@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 69A4</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="698E.html">698E</a></span></td>
+<td class="prev">
+Prev: <a href="698E.html">698E</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#69A4">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6A17.html">6A17</a></span></td>
+<td class="next">
+Next: <a href="6A17.html">6A17</a>
+</td>
 </tr>
 </table>
 <div class="description">69A4: Ring the bell if necessary</div>
@@ -29,47 +32,26 @@
 Called from the main loop at <a href="6229.html">6229</a>.
 </div>
 </div>
-<table class="input-0">
-<tr class="asm-input-header">
-<th colspan="2">Input</th>
-</tr>
-
-</table>
-<table class="output-0">
-<tr class="asm-output-header">
-<th colspan="2">Output</th>
-</tr>
-
-</table>
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="69A4"></span>69A4</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7CC4.html">$7CC4</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the bell's location in the current maze.</td>
+<td class="comment-1" rowspan="1">Pick up the bell's location in the current maze.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69A7"></span>69A7</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-11" rowspan="2">Has Horace already sounded the alarm?</td>
+<td class="comment-1" rowspan="2">Has Horace already sounded the alarm?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69A8"></span>69A8</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69A9"></span>69A9</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69D0">$69D0</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -82,165 +64,104 @@ Horace has already sounded the alarm. Produce an appropriate delay in place of t
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="69AB"></span>69AB</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C62.html">$7C62</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the game speed parameter in <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="1">Pick up the game speed parameter in <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69AE"></span>69AE</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD E,A</td>
-<td class="comment-11" rowspan="6"><span class="register">HL</span>=350+30*<span class="register">A</span>.</td>
+<td class="comment-1" rowspan="6"><span class="register">HL</span>=350+30*<span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69AF"></span>69AF</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$015E</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="69B2"></span>69B2</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,$001E</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69B5"></span>69B5</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69B6"></span>69B6</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC E</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69B7"></span>69B7</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69B2">$69B2</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69B9"></span>69B9</td>
-<td class="bytes-0"></td>
 <td class="instruction">XOR A</td>
-<td class="comment-11" rowspan="1">Clear <span class="register">A</span> for no apparent reason.</td>
+<td class="comment-1" rowspan="1">Clear <span class="register">A</span> for no apparent reason.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69BA"></span>69BA</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="6B0A.html">$6B0A</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the active guard counter (0-3) in <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="1">Pick up the active guard counter (0-3) in <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69BD"></span>69BD</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-11" rowspan="10">Subtract 128*<span class="register">A</span> from <span class="register">HL</span>.</td>
+<td class="comment-1" rowspan="10">Subtract 128*<span class="register">A</span> from <span class="register">HL</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69BE"></span>69BE</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69BF"></span>69BF</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C0"></span>69C0</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C1"></span>69C1</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C2"></span>69C2</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C3"></span>69C3</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,$00</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C5"></span>69C5</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C6"></span>69C6</td>
-<td class="bytes-0"></td>
 <td class="instruction">SBC HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69C8"></span>69C8</td>
-<td class="bytes-0"></td>
 <td class="instruction">SBC HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69CA"></span>69CA</td>
-<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
-<td class="comment-11" rowspan="2">Copy <span class="register">HL</span> to <span class="register">BC</span>.</td>
+<td class="comment-1" rowspan="2">Copy <span class="register">HL</span> to <span class="register">BC</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69CB"></span>69CB</td>
-<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69CC"></span>69CC</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6B0C.html">$6B0C</a></td>
-<td class="comment-11" rowspan="1">Wait for 26*<span class="register">BC</span>+5 T states.</td>
+<td class="comment-1" rowspan="1">Wait for 26*<span class="register">BC</span>+5 T states.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69CF"></span>69CF</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -253,241 +174,171 @@ Horace has not sounded the alarm yet. Produce an appropriate bell sound if neces
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="69D0"></span>69D0</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7CC6.html">$7CC6</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the bell animation frame counter.</td>
+<td class="comment-1" rowspan="1">Pick up the bell animation frame counter.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69D3"></span>69D3</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND $3F</td>
-<td class="comment-11" rowspan="1">Keep only bits 0-5.</td>
+<td class="comment-1" rowspan="1">Keep only bits 0-5.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69D5"></span>69D5</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $00</td>
-<td class="comment-11" rowspan="1">Is the frame counter a multiple of 64 at the moment? (This instruction is redundant.)</td>
+<td class="comment-1" rowspan="1">Is the frame counter a multiple of 64 at the moment? (This instruction is redundant.)</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69D7"></span>69D7</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69F6">$69F6</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69D9"></span>69D9</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="7C69.html">$7C69</a></td>
-<td class="comment-11" rowspan="2">Pick up the sound on/off indicator in <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="2">Pick up the sound on/off indicator in <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69DC"></span>69DC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69DD"></span>69DD</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $1F</td>
-<td class="comment-11" rowspan="1">Is the sound on?</td>
+<td class="comment-1" rowspan="1">Is the sound on?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69DF"></span>69DF</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69AB">$69AB</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69E1"></span>69E1</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,$0016</td>
-<td class="comment-11" rowspan="3">Call the ROM to make a short sound effect.</td>
+<td class="comment-1" rowspan="3">Call the ROM to make a short sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69E4"></span>69E4</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0193</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69E7"></span>69E7</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL $03B5</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69EA"></span>69EA</td>
-<td class="bytes-0"></td>
 <td class="instruction">DI</td>
-<td class="comment-11" rowspan="1">Disable interrupts after the ROM call.</td>
+<td class="comment-1" rowspan="1">Disable interrupts after the ROM call.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69EB"></span>69EB</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,$001A</td>
-<td class="comment-11" rowspan="3">Call the ROM again to make another short sound effect.</td>
+<td class="comment-1" rowspan="3">Call the ROM again to make another short sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69EE"></span>69EE</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0168</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69F1"></span>69F1</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL $03B5</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69F4"></span>69F4</td>
-<td class="bytes-0"></td>
 <td class="instruction">DI</td>
-<td class="comment-11" rowspan="1">Disable interrupts after the ROM call.</td>
+<td class="comment-1" rowspan="1">Disable interrupts after the ROM call.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69F5"></span>69F5</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="69F6"></span>69F6</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $20</td>
-<td class="comment-11" rowspan="1">Is the bell animation frame counter a multiple of 32 at the moment?</td>
+<td class="comment-1" rowspan="1">Is the bell animation frame counter a multiple of 32 at the moment?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69F8"></span>69F8</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69AB">$69AB</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69FA"></span>69FA</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="7C69.html">$7C69</a></td>
-<td class="comment-11" rowspan="2">Pick up the sound on/off indicator in <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="2">Pick up the sound on/off indicator in <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69FD"></span>69FD</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="69FE"></span>69FE</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $1F</td>
-<td class="comment-11" rowspan="1">Is the sound on?</td>
+<td class="comment-1" rowspan="1">Is the sound on?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A00"></span>6A00</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="69A4.html#69AB">$69AB</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A02"></span>6A02</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,$001A</td>
-<td class="comment-11" rowspan="3">Call the ROM to make a short sound effect.</td>
+<td class="comment-1" rowspan="3">Call the ROM to make a short sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A05"></span>6A05</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0168</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A08"></span>6A08</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL $03B5</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A0B"></span>6A0B</td>
-<td class="bytes-0"></td>
 <td class="instruction">DI</td>
-<td class="comment-11" rowspan="1">Disable interrupts after the ROM call.</td>
+<td class="comment-1" rowspan="1">Disable interrupts after the ROM call.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A0C"></span>6A0C</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,$0016</td>
-<td class="comment-11" rowspan="3">Call the ROM again to make another short sound effect.</td>
+<td class="comment-1" rowspan="3">Call the ROM again to make another short sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A0F"></span>6A0F</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0193</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A12"></span>6A12</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL $03B5</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A15"></span>6A15</td>
-<td class="bytes-0"></td>
 <td class="instruction">DI</td>
-<td class="comment-11" rowspan="1">Disable interrupts after the ROM call.</td>
+<td class="comment-1" rowspan="1">Disable interrupts after the ROM call.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6A16"></span>6A16</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="698E.html">698E</a></span></td>
+<td class="prev">
+Prev: <a href="698E.html">698E</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#69A4">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6A17.html">6A17</a></span></td>
+<td class="next">
+Next: <a href="6A17.html">6A17</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/asm/27044.html">Switch to decimal</a>.</div>
 </footer>
 </body>

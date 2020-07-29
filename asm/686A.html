@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 686A</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6821.html">6821</a></span></td>
+<td class="prev">
+Prev: <a href="6821.html">6821</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#686A">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6907.html">6907</a></span></td>
+<td class="next">
+Next: <a href="6907.html">6907</a>
+</td>
 </tr>
 </table>
 <div class="description">686A: Draw the bell and check whether Horace has sounded the alarm</div>
@@ -29,229 +32,144 @@
 Called from the main loop at <a href="6229.html">6229</a>.
 </div>
 </div>
-<table class="input-0">
-<tr class="asm-input-header">
-<th colspan="2">Input</th>
-</tr>
-
-</table>
-<table class="output-0">
-<tr class="asm-output-header">
-<th colspan="2">Output</th>
-</tr>
-
-</table>
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="686A"></span>686A</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C6B.html">$7C6B</a>)</td>
-<td class="comment-11" rowspan="1">Pick up Horace's current location.</td>
+<td class="comment-1" rowspan="1">Pick up Horace's current location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="686D"></span>686D</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,(<a href="7CC4.html">$7CC4</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the location of the bell in the current maze.</td>
+<td class="comment-1" rowspan="1">Pick up the location of the bell in the current maze.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6871"></span>6871</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,B</td>
-<td class="comment-11" rowspan="2">Has Horace already sounded the alarm?</td>
+<td class="comment-1" rowspan="2">Has Horace already sounded the alarm?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6872"></span>6872</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR C</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6873"></span>6873</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET Z</td>
-<td class="comment-11" rowspan="1">Return if so.</td>
+<td class="comment-1" rowspan="1">Return if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6874"></span>6874</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
-<td class="comment-11" rowspan="1">Clear the carry flag. (This instruction is redundant.)</td>
+<td class="comment-1" rowspan="1">Clear the carry flag. (This instruction is redundant.)</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6875"></span>6875</td>
-<td class="bytes-0"></td>
 <td class="instruction">SBC HL,BC</td>
-<td class="comment-11" rowspan="1">Subtract the bell's location from Horace's.</td>
+<td class="comment-1" rowspan="1">Subtract the bell's location from Horace's.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6877"></span>6877</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-11" rowspan="2">Is Horace in exactly the same location as the bell?</td>
+<td class="comment-1" rowspan="2">Is Horace in exactly the same location as the bell?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6878"></span>6878</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6879"></span>6879</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="686A.html#68BE">$68BE</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="687B"></span>687B</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
-<td class="comment-11" rowspan="3">Is Horace one space to the left of the bell?</td>
+<td class="comment-1" rowspan="3">Is Horace one space to the left of the bell?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="687C"></span>687C</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="687D"></span>687D</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="687E"></span>687E</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="686A.html#68BE">$68BE</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6880"></span>6880</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC HL</td>
-<td class="comment-11" rowspan="4">Is Horace one space to the right of the bell?</td>
+<td class="comment-1" rowspan="4">Is Horace one space to the right of the bell?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6881"></span>6881</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6882"></span>6882</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6883"></span>6883</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6884"></span>6884</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="686A.html#68BE">$68BE</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6886"></span>6886</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0021</td>
-<td class="comment-11" rowspan="4">Is Horace one space above the bell?</td>
+<td class="comment-1" rowspan="4">Is Horace one space above the bell?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6889"></span>6889</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="688A"></span>688A</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="688B"></span>688B</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="688C"></span>688C</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="686A.html#68BE">$68BE</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="688E"></span>688E</td>
-<td class="bytes-0"></td>
 <td class="instruction">XOR A</td>
-<td class="comment-11" rowspan="1">Clear the carry flag. (This instruction is redundant.)</td>
+<td class="comment-1" rowspan="1">Clear the carry flag. (This instruction is redundant.)</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="688F"></span>688F</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0041</td>
-<td class="comment-11" rowspan="4">Is Horace one space below the bell?</td>
+<td class="comment-1" rowspan="4">Is Horace one space below the bell?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6892"></span>6892</td>
-<td class="bytes-0"></td>
 <td class="instruction">SBC HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6894"></span>6894</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6895"></span>6895</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6896"></span>6896</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="686A.html#68BE">$68BE</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -264,144 +182,97 @@ Horace has not sounded the alarm.
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6898"></span>6898</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7CC4.html">$7CC4</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the location of the bell in the current maze.</td>
+<td class="comment-1" rowspan="1">Pick up the location of the bell in the current maze.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="689B"></span>689B</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7CC6.html">$7CC6</a>)</td>
-<td class="comment-11" rowspan="3">Increment the bell's animation frame counter.</td>
+<td class="comment-1" rowspan="3">Increment the bell's animation frame counter.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="689E"></span>689E</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="689F"></span>689F</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7CC6.html">$7CC6</a>),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68A2"></span>68A2</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND $38</td>
-<td class="comment-11" rowspan="1">Keep only bits 3, 4 and 5.</td>
+<td class="comment-1" rowspan="1">Keep only bits 3, 4 and 5.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68A4"></span>68A4</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $1F</td>
-<td class="comment-11" rowspan="1">Is the result 30 or less (i.e. bit 5 reset)?</td>
+<td class="comment-1" rowspan="1">Is the result 30 or less (i.e. bit 5 reset)?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68A6"></span>68A6</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR C,<a href="686A.html#68AA">$68AA</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68A8"></span>68A8</td>
-<td class="bytes-0"></td>
 <td class="instruction">XOR $38</td>
-<td class="comment-11" rowspan="1">Flip bits 3 and 4, and reset bit 5.</td>
+<td class="comment-1" rowspan="1">Flip bits 3 and 4, and reset bit 5.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="68AA"></span>68AA</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLCA</td>
-<td class="comment-11" rowspan="4"><span class="register">BC</span>=4*<span class="register">A</span>.</td>
+<td class="comment-1" rowspan="4"><span class="register">BC</span>=4*<span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68AB"></span>68AB</td>
-<td class="bytes-0"></td>
 <td class="instruction">RLCA</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68AC"></span>68AC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68AD"></span>68AD</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,$00</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68AF"></span>68AF</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,<a href="7F07.html">$7F07</a></td>
-<td class="comment-11" rowspan="1">This is the base address of the graphic data for the bell.</td>
+<td class="comment-1" rowspan="1">This is the base address of the graphic data for the bell.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68B2"></span>68B2</td>
-<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
-<td class="comment-11" rowspan="3">Point <span class="register">DE</span> at the graphic data for the appropriate bell sprite.</td>
+<td class="comment-1" rowspan="3">Point <span class="register">DE</span> at the graphic data for the appropriate bell sprite.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68B3"></span>68B3</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68B4"></span>68B4</td>
-<td class="bytes-0"></td>
 <td class="instruction">EX DE,HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68B5"></span>68B5</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C0F.html">$6C0F</a></td>
-<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the attribute file address of the bell's location.</td>
+<td class="comment-1" rowspan="1">Set <span class="register">HL'</span> to the attribute file address of the bell's location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68B8"></span>68B8</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,$3A</td>
-<td class="comment-11" rowspan="1">This is the attribute byte (INK 2: PAPER 7).</td>
+<td class="comment-1" rowspan="1">This is the attribute byte (INK 2: PAPER 7).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68BA"></span>68BA</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6BD6.html">$6BD6</a></td>
-<td class="comment-11" rowspan="1">Draw the bell.</td>
+<td class="comment-1" rowspan="1">Draw the bell.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68BD"></span>68BD</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -414,220 +285,153 @@ Horace has sounded the alarm.
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="68BE"></span>68BE</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,$0000</td>
-<td class="comment-11" rowspan="2">Clear the bell location to indicate that Horace has sounded the alarm.</td>
+<td class="comment-1" rowspan="2">Clear the bell location to indicate that Horace has sounded the alarm.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68C1"></span>68C1</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7CC4.html">$7CC4</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68C4"></span>68C4</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,<a href="7F87.html">$7F87</a></td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the blank sprite.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the graphic data for the blank sprite.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68C7"></span>68C7</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="6FCF.html#6FD1">$6FD1</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the bell location for the current maze.</td>
+<td class="comment-1" rowspan="1">Pick up the bell location for the current maze.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68CA"></span>68CA</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6C0F.html">$6C0F</a></td>
-<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
+<td class="comment-1" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68CD"></span>68CD</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,$3E</td>
-<td class="comment-11" rowspan="1">This is the attribute byte (INK 6: PAPER 7).</td>
+<td class="comment-1" rowspan="1">This is the attribute byte (INK 6: PAPER 7).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68CF"></span>68CF</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6BD6.html">$6BD6</a></td>
-<td class="comment-11" rowspan="1">Draw the blank sprite where the bell was.</td>
+<td class="comment-1" rowspan="1">Draw the blank sprite where the bell was.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68D2"></span>68D2</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="6821.html">$6821</a></td>
-<td class="comment-11" rowspan="1">Draw Horace.</td>
+<td class="comment-1" rowspan="1">Draw Horace.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68D5"></span>68D5</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C73.html">$7C73</a>)</td>
-<td class="comment-11" rowspan="4">Add 60 to the score.</td>
+<td class="comment-1" rowspan="4">Add 60 to the score.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68D8"></span>68D8</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,$003C</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68DB"></span>68DB</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68DC"></span>68DC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C73.html">$7C73</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68DF"></span>68DF</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="65A1.html#65C7">$65C7</a></td>
-<td class="comment-11" rowspan="1">Print the new score and make a sound effect.</td>
+<td class="comment-1" rowspan="1">Print the new score and make a sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68E2"></span>68E2</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="7C62.html">$7C62</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the game speed parameter in <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="1">Pick up the game speed parameter in <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68E5"></span>68E5</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD L,$00</td>
-<td class="comment-11" rowspan="4"><span class="register">HL</span>=128*<span class="register">A</span>.</td>
+<td class="comment-1" rowspan="4"><span class="register">HL</span>=128*<span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68E7"></span>68E7</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68E8"></span>68E8</td>
-<td class="bytes-0"></td>
 <td class="instruction">SRA H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68EA"></span>68EA</td>
-<td class="bytes-0"></td>
 <td class="instruction">RR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68EC"></span>68EC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DAE.html">$6DAE</a>),HL</td>
-<td class="comment-11" rowspan="1">Initialise the guard panic timer to this value.</td>
+<td class="comment-1" rowspan="1">Initialise the guard panic timer to this value.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68EF"></span>68EF</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(<a href="6DB8.html#6DBA">$6DBA</a>)</td>
-<td class="comment-11" rowspan="4">Update the animation frame in the temporary guard buffer; these instructions are redundant and have no effect on any of the guards.</td>
+<td class="comment-1" rowspan="4">Update the animation frame in the temporary guard buffer; these instructions are redundant and have no effect on any of the guards.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68F2"></span>68F2</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD A,$02</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68F4"></span>68F4</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND $03</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68F6"></span>68F6</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="6DB8.html#6DBA">$6DBA</a>),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68F9"></span>68F9</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="7C73.html">$7C73</a>)</td>
-<td class="comment-11" rowspan="4">Add 150 to the score.</td>
+<td class="comment-1" rowspan="4">Add 150 to the score.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68FC"></span>68FC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,$0096</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="68FF"></span>68FF</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6900"></span>6900</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="7C73.html">$7C73</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6903"></span>6903</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="65A1.html#65C7">$65C7</a></td>
-<td class="comment-11" rowspan="1">Print the new score and make a sound effect.</td>
+<td class="comment-1" rowspan="1">Print the new score and make a sound effect.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6906"></span>6906</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6821.html">6821</a></span></td>
+<td class="prev">
+Prev: <a href="6821.html">6821</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#686A">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6907.html">6907</a></span></td>
+<td class="next">
+Next: <a href="6907.html">6907</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/asm/26730.html">Switch to decimal</a>.</div>
 </footer>
 </body>

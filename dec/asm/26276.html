@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 26276</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo-dec.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="26173.html">26173</a></span></td>
+<td class="prev">
+Prev: <a href="26173.html">26173</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#26276">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="26426.html">26426</a></span></td>
+<td class="next">
+Next: <a href="26426.html">26426</a>
+</td>
 </tr>
 </table>
 <div class="description">26276: Check whether Horace has run into a guard</div>
@@ -29,327 +32,202 @@
 Called from the main loop at <a href="25129.html">25129</a>.
 </div>
 </div>
-<table class="input-0">
-<tr class="asm-input-header">
-<th colspan="2">Input</th>
-</tr>
-
-</table>
-<table class="output-0">
-<tr class="asm-output-header">
-<th colspan="2">Output</th>
-</tr>
-
-</table>
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26276"></span>26276</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="31853.html">31853</a>)</td>
-<td class="comment-11" rowspan="1">Pick up Horace's new location.</td>
+<td class="comment-1" rowspan="1">Pick up Horace's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26279"></span>26279</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27680.html">27680</a></td>
-<td class="comment-11" rowspan="1">Check the attribute bytes at Horace's new location.</td>
+<td class="comment-1" rowspan="1">Check the attribute bytes at Horace's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26282"></span>26282</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP 59</td>
-<td class="comment-11" rowspan="1">Has Horace run into a guard?</td>
+<td class="comment-1" rowspan="1">Has Horace run into a guard?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26284"></span>26284</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET NZ</td>
-<td class="comment-11" rowspan="1">Return if not.</td>
+<td class="comment-1" rowspan="1">Return if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26285"></span>26285</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="28078.html">28078</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the guard panic timer.</td>
+<td class="comment-1" rowspan="1">Pick up the guard panic timer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26288"></span>26288</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-11" rowspan="2">Are the guards panicking at the moment?</td>
+<td class="comment-1" rowspan="2">Are the guards panicking at the moment?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26289"></span>26289</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26290"></span>26290</td>
-<td class="bytes-0"></td>
 <td class="instruction">JP Z,<a href="26426.html">26426</a></td>
-<td class="comment-11" rowspan="1">Jump if not.</td>
+<td class="comment-1" rowspan="1">Jump if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26293"></span>26293</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="31859.html">31859</a>)</td>
-<td class="comment-11" rowspan="4">Add 100 to the score (Horace has thrown the guards out of the park).</td>
+<td class="comment-1" rowspan="4">Add 100 to the score (Horace has thrown the guards out of the park).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26296"></span>26296</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,100</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26299"></span>26299</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26300"></span>26300</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="31859.html">31859</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26303"></span>26303</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="26017.html#26055">26055</a></td>
-<td class="comment-11" rowspan="1">Print the score.</td>
+<td class="comment-1" rowspan="1">Print the score.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26306"></span>26306</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,0</td>
-<td class="comment-11" rowspan="2">Reset the guard panic timer.</td>
+<td class="comment-1" rowspan="2">Reset the guard panic timer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26309"></span>26309</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="28078.html">28078</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26312"></span>26312</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="31849.html">31849</a></td>
-<td class="comment-11" rowspan="1">Pick up the sound on/off indicator.</td>
+<td class="comment-1" rowspan="1">Pick up the sound on/off indicator.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26315"></span>26315</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,15</td>
-<td class="comment-11" rowspan="1">Initialise <span class="register">C</span> for the loop that follows.</td>
+<td class="comment-1" rowspan="1">Initialise <span class="register">C</span> for the loop that follows.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26317"></span>26317</td>
-<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
-<td class="comment-11" rowspan="1">Save the loop counter (unnecessarily).</td>
+<td class="comment-1" rowspan="1">Save the loop counter (unnecessarily).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26318"></span>26318</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,C</td>
-<td class="comment-11" rowspan="7">Set <span class="register">B</span> and <span class="register">E</span> equal to 8*(15-<span class="register">C</span>). This value determines the pitch.</td>
+<td class="comment-1" rowspan="7">Set <span class="register">B</span> and <span class="register">E</span> equal to 8*(15-<span class="register">C</span>). This value determines the pitch.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26319"></span>26319</td>
-<td class="bytes-0"></td>
 <td class="instruction">XOR 15</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26321"></span>26321</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26322"></span>26322</td>
-<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26324"></span>26324</td>
-<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26326"></span>26326</td>
-<td class="bytes-0"></td>
 <td class="instruction">SLA B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26328"></span>26328</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD E,B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26329"></span>26329</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD D,8</td>
-<td class="comment-11" rowspan="1">This value determines the duration.</td>
+<td class="comment-1" rowspan="1">This value determines the duration.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26331"></span>26331</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,E</td>
-<td class="comment-11" rowspan="15">Produce a sound (if the sound on/off indicator is on) with pitch and duration determined by <span class="register">E</span> and <span class="register">D</span>.</td>
+<td class="comment-1" rowspan="15">Produce a sound (if the sound on/off indicator is on) with pitch and duration determined by <span class="register">E</span> and <span class="register">D</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26332"></span>26332</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,31</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26334"></span>26334</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND (HL)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26335"></span>26335</td>
-<td class="bytes-0"></td>
 <td class="instruction">OUT (254),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26337"></span>26337</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(IX+0)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26340"></span>26340</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (IX+0),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26343"></span>26343</td>
-<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="26276.html#26337">26337</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26345"></span>26345</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,7</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26347"></span>26347</td>
-<td class="bytes-0"></td>
 <td class="instruction">OUT (254),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26349"></span>26349</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,E</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26350"></span>26350</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(IX+0)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26353"></span>26353</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (IX+0),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26356"></span>26356</td>
-<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="26276.html#26350">26350</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26358"></span>26358</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC D</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26359"></span>26359</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="26276.html#26331">26331</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26361"></span>26361</td>
-<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
-<td class="comment-11" rowspan="1">Restore the loop counter to <span class="register">C</span> (unnecessarily).</td>
+<td class="comment-1" rowspan="1">Restore the loop counter to <span class="register">C</span> (unnecessarily).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26362"></span>26362</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC C</td>
-<td class="comment-11" rowspan="1">Finished yet?</td>
+<td class="comment-1" rowspan="1">Finished yet?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26363"></span>26363</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="26276.html#26317">26317</a></td>
-<td class="comment-11" rowspan="1">Jump back if not.</td>
+<td class="comment-1" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -362,213 +240,156 @@ Now we throw the guards out of the park.
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26365"></span>26365</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,<a href="28070.html">28070</a></td>
-<td class="comment-11" rowspan="1">Point <span class="register">HL</span> at the first guard countdown timer.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">HL</span> at the first guard countdown timer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26368"></span>26368</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,4</td>
-<td class="comment-11" rowspan="1">There are four guards.</td>
+<td class="comment-1" rowspan="1">There are four guards.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26370"></span>26370</td>
-<td class="bytes-0"></td>
 <td class="instruction">PUSH BC</td>
-<td class="comment-11" rowspan="1">Save the guard counter.</td>
+<td class="comment-1" rowspan="1">Save the guard counter.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26371"></span>26371</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
-<td class="comment-11" rowspan="3">Set the zero flag if this guard is already in play.</td>
+<td class="comment-1" rowspan="3">Set the zero flag if this guard is already in play.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26372"></span>26372</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26373"></span>26373</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR (HL)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26374"></span>26374</td>
-<td class="bytes-0"></td>
 <td class="instruction">PUSH HL</td>
-<td class="comment-11" rowspan="1">Save the guard countdown timer pointer.</td>
+<td class="comment-1" rowspan="1">Save the guard countdown timer pointer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26375"></span>26375</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="26276.html#26421">26421</a></td>
-<td class="comment-11" rowspan="1">Jump if this guard has not appeared yet.</td>
+<td class="comment-1" rowspan="1">Jump if this guard has not appeared yet.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26377"></span>26377</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27199.html">27199</a></td>
-<td class="comment-11" rowspan="1">Copy this guard's buffer into the temporary location (<a href="28088.html">28088</a>).</td>
+<td class="comment-1" rowspan="1">Copy this guard's buffer into the temporary location (<a href="28088.html">28088</a>).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26380"></span>26380</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="25947.html#25960">25960</a></td>
-<td class="comment-11" rowspan="1">Redraw the tiles behind the guard.</td>
+<td class="comment-1" rowspan="1">Redraw the tiles behind the guard.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26383"></span>26383</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="31853.html">31853</a>)</td>
-<td class="comment-11" rowspan="1">Pick up Horace's new location.</td>
+<td class="comment-1" rowspan="1">Pick up Horace's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26386"></span>26386</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27680.html">27680</a></td>
-<td class="comment-11" rowspan="1">Check the attribute bytes at this location.</td>
+<td class="comment-1" rowspan="1">Check the attribute bytes at this location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26389"></span>26389</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP 59</td>
-<td class="comment-11" rowspan="1">Set the zero flag if there's a guard here. (This instruction is redundant.)</td>
+<td class="comment-1" rowspan="1">Set the zero flag if there's a guard here. (This instruction is redundant.)</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26391"></span>26391</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="28623.html#28629">28629</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the entrance location for the current maze.</td>
+<td class="comment-1" rowspan="1">Pick up the entrance location for the current maze.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26394"></span>26394</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="28088.html">28088</a>),HL</td>
-<td class="comment-11" rowspan="2">Make this the guard's new location.</td>
+<td class="comment-1" rowspan="2">Make this the guard's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26397"></span>26397</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="28088.html#28092">28092</a>),HL</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26400"></span>26400</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27752.html">27752</a></td>
-<td class="comment-11" rowspan="1">Copy the maze background tiles into the temporary guard buffer.</td>
+<td class="comment-1" rowspan="1">Copy the maze background tiles into the temporary guard buffer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26403"></span>26403</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,1</td>
-<td class="comment-11" rowspan="2">Initialise the guard's animation frame.</td>
+<td class="comment-1" rowspan="2">Initialise the guard's animation frame.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26405"></span>26405</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="28088.html#28090">28090</a>),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26408"></span>26408</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,90</td>
-<td class="comment-11" rowspan="2">Initialise the guard's return delay counter.</td>
+<td class="comment-1" rowspan="2">Initialise the guard's return delay counter.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26410"></span>26410</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (<a href="28088.html#28094">28094</a>),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26413"></span>26413</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR <a href="26276.html#26418">26418</a></td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26415"></span>26415</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="26173.html">26173</a></td>
-<td class="comment-11" rowspan="1">Draw the guard (this instruction is never executed).</td>
+<td class="comment-1" rowspan="1">Draw the guard (this instruction is never executed).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26418"></span>26418</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27242.html">27242</a></td>
-<td class="comment-11" rowspan="1">Copy the guard's buffer back to the original location.</td>
+<td class="comment-1" rowspan="1">Copy the guard's buffer back to the original location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="26421"></span>26421</td>
-<td class="bytes-0"></td>
 <td class="instruction">POP HL</td>
-<td class="comment-11" rowspan="1">Restore the guard countdown timer pointer to <span class="register">HL</span>.</td>
+<td class="comment-1" rowspan="1">Restore the guard countdown timer pointer to <span class="register">HL</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26422"></span>26422</td>
-<td class="bytes-0"></td>
 <td class="instruction">POP BC</td>
-<td class="comment-11" rowspan="1">Restore the guard counter to <span class="register">B</span>.</td>
+<td class="comment-1" rowspan="1">Restore the guard counter to <span class="register">B</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26423"></span>26423</td>
-<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="26276.html#26370">26370</a></td>
-<td class="comment-11" rowspan="1">Jump back to deal with the next guard.</td>
+<td class="comment-1" rowspan="1">Jump back to deal with the next guard.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26425"></span>26425</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="26173.html">26173</a></span></td>
+<td class="prev">
+Prev: <a href="26173.html">26173</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#26276">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="26426.html">26426</a></span></td>
+<td class="next">
+Next: <a href="26426.html">26426</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../../asm/66A4.html">Switch to hexadecimal</a>.</div>
 </footer>
 </body>

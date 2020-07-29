@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 6B0C</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6B0B.html">6B0B</a></span></td>
+<td class="prev">
+Prev: <a href="6B0B.html">6B0B</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6B0C">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6B12.html">6B12</a></span></td>
+<td class="next">
+Next: <a href="6B12.html">6B12</a>
+</td>
 </tr>
 </table>
 <div class="description">6B0C: Wait for 26*<span class="register">BC</span>+5 T states</div>
@@ -29,7 +32,7 @@
 Used by the routine at <a href="69A4.html">69A4</a> to produce a delay in place of a bell sound.
 </div>
 </div>
-<table class="input-1">
+<table class="input">
 <tr class="asm-input-header">
 <th colspan="2">Input</th>
 </tr>
@@ -38,61 +41,48 @@ Used by the routine at <a href="69A4.html">69A4</a> to produce a delay in place 
 <td class="register-desc">Delay parameter</td>
 </tr>
 </table>
-<table class="output-0">
-<tr class="asm-output-header">
-<th colspan="2">Output</th>
-</tr>
-
-</table>
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6B0C"></span>6B0C</td>
-<td class="bytes-0"></td>
 <td class="instruction">DEC BC</td>
-<td class="comment-11" rowspan="1">Decrement the delay counter.</td>
+<td class="comment-1" rowspan="1">Decrement the delay counter.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6B0D"></span>6B0D</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,B</td>
-<td class="comment-11" rowspan="2">Is it zero yet?</td>
+<td class="comment-1" rowspan="2">Is it zero yet?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6B0E"></span>6B0E</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR C</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6B0F"></span>6B0F</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6B0C.html#6B0C">$6B0C</a></td>
-<td class="comment-11" rowspan="1">Jump back if not.</td>
+<td class="comment-1" rowspan="1">Jump back if not.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6B11"></span>6B11</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6B0B.html">6B0B</a></span></td>
+<td class="prev">
+Prev: <a href="6B0B.html">6B0B</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6B0C">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6B12.html">6B12</a></span></td>
+<td class="next">
+Next: <a href="6B12.html">6B12</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/asm/27404.html">Switch to decimal</a>.</div>
 </footer>
 </body>

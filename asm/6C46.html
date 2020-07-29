@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 6C46</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6C20.html">6C20</a></span></td>
+<td class="prev">
+Prev: <a href="6C20.html">6C20</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6C46">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6C68.html">6C68</a></span></td>
+<td class="next">
+Next: <a href="6C68.html">6C68</a>
+</td>
 </tr>
 </table>
 <div class="description">6C46: Check the attribute byte at a sprite tile location</div>
@@ -29,7 +32,7 @@
 Used by the routine at <a href="6C20.html">6C20</a>.
 </div>
 </div>
-<table class="input-1">
+<table class="input">
 <tr class="asm-input-header">
 <th colspan="2">Input</th>
 </tr>
@@ -42,7 +45,7 @@ Used by the routine at <a href="6C20.html">6C20</a>.
 <td class="register-desc">Attribute file address</td>
 </tr>
 </table>
-<table class="output-1">
+<table class="output">
 <tr class="asm-output-header">
 <th colspan="2">Output</th>
 </tr>
@@ -54,171 +57,129 @@ Used by the routine at <a href="6C20.html">6C20</a>.
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C46"></span>6C46</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(HL)</td>
-<td class="comment-11" rowspan="1">Pick up the attribute byte.</td>
+<td class="comment-1" rowspan="1">Pick up the attribute byte.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C47"></span>6C47</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $3B</td>
-<td class="comment-11" rowspan="1">Is it magenta?</td>
+<td class="comment-1" rowspan="1">Is it magenta?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C49"></span>6C49</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6C46.html#6C55">$6C55</a></td>
-<td class="comment-11" rowspan="1">Jump if so (there is a guard here).</td>
+<td class="comment-1" rowspan="1">Jump if so (there is a guard here).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C4B"></span>6C4B</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $3A</td>
-<td class="comment-11" rowspan="1">Is it red?</td>
+<td class="comment-1" rowspan="1">Is it red?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C4D"></span>6C4D</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6C46.html#6C58">$6C58</a></td>
-<td class="comment-11" rowspan="1">Jump if so (there is a cherry or strawberry here).</td>
+<td class="comment-1" rowspan="1">Jump if so (there is a cherry or strawberry here).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C4F"></span>6C4F</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $3C</td>
-<td class="comment-11" rowspan="1">Is it green?</td>
+<td class="comment-1" rowspan="1">Is it green?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C51"></span>6C51</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6C46.html#6C61">$6C61</a></td>
-<td class="comment-11" rowspan="1">Jump if so (there is a flower here).</td>
+<td class="comment-1" rowspan="1">Jump if so (there is a flower here).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C53"></span>6C53</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6C46.html#6C67">$6C67</a></td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C55"></span>6C55</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD E,A</td>
-<td class="comment-11" rowspan="1"><span class="register">E</span>=59 (guard).</td>
+<td class="comment-1" rowspan="1"><span class="register">E</span>=59 (guard).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C56"></span>6C56</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6C46.html#6C67">$6C67</a></td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C58"></span>6C58</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD D,A</td>
-<td class="comment-11" rowspan="1"><span class="register">D</span>=58 (cherry or strawberry).</td>
+<td class="comment-1" rowspan="1"><span class="register">D</span>=58 (cherry or strawberry).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C59"></span>6C59</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,E</td>
-<td class="comment-11" rowspan="2">Have we already detected a guard at the sprite's location?</td>
+<td class="comment-1" rowspan="2">Have we already detected a guard at the sprite's location?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C5A"></span>6C5A</td>
-<td class="bytes-0"></td>
 <td class="instruction">CP $3B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C5C"></span>6C5C</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR Z,<a href="6C46.html#6C67">$6C67</a></td>
-<td class="comment-11" rowspan="1">Jump if so (it doesn't matter that there's also a cherry or strawberry here).</td>
+<td class="comment-1" rowspan="1">Jump if so (it doesn't matter that there's also a cherry or strawberry here).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C5E"></span>6C5E</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD E,D</td>
-<td class="comment-11" rowspan="1"><span class="register">E</span>=58 (cherry or strawberry).</td>
+<td class="comment-1" rowspan="1"><span class="register">E</span>=58 (cherry or strawberry).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C5F"></span>6C5F</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR <a href="6C46.html#6C67">$6C67</a></td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C61"></span>6C61</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD D,A</td>
-<td class="comment-11" rowspan="1"><span class="register">D</span>=60 (flower).</td>
+<td class="comment-1" rowspan="1"><span class="register">D</span>=60 (flower).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C62"></span>6C62</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,E</td>
-<td class="comment-11" rowspan="2">Have we already detected a guard, cherry, strawberry or flower at the sprite's location?</td>
+<td class="comment-1" rowspan="2">Have we already detected a guard, cherry, strawberry or flower at the sprite's location?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C63"></span>6C63</td>
-<td class="bytes-0"></td>
 <td class="instruction">AND A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C64"></span>6C64</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NZ,<a href="6C46.html#6C67">$6C67</a></td>
-<td class="comment-11" rowspan="1">Jump if so.</td>
+<td class="comment-1" rowspan="1">Jump if so.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C66"></span>6C66</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD E,D</td>
-<td class="comment-11" rowspan="1"><span class="register">E</span>=60 (flower).</td>
+<td class="comment-1" rowspan="1"><span class="register">E</span>=60 (flower).</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C67"></span>6C67</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6C20.html">6C20</a></span></td>
+<td class="prev">
+Prev: <a href="6C20.html">6C20</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6C46">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6C68.html">6C68</a></span></td>
+<td class="next">
+Next: <a href="6C68.html">6C68</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/asm/27718.html">Switch to decimal</a>.</div>
 </footer>
 </body>

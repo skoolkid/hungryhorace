@@ -4,12 +4,11 @@
 <title>Hungry Horace: Pokes</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Pokes">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Pokes</td>
 </tr>
 </table>
@@ -20,6 +19,7 @@
 <li><a href="#frequentFruits">More frequent fruits</a></li>
 <li><a href="#alarmAdvantage">Alarm advantage</a></li>
 <li><a href="#expulsionIncentive">Expulsion incentive</a></li>
+<li><a href="#prolongedPanic">Prolonged panic</a></li>
 <li><a href="#alwaysThrowableGuards">Always throwable guards</a></li>
 <li><a href="#graciousGuards">Gracious guards</a></li>
 <li><a href="#turboTunnel">Turbo tunnel</a></li>
@@ -115,8 +115,25 @@ to N (0&lt;=N&lt;=65535):
 <div>POKE 26298,INT(N/256)</div>
 </div>
 </div>
-<div><span id="alwaysThrowableGuards"></span></div>
+<div><span id="prolongedPanic"></span></div>
 <div class="box box-1">
+<div class="box-title">Prolonged panic</div>
+<div class="paragraph">
+When Horace sounds the alarm, the guards will panic for a while and then calm
+down. To make the guards panic until Horace throws them out of the park:
+</div>
+<div class="paragraph">
+POKE <a href="../asm/663D.html#6656">26198</a>,0
+</div>
+<div class="paragraph">
+Alternatively, to make the guards panic until Horace leaves the maze:
+</div>
+<div class="paragraph">
+POKE 26198,0: POKE <a href="../asm/66A4.html#66C2">26307</a>,1
+</div>
+</div>
+<div><span id="alwaysThrowableGuards"></span></div>
+<div class="box box-2">
 <div class="box-title">Always throwable guards</div>
 <div class="paragraph">
 To enable Horace to throw the guards out of the park even when he hasn't
@@ -127,7 +144,7 @@ POKE <a href="../asm/66A4.html#66AD">26287</a>,0
 </div>
 </div>
 <div><span id="graciousGuards"></span></div>
-<div class="box box-2">
+<div class="box box-1">
 <div class="box-title">Gracious guards</div>
 <div class="paragraph">
 To allow Horace to roam the park without fear of being caught by a guard:
@@ -137,7 +154,7 @@ POKE <a href="../asm/66A4.html">26276</a>,201
 </div>
 </div>
 <div><span id="turboTunnel"></span></div>
-<div class="box box-1">
+<div class="box box-2">
 <div class="box-title">Turbo tunnel</div>
 <div class="paragraph">
 It's not fair that the guards can catch up with Horace by following him through
@@ -148,7 +165,7 @@ POKE <a href="../asm/6337.html#636A">25451</a>,1
 </div>
 </div>
 <div><span id="twoWayTunnel"></span></div>
-<div class="box box-2">
+<div class="box box-1">
 <div class="box-title">Two-way tunnel</div>
 <div class="paragraph">
 To make the tunnel in <a href="../asm/72F7.html">maze 1</a> accessible from both sides (like the
@@ -159,9 +176,9 @@ POKE 29735,9: POKE 29736,9
 </div>
 </div>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/reference/pokes.html">Switch to decimal</a>.</div>
 </footer>
 </body>

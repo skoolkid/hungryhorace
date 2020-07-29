@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 25947</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../../images/logo-dec.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="25886.html">25886</a></span></td>
+<td class="prev">
+Prev: <a href="25886.html">25886</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#25947">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="26017.html">26017</a></span></td>
+<td class="next">
+Next: <a href="26017.html">26017</a>
+</td>
 </tr>
 </table>
 <div class="description">25947: Redraw the tiles behind a guard after he's moved</div>
@@ -29,68 +32,41 @@
 Used by the routine at <a href="25886.html">25886</a>.
 </div>
 </div>
-<table class="input-0">
-<tr class="asm-input-header">
-<th colspan="2">Input</th>
-</tr>
-
-</table>
-<table class="output-0">
-<tr class="asm-output-header">
-<th colspan="2">Output</th>
-</tr>
-
-</table>
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="25947"></span>25947</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="28088.html#28092">28092</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the guard's new location.</td>
+<td class="comment-1" rowspan="1">Pick up the guard's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25950"></span>25950</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,(<a href="28088.html">28088</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+<td class="comment-1" rowspan="1">Pick up the guard's current location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25954"></span>25954</td>
-<td class="bytes-0"></td>
 <td class="instruction">XOR A</td>
-<td class="comment-11" rowspan="1">Clear the carry flag.</td>
+<td class="comment-1" rowspan="1">Clear the carry flag.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25955"></span>25955</td>
-<td class="bytes-0"></td>
 <td class="instruction">SBC HL,DE</td>
-<td class="comment-11" rowspan="1">Subtract the guard's current location from his new location.</td>
+<td class="comment-1" rowspan="1">Subtract the guard's current location from his new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25957"></span>25957</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-11" rowspan="2">Has the guard moved?</td>
+<td class="comment-1" rowspan="2">Has the guard moved?</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25958"></span>25958</td>
-<td class="bytes-0"></td>
 <td class="instruction">OR L</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25959"></span>25959</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET Z</td>
-<td class="comment-11" rowspan="1">Return if not.</td>
+<td class="comment-1" rowspan="1">Return if not.</td>
 </tr>
 <tr>
 <td class="routine-comment" colspan="5">
@@ -103,241 +79,174 @@ This entry point is used by the routines at <a href="26276.html">26276</a> (when
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="25960"></span>25960</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="28088.html">28088</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the guard's current location.</td>
+<td class="comment-1" rowspan="1">Pick up the guard's current location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25963"></span>25963</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD BC,16384</td>
-<td class="comment-11" rowspan="2">Set <span class="register">HL</span> to the corresponding display file address.</td>
+<td class="comment-1" rowspan="2">Set <span class="register">HL</span> to the corresponding display file address.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25966"></span>25966</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD HL,BC</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25967"></span>25967</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27663.html">27663</a></td>
-<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
+<td class="comment-1" rowspan="1">Set <span class="register">HL'</span> to the corresponding attribute file address.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25970"></span>25970</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD DE,<a href="28088.html#28095">28095</a></td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the first of the maze background tiles in the guard's buffer.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the first of the maze background tiles in the guard's buffer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25973"></span>25973</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
-<td class="comment-11" rowspan="1">Pick up the attribute byte of the first maze background tile.</td>
+<td class="comment-1" rowspan="1">Pick up the attribute byte of the first maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25974"></span>25974</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the first maze background tile.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the graphic data for the first maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25975"></span>25975</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-11" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
+<td class="comment-1" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25976"></span>25976</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27642.html">27642</a></td>
-<td class="comment-11" rowspan="1">Draw the first (top-left) maze background tile.</td>
+<td class="comment-1" rowspan="1">Draw the first (top-left) maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25979"></span>25979</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
-<td class="comment-11" rowspan="1">Pick up the attribute byte of the second maze background tile.</td>
+<td class="comment-1" rowspan="1">Pick up the attribute byte of the second maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25980"></span>25980</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the second maze background tile.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the graphic data for the second maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25981"></span>25981</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-11" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
+<td class="comment-1" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25982"></span>25982</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27642.html">27642</a></td>
-<td class="comment-11" rowspan="1">Draw the second (top-right) maze background tile.</td>
+<td class="comment-1" rowspan="1">Draw the second (top-right) maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25985"></span>25985</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,L</td>
-<td class="comment-11" rowspan="7">Point <span class="register">HL</span> at the third tile on-screen.</td>
+<td class="comment-1" rowspan="7">Point <span class="register">HL</span> at the third tile on-screen.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25986"></span>25986</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD A,30</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25988"></span>25988</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD L,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25989"></span>25989</td>
-<td class="bytes-0"></td>
 <td class="instruction">JR NC,<a href="25947.html#25995">25995</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25991"></span>25991</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25992"></span>25992</td>
-<td class="bytes-0"></td>
 <td class="instruction">ADD A,8</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25994"></span>25994</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="25995"></span>25995</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
-<td class="comment-11" rowspan="1">Pick up the attribute byte of the third maze background tile.</td>
+<td class="comment-1" rowspan="1">Pick up the attribute byte of the third maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25996"></span>25996</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the third maze background tile.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the graphic data for the third maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25997"></span>25997</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-11" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
+<td class="comment-1" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="25998"></span>25998</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27663.html">27663</a></td>
-<td class="comment-11" rowspan="1">Set <span class="register">HL'</span> to the appropriate attribute file address.</td>
+<td class="comment-1" rowspan="1">Set <span class="register">HL'</span> to the appropriate attribute file address.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26001"></span>26001</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27642.html">27642</a></td>
-<td class="comment-11" rowspan="1">Draw the third (bottom-left) maze background tile.</td>
+<td class="comment-1" rowspan="1">Draw the third (bottom-left) maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26004"></span>26004</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
-<td class="comment-11" rowspan="1">Pick up the attribute byte of the fourth maze background tile.</td>
+<td class="comment-1" rowspan="1">Pick up the attribute byte of the fourth maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26005"></span>26005</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
-<td class="comment-11" rowspan="1">Point <span class="register">DE</span> at the graphic data for the fourth maze background tile.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">DE</span> at the graphic data for the fourth maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26006"></span>26006</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD C,A</td>
-<td class="comment-11" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
+<td class="comment-1" rowspan="1">Copy the attribute byte to <span class="register">C</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26007"></span>26007</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27642.html">27642</a></td>
-<td class="comment-11" rowspan="1">Draw the fourth (bottom-right) maze background tile.</td>
+<td class="comment-1" rowspan="1">Draw the fourth (bottom-right) maze background tile.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26010"></span>26010</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD HL,(<a href="28088.html#28092">28092</a>)</td>
-<td class="comment-11" rowspan="1">Pick up the guard's new location.</td>
+<td class="comment-1" rowspan="1">Pick up the guard's new location.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26013"></span>26013</td>
-<td class="bytes-0"></td>
 <td class="instruction">CALL <a href="27752.html">27752</a></td>
-<td class="comment-11" rowspan="1">Copy the maze backround tiles at this location into the guard's buffer.</td>
+<td class="comment-1" rowspan="1">Copy the maze backround tiles at this location into the guard's buffer.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="26016"></span>26016</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="25886.html">25886</a></span></td>
+<td class="prev">
+Prev: <a href="25886.html">25886</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#25947">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="26017.html">26017</a></span></td>
+<td class="next">
+Next: <a href="26017.html">26017</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../../asm/655B.html">Switch to hexadecimal</a>.</div>
 </footer>
 </body>

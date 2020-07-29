@@ -4,1157 +4,589 @@
 <title>Hungry Horace: Memory map</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="MemoryMap">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Memory map</td>
 </tr>
 </table>
 <div class="map-intro"></div>
 <table class="map">
 <tr>
-<th class="map-page-0">Page</th>
-<th class="map-byte-0">Byte</th>
 <th>Address</th>
-<th class="map-length-0">Length</th>
 <th>Description</th>
 </tr>
 <tr>
-<td class="map-page-0">96</td>
-<td class="map-byte-0">0</td>
 <td class="map-c"><span id="6000"></span><a href="../asm/6000.html">6000</a></td>
-<td class="map-length-0">553</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6000.html">The game has just loaded</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">98</td>
-<td class="map-byte-0">41</td>
 <td class="map-c"><span id="6229"></span><a href="../asm/6229.html">6229</a></td>
-<td class="map-length-0">38</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6229.html">Main loop</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">98</td>
-<td class="map-byte-0">79</td>
 <td class="map-c"><span id="624F"></span><a href="../asm/624F.html">624F</a></td>
-<td class="map-length-0">232</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/624F.html">Read the keyboard and update Horace's sprite accordingly</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">99</td>
-<td class="map-byte-0">55</td>
 <td class="map-c"><span id="6337"></span><a href="../asm/6337.html">6337</a></td>
-<td class="map-length-0">163</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6337.html">Move Horace and the guards</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">99</td>
-<td class="map-byte-0">218</td>
 <td class="map-c"><span id="63DA"></span><a href="../asm/63DA.html">63DA</a></td>
-<td class="map-length-0">324</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/63DA.html">Move a guard</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">101</td>
-<td class="map-byte-0">30</td>
 <td class="map-c"><span id="651E"></span><a href="../asm/651E.html">651E</a></td>
-<td class="map-length-0">61</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/651E.html">Redraw the tiles behind Horace and the guards if they've moved</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">101</td>
-<td class="map-byte-0">91</td>
 <td class="map-c"><span id="655B"></span><a href="../asm/655B.html">655B</a></td>
-<td class="map-length-0">70</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/655B.html">Redraw the tiles behind a guard after he's moved</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">101</td>
-<td class="map-byte-0">161</td>
 <td class="map-c"><span id="65A1"></span><a href="../asm/65A1.html">65A1</a></td>
-<td class="map-length-0">129</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/65A1.html">Add to the score if Horace has eaten something</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">102</td>
-<td class="map-byte-0">34</td>
 <td class="map-c"><span id="6622"></span><a href="../asm/6622.html">6622</a></td>
-<td class="map-length-0">27</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6622.html">Draw the guards</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">102</td>
-<td class="map-byte-0">61</td>
 <td class="map-c"><span id="663D"></span><a href="../asm/663D.html">663D</a></td>
-<td class="map-length-0">103</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/663D.html">Draw a guard</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">102</td>
-<td class="map-byte-0">164</td>
 <td class="map-c"><span id="66A4"></span><a href="../asm/66A4.html">66A4</a></td>
-<td class="map-length-0">150</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/66A4.html">Check whether Horace has run into a guard</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">103</td>
-<td class="map-byte-0">58</td>
 <td class="map-c"><span id="673A"></span><a href="../asm/673A.html">673A</a></td>
-<td class="map-length-0">231</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/673A.html">Lose a life</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">104</td>
-<td class="map-byte-0">33</td>
 <td class="map-c"><span id="6821"></span><a href="../asm/6821.html">6821</a></td>
-<td class="map-length-0">73</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6821.html">Draw Horace</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">104</td>
-<td class="map-byte-0">106</td>
 <td class="map-c"><span id="686A"></span><a href="../asm/686A.html">686A</a></td>
-<td class="map-length-0">157</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/686A.html">Draw the bell and check whether Horace has sounded the alarm</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">105</td>
-<td class="map-byte-0">7</td>
 <td class="map-c"><span id="6907"></span><a href="../asm/6907.html">6907</a></td>
-<td class="map-length-0">27</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6907.html">Check whether a guard should drop his lunch</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">105</td>
-<td class="map-byte-0">34</td>
 <td class="map-c"><span id="6922"></span><a href="../asm/6922.html">6922</a></td>
-<td class="map-length-0">74</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6922.html">Make a guard drop his lunch if necessary</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">105</td>
-<td class="map-byte-0">108</td>
 <td class="map-c"><span id="696C"></span><a href="../asm/696C.html">696C</a></td>
-<td class="map-length-0">34</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/696C.html">Decrement the guard countdown timers</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">105</td>
-<td class="map-byte-0">142</td>
 <td class="map-c"><span id="698E"></span><a href="../asm/698E.html">698E</a></td>
-<td class="map-length-0">22</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/698E.html">Toggle the sound on/off if 'T' is pressed</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">105</td>
-<td class="map-byte-0">164</td>
 <td class="map-c"><span id="69A4"></span><a href="../asm/69A4.html">69A4</a></td>
-<td class="map-length-0">115</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/69A4.html">Ring the bell if necessary</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">23</td>
 <td class="map-u"><span id="6A17"></span><a href="../asm/6A17.html">6A17</a></td>
-<td class="map-length-0">7</td>
 <td class="map-u-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A17.html">Unused</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">30</td>
 <td class="map-c"><span id="6A1E"></span><a href="../asm/6A1E.html">6A1E</a></td>
-<td class="map-length-0">4</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A1E.html">Enter the next maze</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">34</td>
 <td class="map-c"><span id="6A22"></span><a href="../asm/6A22.html">6A22</a></td>
-<td class="map-length-0">29</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A22.html">Initialise the guard countdown timers</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">63</td>
 <td class="map-c"><span id="6A3F"></span><a href="../asm/6A3F.html">6A3F</a></td>
-<td class="map-length-0">43</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A3F.html">Copy a guard buffer into the temporary location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">106</td>
 <td class="map-c"><span id="6A6A"></span><a href="../asm/6A6A.html">6A6A</a></td>
-<td class="map-length-0">13</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A6A.html">Copy the temporary guard buffer back into place</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">119</td>
 <td class="map-c"><span id="6A77"></span><a href="../asm/6A77.html">6A77</a></td>
-<td class="map-length-0">39</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A77.html">Make the title screen or game over sound effect</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">158</td>
 <td class="map-c"><span id="6A9E"></span><a href="../asm/6A9E.html">6A9E</a></td>
-<td class="map-length-0">9</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6A9E.html">Get the tunnel offset and bell, initial guard and entrance locations for the current maze</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">167</td>
 <td class="map-t"><span id="6AA7"></span><a href="../asm/6AA7.html">6AA7</a></td>
-<td class="map-length-0">64</td>
 <td class="map-t-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6AA7.html">Copyright &#169; 1982 Beam Software...</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">106</td>
-<td class="map-byte-0">231</td>
 <td class="map-t"><span id="6AE7"></span><a href="../asm/6AE7.html">6AE7</a></td>
-<td class="map-length-0">33</td>
 <td class="map-t-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6AE7.html">DEMO MODE&#160;&#160;PRESS ANY KEY TO PLAY</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">8</td>
 <td class="map-g"><span id="6B08"></span><a href="../asm/6B08.html">6B08</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B08.html">Title screen countdown timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">10</td>
 <td class="map-g"><span id="6B0A"></span><a href="../asm/6B0A.html">6B0A</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B0A.html">Active guard counter</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">11</td>
 <td class="map-g"><span id="6B0B"></span><a href="../asm/6B0B.html">6B0B</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B0B.html">Game mode indicator</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">12</td>
 <td class="map-c"><span id="6B0C"></span><a href="../asm/6B0C.html">6B0C</a></td>
-<td class="map-length-0">6</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B0C.html">Wait for 26*<span class="register">BC</span>+5 T states</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">18</td>
 <td class="map-c"><span id="6B12"></span><a href="../asm/6B12.html">6B12</a></td>
-<td class="map-length-0">15</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B12.html">Collect a pseudo-random number (from the ROM)</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">33</td>
 <td class="map-c"><span id="6B21"></span><a href="../asm/6B21.html">6B21</a></td>
-<td class="map-length-0">39</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B21.html">Print the score or high score</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">72</td>
 <td class="map-c"><span id="6B48"></span><a href="../asm/6B48.html">6B48</a></td>
-<td class="map-length-0">45</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B48.html">Compute and print a digit</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">117</td>
 <td class="map-c"><span id="6B75"></span><a href="../asm/6B75.html">6B75</a></td>
-<td class="map-length-0">97</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6B75.html">Draw the current maze</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">214</td>
 <td class="map-c"><span id="6BD6"></span><a href="../asm/6BD6.html">6BD6</a></td>
-<td class="map-length-0">36</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6BD6.html">Draw a sprite</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">107</td>
-<td class="map-byte-0">250</td>
 <td class="map-c"><span id="6BFA"></span><a href="../asm/6BFA.html">6BFA</a></td>
-<td class="map-length-0">21</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6BFA.html">Print a tile or font character</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">15</td>
 <td class="map-c"><span id="6C0F"></span><a href="../asm/6C0F.html">6C0F</a></td>
-<td class="map-length-0">17</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6C0F.html">Convert a sprite location or display file address into an attribute file address</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">32</td>
 <td class="map-c"><span id="6C20"></span><a href="../asm/6C20.html">6C20</a></td>
-<td class="map-length-0">38</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6C20.html">Check the attribute bytes at a sprite's location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">70</td>
 <td class="map-c"><span id="6C46"></span><a href="../asm/6C46.html">6C46</a></td>
-<td class="map-length-0">34</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6C46.html">Check the attribute byte at a sprite tile location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">104</td>
 <td class="map-c"><span id="6C68"></span><a href="../asm/6C68.html">6C68</a></td>
-<td class="map-length-0">45</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6C68.html">Copy maze background tiles into a guard's buffer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">149</td>
 <td class="map-c"><span id="6C95"></span><a href="../asm/6C95.html">6C95</a></td>
-<td class="map-length-0">45</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6C95.html">Copy a maze background tile into a guard's buffer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">194</td>
 <td class="map-c"><span id="6CC2"></span><a href="../asm/6CC2.html">6CC2</a></td>
-<td class="map-length-0">56</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6CC2.html">Check the tiles next to Horace or a guard</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">108</td>
-<td class="map-byte-0">250</td>
 <td class="map-c"><span id="6CFA"></span><a href="../asm/6CFA.html">6CFA</a></td>
-<td class="map-length-0">29</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6CFA.html">Identify a tile in front of a sprite</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">23</td>
 <td class="map-c"><span id="6D17"></span><a href="../asm/6D17.html">6D17</a></td>
-<td class="map-length-0">55</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6D17.html">Get the location of the tile in front of a sprite</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">78</td>
 <td class="map-c"><span id="6D4E"></span><a href="../asm/6D4E.html">6D4E</a></td>
-<td class="map-length-0">88</td>
 <td class="map-c-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6D4E.html">Print 'HUNGRY' or 'HORACE' on the title screen</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">166</td>
 <td class="map-g"><span id="6DA6"></span><a href="../asm/6DA6.html">6DA6</a></td>
-<td class="map-length-0">8</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DA6.html">Guard countdown timers</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">174</td>
 <td class="map-g"><span id="6DAE"></span><a href="../asm/6DAE.html">6DAE</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DAE.html">Guard panic timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">176</td>
 <td class="map-g"><span id="6DB0"></span><a href="../asm/6DB0.html">6DB0</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DB0.html">Temporary store for a guard's screen x- and y-coordinates</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">178</td>
 <td class="map-g"><span id="6DB2"></span><a href="../asm/6DB2.html">6DB2</a></td>
-<td class="map-length-0">4</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DB2.html">Temporary store for direction probability parameters</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">182</td>
 <td class="map-g"><span id="6DB6"></span><a href="../asm/6DB6.html">6DB6</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DB6.html">Buffer address of the guard currently being handled</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">184</td>
 <td class="map-g"><span id="6DB8"></span><a href="../asm/6DB8.html">6DB8</a></td>
-<td class="map-length-0">43</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DB8.html">Temporary guard buffer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">109</td>
-<td class="map-byte-0">227</td>
 <td class="map-g"><span id="6DE3"></span><a href="../asm/6DE3.html">6DE3</a></td>
-<td class="map-length-0">172</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6DE3.html">Guard buffers</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">110</td>
-<td class="map-byte-0">143</td>
 <td class="map-b"><span id="6E8F"></span><a href="../asm/6E8F.html">6E8F</a></td>
-<td class="map-length-0">160</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6E8F.html">Data for the word 'HUNGRY' on the title screen</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">47</td>
 <td class="map-b"><span id="6F2F"></span><a href="../asm/6F2F.html">6F2F</a></td>
-<td class="map-length-0">160</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6F2F.html">Data for the word 'HORACE' on the title screen</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">207</td>
 <td class="map-g"><span id="6FCF"></span><a href="../asm/6FCF.html">6FCF</a></td>
-<td class="map-length-0">8</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FCF.html">Tunnel offset and bell, initial guard and entrance locations for the current maze</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">215</td>
 <td class="map-b"><span id="6FD7"></span><a href="../asm/6FD7.html">6FD7</a></td>
-<td class="map-length-0">8</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FD7.html">Tunnel offset and bell, initial guard and entrance locations for maze 1</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">223</td>
 <td class="map-b"><span id="6FDF"></span><a href="../asm/6FDF.html">6FDF</a></td>
-<td class="map-length-0">8</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FDF.html">Tunnel offset and bell, initial guard and entrance locations for maze 2</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">231</td>
 <td class="map-b"><span id="6FE7"></span><a href="../asm/6FE7.html">6FE7</a></td>
-<td class="map-length-0">8</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FE7.html">Tunnel offset and bell, initial guard and entrance locations for maze 3</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">239</td>
 <td class="map-b"><span id="6FEF"></span><a href="../asm/6FEF.html">6FEF</a></td>
-<td class="map-length-0">8</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FEF.html">Tunnel offset and bell, initial guard and entrance locations for maze 4</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">111</td>
-<td class="map-byte-0">247</td>
 <td class="map-b"><span id="6FF7"></span><a href="../asm/6FF7.html">6FF7</a></td>
-<td class="map-length-0">768</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/6FF7.html">Maze 2 layout</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">114</td>
-<td class="map-byte-0">247</td>
 <td class="map-b"><span id="72F7"></span><a href="../asm/72F7.html">72F7</a></td>
-<td class="map-length-0">768</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/72F7.html">Maze 1 layout</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">117</td>
-<td class="map-byte-0">247</td>
 <td class="map-b"><span id="75F7"></span><a href="../asm/75F7.html">75F7</a></td>
-<td class="map-length-0">768</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/75F7.html">Maze 3 layout</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">120</td>
-<td class="map-byte-0">247</td>
 <td class="map-b"><span id="78F7"></span><a href="../asm/78F7.html">78F7</a></td>
-<td class="map-length-0">768</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/78F7.html">Maze 4 layout</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">123</td>
-<td class="map-byte-0">247</td>
 <td class="map-b"><span id="7BF7"></span><a href="../asm/7BF7.html">7BF7</a></td>
-<td class="map-length-0">80</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7BF7.html">Maze tiles</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">71</td>
 <td class="map-t"><span id="7C47"></span><a href="../asm/7C47.html">7C47</a></td>
-<td class="map-length-0">26</td>
 <td class="map-t-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C47.html">PASSES&#160;&#160;&#160;SCORE&#160;&#160;&#160;&#160;&#160;&#160;&#160;BEST</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">97</td>
 <td class="map-g"><span id="7C61"></span><a href="../asm/7C61.html">7C61</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C61.html">Sprite movement timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">98</td>
 <td class="map-g"><span id="7C62"></span><a href="../asm/7C62.html">7C62</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C62.html">Game speed parameter (1-8)</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">99</td>
 <td class="map-g"><span id="7C63"></span><a href="../asm/7C63.html">7C63</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C63.html">Current maze number</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">100</td>
 <td class="map-g"><span id="7C64"></span><a href="../asm/7C64.html">7C64</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C64.html">Redundant temporary variable</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">101</td>
 <td class="map-g"><span id="7C65"></span><a href="../asm/7C65.html">7C65</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C65.html">Lunch-drop countdown timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">103</td>
 <td class="map-g"><span id="7C67"></span><a href="../asm/7C67.html">7C67</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C67.html">Address of the next pseudo-random number</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">105</td>
 <td class="map-g"><span id="7C69"></span><a href="../asm/7C69.html">7C69</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C69.html">Sound on/off indicator</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">106</td>
 <td class="map-g"><span id="7C6A"></span><a href="../asm/7C6A.html">7C6A</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C6A.html">'T' pressed indicator</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">107</td>
 <td class="map-g"><span id="7C6B"></span><a href="../asm/7C6B.html">7C6B</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C6B.html">Horace's current location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">109</td>
 <td class="map-g"><span id="7C6D"></span><a href="../asm/7C6D.html">7C6D</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C6D.html">Horace's new location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">111</td>
 <td class="map-g"><span id="7C6F"></span><a href="../asm/7C6F.html">7C6F</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C6F.html">Temporary store for direction keypress</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">112</td>
 <td class="map-g"><span id="7C70"></span><a href="../asm/7C70.html">7C70</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C70.html">Horace's animation frame (0-3)</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">113</td>
 <td class="map-g"><span id="7C71"></span><a href="../asm/7C71.html">7C71</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C71.html">Horace's attribute byte</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">114</td>
 <td class="map-g"><span id="7C72"></span><a href="../asm/7C72.html">7C72</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C72.html">Horace's walking animation timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">115</td>
 <td class="map-g"><span id="7C73"></span><a href="../asm/7C73.html">7C73</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C73.html">Score</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">117</td>
 <td class="map-g"><span id="7C75"></span><a href="../asm/7C75.html">7C75</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C75.html">High score</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">119</td>
 <td class="map-g"><span id="7C77"></span><a href="../asm/7C77.html">7C77</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C77.html">Extra life indicator</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">120</td>
 <td class="map-g"><span id="7C78"></span><a href="../asm/7C78.html">7C78</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C78.html">Number of lives remaining</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">121</td>
 <td class="map-g"><span id="7C79"></span><a href="../asm/7C79.html">7C79</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C79.html">Tunnel timer</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">122</td>
 <td class="map-g"><span id="7C7A"></span><a href="../asm/7C7A.html">7C7A</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C7A.html">Temporary store for Horace's screen x- and y-coordinates</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">124</td>
 <td class="map-b"><span id="7C7C"></span><a href="../asm/7C7C.html">7C7C</a></td>
-<td class="map-length-0">72</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7C7C.html">Cherry and strawberry graphics</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">196</td>
 <td class="map-g"><span id="7CC4"></span><a href="../asm/7CC4.html">7CC4</a></td>
-<td class="map-length-0">2</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7CC4.html">Bell location</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">198</td>
 <td class="map-g"><span id="7CC6"></span><a href="../asm/7CC6.html">7CC6</a></td>
-<td class="map-length-0">1</td>
 <td class="map-g-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7CC6.html">Bell animation frame counter</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">124</td>
-<td class="map-byte-0">199</td>
 <td class="map-b"><span id="7CC7"></span><a href="../asm/7CC7.html">7CC7</a></td>
-<td class="map-length-0">256</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7CC7.html">Horace graphics</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">125</td>
-<td class="map-byte-0">199</td>
 <td class="map-b"><span id="7DC7"></span><a href="../asm/7DC7.html">7DC7</a></td>
-<td class="map-length-0">320</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7DC7.html">Guard graphics</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">127</td>
-<td class="map-byte-0">7</td>
 <td class="map-b"><span id="7F07"></span><a href="../asm/7F07.html">7F07</a></td>
-<td class="map-length-0">128</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7F07.html">Bell graphics</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 <tr>
-<td class="map-page-0">127</td>
-<td class="map-byte-0">135</td>
 <td class="map-b"><span id="7F87"></span><a href="../asm/7F87.html">7F87</a></td>
-<td class="map-length-0">32</td>
 <td class="map-b-desc">
 <div class="map-entry-title-10"><a class="map-entry-title" href="../asm/7F87.html">Blank sprite</a></div>
-<div class="map-entry-desc-0">
-
-</div>
 </td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/maps/all.html">Switch to decimal</a>.</div>
 </footer>
 </body>

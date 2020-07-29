@@ -4,20 +4,23 @@
 <title>Hungry Horace: Routine at 6BFA</title>
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="../style.css" />
-
 </head>
 <body class="Asm-c">
 <table class="header">
 <tr>
-<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo.png" /></a></td>
+<td class="logo"><a href="../index.html"><img alt="Hungry Horace" src="../images/logo-hex.png" /></a></td>
 <td class="page-header">Routines</td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6BD6.html">6BD6</a></span></td>
+<td class="prev">
+Prev: <a href="6BD6.html">6BD6</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6BFA">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6C0F.html">6C0F</a></span></td>
+<td class="next">
+Next: <a href="6C0F.html">6C0F</a>
+</td>
 </tr>
 </table>
 <div class="description">6BFA: Print a tile or font character</div>
@@ -29,7 +32,7 @@
 Used by the routines at <a href="655B.html">655B</a>, <a href="6B48.html">6B48</a> and <a href="6BD6.html">6BD6</a>.
 </div>
 </div>
-<table class="input-1">
+<table class="input">
 <tr class="asm-input-header">
 <th colspan="2">Input</th>
 </tr>
@@ -50,7 +53,7 @@ Used by the routines at <a href="655B.html">655B</a>, <a href="6B48.html">6B48</
 <td class="register-desc">Attribute file address</td>
 </tr>
 </table>
-<table class="output-1">
+<table class="output">
 <tr class="asm-output-header">
 <th colspan="2">Output</th>
 </tr>
@@ -66,143 +69,101 @@ Used by the routines at <a href="655B.html">655B</a>, <a href="6B48.html">6B48</
 </td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6BFA"></span>6BFA</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,C</td>
-<td class="comment-11" rowspan="1">Copy the attribute byte to <span class="register">A</span>.</td>
+<td class="comment-1" rowspan="1">Copy the attribute byte to <span class="register">A</span>.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6BFB"></span>6BFB</td>
-<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
-<td class="comment-11" rowspan="1">Exchange registers.</td>
+<td class="comment-1" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6BFC"></span>6BFC</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (HL),A</td>
-<td class="comment-11" rowspan="1">Set the attribute byte.</td>
+<td class="comment-1" rowspan="1">Set the attribute byte.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6BFD"></span>6BFD</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC HL</td>
-<td class="comment-11" rowspan="1">Point <span class="register">HL'</span> at the next attribute byte.</td>
+<td class="comment-1" rowspan="1">Point <span class="register">HL'</span> at the next attribute byte.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6BFE"></span>6BFE</td>
-<td class="bytes-0"></td>
 <td class="instruction">EXX</td>
-<td class="comment-11" rowspan="1">Exchange registers.</td>
+<td class="comment-1" rowspan="1">Exchange registers.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6BFF"></span>6BFF</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,$08</td>
-<td class="comment-11" rowspan="6">Copy the 8 graphic bytes of the tile to the screen.</td>
+<td class="comment-1" rowspan="6">Copy the 8 graphic bytes of the tile to the screen.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-2"><span id="6C01"></span>6C01</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,(DE)</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C02"></span>6C02</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD (HL),A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C03"></span>6C03</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C04"></span>6C04</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC DE</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C05"></span>6C05</td>
-<td class="bytes-0"></td>
 <td class="instruction">DJNZ <a href="6BFA.html#6C01">$6C01</a></td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C07"></span>6C07</td>
-<td class="bytes-0"></td>
 <td class="instruction">INC L</td>
-<td class="comment-11" rowspan="6">Set <span class="register">HL</span> to the display file address for the next tile to the right.</td>
+<td class="comment-1" rowspan="6">Set <span class="register">HL</span> to the display file address for the next tile to the right.</td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C08"></span>6C08</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET Z</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C09"></span>6C09</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD B,$08</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C0B"></span>6C0B</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD A,H</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C0C"></span>6C0C</td>
-<td class="bytes-0"></td>
 <td class="instruction">SUB B</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C0D"></span>6C0D</td>
-<td class="bytes-0"></td>
 <td class="instruction">LD H,A</td>
-<td class="comment-01" rowspan="1"></td>
 </tr>
 <tr>
-<td class="asm-label-0"></td>
 <td class="address-1"><span id="6C0E"></span>6C0E</td>
-<td class="bytes-0"></td>
 <td class="instruction">RET</td>
-<td class="comment-11" rowspan="1"></td>
+<td class="comment-1" rowspan="1"></td>
 </tr>
 </table>
 <table class="asm-navigation">
 <tr>
-<td class="prev"><span class="prev-1">Prev: <a href="6BD6.html">6BD6</a></span></td>
+<td class="prev">
+Prev: <a href="6BD6.html">6BD6</a>
+</td>
 <td class="up">Up: <a href="../maps/all.html#6BFA">Map</a></td>
-<td class="next"><span class="next-1">Next: <a href="6C0F.html">6C0F</a></span></td>
+<td class="next">
+Next: <a href="6C0F.html">6C0F</a>
+</td>
 </tr>
 </table>
 <footer>
-<div class="release">The complete Hungry Horace RAM disassembly 20190620</div>
-<div class="copyright">&#169; 1982 Beam Software. &#169; 2019 Richard Dymond.</div>
-<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 7.2.</div>
+<div class="release">The complete Hungry Horace RAM disassembly 20200729</div>
+<div class="copyright">&#169; 1982 Beam Software. &#169; 2020 Richard Dymond.</div>
+<div class="created">Created using <a href="https://skoolkit.ca">SkoolKit</a> 8.2.</div>
 <div><a href="../dec/asm/27642.html">Switch to decimal</a>.</div>
 </footer>
 </body>
