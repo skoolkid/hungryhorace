@@ -1,4 +1,4 @@
-# Copyright 2017-2019 Richard Dymond (rjdymond@gmail.com)
+# Copyright 2017-2019, 2021 Richard Dymond (rjdymond@gmail.com)
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -14,13 +14,8 @@
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
 from skoolkit.graphics import Frame, Udg
-from skoolkit.skoolasm import AsmWriter
 from skoolkit.skoolhtml import HtmlWriter
-from skoolkit.skoolmacro import parse_image_macro, parse_strings
-
-def parse_s(text, index, case):
-    end, s = parse_strings(text, index, 1)
-    return end, s.lower() if case == 1 else s
+from skoolkit.skoolmacro import parse_image_macro
 
 class HungryHoraceHtmlWriter(HtmlWriter):
     def init(self):
@@ -46,10 +41,6 @@ class HungryHoraceHtmlWriter(HtmlWriter):
         frames = [Frame(self._get_maze_udgs(addr, loc_addr), scale, 0, *crop_rect)]
         return end, self.handle_image(frames, fname, cwd, alt, 'ScreenshotImagePath')
 
-    def expand_s(self, text, index, cwd):
-        # #S/text/
-        return parse_s(text, index, self.case)
-
     def _get_maze_udgs(self, m_addr, l_addr):
         maze_udgs = [[self.maze_tiles[i] for i in self.snapshot[a:a + 32]] for a in range(m_addr, m_addr + 768, 32)]
         if l_addr:
@@ -64,8 +55,3 @@ class HungryHoraceHtmlWriter(HtmlWriter):
                 maze_udgs[y][x:x + 2] = sprite_udgs[:2]
                 maze_udgs[y + 1][x:x + 2] = sprite_udgs[2:]
         return maze_udgs
-
-class HungryHoraceAsmWriter(AsmWriter):
-    def expand_s(self, text, index):
-        # #S/text/
-        return parse_s(text, index, self.case)
