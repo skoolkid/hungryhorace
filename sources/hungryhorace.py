@@ -13,16 +13,9 @@
 # You should have received a copy of the GNU General Public License along with
 # this program. If not, see <http://www.gnu.org/licenses/>.
 
-from skoolkit.graphics import Frame, Udg
 from skoolkit.skoolhtml import HtmlWriter
-from skoolkit.skoolmacro import parse_image_macro
 
 class HungryHoraceHtmlWriter(HtmlWriter):
-    def init(self):
-        self.maze_tiles = [Udg(61, self.snapshot[a:a + 8]) for a in range(31735, 31815, 8)]
-        self.maze_tiles[2].attr = 60 # flower
-        self.maze_tiles[3].attr = 56 # entrance/exit
-
     def init_page(self, skoolkit, game):
         if 'alt_base' in game:
             path = skoolkit['path']
@@ -33,25 +26,3 @@ class HungryHoraceHtmlWriter(HtmlWriter):
                 else:
                     path = path.replace(addr_str, '{:04X}'.format(int(addr_str)))
             skoolkit['Path'] = skoolkit['index_href'][:-10] + game['alt_dir'] + path
-
-    def expand_maze(self, text, index, cwd):
-        # MAZEaddr[,scale,locaddr](fname)
-        names = ('addr', 'scale', 'locaddr')
-        end, crop_rect, fname, frame, alt, (addr, scale, loc_addr) = parse_image_macro(text, index, (2, 0), names)
-        frames = [Frame(self._get_maze_udgs(addr, loc_addr), scale, 0, *crop_rect)]
-        return end, self.handle_image(frames, fname, cwd, alt, 'ScreenshotImagePath')
-
-    def _get_maze_udgs(self, m_addr, l_addr):
-        maze_udgs = [[self.maze_tiles[i] for i in self.snapshot[a:a + 32]] for a in range(m_addr, m_addr + 768, 32)]
-        if l_addr:
-            for s_addr, attr, loc_addr in (
-                    (32519, 58, l_addr),     # Bell
-                    (32327, 59, l_addr + 2), # Guard
-                    (32103, 57, l_addr + 4)  # Horace
-            ):
-                sprite_udgs = [Udg(attr, self.snapshot[a:a + 8]) for a in range(s_addr, s_addr + 32, 8)]
-                location = self.snapshot[loc_addr] + 256 * self.snapshot[loc_addr + 1]
-                x, y = location % 32, location // 2048 * 8 + location // 32 & 31
-                maze_udgs[y][x:x + 2] = sprite_udgs[:2]
-                maze_udgs[y + 1][x:x + 2] = sprite_udgs[2:]
-        return maze_udgs
