@@ -1,8 +1,7 @@
-; Copyright 2014-2020 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2021 Richard Dymond (rjdymond@gmail.com)
 
 [Config]
 GameDir=hungry_horace
-HtmlWriterClass=:hungryhorace.HungryHoraceHtmlWriter
 RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
 
 [Game]
