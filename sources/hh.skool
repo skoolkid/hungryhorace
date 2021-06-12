@@ -13,14 +13,14 @@
 @expand=+    #SPRITE({0},{1})(*s)
 @expand=+    #OVER({{x}},{{y}},0,0,3)({{1}})({{1}})({3},s)
 @expand=+)
-@expand=#DEFINE3,1,1(2,0)(MAZE,
-@expand=+    #COPY(scale={1})({0},maze)
-@expand=+    #IF({2})(
-@expand=+        #SOVER(32519,58,{2})(maze)
-@expand=+        #SOVER(32327,59,{2}+2)(maze)
-@expand=+        #SOVER(32103,57,{2}+4)(maze)
+@expand=#DEF(#MAZE(addr,scale=2,posaddr=0)(fname)
+@expand=+    #COPY(scale=$scale)($addr,maze)
+@expand=+    #IF($posaddr)(
+@expand=+        #SOVER(32519,58,$posaddr)(maze)
+@expand=+        #SOVER(32327,59,$posaddr+2)(maze)
+@expand=+        #SOVER(32103,57,$posaddr+4)(maze)
 @expand=+    )
-@expand=+    #UDGARRAY*maze({{ScreenshotImagePath}}/{3})
+@expand=+    #UDGARRAY*maze({ScreenshotImagePath}/$fname)
 @expand=+)
 @expand=#DEFINE0(BUG,#LINK:Bugs)
 @expand=#DEFINE0(FACT,#LINK:Facts)
