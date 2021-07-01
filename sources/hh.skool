@@ -1,10 +1,10 @@
 ; Copyright 2014-2021 Richard Dymond (rjdymond@gmail.com)
 
 @start
-@expand=#DEFINE2,1@@LOGO@#UDGARRAY(7,#EVAL(14+7*{0}-6*{1}),4,tindex=2,alpha=#IF({1})(0,255));32768-32830-1-56,,7{{8,,208}}({{ImagePath}}/{2}|Hungry Horace)@@
-@expand=#DEFINE2//SPRITE/#UDGARRAY2,{1};{0}-({0}+24)-8//
-@expand=#DEFINE1(FRUIT,#UDGARRAY#(2#FOR({0},{0}+27,9)||n|;(n+1),#PEEKn||))
-@expand=#DEFINE1(MAZEF,#UDGARRAY#(32#FOR({0},{0}+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||))
+@expand=#DEF(#LOGO(dark,trans)(fname) #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace))
+@expand=#DEF(#SPRITE(addr,attr) #UDGARRAY2,$attr;$addr-($addr+24)-8)
+@expand=#DEF(#FRUIT(addr) #UDGARRAY#(2#FOR($addr,$addr+27,9)||n|;(n+1),#PEEKn||))
+@expand=#DEF(#MAZEF(addr) #UDGARRAY#(32#FOR($addr,$addr+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||))
 @expand=#FOR(28663,30967,768)(a,#MAZEFa(*a))
 @expand=#DEF(#SOVER(addr,attr,locaddr)(frame)
 @expand=+    #LET(loc=#PEEK($locaddr)+256*#PEEK($locaddr+1))
@@ -22,10 +22,10 @@
 @expand=+    )
 @expand=+    #UDGARRAY*maze({ScreenshotImagePath}/$fname)
 @expand=+)
-@expand=#DEFINE0(BUG,#LINK:Bugs)
-@expand=#DEFINE0(FACT,#LINK:Facts)
-@expand=#DEFINE0(POKE,#LINK:Pokes)
-@expand=#DEFINE0(S,#FORMAT({{mode[case]}}))
+@expand=#DEF(#BUG #LINK:Bugs)
+@expand=#DEF(#FACT #LINK:Facts)
+@expand=#DEF(#POKE #LINK:Pokes)
+@expand=#DEF(#S #FORMAT({mode[case]}))
 @set-handle-unsupported-macros=1
 ; Hungry Horace disassembly
 ; https://skoolkit.ca
