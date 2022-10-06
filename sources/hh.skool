@@ -1,4 +1,4 @@
-; Copyright 2014-2021 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2022 Richard Dymond (rjdymond@gmail.com)
 
 @start
 @expand=#DEF(#LOGO(dark,trans)(fname) #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace))
@@ -31,7 +31,7 @@
 ; https://skoolkit.ca
 ;
 ; Copyright 1982 Beam Software (Hungry Horace)
-; Copyright 2014-2021 Richard Dymond (this disassembly)
+; Copyright 2014-2022 Richard Dymond (this disassembly)
 @bfix+begin
 ;
 ; This disassembly contains fixes for the following bugs:
@@ -1544,6 +1544,8 @@ c27044 LD HL,(31940) ; Pick up the bell's location in the current maze.
  27087 RET           ;
 ; Horace has not sounded the alarm yet. Produce an appropriate bell sound if
 ; necessary.
+; .
+; #HTML(#AUDIO(bell.wav)(#INCLUDE(Bell)))
 *27088 LD A,(31942)  ; Pick up the bell animation frame counter.
  27091 AND 63        ; Keep only bits 0-5.
  27093 CP 0          ; Is the frame counter a multiple of 64 at the moment?

@@ -1,4 +1,4 @@
-; Copyright 2014-2021 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2022 Richard Dymond (rjdymond@gmail.com)
 
 [Config]
 GameDir=hungry_horace
@@ -24,3 +24,7 @@ PageByteColumns=#IF({base}==16)(0,1)
 
 [MemoryMap:UnusedMap]
 PageByteColumns=#IF({base}==16)(0,1)
+
+[Bell]
+ [1730]*45, 330, [1558]*53, 1200000, [1558]*53, 282, [1730]*45, 1200000,
+ [1730]*45, 330, [1558]*53, 1200000, [1558]*53, 282, [1730]*45
