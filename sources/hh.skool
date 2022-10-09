@@ -942,6 +942,9 @@ c26017 LD A,(31865)  ; Pick up the tunnel timer.
                      ; #BUG#howManyLives(bug).
  26109 EX DE,HL      ; Transfer the display file address to #REGde.
  26110 CALL 27471    ; Print the number of lives remaining.
+; Now make a sound effect.
+; .
+; #AUDIO1(action.wav)(#FOR(16,1,-1,7)(c,104*c+13,104*c+106))
 *26113 LD HL,31849   ; Pick up the sound on/off indicator.
  26116 LD C,16       ; Initialise #REGc for the loop that follows.
 *26118 PUSH BC       ; Save the loop counter (unnecessarily).
@@ -1545,7 +1548,7 @@ c27044 LD HL,(31940) ; Pick up the bell's location in the current maze.
 ; Horace has not sounded the alarm yet. Produce an appropriate bell sound if
 ; necessary.
 ; .
-; #HTML(#AUDIO(bell.wav)(#INCLUDE(Bell)))
+; #AUDIO(bell.wav)(#INCLUDE(Bell))
 *27088 LD A,(31942)  ; Pick up the bell animation frame counter.
  27091 AND 63        ; Keep only bits 0-5.
  27093 CP 0          ; Is the frame counter a multiple of 64 at the moment?
