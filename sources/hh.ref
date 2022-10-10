@@ -1,6 +1,7 @@
 ; Copyright 2014-2022 Richard Dymond (rjdymond@gmail.com)
 
 [Config]
+Expand=#INCLUDE(Expand)
 GameDir=hungry_horace
 RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
 
@@ -24,6 +25,9 @@ PageByteColumns=#IF({base}==16)(0,1)
 
 [MemoryMap:UnusedMap]
 PageByteColumns=#IF({base}==16)(0,1)
+
+[Expand]
+#DEF(#TITLESOUND #FOR(127,7,-8,7)||d|[13*d+26,13*d+57]*9,13*d+26|13*d+128||)
 
 [Bell]
  [1730]*45, 330, [1558]*53, 1200000, [1558]*53, 282, [1730]*45, 1200000,

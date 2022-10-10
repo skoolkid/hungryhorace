@@ -114,6 +114,10 @@ c24576 DI            ; Disable interrupts.
  24704 JR 24695      ; }
 *24706 POP AF        ; {Restore the game mode indicator.
  24707 LD (27403),A  ; }
+; The following loop cycles the colour of the words 'HUNGRY HORACE' and plays
+; a sound effect, either 140 times or until a key is pressed.
+; .
+; #AUDIO1(title.wav)(#FOR(1,30,,7)(n,#TITLESOUND,7147))
 *24710 LD HL,22688   ; {Change the colour of the words 'HUNGRY HORACE' on the
  24713 LD DE,22689   ; title screen.
  24716 LD BC,159     ;
@@ -1714,8 +1718,8 @@ t27367 DEFM "DEMO MODE  PRESS ANY KEY TO PLAY"
 
 ; Title screen countdown timer
 ;
-; Used by the routine at #R24576. Decremented until it reaches zero, after
-; which demo mode begins.
+; Used by the routine at #R24576. Decremented from 140 until it reaches zero,
+; after which demo mode begins.
 @label=TITLECT
 g27400 DEFW 0
 
