@@ -1,6 +1,7 @@
 ; Copyright 2014-2022 Richard Dymond (rjdymond@gmail.com)
 
 @start
+@rom
 @expand=#DEF(#LOGO(dark,trans)(fname) #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace))
 @expand=#DEF(#SPRITE(addr,attr) #UDGARRAY2,$attr;$addr-($addr+24)-8)
 @expand=#DEF(#FRUIT(addr) #UDGARRAY#(2#FOR($addr,$addr+27,9)||n|;(n+1),#PEEKn||))
@@ -54,6 +55,7 @@
 @org
 ; The game has just loaded
 @label=START
+@assemble=2
 c24576 DI            ; Disable interrupts.
  24577 LD A,(23672)  ; {Initialise the pseudo-random number address.
  24580 LD L,A        ;
@@ -1152,7 +1154,13 @@ c26426 LD A,(31864)  ; {Decrement the number of lives.
  26449 ADD A,"0"     ; Convert it to the ASCII code of the digit.
  26451 EX DE,HL      ; Transfer the display file address to #REGde.
  26452 CALL 27471    ; Print the number of lives remaining.
-; The following loop produces the Horace-has-died colour-cycling effect.
+; The following loop produces the Horace-has-died colour-cycling effect. The
+; accompanying sound effect varies depending on the current value of the
+; address held at #R31847.
+; .
+; #HTML(When that address is 0, it sounds like this:)
+; .
+; #PUSHS #POKES31849,31 #AUDIO5(die.wav)(26455,26519) #POPS
  26455 LD B,45       ; Initialise the loop counter.
 *26457 PUSH BC       ; Save the loop counter.
  26458 LD A,(31857)  ; {Increment Horace's INK colour.
@@ -1759,8 +1767,8 @@ c27404 DEC BC        ; Decrement the delay counter.
 c27410 LD HL,(31847) ; Pick up the address of the next pseudo-random number.
  27413 LD A,(HL)     ; Copy the number to #REGa.
  27414 PUSH AF       ; Save the number briefly.
- 27415 INC HL        ; {Increment the address, rolling over from 8191 to 0.
- 27416 LD A,H        ;
+ 27415 INC HL        ; {Increment the address, rolling over from #N8191,,,1(0x)
+ 27416 LD A,H        ; to 0.
  27417 AND 31        ;
  27419 LD H,A        ; }
  27420 LD (31847),HL ; Save the new address.
@@ -2865,6 +2873,7 @@ g31845 DEFW 0
 ; Address of the next pseudo-random number
 ;
 ; Initialised by the routine at #R24576, and used by the routine at #R27410.
+; Always holds a value between 0 and #N8191,,,1(0x).
 @label=RANDADDR
 g31847 DEFW 0
 

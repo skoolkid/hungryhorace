@@ -2,4 +2,4 @@ GAME=hh
 SRCFILES=$(echo hh.skool {hh,bugs,changelog,facts,pokes}.ref COPYING)
 BIN2SNAOPTS="-o 24576 -b 7 -P 23624,56"
 BIN2TAPOPTS="-o 24576"
-WAVCONVERT="bell.wav title.wav"
+WAVCONVERT="bell.wav die.wav title.wav"
