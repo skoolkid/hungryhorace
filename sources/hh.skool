@@ -1075,6 +1075,9 @@ c26276 LD HL,(31853) ; Pick up Horace's new location.
  26303 CALL 26055    ; Print the score.
  26306 LD HL,0       ; {Reset the guard panic timer.
  26309 LD (28078),HL ; }
+; Now make the 'caught a guard' sound effect.
+; .
+; #PUSHS #POKES31849,31 #AUDIO5(guard.wav)(26312,26365) #POPS
  26312 LD HL,31849   ; Pick up the sound on/off indicator.
  26315 LD C,15       ; Initialise #REGc for the loop that follows.
 *26317 PUSH BC       ; Save the loop counter (unnecessarily).
