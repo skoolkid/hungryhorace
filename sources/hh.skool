@@ -512,6 +512,8 @@ c25399 LD A,(31841)  ; {Decrement the sprite movement timer.
  25445 JP Z,27166    ; Jump if so (Horace is leaving the maze).
  25448 JR 25529      ;
 ; Horace is about to enter a tunnel.
+; .
+; #PUSHS #POKES31849,31 #AUDIO5(tunnel.wav)(25474,25512) #POPS
 *25450 LD A,90       ; {Initialise the tunnel timer.
  25452 LD (31865),A  ; }
  25455 LD BC,(28623) ; Pick up the tunnel offset for the current maze.
