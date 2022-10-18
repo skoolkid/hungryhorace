@@ -2,27 +2,8 @@
 
 @start
 @rom
-@expand=#DEF(#LOGO(dark,trans)(fname) #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace))
 @expand=#DEF(#SPRITE(addr,attr) #UDGARRAY2,$attr;$addr-($addr+24)-8)
 @expand=#DEF(#FRUIT(addr) #UDGARRAY#(2#FOR($addr,$addr+27,9)||n|;(n+1),#PEEKn||))
-@expand=#DEF(#MAZEF(addr) #UDGARRAY#(32#FOR($addr,$addr+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||))
-@expand=#FOR(28663,30967,768)(a,#MAZEFa(*a))
-@expand=#DEF(#SOVER(addr,attr,locaddr)(frame)
-@expand=+    #LET(loc=#PEEK($locaddr)+256*#PEEK($locaddr+1))
-@expand=+    #LET(x={loc}%32)
-@expand=+    #LET(y={loc}/2048*8+{loc}/32&31)
-@expand=+    #SPRITE($addr,$attr)(*s)
-@expand=+    #OVER({x},{y},0,0,3)($f)($f)($frame,s)
-@expand=+)
-@expand=#DEF(#MAZE(addr,scale=2,posaddr=0)(fname)
-@expand=+    #COPY(scale=$scale)($addr,maze)
-@expand=+    #IF($posaddr)(
-@expand=+        #SOVER(32519,58,$posaddr)(maze)
-@expand=+        #SOVER(32327,59,$posaddr+2)(maze)
-@expand=+        #SOVER(32103,57,$posaddr+4)(maze)
-@expand=+    )
-@expand=+    #UDGARRAY*maze({ScreenshotImagePath}/$fname)
-@expand=+)
 @expand=#DEF(#BUG #LINK:Bugs)
 @expand=#DEF(#FACT #LINK:Facts)
 @expand=#DEF(#POKE #LINK:Pokes)

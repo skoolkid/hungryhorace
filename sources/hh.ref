@@ -27,6 +27,33 @@ PageByteColumns=#IF({base}==16)(0,1)
 PageByteColumns=#IF({base}==16)(0,1)
 
 [Expand]
+#DEF(#LOGO(dark,trans)(fname)
+  #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace)
+)
+
+#DEF(#MAZEF(addr)
+  #UDGARRAY#(32#FOR($addr,$addr+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||)
+)
+#FOR(28663,30967,768)(a,#MAZEFa(*a))
+
+#DEF(#SOVER(addr,attr,locaddr)(frame)
+  #LET(loc=#PEEK($locaddr)+256*#PEEK($locaddr+1))
+  #LET(x={loc}%32)
+  #LET(y={loc}/2048*8+{loc}/32&31)
+  #SPRITE($addr,$attr)(*s)
+  #OVER({x},{y},0,0,3)($f)($f)($frame,s)
+)
+
+#DEF(#MAZE(addr,scale=2,posaddr=0)(fname)
+  #COPY(scale=$scale)($addr,maze)
+  #IF($posaddr)(
+    #SOVER(32519,58,$posaddr)(maze)
+    #SOVER(32327,59,$posaddr+2)(maze)
+    #SOVER(32103,57,$posaddr+4)(maze)
+  )
+  #UDGARRAY*maze({ScreenshotImagePath}/$fname)
+)
+
 #DEF(#TITLESOUND #FOR(127,7,-8,7)||d|[13*d+26,13*d+57]*9,13*d+26|13*d+128||)
 
 [Bell]
