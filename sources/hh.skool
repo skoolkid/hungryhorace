@@ -2463,6 +2463,8 @@ g28131 DEFW 0                 ; {Guard 1.
 ; Each byte here determines the bit pattern that is drawn in a single tile.
 ; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
 ; and 1 determine the pattern in the lower half.
+; .
+; #HTML(#POKES16384,0,6144;22528,56,768 #SIM24664,24652 #SCR(y=5,h=5)(hungry))
 @label=HUNGRY
 b28303 DEFB 51,17,0,51,17,34,51,0  ; {First row of tiles.
  28311 DEFB 34,51,0,51,17,0,51,17  ;
@@ -2492,6 +2494,8 @@ b28303 DEFB 51,17,0,51,17,34,51,0  ; {First row of tiles.
 ; Each byte here determines the bit pattern that is drawn in a single tile.
 ; Bits 4 and 5 determine the pattern in the upper half of the tile, and bits 0
 ; and 1 determine the pattern in the lower half.
+; .
+; #HTML(#POKES16384,0,6144;22528,56,768 #SIM24676,24664 #SCR(y=12,h=5)(horace))
 @label=HORACE
 b28463 DEFB 51,17,0,51,17,0,35,49  ; {First row of tiles.
  28471 DEFB 51,1,0,51,49,50,19,0   ;
