@@ -34,9 +34,9 @@
 @defb=32845:7,228,36,36,36,7,192,4,36,39,199,228,4          ;
 @defb=32859:4,36,36,68,36,36,0,4,35,196,36,35,199,224       ;
 @org
+@assemble=2
 ; The game has just loaded
 @label=START
-@assemble=2
 c24576 DI            ; Disable interrupts.
  24577 LD A,(23672)  ; {Initialise the pseudo-random number address.
  24580 LD L,A        ;
@@ -97,8 +97,8 @@ c24576 DI            ; Disable interrupts.
  24704 JR 24695      ; }
 *24706 POP AF        ; {Restore the game mode indicator.
  24707 LD (27403),A  ; }
-; The following loop cycles the colour of the words 'HUNGRY HORACE' and plays
-; a sound effect, either 140 times or until a key is pressed.
+; The following loop cycles the colour of the words 'HUNGRY HORACE' and plays a
+; sound effect, either 140 times or until a key is pressed.
 ; .
 ; #AUDIO1(title.wav)(#FOR(1,30,,7)(n,#TITLESOUND,7147))
 *24710 LD HL,22688   ; {Change the colour of the words 'HUNGRY HORACE' on the
