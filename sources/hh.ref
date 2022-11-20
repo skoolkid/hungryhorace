@@ -3,7 +3,7 @@
 [Config]
 Expand=#INCLUDE(Expand)
 GameDir=hungry_horace
-RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref
+RefFiles=bugs.ref;changelog.ref;facts.ref;pokes.ref;sound.ref
 
 [Game]
 AddressAnchor={address#IF({base}==16)(:04#S/X/)}
@@ -16,6 +16,10 @@ Release=The complete Hungry Horace RAM disassembly 20200729
 
 [Paths]
 CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
+Sound=sound/sound.html
+
+[Index:Graphics:Sound]
+Sound
 
 [MemoryMap:MemoryMap]
 PageByteColumns=#IF({base}==16)(0,1)

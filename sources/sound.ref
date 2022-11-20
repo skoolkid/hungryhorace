@@ -1,0 +1,39 @@
+; Copyright 2022 Richard Dymond (rjdymond@gmail.com)
+
+[Page:Sound]
+SectionPrefix=Audio
+
+[Audio:titlescreen:Title screen]
+These sound effects are produced while the title screen is on display (see
+#R24710).
+
+#AUDIO1(title.wav)(#FOR(1,30,,7)(n,#TITLESOUND,7147))
+
+[Audio:tunnel:Tunnel]
+This sound effect is produced when Horace enters a tunnel (see #R25450).
+
+#PUSHS #POKES31849,31 #AUDIO5(tunnel.wav)(25474,25512) #POPS
+
+[Audio:action:Action]
+This sound effect is produced when a maze is initialised, and also when Horace
+eats something, throws the guards out of the park, or sounds the alarm (see
+#R26113).
+
+#AUDIO1(action.wav)(#FOR(16,1,-1,7)(c,104*c+13,104*c+106))
+
+[Audio:guard:Guard]
+This sound effect is produced when Horace catches a panicking guard (see
+#R26312).
+
+#PUSHS #POKES31849,31 #AUDIO5(guard.wav)(26312,26365) #POPS
+
+[Audio:die:Lose a life]
+This sound effect (or something like it) is produced by the routine at #R26426
+when Horace loses a life.
+
+#PUSHS #POKES31849,31 #AUDIO5(die.wav)(26455,26519) #POPS
+
+[Audio:bell:Bell]
+These sound effects are produced when the bell is ringing (see #R27088).
+
+#AUDIO(bell.wav)(#INCLUDE(Bell))

@@ -16,7 +16,7 @@ SKOOL = 'hh.skool'
 
 SNAPSHOT = 'build/hungry_horace.z80'
 
-OUTPUT = """Using ref files: hh.ref, bugs.ref, changelog.ref, facts.ref, pokes.ref
+OUTPUT = """Using ref files: hh.ref, bugs.ref, changelog.ref, facts.ref, pokes.ref, sound.ref
 Parsing {skoolfile}
 Output directory: {odir}/hungry_horace
 Copying {SKOOLKIT_HOME}/skoolkit/resources/skoolkit.css to skoolkit.css
@@ -31,6 +31,7 @@ Writing reference/bugs.html
 Writing reference/changelog.html
 Writing reference/facts.html
 Writing reference/pokes.html
+Writing sound/sound.html
 Writing index.html"""
 
 write_tests(SKOOL, SNAPSHOT, OUTPUT)
