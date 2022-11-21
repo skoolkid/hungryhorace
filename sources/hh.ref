@@ -16,6 +16,7 @@ Release=The complete Hungry Horace RAM disassembly 20200729
 
 [Paths]
 CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
+Graphics=maps/graphics.html
 Sound=sound/sound.html
 
 [Index:Graphics:Graphics and sound]

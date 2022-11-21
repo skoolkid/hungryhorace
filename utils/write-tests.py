@@ -27,6 +27,7 @@ Writing maps/data.html
 Writing maps/messages.html
 Writing maps/unused.html
 Writing buffers/gbuffer.html
+Writing maps/graphics.html
 Writing reference/bugs.html
 Writing reference/changelog.html
 Writing reference/facts.html
