@@ -18,7 +18,8 @@ Release=The complete Hungry Horace RAM disassembly 20200729
 CodeFiles={address#IF({base}==16)(:04#S/X/)}.html
 Sound=sound/sound.html
 
-[Index:Graphics:Sound]
+[Index:Graphics:Graphics and sound]
+Graphics
 Sound
 
 [MemoryMap:MemoryMap]
@@ -29,6 +30,9 @@ PageByteColumns=#IF({base}==16)(0,1)
 
 [MemoryMap:UnusedMap]
 PageByteColumns=#IF({base}==16)(0,1)
+
+[MemoryMap:Graphics]
+Includes=28303,28463,28663,29431,30199,30967,31735,31868,31943,32199,32519
 
 [Expand]
 #DEF(#LOGO(dark,trans)(fname)
