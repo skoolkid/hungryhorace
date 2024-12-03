@@ -9,8 +9,8 @@ created using [SkoolKit](https://skoolkit.ca).
 Decide which number base you prefer and then click the corresponding link below
 to browse the latest release:
 
-* [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/) (hexadecimal; mirror [here](https://skoolkid.gitlab.io/hungryhorace/))
-* [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/dec/) (decimal; mirror [here](https://skoolkid.gitlab.io/hungryhorace/dec/))
+* [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/) (hexadecimal)
+* [Hungry Horace disassembly](https://skoolkid.github.io/hungryhorace/dec/) (decimal)
 
 To build the current development version of the disassembly, first obtain the
 development version of [SkoolKit](https://github.com/skoolkid/skoolkit). Then:
