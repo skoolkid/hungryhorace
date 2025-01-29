@@ -1,4 +1,4 @@
-; Copyright 2014-2022 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2014-2022, 2025 Richard Dymond (rjdymond@gmail.com)
 
 [Config]
 Expand=#INCLUDE(Expand)
@@ -37,11 +37,11 @@ Includes=28303,28463,28663,29431,30199,30967,31735,31868,31943,32199,32519
 
 [Expand]
 #DEF(#LOGO(dark,trans)(fname)
-  #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255));32768-32830-1-56,,7{8,,208}({ImagePath}/$fname|Hungry Horace)
+  #UDGARRAY(7,#EVAL(14+7*$dark-6*$trans),4,tindex=2,alpha=#IF($trans)(0,255))(32768-32830-1-56,,7){8,,208}({ImagePath}/$fname|Hungry Horace)
 )
 
 #DEF(#MAZEF(addr)
-  #UDGARRAY#(32#FOR($addr,$addr+767)||n|;(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)||)
+  #UDGARRAY#(32(#FOR($addr,$addr+767)||n|(31735+8*#PEEKn),#MAP(#PEEKn)(61,2:60,3:56)|;||))
 )
 #FOR(28663,30967,768)(a,#MAZEFa(*a))
 
@@ -60,7 +60,7 @@ Includes=28303,28463,28663,29431,30199,30967,31735,31868,31943,32199,32519
     #SOVER(32327,59,$posaddr+2)(maze)
     #SOVER(32103,57,$posaddr+4)(maze)
   )
-  #UDGARRAY*maze({ScreenshotImagePath}/$fname)
+  #FRAMES(maze)({ScreenshotImagePath}/$fname)
 )
 
 #DEF(#TITLESOUND #FOR(127,7,-8,7)||d|[13*d+26,13*d+57]*9,13*d+26|13*d+128||)

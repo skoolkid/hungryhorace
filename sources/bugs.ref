@@ -1,4 +1,4 @@
-; Copyright 2017, 2018 Richard Dymond (rjdymond@gmail.com)
+; Copyright 2017, 2018, 2025 Richard Dymond (rjdymond@gmail.com)
 
 [Bug:freeExtraLife:Free extra life]
 Horace is given three lives before a game starts (see #R24787), but not long
@@ -27,8 +27,8 @@ parameter at #R31842 (1-8), and 'G' is the value of the active guard counter at
 (mod 65536).
 
 However, one reason the slowdown might not happen is that the active guard
-counter is #BUG#brokenGuardCounter(broken), and so 'G' might not be 3 even when
-all four guards are in play.
+counter is #BUG(brokenGuardCounter)(broken), and so 'G' might not be 3 even
+when all four guards are in play.
 
 [Bug:howManyLives:How many lives?]
 If Horace does well enough to get 10 lives remaining, that number is printed as
