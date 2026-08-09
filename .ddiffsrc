@@ -1,6 +1,7 @@
 # rc file for check-asms, check-bins, disassembly-diff, skooldiff, write-files
 
 OLD_VERSION=20260410
+RZX=$SPECTRUM_RZX/h/hungry_horace.rzx
 SK_OLD_VERSION=10.0
 SKOOL2BIN_START=24576
 SNAPSHOT=$HUNGRYHORACE_HOME/build/hungry_horace.z80
