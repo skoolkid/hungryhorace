@@ -753,7 +753,7 @@ c25562 LD A,(28094)  ; Pick up the guard's return delay counter.
  25845 CP 1          ; Is the guard facing a tunnel entrance?
  25847 JR NZ,25879   ; Jump if not. (This jump is never made.)
 ; The guard is about to enter a tunnel.
- 25849 LD BC,(28623) ; Pick up the the tunnel offset.
+ 25849 LD BC,(28623) ; Pick up the tunnel offset.
  25853 LD A,(28090)  ; Pick up the guard's animation frame.
  25856 AND A         ; Is it 0 (going up)?
  25857 JR Z,25863    ; Jump if so.
@@ -869,7 +869,7 @@ c25947 LD HL,(28092) ; Pick up the guard's new location.
  26006 LD C,A        ; Copy the attribute byte to #REGc.
  26007 CALL 27642    ; Draw the fourth (bottom-right) maze background tile.
  26010 LD HL,(28092) ; Pick up the guard's new location.
- 26013 CALL 27752    ; Copy the maze backround tiles at this location into the
+ 26013 CALL 27752    ; Copy the maze background tiles at this location into the
                      ; guard's buffer.
  26016 RET           ;
 
@@ -1159,7 +1159,7 @@ c26426 LD A,(31864)  ; {Decrement the number of lives.
  26473 LD HL,22528   ; This is the attribute file address for the 'P' of
                      ; 'PASSES'.
  26476 LD B,9        ; #REGb will count the characters in 'PASSES n ' (where
-                     ; 'n' in the number of lives remaining).
+                     ; 'n' is the number of lives remaining).
  26478 POP AF        ; Restore the attribute byte to #REGa.
 *26479 LD (HL),A     ; {Change the INK colour of the number of remaining lives
  26480 INC HL        ; to match that of Horace.
