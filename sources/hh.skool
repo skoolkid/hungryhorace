@@ -265,7 +265,7 @@ c24576 DI            ; Disable interrupts.
  25037 JR NZ,25044   ; Jump if not.
  25039 LD HL,(28627) ; Pick up the initial guard location for the current maze.
  25042 JR 25047      ;
-*25044 LD HL,(28629) ; Pick up the bell location for the current maze.
+*25044 LD HL,(28629) ; Pick up the entrance location for the current maze.
 *25047 LD (28088),HL ; {Initialise the guard's current and new locations.
  25050 LD (28092),HL ; }
  25053 LD HL,28095   ; {Clear the four maze background tiles in the temporary
@@ -1133,7 +1133,8 @@ c26426 LD A,(31864)  ; {Decrement the number of lives.
  26433 XOR A         ; {Reset the tunnel timer.
  26434 LD (31865),A  ; }
  26437 LD (28094),A  ; Reset the current guard's return delay counter.
- 26440 LD HL,16391   ; This is the display file address for the score.
+ 26440 LD HL,16391   ; This is the display file address for the number of lives
+                     ; remaining.
  26443 CALL 27663    ; Set #REGhl' to the corresponding attribute file address
                      ; (unnecessarily).
  26446 LD A,(31864)  ; Pick up the number of lives remaining.
